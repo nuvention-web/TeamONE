@@ -1,0 +1,4 @@
+AuthType Basic  
+AuthName "restricted area"  
+AuthUserFile /Users/Cameron/Desktop/CAMERON's Folder/College/Junior/Winter/NUvention/LandingPage/Admin/htpasswd  
+require valid-user
