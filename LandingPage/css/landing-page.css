@@ -11,6 +11,22 @@
 .marketing {
     padding-top: 30px;
 }
+.intro-social-buttons {
+    text-align: left;
+    padding-left: 5px;
+}
+
+#video {
+    padding-top: 20%;
+}
+h2 {
+    text-align: center;
+}
+.img-circle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body,
 html {
@@ -37,7 +53,7 @@ h6 {
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
-    text-align: center;
+    text-align: left;
     color: #f8f8f8;
     background-color: skyblue;
     background-size: cover;
@@ -46,7 +62,7 @@ h6 {
 .intro-message {
     position: relative;
     padding-top: 8%;
-    padding-bottom: 20%;
+    padding-bottom: 5%;
 }
 
 .intro-message > h1 {
@@ -66,14 +82,18 @@ h6 {
     color: #E6E6E6;
     width: 40%;
     text-align: left;
+    margin-left: 5px;
 }
 .intro-message > btn {
     vertical-align: bottom;
 }
 
 @media(max-width:767px) {
+    #video {
+    padding-top: 0%;
+}
     .intro-message {
-        padding-bottom: 15%;
+        padding-bottom: 5%;
     }
 
     .intro-message > h1 {
