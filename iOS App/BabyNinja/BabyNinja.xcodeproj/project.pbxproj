@@ -13,9 +13,10 @@
 		201024E21A7B030F00F248F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201024E11A7B030F00F248F3 /* Images.xcassets */; };
 		201024E51A7B030F00F248F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201024E31A7B030F00F248F3 /* LaunchScreen.xib */; };
 		201024F11A7B030F00F248F3 /* BabyNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024F01A7B030F00F248F3 /* BabyNinjaTests.m */; };
-		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
+		201024FF1A7B530E00F248F3 /* poop.png in Resorces */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
 		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
 		203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */; };
+		203A49A31A809F7000F02E56 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49A21A809F7000F02E56 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		203A499A1A809D9C00F02E56 /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
 		203A499B1A809D9C00F02E56 /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
 		203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDropShadowView.m; sourceTree = "<group>"; };
+		203A49A11A809F7000F02E56 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		203A49A21A809F7000F02E56 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 		201024FC1A7B135F00F248F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				203A499F1A809F7000F02E56 /* LeftSideController */,
+				203A49A01A809F7000F02E56 /* MainViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -165,6 +170,22 @@
 				203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */,
 			);
 			path = ICSDrawerController;
+			sourceTree = "<group>";
+		};
+		203A499F1A809F7000F02E56 /* LeftSideController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LeftSideController;
+			sourceTree = "<group>";
+		};
+		203A49A01A809F7000F02E56 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				203A49A11A809F7000F02E56 /* MainViewController.h */,
+				203A49A21A809F7000F02E56 /* MainViewController.m */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +292,7 @@
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
+				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
