@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		201024D71A7B030F00F248F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024D61A7B030F00F248F3 /* main.m */; };
 		201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024D91A7B030F00F248F3 /* AppDelegate.m */; };
-		201024DD1A7B030F00F248F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024DC1A7B030F00F248F3 /* ViewController.m */; };
+		201024DD1A7B030F00F248F3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024DC1A7B030F00F248F3 /* MainViewController.m */; };
 		201024E01A7B030F00F248F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 201024DE1A7B030F00F248F3 /* Main.storyboard */; };
 		201024E21A7B030F00F248F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201024E11A7B030F00F248F3 /* Images.xcassets */; };
 		201024E51A7B030F00F248F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201024E31A7B030F00F248F3 /* LaunchScreen.xib */; };
 		201024F11A7B030F00F248F3 /* BabyNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024F01A7B030F00F248F3 /* BabyNinjaTests.m */; };
+		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
+		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
+		203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,19 @@
 		201024D61A7B030F00F248F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		201024D81A7B030F00F248F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		201024D91A7B030F00F248F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		201024DB1A7B030F00F248F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		201024DC1A7B030F00F248F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		201024DB1A7B030F00F248F3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		201024DC1A7B030F00F248F3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		201024DF1A7B030F00F248F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		201024E11A7B030F00F248F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		201024E41A7B030F00F248F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		201024EA1A7B030F00F248F3 /* BabyNinjaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNinjaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201024EF1A7B030F00F248F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201024F01A7B030F00F248F3 /* BabyNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyNinjaTests.m; sourceTree = "<group>"; };
+		201024FE1A7B530E00F248F3 /* poop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poop.png; sourceTree = "<group>"; };
+		203A49991A809D9C00F02E56 /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
+		203A499A1A809D9C00F02E56 /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
+		203A499B1A809D9C00F02E56 /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
+		203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDropShadowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +89,15 @@
 		201024D31A7B030F00F248F3 /* BabyNinja */ = {
 			isa = PBXGroup;
 			children = (
+				201024FD1A7B530E00F248F3 /* Images */,
 				201024FA1A7B135F00F248F3 /* External Libraries */,
 				201024FB1A7B135F00F248F3 /* Utilities */,
 				201024FC1A7B135F00F248F3 /* ViewControllers */,
 				201024D41A7B030F00F248F3 /* Supporting Files */,
 				201024D81A7B030F00F248F3 /* AppDelegate.h */,
 				201024D91A7B030F00F248F3 /* AppDelegate.m */,
-				201024DB1A7B030F00F248F3 /* ViewController.h */,
-				201024DC1A7B030F00F248F3 /* ViewController.m */,
+				201024DB1A7B030F00F248F3 /* MainViewController.h */,
+				201024DC1A7B030F00F248F3 /* MainViewController.m */,
 				201024DE1A7B030F00F248F3 /* Main.storyboard */,
 				201024E31A7B030F00F248F3 /* LaunchScreen.xib */,
 				201024E11A7B030F00F248F3 /* Images.xcassets */,
@@ -125,6 +134,7 @@
 		201024FA1A7B135F00F248F3 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				203A49981A809D9C00F02E56 /* ICSDrawerController */,
 			);
 			path = "External Libraries";
 			sourceTree = "<group>";
@@ -141,6 +151,25 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		201024FD1A7B530E00F248F3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				201024FE1A7B530E00F248F3 /* poop.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		203A49981A809D9C00F02E56 /* ICSDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				203A49991A809D9C00F02E56 /* ICSDrawerController.h */,
+				203A499A1A809D9C00F02E56 /* ICSDrawerController.m */,
+				203A499B1A809D9C00F02E56 /* ICSDropShadowView.h */,
+				203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */,
+			);
+			path = ICSDrawerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				201024E01A7B030F00F248F3 /* Main.storyboard in Resources */,
+				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				201024E51A7B030F00F248F3 /* LaunchScreen.xib in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 			);
@@ -243,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201024DD1A7B030F00F248F3 /* ViewController.m in Sources */,
+				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
+				201024DD1A7B030F00F248F3 /* MainViewController.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
+				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +470,7 @@
 				201024F61A7B030F00F248F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		201024F71A7B030F00F248F3 /* Build configuration list for PBXNativeTarget "BabyNinjaTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +479,7 @@
 				201024F91A7B030F00F248F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
