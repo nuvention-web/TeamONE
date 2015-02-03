@@ -16,6 +16,8 @@
 		203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */; };
 		203A49A31A809F7000F02E56 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49A21A809F7000F02E56 /* MainViewController.m */; };
 		203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49A81A80A4F500F02E56 /* LeftSideController.m */; };
+		203A49AB1A80AF9200F02E56 /* iphone6P.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A49AA1A80AF9200F02E56 /* iphone6P.png */; };
+		203A49AD1A80B01E00F02E56 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 203A49AC1A80B01E00F02E56 /* iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		203A49A21A809F7000F02E56 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		203A49A71A80A4E200F02E56 /* LeftSideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftSideController.h; sourceTree = "<group>"; };
 		203A49A81A80A4F500F02E56 /* LeftSideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideController.m; sourceTree = "<group>"; };
+		203A49AA1A80AF9200F02E56 /* iphone6P.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone6P.png; sourceTree = "<group>"; };
+		203A49AC1A80B01E00F02E56 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 		201024FD1A7B530E00F248F3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				203A49AC1A80B01E00F02E56 /* iphone.png */,
+				203A49AA1A80AF9200F02E56 /* iphone6P.png */,
 				201024FE1A7B530E00F248F3 /* poop.png */,
 			);
 			path = Images;
@@ -267,6 +273,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203A49AD1A80B01E00F02E56 /* iphone.png in Resources */,
+				203A49AB1A80AF9200F02E56 /* iphone6P.png in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 			);
