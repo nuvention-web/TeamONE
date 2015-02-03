@@ -17,12 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor blackColor];
+    // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+   // [self.window makeKeyAndVisible];
+  //  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+ //   self.window.backgroundColor = [UIColor blackColor];
     
-    NSArray *colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
-                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
-                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
-                        ];
+ //   NSArray *colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+                      //  [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+                     //   [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
+                  //      ];
     
 //    ICSColorsViewController *colorsVC = [[ICSColorsViewController alloc] initWithColors:colors];
 //    ICSPlainColorViewController *plainColorVC = [[ICSPlainColorViewController alloc] init];
