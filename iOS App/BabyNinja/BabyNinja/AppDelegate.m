@@ -28,8 +28,10 @@
     return YES;    
 }
 
+// instantiates the sidecontroller and main controller with the library ICSDrawerController
 -(UIViewController*)addSideViewController{
-    NSArray *colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    NSArray *colors ;
+    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
                         [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
                         [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
                         ];
@@ -42,7 +44,6 @@
                                                                      centerViewController:plainColorVC];
     return drawer;
 }
-
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

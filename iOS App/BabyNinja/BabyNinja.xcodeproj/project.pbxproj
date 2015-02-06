@@ -28,6 +28,15 @@
 		203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49BF1A8165EE00F02E56 /* AFURLRequestSerialization.m */; };
 		203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49C11A8165EE00F02E56 /* AFURLResponseSerialization.m */; };
 		203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49C31A8165EE00F02E56 /* AFURLSessionManager.m */; };
+		203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49D71A828C7300F02E56 /* InterfaceController.m */; };
+		203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49DA1A828C7300F02E56 /* NotificationController.m */; };
+		203A49DD1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49DC1A828C7300F02E56 /* Images.xcassets */; };
+		203A49E11A828C7300F02E56 /* BabyNinja WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E01A828C7300F02E56 /* BabyNinja WatchKit App.app */; };
+		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
+		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
+		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
+		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +47,35 @@
 			remoteGlobalIDString = 201024D01A7B030F00F248F3;
 			remoteInfo = BabyNinja;
 		};
+		203A49E21A828C7300F02E56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 201024C91A7B030F00F248F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 203A49DF1A828C7300F02E56;
+			remoteInfo = "BabyNinja WatchKit App";
+		};
+		203A49EC1A828C7300F02E56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 201024C91A7B030F00F248F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 203A49D01A828C7300F02E56;
+			remoteInfo = "BabyNinja WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		203A49F51A828C7300F02E56 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		201024D11A7B030F00F248F3 /* BabyNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +118,22 @@
 		203A49C11A8165EE00F02E56 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		203A49C21A8165EE00F02E56 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		203A49C31A8165EE00F02E56 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BabyNinja WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		203A49D41A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203A49D51A828C7300F02E56 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		203A49D61A828C7300F02E56 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		203A49D71A828C7300F02E56 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		203A49D91A828C7300F02E56 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		203A49DA1A828C7300F02E56 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		203A49DC1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		203A49E01A828C7300F02E56 /* BabyNinja WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BabyNinja WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		203A49E61A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		203A49E81A828C7300F02E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		203A49EA1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
+		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
+		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
+		20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +151,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		203A49CE1A828C7300F02E56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +166,8 @@
 			children = (
 				201024D31A7B030F00F248F3 /* BabyNinja */,
 				201024ED1A7B030F00F248F3 /* BabyNinjaTests */,
+				203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */,
+				203A49E41A828C7300F02E56 /* BabyNinja WatchKit App */,
 				201024D21A7B030F00F248F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +177,8 @@
 			children = (
 				201024D11A7B030F00F248F3 /* BabyNinja.app */,
 				201024EA1A7B030F00F248F3 /* BabyNinjaTests.xctest */,
+				203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */,
+				203A49E01A828C7300F02E56 /* BabyNinja WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +227,7 @@
 		201024FA1A7B135F00F248F3 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				20B3A8791A84884300B4C8CC /* ALRadial */,
 				203A49B01A8165EE00F02E56 /* AFNetworking */,
 				203A49981A809D9C00F02E56 /* ICSDrawerController */,
 			);
@@ -251,6 +316,57 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				203A49D61A828C7300F02E56 /* InterfaceController.h */,
+				203A49D71A828C7300F02E56 /* InterfaceController.m */,
+				203A49D91A828C7300F02E56 /* NotificationController.h */,
+				203A49DA1A828C7300F02E56 /* NotificationController.m */,
+				203A49DC1A828C7300F02E56 /* Images.xcassets */,
+				203A49D31A828C7300F02E56 /* Supporting Files */,
+			);
+			path = "BabyNinja WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		203A49D31A828C7300F02E56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203A49D41A828C7300F02E56 /* Info.plist */,
+				203A49D51A828C7300F02E56 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		203A49E41A828C7300F02E56 /* BabyNinja WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				203A49E71A828C7300F02E56 /* Interface.storyboard */,
+				203A49EA1A828C7300F02E56 /* Images.xcassets */,
+				203A49E51A828C7300F02E56 /* Supporting Files */,
+			);
+			path = "BabyNinja WatchKit App";
+			sourceTree = "<group>";
+		};
+		203A49E51A828C7300F02E56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				203A49E61A828C7300F02E56 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20B3A8791A84884300B4C8CC /* ALRadial */ = {
+			isa = PBXGroup;
+			children = (
+				20B3A87A1A84884300B4C8CC /* ALRadialButton.h */,
+				20B3A87B1A84884300B4C8CC /* ALRadialButton.m */,
+				20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */,
+				20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */,
+			);
+			path = ALRadial;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,10 +377,12 @@
 				201024CD1A7B030F00F248F3 /* Sources */,
 				201024CE1A7B030F00F248F3 /* Frameworks */,
 				201024CF1A7B030F00F248F3 /* Resources */,
+				203A49F51A828C7300F02E56 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				203A49ED1A828C7300F02E56 /* PBXTargetDependency */,
 			);
 			name = BabyNinja;
 			productName = BabyNinja;
@@ -289,6 +407,39 @@
 			productReference = 201024EA1A7B030F00F248F3 /* BabyNinjaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		203A49D01A828C7300F02E56 /* BabyNinja WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203A49F41A828C7300F02E56 /* Build configuration list for PBXNativeTarget "BabyNinja WatchKit Extension" */;
+			buildPhases = (
+				203A49CD1A828C7300F02E56 /* Sources */,
+				203A49CE1A828C7300F02E56 /* Frameworks */,
+				203A49CF1A828C7300F02E56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				203A49E31A828C7300F02E56 /* PBXTargetDependency */,
+			);
+			name = "BabyNinja WatchKit Extension";
+			productName = "BabyNinja WatchKit Extension";
+			productReference = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		203A49DF1A828C7300F02E56 /* BabyNinja WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 203A49F31A828C7300F02E56 /* Build configuration list for PBXNativeTarget "BabyNinja WatchKit App" */;
+			buildPhases = (
+				203A49DE1A828C7300F02E56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BabyNinja WatchKit App";
+			productName = "BabyNinja WatchKit App";
+			productReference = 203A49E01A828C7300F02E56 /* BabyNinja WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,6 +455,12 @@
 					201024E91A7B030F00F248F3 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 201024D01A7B030F00F248F3;
+					};
+					203A49D01A828C7300F02E56 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					203A49DF1A828C7300F02E56 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -322,6 +479,8 @@
 			targets = (
 				201024D01A7B030F00F248F3 /* BabyNinja */,
 				201024E91A7B030F00F248F3 /* BabyNinjaTests */,
+				203A49D01A828C7300F02E56 /* BabyNinja WatchKit Extension */,
+				203A49DF1A828C7300F02E56 /* BabyNinja WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -346,6 +505,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		203A49CF1A828C7300F02E56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203A49DD1A828C7300F02E56 /* Images.xcassets in Resources */,
+				203A49E11A828C7300F02E56 /* BabyNinja WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		203A49DE1A828C7300F02E56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */,
+				203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -354,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
+				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
@@ -367,6 +545,7 @@
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
+				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +558,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		203A49CD1A828C7300F02E56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */,
+				203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -387,7 +575,28 @@
 			target = 201024D01A7B030F00F248F3 /* BabyNinja */;
 			targetProxy = 201024EB1A7B030F00F248F3 /* PBXContainerItemProxy */;
 		};
+		203A49E31A828C7300F02E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 203A49DF1A828C7300F02E56 /* BabyNinja WatchKit App */;
+			targetProxy = 203A49E21A828C7300F02E56 /* PBXContainerItemProxy */;
+		};
+		203A49ED1A828C7300F02E56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 203A49D01A828C7300F02E56 /* BabyNinja WatchKit Extension */;
+			targetProxy = 203A49EC1A828C7300F02E56 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		203A49E71A828C7300F02E56 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				203A49E81A828C7300F02E56 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		201024F21A7B030F00F248F3 /* Debug */ = {
@@ -522,6 +731,62 @@
 			};
 			name = Release;
 		};
+		203A49EF1A828C7300F02E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		203A49F01A828C7300F02E56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		203A49F11A828C7300F02E56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = BabyNinja_WatchKit_Extension;
+				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		203A49F21A828C7300F02E56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = BabyNinja_WatchKit_Extension;
+				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -548,6 +813,24 @@
 			buildConfigurations = (
 				201024F81A7B030F00F248F3 /* Debug */,
 				201024F91A7B030F00F248F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		203A49F31A828C7300F02E56 /* Build configuration list for PBXNativeTarget "BabyNinja WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203A49F11A828C7300F02E56 /* Debug */,
+				203A49F21A828C7300F02E56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		203A49F41A828C7300F02E56 /* Build configuration list for PBXNativeTarget "BabyNinja WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				203A49EF1A828C7300F02E56 /* Debug */,
+				203A49F01A828C7300F02E56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

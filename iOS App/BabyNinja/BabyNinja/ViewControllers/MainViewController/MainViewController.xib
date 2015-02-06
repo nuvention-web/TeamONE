@@ -4,19 +4,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="view" destination="bam-bt-g9l" id="RFt-dQ-O0M"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="QPR-FA-rLK" customClass="MainViewController">
-            <layoutGuides>
-                <viewControllerLayoutGuide type="top" id="MzX-U2-TIH"/>
-                <viewControllerLayoutGuide type="bottom" id="6Mm-lo-JR0"/>
-            </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="ZxO-oJ-ziN">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            </view>
-            <point key="canvasLocation" x="312" y="294"/>
-        </viewController>
+        <view contentMode="scaleToFill" id="bam-bt-g9l">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="326" y="260"/>
+        </view>
     </objects>
 </document>
