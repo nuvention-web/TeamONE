@@ -15,9 +15,9 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-s3-pkM">
-                    <rect key="frame" x="136" y="131" width="37" height="30"/>
-                    <state key="normal" title="Poop">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-s3-pkM">
+                    <rect key="frame" x="105" y="216" width="167" height="167"/>
+                    <state key="normal" image="poop.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -29,4 +29,7 @@
             <point key="canvasLocation" x="326" y="260"/>
         </view>
     </objects>
+    <resources>
+        <image name="poop.png" width="305" height="307"/>
+    </resources>
 </document>

@@ -24,7 +24,7 @@
 
 - (void)willAppear {
 	//rotate the button upsidedown so its right side up after the 180 degree rotation while its moving out
-	[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, 180/180*M_PI)];
+//	[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, 180/180*M_PI)];
 	
 	self.alpha = 1.0;
 	
@@ -32,7 +32,7 @@
 		
 		//this animation rotates the button 180 degree's, and moves the center point to the end of the "string"
 		[self setCenter:self.bouncePoint];
-		[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, 0/180*M_PI)];
+//		[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, 0/180*M_PI)];
 		
 	} completion:^(BOOL finished) {
 		
@@ -49,7 +49,7 @@
 	[UIView animateWithDuration:.15f delay:0.0f options:UIViewAnimationOptionCurveLinear animations:^{
 		
 		//first do the rotate in place animation
-		[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, -(180/180*M_PI))];
+//		[self.imageView setTransform:CGAffineTransformRotate(CGAffineTransformIdentity, -(180/180*M_PI))];
 	
 	} completion:^(BOOL finished) {
 		

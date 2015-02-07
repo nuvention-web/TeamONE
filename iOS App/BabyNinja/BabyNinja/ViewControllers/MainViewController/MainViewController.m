@@ -28,6 +28,7 @@
     UIImage *hamburger = [UIImage imageNamed:@"hamburger"];
     NSParameterAssert(hamburger);
     
+    // create the left slider button
     self.openDrawerButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.openDrawerButton.frame = CGRectMake(10.0f, 20.0f, 44.0f, 44.0f);
     [self.openDrawerButton setImage:hamburger forState:UIControlStateNormal];
@@ -90,7 +91,6 @@
 - (NSInteger) arcSizeForRadialMenu:(ALRadialMenu *)radialMenu {
     if (radialMenu == self.radialMenu)
         return 360;
-
     
     return 0;
 }
@@ -98,7 +98,7 @@
 
 - (NSInteger) arcRadiusForRadialMenu:(ALRadialMenu *)radialMenu {
 //    if (radialMenu == self.radialMenu)
-        return 80;
+        return 150;
 
 }
 
@@ -142,4 +142,5 @@
     }
     
 }
+
 @end

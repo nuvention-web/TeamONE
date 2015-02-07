@@ -13,7 +13,7 @@
 
 
 
-@interface MainViewController : UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting,ALRadialMenuDelegate>
+@interface MainViewController : UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting, ALRadialMenuDelegate>
 
 @property(nonatomic, weak) ICSDrawerController *drawer;
 

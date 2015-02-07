@@ -166,8 +166,6 @@
 
 
 
-
-
 #pragma mark - private methods
 - (void)willFlingItem {
 	if (self.itemIndex == [self.items count]) {
@@ -210,16 +208,16 @@
 
 - (void)shouldRotateButton:(UIButton *)button forDuration:(float)duration forwardDirection:(BOOL)direction {
 	//use CABasicAnimation instead of a view animation so we can keep the spin going for more than 360
-	CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-	spinAnimation.duration = duration;
-	spinAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseInEaseOut];
-	//do a 180 turn for each object being flung
-	float totalDuration = M_PI * [self.items count];
-	if (!direction) {
-		totalDuration = totalDuration * -1;
-	}
-	spinAnimation.toValue = [NSNumber numberWithFloat: totalDuration];
-	[button.layer addAnimation:spinAnimation forKey:@"spinAnimation"];
+//	CABasicAnimation *spinAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//	spinAnimation.duration = duration;
+//	spinAnimation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseInEaseOut];
+//	//do a 180 turn for each object being flung
+//	float totalDuration = M_PI * [self.items count];
+//	if (!direction) {
+//		totalDuration = totalDuration * -1;
+//	}
+//	spinAnimation.toValue = [NSNumber numberWithFloat: totalDuration];
+//	[button.layer addAnimation:spinAnimation forKey:@"spinAnimation"];
 
 }
 
