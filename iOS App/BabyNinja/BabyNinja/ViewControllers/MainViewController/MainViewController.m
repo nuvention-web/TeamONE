@@ -13,6 +13,9 @@
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
 
+@property (nonatomic) NSInteger selectedColorIndex;
+@property (nonatomic) NSInteger selectedTextureIndex;
+
 @end
 
 
@@ -42,7 +45,21 @@
 }
 
 - (IBAction)poopButtonPressed:(id)sender {
+    
+    [self changePoopButtonStateImage];
     [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
+}
+
+-(void)changePoopButtonStateImage{
+    if(self.poopButton.tag==0){
+        self.poopButton.tag = 1 ; //setting the mode to selected
+        [self.poopButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
+    } else {
+        self.poopButton.tag = 0 ; //setting the mode to unselected
+        [self.poopButton setImage:[UIImage imageNamed:@"poop"] forState:UIControlStateNormal];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 
@@ -81,8 +98,8 @@
 - (NSInteger) numberOfItemsInRadialMenu:(ALRadialMenu *)radialMenu {
     //FIXME: dipshit, change one of these variable names
     if (radialMenu == self.radialMenu)
-        return 9;
-
+        return 8;
+    
     
     return 0;
 }
@@ -97,9 +114,9 @@
 
 
 - (NSInteger) arcRadiusForRadialMenu:(ALRadialMenu *)radialMenu {
-//    if (radialMenu == self.radialMenu)
-        return 150;
-
+    //    if (radialMenu == self.radialMenu)
+    return 150;
+    
 }
 
 
@@ -122,10 +139,11 @@
             [button setImage:[UIImage imageNamed:@"email"] forState:UIControlStateNormal];
         } else if (index == 8) {
             [button setImage:[UIImage imageNamed:@"googleplus-revised"] forState:UIControlStateNormal];
-        } else if (index == 9) {
-            [button setImage:[UIImage imageNamed:@"facebook500"] forState:UIControlStateNormal];
         }
-        
+        //        } else if (index == 9) {
+        //            [button setImage:[UIImage imageNamed:@"facebook500"] forState:UIControlStateNormal];
+        //        }
+        //
     }
     
     if (button.imageView.image) {
@@ -135,11 +153,53 @@
     return nil;
 }
 
+- (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu{
+    return 50.0;
+}
 
 - (void) radialMenu:(ALRadialMenu *)radialMenu didSelectItemAtIndex:(NSInteger)index {
+    
+    NSLog(@"%ld", (long)index);
     if (radialMenu == self.radialMenu) {
-        [self.radialMenu itemsWillDisapearIntoButton:self.poopButton];
+        ALRadialButton *button = [radialMenu.items objectAtIndex:index-1];
+        if(button.selected ==0){
+            if(index<=4){
+                self.selectedColorIndex = index;
+                for (int i=1; i<=4; i++) {
+                    [self removeSelectedImageFromButton:[radialMenu.items objectAtIndex:i-1]];
+                }
+            } else{
+                self.selectedTextureIndex = index;
+                for (int i=5; i<=8; i++) {
+                    [self removeSelectedImageFromButton:[radialMenu.items objectAtIndex:i-1]];
+                }
+            }
+            [self addSelectedImageFromButton:button];
+        } else
+            [self removeSelectedImageFromButton:button];
+        if(index<=4){
+            self.selectedColorIndex = 0;
+        } else{
+            self.selectedTextureIndex = 0;
+        }
+        
     }
+    NSLog(@"%ld %ld", (long)self.selectedTextureIndex, (long)self.selectedColorIndex);
+}
+
+
+-(void)removeSelectedImageFromButton:(ALRadialButton*)button{
+    button.selected = 0;
+    for(UIView *view in button.subviews)
+        if(view.tag==100)
+            [view removeFromSuperview];
+}
+
+-(void)addSelectedImageFromButton:(ALRadialButton*)button{
+    button.selected = 1;
+    UIImageView *tickImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"circle"]];
+    tickImageView.tag = 100;
+    [button addSubview:tickImageView];
     
 }
 
