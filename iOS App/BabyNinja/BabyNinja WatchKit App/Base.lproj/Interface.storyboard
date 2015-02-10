@@ -1,16 +1,111 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="150" alignment="left" id="O0o-CH-XcW">
+                            <items>
+                                <button width="83" height="82" alignment="center" verticalAlignment="center" backgroundImage="Wpoop" id="eAM-Ql-KzA">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <action selector="poopButtonPressed:" destination="AgC-eL-Hgc" id="YHd-9Z-zI3"/>
+                                        <segue destination="RqV-rF-eeO" kind="push" id="wEi-i0-Sb7"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="poopButton" destination="eAM-Ql-KzA" id="7z7-3a-o5K"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="RO8-ul-6QH">
+            <objects>
+                <controller id="RqV-rF-eeO">
+                    <items>
+                        <label alignment="center" text="Select the color" id="xwp-41-U6L"/>
+                        <group width="126" height="263" alignment="left" layout="vertical" id="dcT-Da-feP">
+                            <items>
+                                <button width="59" alignment="center" title="yellow" backgroundImage="1" id="8q9-9l-Yoz">
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                    <connections>
+                                        <segue destination="2oi-MT-iyK" kind="push" id="ana-HY-JJ6"/>
+                                    </connections>
+                                </button>
+                                <button width="61" height="57.5" alignment="center" title="greenish-black" backgroundImage="2" id="fhk-jQ-j5E">
+                                    <fontDescription key="font" type="system" pointSize="7"/>
+                                    <connections>
+                                        <segue destination="2oi-MT-iyK" kind="push" id="lKK-l0-abw"/>
+                                    </connections>
+                                </button>
+                                <button width="62" height="64" alignment="center" title="like peanut butter" backgroundImage="3" id="lzW-KW-zkP">
+                                    <fontDescription key="font" type="system" pointSize="9"/>
+                                    <connections>
+                                        <segue destination="2oi-MT-iyK" kind="push" id="KG9-83-W8s"/>
+                                    </connections>
+                                </button>
+                                <button width="61" height="62" alignment="center" title="dark green" backgroundImage="4" id="qT3-cH-Tvo">
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <segue destination="2oi-MT-iyK" kind="push" id="V2A-a7-YZN"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="430" y="363"/>
+        </scene>
+        <!--Texture Selection Interface Controller-->
+        <scene sceneID="U38-TQ-3b6">
+            <objects>
+                <controller id="2oi-MT-iyK" customClass="TextureSelectionInterfaceController">
+                    <items>
+                        <group width="1" height="220" alignment="left" layout="vertical" id="Ipd-Sh-Bt5">
+                            <items>
+                                <label alignment="center" text="Select the texture" id="9x4-D7-dIV"/>
+                                <button width="1" alignment="left" title="Sticky Motor Oil" id="nSz-Hh-Bk7">
+                                    <connections>
+                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="jtc-fb-Btz"/>
+                                        <segue destination="Xq4-nE-1Ub" kind="push" id="DdG-ke-jeA"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Seedy Thick" id="RGZ-0q-GkY">
+                                    <connections>
+                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="WZa-kb-Oa4"/>
+                                        <segue destination="Xq4-nE-1Ub" kind="push" id="sek-cU-jIU"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Running Diarrhea" id="M3H-HQ-BY0">
+                                    <connections>
+                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="Kxz-1M-mqO"/>
+                                        <segue destination="Xq4-nE-1Ub" kind="push" id="yEI-bU-1VZ"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Mushy" id="eP7-Gz-giT">
+                                    <connections>
+                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="eFf-HE-ysn"/>
+                                        <segue destination="Xq4-nE-1Ub" kind="push" id="n5F-D2-5AZ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="643" y="341.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -26,14 +121,29 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="144" y="649"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider=""/>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="316" y="673"/>
+        </scene>
+        <!--Alert Interface Controller-->
+        <scene sceneID="zzh-bE-S2n">
+            <objects>
+                <controller id="Xq4-nE-1Ub" customClass="AlertInterfaceController">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 7 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="576" y="664"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lKK-l0-abw"/>
+        <segue reference="yEI-bU-1VZ"/>
+    </inferredMetricsTieBreakers>
 </document>

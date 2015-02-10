@@ -35,6 +35,8 @@
 		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
 		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */; };
+		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -87,7 +89,7 @@
 		201024EA1A7B030F00F248F3 /* BabyNinjaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabyNinjaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		201024EF1A7B030F00F248F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201024F01A7B030F00F248F3 /* BabyNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyNinjaTests.m; sourceTree = "<group>"; };
-		201024FE1A7B530E00F248F3 /* poop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poop.png; sourceTree = "<group>"; };
+		201024FE1A7B530E00F248F3 /* poop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poop.png; path = Images/poop.png; sourceTree = "<group>"; };
 		203A49991A809D9C00F02E56 /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
 		203A499A1A809D9C00F02E56 /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
 		203A499B1A809D9C00F02E56 /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
@@ -130,6 +132,10 @@
 		203A49E61A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A49E81A828C7300F02E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		203A49EA1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		206589DB1A8A61500019F21D /* TextureSelectionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureSelectionInterfaceController.h; sourceTree = "<group>"; };
+		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
+		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
+		206589DF1A8A666F0019F21D /* AlertInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInterfaceController.m; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 				201024D81A7B030F00F248F3 /* AppDelegate.h */,
 				201024D91A7B030F00F248F3 /* AppDelegate.m */,
 				201024E11A7B030F00F248F3 /* Images.xcassets */,
+				201024FE1A7B530E00F248F3 /* poop.png */,
 			);
 			path = BabyNinja;
 			sourceTree = "<group>";
@@ -255,7 +262,6 @@
 			children = (
 				203A49AC1A80B01E00F02E56 /* iphone.png */,
 				203A49AA1A80AF9200F02E56 /* iphone6P.png */,
-				201024FE1A7B530E00F248F3 /* poop.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -323,8 +329,12 @@
 				203A49D71A828C7300F02E56 /* InterfaceController.m */,
 				203A49D91A828C7300F02E56 /* NotificationController.h */,
 				203A49DA1A828C7300F02E56 /* NotificationController.m */,
+				206589DB1A8A61500019F21D /* TextureSelectionInterfaceController.h */,
+				206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */,
 				203A49DC1A828C7300F02E56 /* Images.xcassets */,
 				203A49D31A828C7300F02E56 /* Supporting Files */,
+				206589DE1A8A666F0019F21D /* AlertInterfaceController.h */,
+				206589DF1A8A666F0019F21D /* AlertInterfaceController.m */,
 			);
 			path = "BabyNinja WatchKit Extension";
 			sourceTree = "<group>";
@@ -563,6 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */,
+				206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */,
+				206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */,
 				203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,12 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import "ALRadialMenu.h"
 
 @interface InterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *poopButton;
+@property (strong, nonatomic) ALRadialMenu *radialMenu;
+
+@property (nonatomic) NSInteger tag;
 @end
