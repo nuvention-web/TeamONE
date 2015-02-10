@@ -24,7 +24,7 @@
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
-    [NSTimer scheduledTimerWithTimeInterval:0.5f
+    [NSTimer scheduledTimerWithTimeInterval:0.9f
                                      target:self
                                    selector:@selector(goBackToRootController)
                                    userInfo:nil

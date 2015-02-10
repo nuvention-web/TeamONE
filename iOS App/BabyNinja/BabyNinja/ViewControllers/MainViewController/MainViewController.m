@@ -124,26 +124,23 @@
     ALRadialButton *button = [[ALRadialButton alloc] init];
     if (radialMenu == self.radialMenu) {
         if (index == 1) {
-            [button setImage:[UIImage imageNamed:@"dribbble"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
         } else if (index == 2) {
-            [button setImage:[UIImage imageNamed:@"youtube"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"2"] forState:UIControlStateNormal];
         } else if (index == 3) {
-            [button setImage:[UIImage imageNamed:@"vimeo"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"3"] forState:UIControlStateNormal];
         } else if (index == 4) {
-            [button setImage:[UIImage imageNamed:@"pinterest"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"4"] forState:UIControlStateNormal];
         } else if (index == 5) {
-            [button setImage:[UIImage imageNamed:@"twitter"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"t1"] forState:UIControlStateNormal];
         } else if (index == 6) {
-            [button setImage:[UIImage imageNamed:@"instagram500"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"t2"] forState:UIControlStateNormal];
         } else if (index == 7) {
-            [button setImage:[UIImage imageNamed:@"email"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"t3"] forState:UIControlStateNormal];
         } else if (index == 8) {
-            [button setImage:[UIImage imageNamed:@"googleplus-revised"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"t4"] forState:UIControlStateNormal];
         }
-        //        } else if (index == 9) {
-        //            [button setImage:[UIImage imageNamed:@"facebook500"] forState:UIControlStateNormal];
-        //        }
-        //
+
     }
     
     if (button.imageView.image) {
