@@ -37,7 +37,7 @@
                         <label alignment="center" text="Select the color" id="xwp-41-U6L"/>
                         <group width="126" height="263" alignment="left" layout="vertical" id="dcT-Da-feP">
                             <items>
-                                <button width="59" alignment="center" title="yellow" backgroundImage="1" id="8q9-9l-Yoz">
+                                <button width="59" alignment="center" title="light" backgroundImage="1" id="8q9-9l-Yoz">
                                     <fontDescription key="font" type="system" pointSize="9"/>
                                     <connections>
                                         <segue destination="2oi-MT-iyK" kind="push" id="ana-HY-JJ6"/>
@@ -49,7 +49,7 @@
                                         <segue destination="2oi-MT-iyK" kind="push" id="lKK-l0-abw"/>
                                     </connections>
                                 </button>
-                                <button width="62" height="64" alignment="center" title="like peanut butter" backgroundImage="3" id="lzW-KW-zkP">
+                                <button width="62" height="64" alignment="center" title="brown" backgroundImage="3" id="lzW-KW-zkP">
                                     <fontDescription key="font" type="system" pointSize="9"/>
                                     <connections>
                                         <segue destination="2oi-MT-iyK" kind="push" id="KG9-83-W8s"/>
@@ -76,7 +76,7 @@
                         <group width="1" height="220" alignment="left" layout="vertical" id="Ipd-Sh-Bt5">
                             <items>
                                 <label alignment="center" text="Select the texture" id="9x4-D7-dIV"/>
-                                <button width="1" alignment="left" title="Sticky Motor Oil" id="nSz-Hh-Bk7">
+                                <button width="1" alignment="left" title="Thick" id="nSz-Hh-Bk7">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="jtc-fb-Btz"/>
                                         <segue destination="Xq4-nE-1Ub" kind="push" id="DdG-ke-jeA"/>
@@ -88,13 +88,13 @@
                                         <segue destination="Xq4-nE-1Ub" kind="push" id="sek-cU-jIU"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" title="Running Diarrhea" id="M3H-HQ-BY0">
+                                <button width="1" alignment="left" title="Diarrhea" id="M3H-HQ-BY0">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="Kxz-1M-mqO"/>
                                         <segue destination="Xq4-nE-1Ub" kind="push" id="yEI-bU-1VZ"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" title="Mushy" id="eP7-Gz-giT">
+                                <button width="1" alignment="left" title="Soft" id="eP7-Gz-giT">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="eFf-HE-ysn"/>
                                         <segue destination="Xq4-nE-1Ub" kind="push" id="n5F-D2-5AZ"/>
@@ -135,7 +135,7 @@
             <objects>
                 <controller id="Xq4-nE-1Ub" customClass="AlertInterfaceController">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 7 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
+                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 8 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
                     </items>
                 </controller>
             </objects>

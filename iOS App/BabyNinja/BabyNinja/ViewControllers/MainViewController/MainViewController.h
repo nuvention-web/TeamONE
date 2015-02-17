@@ -19,6 +19,7 @@
 
 @property (strong, nonatomic) ALRadialMenu *radialMenu;
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
+@property (weak, nonatomic) IBOutlet UIButton *feedButton;
 
 @end
 

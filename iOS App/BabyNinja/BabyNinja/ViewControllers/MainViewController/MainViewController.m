@@ -57,7 +57,25 @@
     } else {
         self.poopButton.tag = 0 ; //setting the mode to unselected
         [self.poopButton setImage:[UIImage imageNamed:@"poop"] forState:UIControlStateNormal];
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (IBAction)feedButtonPressed:(id)sender {
+    [self changeFeedButtonStateImage];
+    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
+
+}
+
+-(void)changeFeedButtonStateImage{
+    if(self.feedButton.tag==0){
+        self.feedButton.tag = 1 ; //setting the mode to selected
+        [self.feedButton setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
+    } else {
+        self.feedButton.tag = 0 ; //setting the mode to unselected
+        [self.feedButton setImage:[UIImage imageNamed:@"bottle"] forState:UIControlStateNormal];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
 }
@@ -115,7 +133,7 @@
 
 - (NSInteger) arcRadiusForRadialMenu:(ALRadialMenu *)radialMenu {
     //    if (radialMenu == self.radialMenu)
-    return 150;
+    return 80;
     
 }
 
@@ -151,7 +169,7 @@
 }
 
 - (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu{
-    return 50.0;
+    return 40.0;
 }
 
 - (void) radialMenu:(ALRadialMenu *)radialMenu didSelectItemAtIndex:(NSInteger)index {

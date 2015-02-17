@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="feedButton" destination="LeO-Dg-eC1" id="AdR-mF-Agd"/>
                 <outlet property="poopButton" destination="Ek7-s3-pkM" id="IXc-Ol-8pb"/>
                 <outlet property="view" destination="bam-bt-g9l" id="RFt-dQ-O0M"/>
             </connections>
@@ -16,12 +17,24 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-s3-pkM">
-                    <rect key="frame" x="105" y="216" width="167" height="167"/>
+                    <rect key="frame" x="53" y="212" width="101" height="101"/>
                     <state key="normal" image="poop.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="poopButtonPressed:" destination="-1" eventType="touchUpInside" id="9Zo-ly-1VE"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-1k-EN7">
+                    <rect key="frame" x="47" y="78" width="282" height="94"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-Dg-eC1">
+                    <rect key="frame" x="259" y="233" width="57" height="60"/>
+                    <state key="normal" image="bottle">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="feedButtonPressed:" destination="-1" eventType="touchUpInside" id="eaf-0y-dHw"/>
                     </connections>
                 </button>
             </subviews>
@@ -30,6 +43,8 @@
         </view>
     </objects>
     <resources>
+        <image name="bottle" width="128" height="128"/>
+        <image name="logo" width="853" height="289"/>
         <image name="poop.png" width="305" height="307"/>
     </resources>
 </document>
