@@ -18,6 +18,7 @@
 @property(nonatomic, weak) ICSDrawerController *drawer;
 
 @property (strong, nonatomic) ALRadialMenu *radialMenu;
+@property (strong, nonatomic) ALRadialMenu *radialFeedMenu;
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *feedButton;
 

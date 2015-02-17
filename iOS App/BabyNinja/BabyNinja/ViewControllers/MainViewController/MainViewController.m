@@ -41,6 +41,8 @@
     self.radialMenu = [[ALRadialMenu alloc] init];
     self.radialMenu.delegate = self;
     
+    self.radialFeedMenu = [[ALRadialMenu alloc] init];
+    self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
 }
 
@@ -64,7 +66,7 @@
 
 - (IBAction)feedButtonPressed:(id)sender {
     [self changeFeedButtonStateImage];
-    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
+    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
 
 }
 
@@ -75,8 +77,6 @@
     } else {
         self.feedButton.tag = 0 ; //setting the mode to unselected
         [self.feedButton setImage:[UIImage imageNamed:@"bottle"] forState:UIControlStateNormal];
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        [alert show];
     }
 }
 
@@ -117,17 +117,16 @@
     //FIXME: dipshit, change one of these variable names
     if (radialMenu == self.radialMenu)
         return 8;
-    
+    else if (radialMenu == self.radialFeedMenu)
+        return 2;
     
     return 0;
 }
 
 
 - (NSInteger) arcSizeForRadialMenu:(ALRadialMenu *)radialMenu {
-    if (radialMenu == self.radialMenu)
         return 360;
     
-    return 0;
 }
 
 
@@ -159,6 +158,12 @@
             [button setImage:[UIImage imageNamed:@"t4"] forState:UIControlStateNormal];
         }
 
+    } else if(radialMenu == self.radialFeedMenu){
+        if (index == 1) {
+            [button setImage:[UIImage imageNamed:@"breastFeed"] forState:UIControlStateNormal];
+        } else if (index == 2) {
+            [button setImage:[UIImage imageNamed:@"formula"] forState:UIControlStateNormal];
+        }
     }
     
     if (button.imageView.image) {
@@ -167,6 +172,7 @@
     
     return nil;
 }
+
 
 - (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu{
     return 40.0;
@@ -200,6 +206,7 @@
         
     }
     NSLog(@"%ld %ld", (long)self.selectedTextureIndex, (long)self.selectedColorIndex);
+    
 }
 
 
