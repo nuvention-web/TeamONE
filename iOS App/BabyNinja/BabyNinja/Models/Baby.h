@@ -10,4 +10,14 @@
 
 @interface Baby : NSObject
 
+@property (nonatomic, strong) NSString *babyName;
+
+@property (nonatomic, strong) NSString *babyId;
+
+@property (nonatomic, strong) NSString *babyImageURL;
+
+@property (nonatomic, strong) NSDate *babyDOB;
+
+@property (nonatomic, strong) NSString *babyGender;
+
 @end

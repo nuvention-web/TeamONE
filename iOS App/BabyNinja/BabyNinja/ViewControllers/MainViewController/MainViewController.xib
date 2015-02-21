@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="feedButton" destination="LeO-Dg-eC1" id="AdR-mF-Agd"/>
                 <outlet property="poopButton" destination="Ek7-s3-pkM" id="IXc-Ol-8pb"/>
+                <outlet property="sleepOrAwakeButton" destination="IWd-me-rA7" id="Sij-Sy-BPd"/>
                 <outlet property="view" destination="bam-bt-g9l" id="RFt-dQ-O0M"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-s3-pkM">
                     <rect key="frame" x="138" y="306" width="101" height="101"/>
-                    <state key="normal" image="poop.png">
+                    <state key="normal" image="diaper">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -39,6 +40,9 @@
                     <state key="normal" image="sleep">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="sleepOrAwakeButtonPressed:" destination="-1" eventType="touchUpInside" id="hqO-Tc-gNM"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-1k-EN7">
                     <rect key="frame" x="99" y="19" width="186" height="64"/>
@@ -50,8 +54,8 @@
     </objects>
     <resources>
         <image name="bottle" width="87" height="86"/>
+        <image name="diaper" width="84" height="85"/>
         <image name="logo" width="853" height="289"/>
-        <image name="poop.png" width="305" height="307"/>
         <image name="sleep" width="85" height="84"/>
     </resources>
 </document>

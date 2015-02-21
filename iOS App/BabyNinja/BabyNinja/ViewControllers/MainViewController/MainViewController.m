@@ -9,7 +9,9 @@
 #import "MainViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface MainViewController ()
+@interface MainViewController (){
+    UIView *blackView;
+}
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
 
@@ -55,10 +57,12 @@
 -(void)changePoopButtonStateImage{
     if(self.poopButton.tag==0){
         self.poopButton.tag = 1 ; //setting the mode to selected
+//        [self blackOutTheBackground];
         [self.poopButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
     } else {
         self.poopButton.tag = 0 ; //setting the mode to unselected
-        [self.poopButton setImage:[UIImage imageNamed:@"poop"] forState:UIControlStateNormal];
+//        [self removeTheBlackOutBackground];
+        [self.poopButton setImage:[UIImage imageNamed:@"diaper"] forState:UIControlStateNormal];
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
@@ -78,6 +82,31 @@
         self.feedButton.tag = 0 ; //setting the mode to unselected
         [self.feedButton setImage:[UIImage imageNamed:@"bottle"] forState:UIControlStateNormal];
     }
+}
+
+- (IBAction)sleepOrAwakeButtonPressed:(id)sender {
+    if(self.sleepOrAwakeButton.tag==0){
+        self.sleepOrAwakeButton.tag = 1 ; //setting the mode to selected
+        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"awake"] forState:UIControlStateNormal];
+    } else {
+        self.sleepOrAwakeButton.tag = 0 ; //setting the mode to unselected
+        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"sleep"] forState:UIControlStateNormal];
+    }
+    
+}
+
+-(void)blackOutTheBackground{
+    if ( nil == blackView) {
+        blackView = [[UIView alloc]initWithFrame:self.view.frame];
+        [blackView setBackgroundColor:[UIColor blackColor]];
+        blackView.alpha = 0.2;
+    }
+
+    [self.view addSubview:blackView];
+}
+
+-(void)removeTheBlackOutBackground{
+    [blackView removeFromSuperview];
 }
 
 

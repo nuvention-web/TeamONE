@@ -10,4 +10,16 @@
 
 @interface CareTaker : NSObject
 
+@property (nonatomic, strong) NSString *careTakerName;
+
+@property (nonatomic, strong) NSString *careTakerId;
+
+@property (nonatomic, strong) NSString *careTakerUsername;
+
+@property (nonatomic, strong) NSString *careTakerImageURL;
+
+@property (nonatomic, strong) NSDate *careTakerRelationToBaby;
+
+@property (nonatomic, strong) NSString *careTakerGender;
+
 @end
