@@ -73,7 +73,7 @@
 -(void)changeFeedButtonStateImage{
     if(self.feedButton.tag==0){
         self.feedButton.tag = 1 ; //setting the mode to selected
-        [self.feedButton setImage:[UIImage imageNamed:@"tick"] forState:UIControlStateNormal];
+        [self.feedButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
     } else {
         self.feedButton.tag = 0 ; //setting the mode to unselected
         [self.feedButton setImage:[UIImage imageNamed:@"bottle"] forState:UIControlStateNormal];

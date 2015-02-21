@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek7-s3-pkM">
-                    <rect key="frame" x="138" y="216" width="101" height="101"/>
+                    <rect key="frame" x="138" y="306" width="101" height="101"/>
                     <state key="normal" image="poop.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -25,11 +25,8 @@
                         <action selector="poopButtonPressed:" destination="-1" eventType="touchUpInside" id="9Zo-ly-1VE"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-1k-EN7">
-                    <rect key="frame" x="47" y="78" width="282" height="94"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeO-Dg-eC1">
-                    <rect key="frame" x="160" y="417" width="57" height="60"/>
+                    <rect key="frame" x="148" y="512" width="80" height="80"/>
                     <state key="normal" image="bottle">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -37,14 +34,24 @@
                         <action selector="feedButtonPressed:" destination="-1" eventType="touchUpInside" id="eaf-0y-dHw"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-me-rA7">
+                    <rect key="frame" x="148" y="131" width="80" height="80"/>
+                    <state key="normal" image="sleep">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3ba-1k-EN7">
+                    <rect key="frame" x="99" y="19" width="186" height="64"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="326" y="260"/>
         </view>
     </objects>
     <resources>
-        <image name="bottle" width="128" height="128"/>
+        <image name="bottle" width="87" height="86"/>
         <image name="logo" width="853" height="289"/>
         <image name="poop.png" width="305" height="307"/>
+        <image name="sleep" width="85" height="84"/>
     </resources>
 </document>

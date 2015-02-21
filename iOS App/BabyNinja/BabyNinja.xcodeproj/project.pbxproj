@@ -33,6 +33,8 @@
 		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
 		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
+		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
 		206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */; };
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
@@ -128,6 +130,10 @@
 		203A49E61A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A49E81A828C7300F02E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		203A49EA1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20440A661A97F0AE0066CB7F /* Baby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baby.h; sourceTree = "<group>"; };
+		20440A671A97F0AE0066CB7F /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
+		20440A691A97F0C70066CB7F /* CareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTaker.h; sourceTree = "<group>"; };
+		20440A6A1A97F0C70066CB7F /* CareTaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareTaker.m; sourceTree = "<group>"; };
 		206589DB1A8A61500019F21D /* TextureSelectionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureSelectionInterfaceController.h; sourceTree = "<group>"; };
 		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
 		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 		201024D31A7B030F00F248F3 /* BabyNinja */ = {
 			isa = PBXGroup;
 			children = (
+				20440A651A97F0790066CB7F /* Models */,
 				201024FA1A7B135F00F248F3 /* External Libraries */,
 				201024FB1A7B135F00F248F3 /* Utilities */,
 				201024FC1A7B135F00F248F3 /* ViewControllers */,
@@ -350,6 +357,17 @@
 				203A49E61A828C7300F02E56 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20440A651A97F0790066CB7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20440A661A97F0AE0066CB7F /* Baby.h */,
+				20440A671A97F0AE0066CB7F /* Baby.m */,
+				20440A691A97F0C70066CB7F /* CareTaker.h */,
+				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		20B3A8791A84884300B4C8CC /* ALRadial */ = {
@@ -527,6 +545,7 @@
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
+				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
@@ -535,6 +554,7 @@
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
+				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
