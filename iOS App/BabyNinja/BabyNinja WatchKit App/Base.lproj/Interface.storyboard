@@ -10,94 +10,104 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <group width="1" height="150" alignment="left" id="O0o-CH-XcW">
+                        <label alignment="left" text="test" id="Q6n-cx-ZYQ">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <group width="132" height="54" alignment="left" id="O0o-CH-XcW">
                             <items>
-                                <button width="83" height="82" alignment="center" verticalAlignment="center" backgroundImage="Wpoop" id="eAM-Ql-KzA">
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <action selector="poopButtonPressed:" destination="AgC-eL-Hgc" id="YHd-9Z-zI3"/>
-                                        <segue destination="RqV-rF-eeO" kind="push" id="wEi-i0-Sb7"/>
-                                    </connections>
-                                </button>
+                                <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN"/>
+                                <button width="50" height="50" alignment="right" backgroundImage="sleep" id="SqG-JY-Q27"/>
                             </items>
                         </group>
+                        <button width="50" height="50" alignment="center" backgroundImage="diaper" id="fQD-W7-ko5">
+                            <connections>
+                                <segue destination="i61-Fq-IDJ" kind="push" id="6H1-22-yBI"/>
+                            </connections>
+                        </button>
                     </items>
-                    <connections>
-                        <outlet property="poopButton" destination="eAM-Ql-KzA" id="7z7-3a-o5K"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="96" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="bER-Q4-Rh4">
+            <objects>
+                <controller id="i61-Fq-IDJ">
+                    <items>
+                        <label alignment="left" text="Label" id="Suk-MU-mek">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <button width="50" height="50" alignment="center" backgroundImage="poop" id="Kpq-Sz-hO7">
+                            <connections>
+                                <segue destination="2oi-MT-iyK" kind="push" id="JBn-9N-3h6"/>
+                            </connections>
+                        </button>
+                        <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="pee" id="CKX-Dx-cFg"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="269" y="345"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="RO8-ul-6QH">
             <objects>
                 <controller id="RqV-rF-eeO">
                     <items>
-                        <label alignment="center" text="Select the color" id="xwp-41-U6L"/>
-                        <group width="126" height="263" alignment="left" layout="vertical" id="dcT-Da-feP">
+                        <group width="130" height="168" alignment="left" layout="vertical" id="dcT-Da-feP">
                             <items>
-                                <button width="59" alignment="center" title="light" backgroundImage="1" id="8q9-9l-Yoz">
-                                    <fontDescription key="font" type="system" pointSize="9"/>
-                                    <connections>
-                                        <segue destination="2oi-MT-iyK" kind="push" id="ana-HY-JJ6"/>
-                                    </connections>
-                                </button>
-                                <button width="61" height="57.5" alignment="center" title="greenish-black" backgroundImage="2" id="fhk-jQ-j5E">
-                                    <fontDescription key="font" type="system" pointSize="7"/>
-                                    <connections>
-                                        <segue destination="2oi-MT-iyK" kind="push" id="lKK-l0-abw"/>
-                                    </connections>
-                                </button>
-                                <button width="62" height="64" alignment="center" title="brown" backgroundImage="3" id="lzW-KW-zkP">
-                                    <fontDescription key="font" type="system" pointSize="9"/>
-                                    <connections>
-                                        <segue destination="2oi-MT-iyK" kind="push" id="KG9-83-W8s"/>
-                                    </connections>
-                                </button>
-                                <button width="61" height="62" alignment="center" title="dark green" backgroundImage="4" id="qT3-cH-Tvo">
-                                    <fontDescription key="font" type="system" pointSize="10"/>
-                                    <connections>
-                                        <segue destination="2oi-MT-iyK" kind="push" id="V2A-a7-YZN"/>
-                                    </connections>
-                                </button>
+                                <group width="1" alignment="right" id="PIY-8Y-4fw">
+                                    <items>
+                                        <button width="50" height="50" alignment="left" backgroundImage="greenTick" id="iFO-bd-oxX"/>
+                                        <button width="50" height="50" alignment="right" title="light" backgroundImage="1" id="8q9-9l-Yoz">
+                                            <fontDescription key="font" type="system" pointSize="9"/>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="Yl5-JE-SR1">
+                                    <items>
+                                        <button width="50" height="50" alignment="left" title="greenish-black" backgroundImage="2" id="fhk-jQ-j5E">
+                                            <fontDescription key="font" type="system" pointSize="7"/>
+                                        </button>
+                                        <button width="50" height="50" alignment="right" title="brown" backgroundImage="3" id="lzW-KW-zkP">
+                                            <fontDescription key="font" type="system" pointSize="9"/>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="kE0-Nc-bam">
+                                    <items>
+                                        <button width="50" height="50" alignment="left" title="dark green" backgroundImage="4" id="qT3-cH-Tvo">
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </button>
+                                        <button width="50" height="50" alignment="right" title="dark green" backgroundImage="4" id="W1g-tQ-hE6">
+                                            <fontDescription key="font" type="system" pointSize="10"/>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="430" y="363"/>
+            <point key="canvasLocation" x="657" y="344.25"/>
         </scene>
         <!--Texture Selection Interface Controller-->
         <scene sceneID="U38-TQ-3b6">
             <objects>
                 <controller id="2oi-MT-iyK" customClass="TextureSelectionInterfaceController">
                     <items>
-                        <group width="1" height="220" alignment="left" layout="vertical" id="Ipd-Sh-Bt5">
+                        <group width="1" height="151" alignment="left" layout="vertical" id="Ipd-Sh-Bt5">
                             <items>
                                 <label alignment="center" text="Select the texture" id="9x4-D7-dIV"/>
-                                <button width="1" alignment="left" title="Thick" id="nSz-Hh-Bk7">
+                                <button width="1" alignment="left" title="Solid" id="nSz-Hh-Bk7">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="jtc-fb-Btz"/>
-                                        <segue destination="Xq4-nE-1Ub" kind="push" id="DdG-ke-jeA"/>
+                                        <segue destination="RqV-rF-eeO" kind="push" id="sLr-c1-JkK"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" title="Seedy Thick" id="RGZ-0q-GkY">
+                                <button width="1" alignment="left" title="Loose" id="RGZ-0q-GkY">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="WZa-kb-Oa4"/>
-                                        <segue destination="Xq4-nE-1Ub" kind="push" id="sek-cU-jIU"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="left" title="Diarrhea" id="M3H-HQ-BY0">
-                                    <connections>
-                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="Kxz-1M-mqO"/>
-                                        <segue destination="Xq4-nE-1Ub" kind="push" id="yEI-bU-1VZ"/>
-                                    </connections>
-                                </button>
-                                <button width="1" alignment="left" title="Soft" id="eP7-Gz-giT">
-                                    <connections>
-                                        <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="eFf-HE-ysn"/>
-                                        <segue destination="Xq4-nE-1Ub" kind="push" id="n5F-D2-5AZ"/>
+                                        <segue destination="RqV-rF-eeO" kind="push" id="Y4x-Ud-89v"/>
                                     </connections>
                                 </button>
                             </items>
@@ -105,7 +115,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="643" y="341.5"/>
+            <point key="canvasLocation" x="443" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -128,7 +138,7 @@
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="316" y="673"/>
+            <point key="canvasLocation" x="327" y="725"/>
         </scene>
         <!--Alert Interface Controller-->
         <scene sceneID="zzh-bE-S2n">
@@ -143,7 +153,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lKK-l0-abw"/>
-        <segue reference="yEI-bU-1VZ"/>
+        <segue reference="sLr-c1-JkK"/>
     </inferredMetricsTieBreakers>
 </document>
