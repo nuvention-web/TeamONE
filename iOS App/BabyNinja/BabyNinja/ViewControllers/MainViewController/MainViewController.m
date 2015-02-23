@@ -57,11 +57,11 @@
 -(void)changePoopButtonStateImage{
     if(self.poopButton.tag==0){
         self.poopButton.tag = 1 ; //setting the mode to selected
-//        [self blackOutTheBackground];
+        [self blackOutTheBackgroundWithRespectToButton:self.poopButton];
         [self.poopButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
     } else {
         self.poopButton.tag = 0 ; //setting the mode to unselected
-//        [self removeTheBlackOutBackground];
+        [self removeTheBlackOutBackground];
         [self.poopButton setImage:[UIImage imageNamed:@"diaper"] forState:UIControlStateNormal];
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
@@ -95,7 +95,7 @@
     
 }
 
--(void)blackOutTheBackground{
+-(void)blackOutTheBackgroundWithRespectToButton:(UIButton*)button{
     if ( nil == blackView) {
         blackView = [[UIView alloc]initWithFrame:self.view.frame];
         [blackView setBackgroundColor:[UIColor blackColor]];
@@ -103,6 +103,7 @@
     }
 
     [self.view addSubview:blackView];
+    [self.view bringSubviewToFront:button];
 }
 
 -(void)removeTheBlackOutBackground{
@@ -145,7 +146,7 @@
 - (NSInteger) numberOfItemsInRadialMenu:(ALRadialMenu *)radialMenu {
     //FIXME: dipshit, change one of these variable names
     if (radialMenu == self.radialMenu)
-        return 8;
+        return 2;
     else if (radialMenu == self.radialFeedMenu)
         return 2;
     
@@ -161,7 +162,7 @@
 
 - (NSInteger) arcRadiusForRadialMenu:(ALRadialMenu *)radialMenu {
     //    if (radialMenu == self.radialMenu)
-    return 80;
+    return 100;
     
 }
 
@@ -170,9 +171,9 @@
     ALRadialButton *button = [[ALRadialButton alloc] init];
     if (radialMenu == self.radialMenu) {
         if (index == 1) {
-            [button setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"poop"] forState:UIControlStateNormal];
         } else if (index == 2) {
-            [button setImage:[UIImage imageNamed:@"2"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"pee"] forState:UIControlStateNormal];
         } else if (index == 3) {
             [button setImage:[UIImage imageNamed:@"3"] forState:UIControlStateNormal];
         } else if (index == 4) {
@@ -204,7 +205,7 @@
 
 
 - (float) buttonSizeForRadialMenu:(ALRadialMenu *)radialMenu{
-    return 40.0;
+    return 60.0;
 }
 
 - (void) radialMenu:(ALRadialMenu *)radialMenu didSelectItemAtIndex:(NSInteger)index {
