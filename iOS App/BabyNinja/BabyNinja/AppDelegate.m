@@ -52,7 +52,7 @@
         
         NSLog(@"containing app received message from watch");
         
-        NSDictionary *response = @{@"response" : @"Sneha"};
+        NSDictionary *response = @{@"response" : @"BabyNinja iphone is talking to Apple watch"};
         reply(response);
     }
     
