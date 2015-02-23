@@ -42,7 +42,11 @@
                                 <segue destination="2oi-MT-iyK" kind="push" id="JBn-9N-3h6"/>
                             </connections>
                         </button>
-                        <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="pee" id="CKX-Dx-cFg"/>
+                        <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="pee" id="CKX-Dx-cFg">
+                            <connections>
+                                <segue destination="Xq4-nE-1Ub" kind="push" id="NKb-73-KNm"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -57,7 +61,11 @@
                             <items>
                                 <group width="1" alignment="right" id="PIY-8Y-4fw">
                                     <items>
-                                        <button width="50" height="50" alignment="left" backgroundImage="greenTick" id="iFO-bd-oxX"/>
+                                        <button width="50" height="50" alignment="left" backgroundImage="greenTick" id="iFO-bd-oxX">
+                                            <connections>
+                                                <segue destination="Xq4-nE-1Ub" kind="push" id="ln5-xX-NkJ"/>
+                                            </connections>
+                                        </button>
                                         <button width="50" height="50" alignment="right" title="light" backgroundImage="1" id="8q9-9l-Yoz">
                                             <fontDescription key="font" type="system" pointSize="9"/>
                                         </button>
@@ -153,6 +161,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="NKb-73-KNm"/>
         <segue reference="sLr-c1-JkK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -33,6 +33,18 @@
 }
 
 -(void)goBackToRootController{
+    NSDictionary *requst = @{@"request":@"Hello"};
+    
+    [AlertInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@", [replyInfo objectForKey:@"response"]);
+//            [self.label setText:[replyInfo objectForKey:@"response"]];
+        }
+        
+    }];
     [self popToRootController];
 }
 

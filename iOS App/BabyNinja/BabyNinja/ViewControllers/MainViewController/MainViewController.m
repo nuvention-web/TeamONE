@@ -11,6 +11,7 @@
 
 @interface MainViewController (){
     UIView *blackView;
+    UIButton *selectedButton;
 }
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
@@ -58,10 +59,12 @@
     if(self.poopButton.tag==0){
         self.poopButton.tag = 1 ; //setting the mode to selected
         [self blackOutTheBackgroundWithRespectToButton:self.poopButton];
+        selectedButton = self.poopButton;
         [self.poopButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
     } else {
         self.poopButton.tag = 0 ; //setting the mode to unselected
         [self removeTheBlackOutBackground];
+        selectedButton = nil;
         [self.poopButton setImage:[UIImage imageNamed:@"diaper"] forState:UIControlStateNormal];
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
@@ -77,9 +80,12 @@
 -(void)changeFeedButtonStateImage{
     if(self.feedButton.tag==0){
         self.feedButton.tag = 1 ; //setting the mode to selected
+        selectedButton = self.feedButton;
+        [self blackOutTheBackgroundWithRespectToButton:self.feedButton];
         [self.feedButton setImage:[UIImage imageNamed:@"greenTick"] forState:UIControlStateNormal];
     } else {
         self.feedButton.tag = 0 ; //setting the mode to unselected
+        selectedButton = nil;
         [self.feedButton setImage:[UIImage imageNamed:@"bottle"] forState:UIControlStateNormal];
     }
 }
@@ -90,6 +96,7 @@
         [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"awake"] forState:UIControlStateNormal];
     } else {
         self.sleepOrAwakeButton.tag = 0 ; //setting the mode to unselected
+        [self removeTheBlackOutBackground];
         [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"sleep"] forState:UIControlStateNormal];
     }
     
@@ -100,10 +107,23 @@
         blackView = [[UIView alloc]initWithFrame:self.view.frame];
         [blackView setBackgroundColor:[UIColor blackColor]];
         blackView.alpha = 0.2;
+        UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tappedOnBlackOutBackground)];
+        [blackView addGestureRecognizer:gesture];
     }
 
     [self.view addSubview:blackView];
     [self.view bringSubviewToFront:button];
+}
+
+-(void)tappedOnBlackOutBackground{
+    
+    if (selectedButton==self.poopButton) {
+        [self poopButtonPressed:selectedButton];
+    } else if (selectedButton==self.feedButton) {
+        [self feedButtonPressed:selectedButton];
+    }
+    
+    [blackView removeFromSuperview];
 }
 
 -(void)removeTheBlackOutBackground{

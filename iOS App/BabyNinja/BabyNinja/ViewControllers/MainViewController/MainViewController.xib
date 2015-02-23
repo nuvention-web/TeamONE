@@ -53,7 +53,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bottle" width="87" height="86"/>
+        <image name="bottle" width="83" height="82"/>
         <image name="diaper" width="84" height="85"/>
         <image name="logo" width="853" height="289"/>
         <image name="sleep" width="85" height="84"/>

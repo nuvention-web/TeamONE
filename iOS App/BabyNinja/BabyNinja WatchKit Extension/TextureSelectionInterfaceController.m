@@ -34,6 +34,8 @@
 
 - (IBAction)goBackToPreviousScreen {
     [self popToRootController];
+    
+    
 }
 
 @end
