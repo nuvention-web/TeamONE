@@ -37,6 +37,12 @@
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
 		206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */; };
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
+		209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753CD1AA0F35A00463D41 /* BabyProfileCell.m */; };
+		209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */; };
+		209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D21AA15E2B00463D41 /* CareTakersListCell.m */; };
+		209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753D31AA15E2B00463D41 /* CareTakersListCell.xib */; };
+		209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D71AA16EAD00463D41 /* CustomTableFooter.m */; };
+		209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753D91AA16EC400463D41 /* CustomTableFooter.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -138,6 +144,15 @@
 		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
 		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
 		206589DF1A8A666F0019F21D /* AlertInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInterfaceController.m; sourceTree = "<group>"; };
+		209753CC1AA0F35A00463D41 /* BabyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyProfileCell.h; sourceTree = "<group>"; };
+		209753CD1AA0F35A00463D41 /* BabyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyProfileCell.m; sourceTree = "<group>"; };
+		209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyProfileCell.xib; sourceTree = "<group>"; };
+		209753D11AA15E2B00463D41 /* CareTakersListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTakersListCell.h; sourceTree = "<group>"; };
+		209753D21AA15E2B00463D41 /* CareTakersListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareTakersListCell.m; sourceTree = "<group>"; };
+		209753D31AA15E2B00463D41 /* CareTakersListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareTakersListCell.xib; sourceTree = "<group>"; };
+		209753D61AA16EAD00463D41 /* CustomTableFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableFooter.h; sourceTree = "<group>"; };
+		209753D71AA16EAD00463D41 /* CustomTableFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableFooter.m; sourceTree = "<group>"; };
+		209753D91AA16EC400463D41 /* CustomTableFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableFooter.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -275,6 +290,15 @@
 			children = (
 				203A49A71A80A4E200F02E56 /* LeftSideController.h */,
 				203A49A81A80A4F500F02E56 /* LeftSideController.m */,
+				209753CC1AA0F35A00463D41 /* BabyProfileCell.h */,
+				209753CD1AA0F35A00463D41 /* BabyProfileCell.m */,
+				209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */,
+				209753D11AA15E2B00463D41 /* CareTakersListCell.h */,
+				209753D21AA15E2B00463D41 /* CareTakersListCell.m */,
+				209753D31AA15E2B00463D41 /* CareTakersListCell.xib */,
+				209753D61AA16EAD00463D41 /* CustomTableFooter.h */,
+				209753D71AA16EAD00463D41 /* CustomTableFooter.m */,
+				209753D91AA16EC400463D41 /* CustomTableFooter.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -504,9 +528,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
+				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
+				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,15 +576,18 @@
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
+				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
+				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
+				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
