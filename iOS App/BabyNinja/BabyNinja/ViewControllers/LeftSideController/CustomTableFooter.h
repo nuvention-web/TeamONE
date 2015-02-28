@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTableFooter : UIView
+@property (weak, nonatomic) IBOutlet UILabel *customMessage;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
+//-(void)initializeFooter;
 @end

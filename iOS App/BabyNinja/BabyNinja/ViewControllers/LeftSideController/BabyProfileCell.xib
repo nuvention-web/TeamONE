@@ -34,7 +34,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.79995674818647622" green="0.70103879311639261" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.80000000000000004" green="0.69803921568627447" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="ageLabel" destination="7uC-g4-Sbn" id="G3i-SE-owA"/>

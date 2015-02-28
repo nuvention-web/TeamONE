@@ -10,6 +10,8 @@
 #import "MainViewController.h"
 #import "BabyProfileCell.h"
 #import "CareTakersListCell.h"
+#import "CustomTableFooter.h"
+#import "SettingsTableViewController.h"
 
 static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewControllerCellReuseId";
 
@@ -20,6 +22,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 @property(nonatomic, strong) NSArray *colors;
 @property(nonatomic, assign) NSInteger previousRow;
 @property(nonatomic, strong) NSArray *actions;
+@property(nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -30,8 +33,8 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 - (id)initWithColors:(NSArray *)colors
 {
     NSParameterAssert(colors);
-    
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super init];
+//    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _colors = colors;
     }
@@ -43,6 +46,12 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-40)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.view addSubview:self.tableView];
     self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Settings", @"Logout", nil];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kICSColorsViewControllerCellReuseId];
     [self.tableView registerClass:[BabyProfileCell class] forCellReuseIdentifier:@"babyCell"];
@@ -51,17 +60,27 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     [self.tableView registerNib:[UINib nibWithNibName:@"CareTakersListCell" bundle:nil] forCellReuseIdentifier:@"careTakerCell"];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    CustomTableFooter *footer = [[CustomTableFooter alloc]init];
+    footer.frame = CGRectMake(0, self.view.frame.size.height-40, self.view.frame.size.width, 40);
+    [self.view addSubview:footer];
+//    self.tableView.tableFooterView = footer;
 
-//    self.tableView.tableFooterView = myCustomFooterView
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewWillLayoutSubviews{
+
+}
 #pragma mark - Configuring the view’s layout behavior
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     // Even if this view controller hides the status bar, implementing this method is still needed to match the center view controller's
     // status bar style to avoid a flicker when the drawer is dragged and then left to open.
-    return UIStatusBarStyleDefault;
+    return UIStatusBarStyleLightContent;
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -101,6 +120,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier
                                                             forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(indexPath.section==0){
         if(indexPath.row==0){
             BabyProfileCell *profileCell = (BabyProfileCell *)cell;
@@ -127,6 +147,13 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+
+    if([cell.textLabel.text isEqualToString:@"Settings"]){
+        SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
+        [self.navigationController pushViewController:settings animated:YES];
+    }
+    
     //    if (indexPath.row == self.previousRow) {
     //        // Close the drawer without no further actions on the center view controller
     //        [self.drawer close];

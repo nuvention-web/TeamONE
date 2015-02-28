@@ -8,7 +8,7 @@
 
 #import "ICSDrawerController.h"
 
-@interface LeftSideController : UITableViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting>
+@interface LeftSideController : UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting, UITableViewDelegate, UITableViewDataSource>
 
 @property(nonatomic, weak) ICSDrawerController *drawer;
 

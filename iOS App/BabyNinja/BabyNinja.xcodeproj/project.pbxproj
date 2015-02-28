@@ -43,6 +43,7 @@
 		209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753D31AA15E2B00463D41 /* CareTakersListCell.xib */; };
 		209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D71AA16EAD00463D41 /* CustomTableFooter.m */; };
 		209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753D91AA16EC400463D41 /* CustomTableFooter.xib */; };
+		209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753DC1AA1820600463D41 /* SettingsTableViewController.m */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -153,6 +154,8 @@
 		209753D61AA16EAD00463D41 /* CustomTableFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableFooter.h; sourceTree = "<group>"; };
 		209753D71AA16EAD00463D41 /* CustomTableFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableFooter.m; sourceTree = "<group>"; };
 		209753D91AA16EC400463D41 /* CustomTableFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableFooter.xib; sourceTree = "<group>"; };
+		209753DB1AA1820600463D41 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		209753DC1AA1820600463D41 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -299,6 +302,8 @@
 				209753D61AA16EAD00463D41 /* CustomTableFooter.h */,
 				209753D71AA16EAD00463D41 /* CustomTableFooter.m */,
 				209753D91AA16EC400463D41 /* CustomTableFooter.xib */,
+				209753DB1AA1820600463D41 /* SettingsTableViewController.h */,
+				209753DC1AA1820600463D41 /* SettingsTableViewController.m */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -574,6 +579,7 @@
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
+				209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
