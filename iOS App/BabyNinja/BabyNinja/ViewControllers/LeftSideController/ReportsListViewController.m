@@ -7,6 +7,7 @@
 //
 
 #import "ReportsListViewController.h"
+#import "ReportScreenViewController.h"
 
 @interface ReportsListViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -56,8 +57,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if([cell.textLabel.text isEqualToString:@"Milk"]){
-
+    if([cell.textLabel.text isEqualToString:@"Milk Report"]){
+        ReportScreenViewController *report = [[ReportScreenViewController alloc]init];
+        [self presentViewController:report animated:YES completion:nil];
     }
 }
 

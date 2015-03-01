@@ -54,6 +54,8 @@
 		209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */; };
 		209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753F31AA2D5F500463D41 /* ReportsListViewController.m */; };
 		209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F41AA2D5F500463D41 /* ReportsListViewController.xib */; };
+		209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753F81AA3987600463D41 /* ReportScreenViewController.m */; };
+		209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F91AA3987600463D41 /* ReportScreenViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -181,6 +183,9 @@
 		209753F21AA2D5F500463D41 /* ReportsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsListViewController.h; sourceTree = "<group>"; };
 		209753F31AA2D5F500463D41 /* ReportsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsListViewController.m; sourceTree = "<group>"; };
 		209753F41AA2D5F500463D41 /* ReportsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportsListViewController.xib; sourceTree = "<group>"; };
+		209753F71AA3987600463D41 /* ReportScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportScreenViewController.h; sourceTree = "<group>"; };
+		209753F81AA3987600463D41 /* ReportScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportScreenViewController.m; sourceTree = "<group>"; };
+		209753F91AA3987600463D41 /* ReportScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportScreenViewController.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -344,6 +349,9 @@
 				209753F21AA2D5F500463D41 /* ReportsListViewController.h */,
 				209753F31AA2D5F500463D41 /* ReportsListViewController.m */,
 				209753F41AA2D5F500463D41 /* ReportsListViewController.xib */,
+				209753F71AA3987600463D41 /* ReportScreenViewController.h */,
+				209753F81AA3987600463D41 /* ReportScreenViewController.m */,
+				209753F91AA3987600463D41 /* ReportScreenViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -575,6 +583,7 @@
 			files = (
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
+				209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
@@ -624,6 +633,7 @@
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
+				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,
 				209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
