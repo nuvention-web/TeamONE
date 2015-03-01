@@ -7,6 +7,7 @@
 //
 
 #import "SettingsTableViewController.h"
+#import "ConfigurationViewController.h"
 
 @interface SettingsTableViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -65,6 +66,13 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if ([cell.textLabel.text isEqualToString:@"Configure Tasks"]) {
+        ConfigurationViewController *conf = [[ConfigurationViewController alloc]init];
+        [self.navigationController pushViewController:conf animated:YES];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

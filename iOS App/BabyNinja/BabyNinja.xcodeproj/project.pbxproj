@@ -44,6 +44,12 @@
 		209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D71AA16EAD00463D41 /* CustomTableFooter.m */; };
 		209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753D91AA16EC400463D41 /* CustomTableFooter.xib */; };
 		209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753DC1AA1820600463D41 /* SettingsTableViewController.m */; };
+		209753E11AA29DA500463D41 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753DF1AA29DA500463D41 /* ConfigurationViewController.m */; };
+		209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753E01AA29DA500463D41 /* ConfigurationViewController.xib */; };
+		209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753E41AA29F9B00463D41 /* ConfigurationTableViewCell.m */; };
+		209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753E51AA29F9B00463D41 /* ConfigurationTableViewCell.xib */; };
+		209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */; };
+		209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -156,6 +162,15 @@
 		209753D91AA16EC400463D41 /* CustomTableFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableFooter.xib; sourceTree = "<group>"; };
 		209753DB1AA1820600463D41 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		209753DC1AA1820600463D41 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		209753DE1AA29DA500463D41 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		209753DF1AA29DA500463D41 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
+		209753E01AA29DA500463D41 /* ConfigurationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigurationViewController.xib; sourceTree = "<group>"; };
+		209753E31AA29F9B00463D41 /* ConfigurationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationTableViewCell.h; sourceTree = "<group>"; };
+		209753E41AA29F9B00463D41 /* ConfigurationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationTableViewCell.m; sourceTree = "<group>"; };
+		209753E51AA29F9B00463D41 /* ConfigurationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigurationTableViewCell.xib; sourceTree = "<group>"; };
+		209753E81AA2B9BD00463D41 /* MilkSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MilkSettingsViewController.h; sourceTree = "<group>"; };
+		209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MilkSettingsViewController.m; sourceTree = "<group>"; };
+		209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilkSettingsViewController.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -304,6 +319,15 @@
 				209753D91AA16EC400463D41 /* CustomTableFooter.xib */,
 				209753DB1AA1820600463D41 /* SettingsTableViewController.h */,
 				209753DC1AA1820600463D41 /* SettingsTableViewController.m */,
+				209753DE1AA29DA500463D41 /* ConfigurationViewController.h */,
+				209753DF1AA29DA500463D41 /* ConfigurationViewController.m */,
+				209753E01AA29DA500463D41 /* ConfigurationViewController.xib */,
+				209753E31AA29F9B00463D41 /* ConfigurationTableViewCell.h */,
+				209753E41AA29F9B00463D41 /* ConfigurationTableViewCell.m */,
+				209753E51AA29F9B00463D41 /* ConfigurationTableViewCell.xib */,
+				209753E81AA2B9BD00463D41 /* MilkSettingsViewController.h */,
+				209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */,
+				209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -534,6 +558,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
+				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
+				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
+				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
@@ -576,7 +603,9 @@
 			files = (
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
+				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
+				209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */,
@@ -597,6 +626,7 @@
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
+				209753E11AA29DA500463D41 /* ConfigurationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
