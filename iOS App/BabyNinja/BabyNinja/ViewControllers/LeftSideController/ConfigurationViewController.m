@@ -8,6 +8,7 @@
 
 #import "ConfigurationViewController.h"
 #import "ConfigurationTableViewCell.h"
+#import "MilkSettingsViewController.h"
 
 @interface ConfigurationViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -47,6 +48,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ConfigurationTableViewCell *cell = (ConfigurationTableViewCell*)[tableView dequeueReusableCellWithIdentifier:@"configurationCell" forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.configurationNameLabel.text = [self.actions objectAtIndex:indexPath.row];
     cell.furtherConfigurationRequired = [[self.configurationSettingsRequired valueForKey:[self.actions objectAtIndex:indexPath.row]] boolValue];
     // Configure the cell...
@@ -59,6 +61,23 @@
         return @"Apple Watch";
     } else
         return @"iPhone";
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ConfigurationTableViewCell *cell = (ConfigurationTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if([cell.configurationNameLabel.text isEqualToString:@"Milk"]){
+        MilkSettingsViewController *controller = [[MilkSettingsViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+        ConfigurationTableViewCell *cell = (ConfigurationTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+    if([cell.configurationNameLabel.text isEqualToString:@"Milk"]){
+        MilkSettingsViewController *controller = [[MilkSettingsViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+        
 }
 
 /*
