@@ -52,6 +52,8 @@
 		209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */; };
 		209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */; };
 		209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */; };
+		209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753F31AA2D5F500463D41 /* ReportsListViewController.m */; };
+		209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F41AA2D5F500463D41 /* ReportsListViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -176,6 +178,9 @@
 		209753ED1AA2CF7F00463D41 /* ReminderSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderSettingsViewController.h; sourceTree = "<group>"; };
 		209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderSettingsViewController.m; sourceTree = "<group>"; };
 		209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderSettingsViewController.xib; sourceTree = "<group>"; };
+		209753F21AA2D5F500463D41 /* ReportsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsListViewController.h; sourceTree = "<group>"; };
+		209753F31AA2D5F500463D41 /* ReportsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsListViewController.m; sourceTree = "<group>"; };
+		209753F41AA2D5F500463D41 /* ReportsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportsListViewController.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -336,6 +341,9 @@
 				209753ED1AA2CF7F00463D41 /* ReminderSettingsViewController.h */,
 				209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */,
 				209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */,
+				209753F21AA2D5F500463D41 /* ReportsListViewController.h */,
+				209753F31AA2D5F500463D41 /* ReportsListViewController.m */,
+				209753F41AA2D5F500463D41 /* ReportsListViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -567,6 +575,7 @@
 			files = (
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
+				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
@@ -610,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,

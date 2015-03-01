@@ -12,6 +12,7 @@
 #import "CareTakersListCell.h"
 #import "CustomTableFooter.h"
 #import "SettingsTableViewController.h"
+#import "ReportsListViewController.h"
 
 static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewControllerCellReuseId";
 
@@ -152,6 +153,9 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     if([cell.textLabel.text isEqualToString:@"Settings"]){
         SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
         [self.navigationController pushViewController:settings animated:YES];
+    } else if ([cell.textLabel.text isEqualToString:@"Reports"]){
+        ReportsListViewController *reports = [[ReportsListViewController alloc]init];
+        [self.navigationController pushViewController:reports animated:YES];
     }
     
     //    if (indexPath.row == self.previousRow) {
