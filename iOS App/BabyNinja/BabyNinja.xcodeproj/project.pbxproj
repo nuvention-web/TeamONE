@@ -50,6 +50,8 @@
 		209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753E51AA29F9B00463D41 /* ConfigurationTableViewCell.xib */; };
 		209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */; };
 		209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */; };
+		209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */; };
+		209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 /* End PBXBuildFile section */
@@ -171,6 +173,9 @@
 		209753E81AA2B9BD00463D41 /* MilkSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MilkSettingsViewController.h; sourceTree = "<group>"; };
 		209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MilkSettingsViewController.m; sourceTree = "<group>"; };
 		209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MilkSettingsViewController.xib; sourceTree = "<group>"; };
+		209753ED1AA2CF7F00463D41 /* ReminderSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderSettingsViewController.h; sourceTree = "<group>"; };
+		209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderSettingsViewController.m; sourceTree = "<group>"; };
+		209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderSettingsViewController.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -328,6 +333,9 @@
 				209753E81AA2B9BD00463D41 /* MilkSettingsViewController.h */,
 				209753E91AA2B9BD00463D41 /* MilkSettingsViewController.m */,
 				209753EA1AA2B9BD00463D41 /* MilkSettingsViewController.xib */,
+				209753ED1AA2CF7F00463D41 /* ReminderSettingsViewController.h */,
+				209753EE1AA2CF7F00463D41 /* ReminderSettingsViewController.m */,
+				209753EF1AA2CF7F00463D41 /* ReminderSettingsViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -566,6 +574,7 @@
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
+				209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +626,7 @@
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
+				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,

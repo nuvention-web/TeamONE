@@ -8,6 +8,7 @@
 
 #import "SettingsTableViewController.h"
 #import "ConfigurationViewController.h"
+#import "ReminderSettingsViewController.h"
 
 @interface SettingsTableViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -71,6 +72,9 @@
     if ([cell.textLabel.text isEqualToString:@"Configure Tasks"]) {
         ConfigurationViewController *conf = [[ConfigurationViewController alloc]init];
         [self.navigationController pushViewController:conf animated:YES];
+    } else if([cell.textLabel.text isEqualToString:@"Configure Reminders"]){
+        ReminderSettingsViewController *controller = [[ReminderSettingsViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
