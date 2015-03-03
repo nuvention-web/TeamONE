@@ -61,6 +61,8 @@
 		20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB301AA57DEA00C50831 /* TMCache.m */; };
 		20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB321AA57DEA00C50831 /* TMDiskCache.m */; };
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
+		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
+		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +201,10 @@
 		20F3BB321AA57DEA00C50831 /* TMDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDiskCache.m; sourceTree = "<group>"; };
 		20F3BB331AA57DEA00C50831 /* TMMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMemoryCache.h; sourceTree = "<group>"; };
 		20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMemoryCache.m; sourceTree = "<group>"; };
+		20F3BB381AA609F900C50831 /* ColorSelectionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSelectionInterfaceController.h; sourceTree = "<group>"; };
+		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
+		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
+		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +421,8 @@
 				203A49D31A828C7300F02E56 /* Supporting Files */,
 				206589DE1A8A666F0019F21D /* AlertInterfaceController.h */,
 				206589DF1A8A666F0019F21D /* AlertInterfaceController.m */,
+				20F3BB381AA609F900C50831 /* ColorSelectionInterfaceController.h */,
+				20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */,
 			);
 			path = "BabyNinja WatchKit Extension";
 			sourceTree = "<group>";
@@ -424,6 +432,8 @@
 			children = (
 				203A49D41A828C7300F02E56 /* Info.plist */,
 				203A49D51A828C7300F02E56 /* PushNotificationPayload.apns */,
+				20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */,
+				20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -701,6 +711,8 @@
 				203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */,
 				206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */,
 				206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */,
+				20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */,
+				20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */,
 				203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@
 
 @interface MilkSettingsViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISwitch *breastFeedSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *breastFeedSegmentControl;
 @property (weak, nonatomic) IBOutlet UIPickerView *ouncesOfBottledMilk;
 @property (weak, nonatomic) IBOutlet UIView *ouncesView;
 

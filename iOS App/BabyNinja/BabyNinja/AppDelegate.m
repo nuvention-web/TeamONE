@@ -41,8 +41,7 @@
     MainViewController *plainColorVC = [[MainViewController alloc] init];
     plainColorVC.view.backgroundColor = colors[0];
     
-    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController
-                                                                     centerViewController:plainColorVC];
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:plainColorVC];
     return drawer;
 }
 
