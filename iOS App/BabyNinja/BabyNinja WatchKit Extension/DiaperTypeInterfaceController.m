@@ -35,10 +35,29 @@
 - (IBAction)doMenuItemAction {
     // Handle menu action.
     NSLog(@"Menuuuuuuu");
-    [self popToRootController];
+    NSDictionary *requst = @{@"diaper":@"changed"};
+    
+    [DiaperTypeInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
+            NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
+            if(newDiaperCount<=10){
+                //                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
+                [self pushControllerWithName:@"alert" context:nil];
+            } else {
+                [self popToRootController];
+            }
+            //            [self.label setText:[replyInfo objectForKey:@"response"]];
+        }
+        
+    }];
+    
+    
 }
-
+     
+     
 @end
-
-
 
