@@ -33,5 +33,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)poopTipsInfoPressed:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Poop Tips" message:@"This alert will monitor when your baby poops loose and will remind you to check the diaper more often, check for good hydration and to be on alert for skin rash." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    [alert show];
+}
+- (IBAction)foodReminderInfoPRessed:(id)sender {
+}
+- (IBAction)diaperReminderInfoPressed:(id)sender {
+}
+
+
 
 @end

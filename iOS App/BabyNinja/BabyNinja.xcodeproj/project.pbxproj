@@ -58,6 +58,8 @@
 		209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F91AA3987600463D41 /* ReportScreenViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
+		20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */; };
+		20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */; };
 		20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB301AA57DEA00C50831 /* TMCache.m */; };
 		20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB321AA57DEA00C50831 /* TMDiskCache.m */; };
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
@@ -195,6 +197,9 @@
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
 		20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialMenu.m; sourceTree = "<group>"; };
+		20C693411AA6411C0055B62F /* DiaperSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperSettingsViewController.h; sourceTree = "<group>"; };
+		20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperSettingsViewController.m; sourceTree = "<group>"; };
+		20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaperSettingsViewController.xib; sourceTree = "<group>"; };
 		20F3BB2F1AA57DEA00C50831 /* TMCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCache.h; sourceTree = "<group>"; };
 		20F3BB301AA57DEA00C50831 /* TMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCache.m; sourceTree = "<group>"; };
 		20F3BB311AA57DEA00C50831 /* TMDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDiskCache.h; sourceTree = "<group>"; };
@@ -368,6 +373,9 @@
 				209753F71AA3987600463D41 /* ReportScreenViewController.h */,
 				209753F81AA3987600463D41 /* ReportScreenViewController.m */,
 				209753F91AA3987600463D41 /* ReportScreenViewController.xib */,
+				20C693411AA6411C0055B62F /* DiaperSettingsViewController.h */,
+				20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */,
+				20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -621,6 +629,7 @@
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
+				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
@@ -663,6 +672,7 @@
 			files = (
 				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
+				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,

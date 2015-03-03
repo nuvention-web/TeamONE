@@ -9,6 +9,8 @@
 #import "ConfigurationViewController.h"
 #import "ConfigurationTableViewCell.h"
 #import "MilkSettingsViewController.h"
+#import "DiaperSettingsViewController.h"
+
 
 @interface ConfigurationViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -68,6 +70,9 @@
     if([cell.configurationNameLabel.text isEqualToString:@"Milk"]){
         MilkSettingsViewController *controller = [[MilkSettingsViewController alloc]init];
         [self.navigationController pushViewController:controller animated:YES];
+    }else if([cell.configurationNameLabel.text isEqualToString:@"Diaper"]){
+        DiaperSettingsViewController *controller = [[DiaperSettingsViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
@@ -75,6 +80,9 @@
         ConfigurationTableViewCell *cell = (ConfigurationTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
     if([cell.configurationNameLabel.text isEqualToString:@"Milk"]){
         MilkSettingsViewController *controller = [[MilkSettingsViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if([cell.configurationNameLabel.text isEqualToString:@"Diaper"]){
+        DiaperSettingsViewController *controller = [[DiaperSettingsViewController alloc]init];
         [self.navigationController pushViewController:controller animated:YES];
     }
         

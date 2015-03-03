@@ -44,7 +44,9 @@
         } else {
             NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
             NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
-            if(newDiaperCount<=10){
+            NSInteger minDiaperCount = [[replyInfo objectForKey:@"minDiaperCount"]integerValue];
+//            MinDiaperCount
+            if(newDiaperCount<=minDiaperCount){
                 //                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
 //                [NSNumber numberWithInteger:newDiaperCount]
                 [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];

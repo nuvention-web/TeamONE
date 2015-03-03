@@ -67,7 +67,7 @@
         
         NSLog(@"%ld",(long)[d integerForKey:key]);
         
-        NSDictionary *response = @{@"newDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:key]]};
+        NSDictionary *response = @{@"newDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:key]],@"minDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:@"MinDiaperCount"]] };
         reply(response);
     }
     
