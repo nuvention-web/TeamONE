@@ -45,8 +45,7 @@
             NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
             NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
             if(newDiaperCount<=10){
-//                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
-                [self pushControllerWithName:@"alert" context:nil];
+                [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
             } else {
                 [self popToRootController];
             }
@@ -57,6 +56,29 @@
     
     
 }
+
+- (IBAction)colorSelected {
+    NSDictionary *requst = @{@"diaper":@"changed"};
+    
+    [ColorSelectionInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
+            NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
+            if(newDiaperCount<=10){
+                [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
+            } else {
+                [self popToRootController];
+            }
+            //            [self.label setText:[replyInfo objectForKey:@"response"]];
+        }
+        
+    }];
+}
+
+
 
 @end
 

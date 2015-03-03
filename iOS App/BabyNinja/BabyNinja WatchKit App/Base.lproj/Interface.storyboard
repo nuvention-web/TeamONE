@@ -85,13 +85,13 @@
                                         <button width="50" height="50" alignment="right" backgroundImage="1" id="8q9-9l-Yoz">
                                             <fontDescription key="font" type="system" pointSize="9"/>
                                             <connections>
-                                                <segue destination="Xq4-nE-1Ub" kind="push" id="bMs-Jl-ZQB"/>
+                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="lhc-su-hgs"/>
                                             </connections>
                                         </button>
                                         <button width="50" height="50" alignment="left" backgroundImage="4" id="qT3-cH-Tvo">
                                             <fontDescription key="font" type="system" pointSize="10"/>
                                             <connections>
-                                                <segue destination="Xq4-nE-1Ub" kind="push" id="wuP-5Q-IJ1"/>
+                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="q2G-GN-XnX"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -104,13 +104,13 @@
                                         <button width="50" height="50" alignment="left" backgroundImage="2" id="fhk-jQ-j5E">
                                             <fontDescription key="font" type="system" pointSize="7"/>
                                             <connections>
-                                                <segue destination="Xq4-nE-1Ub" kind="push" id="nhl-on-i8k"/>
+                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="nAd-rX-rxw"/>
                                             </connections>
                                         </button>
                                         <button width="50" height="50" alignment="right" backgroundImage="3" id="lzW-KW-zkP">
                                             <fontDescription key="font" type="system" pointSize="9"/>
                                             <connections>
-                                                <segue destination="Xq4-nE-1Ub" kind="push" id="1ef-8n-QTU"/>
+                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="fYG-k7-3G3"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -192,15 +192,17 @@
             <objects>
                 <controller identifier="alert" id="Xq4-nE-1Ub" customClass="AlertInterfaceController">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 10 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
+                        <label alignment="center" verticalAlignment="center" text="Alert!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
                     </items>
+                    <connections>
+                        <outlet property="diaperNumberAlertLabel" destination="QcP-sb-oRM" id="sYF-uq-U8r"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="885" y="342"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NKb-73-KNm"/>
         <segue reference="sLr-c1-JkK"/>
     </inferredMetricsTieBreakers>
 </document>

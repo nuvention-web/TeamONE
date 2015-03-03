@@ -18,33 +18,37 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
+    NSNumber *number = (NSNumber*)context;
+    NSString *string = [NSString stringWithFormat:@"             Alert!                            You are just left with %ld diapers. Time to buy more!", [number integerValue]];
+        [self.diaperNumberAlertLabel setText:string];
     // Configure interface objects here.
 }
 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
-    [NSTimer scheduledTimerWithTimeInterval:0.9f
+    [super willActivate];
+//    [self.diaperNumberAlertLabel setText:[NSString stringWithFormat:@"             Alert!                            You are just left with %ld diapers. Time to buy more!", self.diaperCount]];
+    [NSTimer scheduledTimerWithTimeInterval:2.5f
                                      target:self
                                    selector:@selector(goBackToRootController)
                                    userInfo:nil
                                     repeats:NO];
-    [super willActivate];
+    
 }
 
 -(void)goBackToRootController{
-    NSDictionary *requst = @{@"diaper":@"changed"};
+//    NSDictionary *requst = @{@"diaper":@"changed"};
     
-    [AlertInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
-        
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
-//            [self.label setText:[replyInfo objectForKey:@"response"]];
-        }
-        
-    }];
+//    [AlertInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+//        
+//        if (error) {
+//            NSLog(@"%@", error);
+//        } else {
+//            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
+////            [self.label setText:[replyInfo objectForKey:@"response"]];
+//        }
+//        
+//    }];
     [self popToRootController];
 }
 

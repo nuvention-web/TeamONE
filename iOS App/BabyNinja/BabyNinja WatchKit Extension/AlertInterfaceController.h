@@ -11,4 +11,8 @@
 
 @interface AlertInterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceLabel *diaperNumberAlertLabel;
+
+@property (nonatomic, assign)  NSInteger diaperCount;
+
 @end

@@ -46,7 +46,8 @@
             NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
             if(newDiaperCount<=10){
                 //                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
-                [self pushControllerWithName:@"alert" context:nil];
+//                [NSNumber numberWithInteger:newDiaperCount]
+                [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
             } else {
                 [self popToRootController];
             }
