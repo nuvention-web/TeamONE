@@ -14,6 +14,7 @@
  Values will not persist after application relaunch or returning from the background. See <TMCache> for
  a memory cache backed by a disk cache.
  */
+#import <UIKit/UIKit.h>
 
 @class TMMemoryCache;
 

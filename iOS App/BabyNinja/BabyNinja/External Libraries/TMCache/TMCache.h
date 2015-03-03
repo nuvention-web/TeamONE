@@ -15,6 +15,7 @@
 
 #import "TMDiskCache.h"
 #import "TMMemoryCache.h"
+#import <UIKit/UIKit.h>
 
 @class TMCache;
 

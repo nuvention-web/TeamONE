@@ -22,6 +22,7 @@
  All access to the cache is dated so the that the least-used objects can be trimmed first. Setting an optional
  <ageLimit> will trigger a GCD timer to periodically to trim the cache with <trimToDate:>.
  */
+#import <UIKit/UIKit.h>
 
 @class TMDiskCache;
 
