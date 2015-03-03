@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3735"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,7 +16,11 @@
                         <group width="132" height="54" alignment="left" id="O0o-CH-XcW">
                             <items>
                                 <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN"/>
-                                <button width="50" height="50" alignment="right" backgroundImage="sleep" id="SqG-JY-Q27"/>
+                                <button width="50" height="50" alignment="right" backgroundImage="awake" id="SqG-JY-Q27">
+                                    <connections>
+                                        <action selector="sleepOrAwakeButtonPressed" destination="AgC-eL-Hgc" id="MfP-0r-B6u"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                         <button width="50" height="50" alignment="center" backgroundImage="diaper" id="fQD-W7-ko5">
@@ -25,6 +29,9 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="sleepOrAwakeButton" destination="SqG-JY-Q27" id="SCh-cs-A78"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="96" y="345"/>
@@ -50,12 +57,12 @@
                     </items>
                     <menu key="menu" id="S9a-yk-Plx">
                         <items>
-                            <menuItem title="Accept" icon="accept" id="q2J-OI-O5H">
+                            <menuItem title="Log" icon="accept" id="q2J-OI-O5H">
                                 <connections>
                                     <action selector="doMenuItemAction" destination="i61-Fq-IDJ" id="jgp-EA-VDK"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Decline" icon="decline" id="170-T0-OGu">
+                            <menuItem title="Nah" icon="decline" id="170-T0-OGu">
                                 <connections>
                                     <action selector="doMenuItemAction" destination="i61-Fq-IDJ" id="d6b-9r-fxK"/>
                                 </connections>
@@ -77,9 +84,15 @@
                                     <items>
                                         <button width="50" height="50" alignment="right" backgroundImage="1" id="8q9-9l-Yoz">
                                             <fontDescription key="font" type="system" pointSize="9"/>
+                                            <connections>
+                                                <segue destination="Xq4-nE-1Ub" kind="push" id="bMs-Jl-ZQB"/>
+                                            </connections>
                                         </button>
                                         <button width="50" height="50" alignment="left" backgroundImage="4" id="qT3-cH-Tvo">
                                             <fontDescription key="font" type="system" pointSize="10"/>
+                                            <connections>
+                                                <segue destination="Xq4-nE-1Ub" kind="push" id="wuP-5Q-IJ1"/>
+                                            </connections>
                                         </button>
                                     </items>
                                 </group>
@@ -90,9 +103,15 @@
                                     <items>
                                         <button width="50" height="50" alignment="left" backgroundImage="2" id="fhk-jQ-j5E">
                                             <fontDescription key="font" type="system" pointSize="7"/>
+                                            <connections>
+                                                <segue destination="Xq4-nE-1Ub" kind="push" id="nhl-on-i8k"/>
+                                            </connections>
                                         </button>
                                         <button width="50" height="50" alignment="right" backgroundImage="3" id="lzW-KW-zkP">
                                             <fontDescription key="font" type="system" pointSize="9"/>
+                                            <connections>
+                                                <segue destination="Xq4-nE-1Ub" kind="push" id="1ef-8n-QTU"/>
+                                            </connections>
                                         </button>
                                     </items>
                                 </group>
@@ -106,7 +125,7 @@
                                     <action selector="doMenuItemAction" destination="RqV-rF-eeO" id="0QP-fY-hSR"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Cancel" icon="decline" id="uRD-Va-5y6">
+                            <menuItem title="Nah" icon="decline" id="uRD-Va-5y6">
                                 <connections>
                                     <action selector="doMenuItemAction" destination="RqV-rF-eeO" id="3rZ-cf-crb"/>
                                 </connections>
@@ -168,12 +187,12 @@
             </objects>
             <point key="canvasLocation" x="327" y="725"/>
         </scene>
-        <!--Alert Interface Controller-->
+        <!--alert-->
         <scene sceneID="zzh-bE-S2n">
             <objects>
-                <controller id="Xq4-nE-1Ub" customClass="AlertInterfaceController">
+                <controller identifier="alert" id="Xq4-nE-1Ub" customClass="AlertInterfaceController">
                     <items>
-                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 8 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
+                        <label alignment="center" verticalAlignment="center" text="             Alert!                            You are just left with 10 diapers. Time to buy more!" textAlignment="center" numberOfLines="0" id="QcP-sb-oRM"/>
                     </items>
                 </controller>
             </objects>
@@ -181,6 +200,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="NKb-73-KNm"/>
         <segue reference="sLr-c1-JkK"/>
     </inferredMetricsTieBreakers>
 </document>

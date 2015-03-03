@@ -25,7 +25,14 @@
     
     self.window.rootViewController = [self addSideViewController];
     [self.window makeKeyAndVisible];
+    [self initiateUserDefaultVarialbles]; //dirty way for demonstration -- SA
     return YES;    
+}
+
+-(void)initiateUserDefaultVarialbles{
+    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+    NSString *key = @"DiaperCount";
+    [d setInteger:12 forKey:key];
 }
 
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
@@ -48,11 +55,19 @@
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Hello"]) {
+    if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
         
         NSLog(@"containing app received message from watch");
         
-        NSDictionary *response = @{@"response" : @"BabyNinja iphone is talking to Apple watch"};
+        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+        NSString *key = @"DiaperCount";
+        NSLog(@"%ld",(long)[d integerForKey:key]);
+        
+        [d setInteger:([d integerForKey:key]-1) forKey:key];
+        
+        NSLog(@"%ld",(long)[d integerForKey:key]);
+        
+        NSDictionary *response = @{@"newDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:key]]};
         reply(response);
     }
     

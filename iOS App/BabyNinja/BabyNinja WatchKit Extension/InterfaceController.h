@@ -12,4 +12,6 @@
 
 @interface InterfaceController : WKInterfaceController
 
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *sleepOrAwakeButton;
+
 @end

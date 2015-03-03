@@ -21,7 +21,7 @@
     [super viewDidLoad];
     self.actions = [[NSArray alloc] initWithObjects:@"Feed",@"Diaper", @"Milk",@"Sleep", nil];
     
-    self.configurationSettingsRequired = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO], nil] forKeys:self.actions];
+    self.configurationSettingsRequired = [[NSDictionary alloc]initWithObjects:[NSArray arrayWithObjects:[NSNumber numberWithBool:YES], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:YES], [NSNumber numberWithBool:NO], nil] forKeys:self.actions];
     [self.tableView registerClass:[ConfigurationTableViewCell class] forCellReuseIdentifier:@"configurationCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ConfigurationTableViewCell" bundle:nil] forCellReuseIdentifier:@"configurationCell"];
     self.tableView.scrollEnabled = NO;

@@ -7,7 +7,7 @@
 //
 
 #import "ColorSelectionInterfaceController.h"
-
+#import "AlertInterfaceController.h"
 
 @interface ColorSelectionInterfaceController()
 
@@ -35,7 +35,27 @@
 - (IBAction)doMenuItemAction {
     // Handle menu action.
     NSLog(@"Menuuuuuuu");
-    [self popToRootController];
+    NSDictionary *requst = @{@"diaper":@"changed"};
+    
+    [ColorSelectionInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
+            NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
+            if(newDiaperCount<=10){
+//                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
+                [self presentControllerWithName:@"alert" context:nil];
+            } else {
+                [self popToRootController];
+            }
+            //            [self.label setText:[replyInfo objectForKey:@"response"]];
+        }
+        
+    }];
+    
+    
 }
 
 @end

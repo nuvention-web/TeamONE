@@ -33,14 +33,14 @@
 }
 
 -(void)goBackToRootController{
-    NSDictionary *requst = @{@"request":@"Hello"};
+    NSDictionary *requst = @{@"diaper":@"changed"};
     
     [AlertInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
             NSLog(@"%@", error);
         } else {
-            NSLog(@"%@", [replyInfo objectForKey:@"response"]);
+            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
 //            [self.label setText:[replyInfo objectForKey:@"response"]];
         }
         

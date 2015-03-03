@@ -10,7 +10,7 @@
 
 
 @interface InterfaceController()
-
+@property (nonatomic, assign) BOOL sleeping;
 @end
 
 
@@ -23,6 +23,7 @@
 }
 
 - (void)willActivate {
+    self.sleeping = NO;
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
@@ -30,6 +31,15 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+- (IBAction)sleepOrAwakeButtonPressed {
+    if(self.sleeping == YES){
+        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"awake"]];
+        self.sleeping = NO;
+    } else {
+        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"sleep"]];
+        self.sleeping = YES;
+    }
 }
 
 
