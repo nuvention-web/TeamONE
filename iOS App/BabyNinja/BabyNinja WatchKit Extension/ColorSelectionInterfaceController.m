@@ -70,13 +70,11 @@
             NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
             NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
             NSInteger minDiaperCount = [[replyInfo objectForKey:@"minDiaperCount"]integerValue];
-            //            MinDiaperCount
             if(newDiaperCount<=minDiaperCount){
                 [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
             } else {
                 [self popToRootController];
             }
-            //            [self.label setText:[replyInfo objectForKey:@"response"]];
         }
         
     }];
