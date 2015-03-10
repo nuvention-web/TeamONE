@@ -38,17 +38,23 @@
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
-    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
-                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
-                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
-                        ];
+//    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+//                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+//                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
+//                        ];
+    colors = @[[UIColor clearColor],
+               [UIColor clearColor],
+               [UIColor clearColor]
+               ];
     
     LeftSideController *colorsVC = [[LeftSideController alloc] initWithColors:colors];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
     MainViewController *plainColorVC = [[MainViewController alloc] init];
     plainColorVC.view.backgroundColor = colors[0];
-    
-    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:plainColorVC];
+    UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
+    navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    navController.title = @"BABYNINJA";
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
     return drawer;
 }
 

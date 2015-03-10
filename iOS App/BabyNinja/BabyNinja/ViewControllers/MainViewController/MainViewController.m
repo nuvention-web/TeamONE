@@ -8,6 +8,8 @@
 
 #import "MainViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "DiaperChangeViewController.h"
+#import "SleepModeViewController.h"
 
 @interface MainViewController (){
     UIView *blackView;
@@ -31,14 +33,18 @@
     [super viewDidLoad];
     
     // Initialize and add the openDrawerButton
-    UIImage *hamburger = [UIImage imageNamed:@"hamburger"];
+    UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
     NSParameterAssert(hamburger);
-    
+    self.title = @"BABYNINJA";
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     // create the left slider button
     self.openDrawerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.openDrawerButton.frame = CGRectMake(10.0f, 20.0f, 44.0f, 44.0f);
+    self.openDrawerButton.frame = CGRectMake(15.0f, 25.0f, 30.0f, 30.0f);
     [self.openDrawerButton setImage:hamburger forState:UIControlStateNormal];
     [self.openDrawerButton addTarget:self action:@selector(openDrawer:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *button = [[UIBarButtonItem alloc]initWithCustomView:self.openDrawerButton];
+    self.navigationItem.leftBarButtonItem = button;
     
     //create an instance of the radial menu and set ourselves as the delegate.
     self.radialMenu = [[ALRadialMenu alloc] init];
@@ -51,8 +57,10 @@
 
 - (IBAction)poopButtonPressed:(id)sender {
     
-    [self changePoopButtonStateImage];
-    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
+//    [self changePoopButtonStateImage];
+//    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
+    DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)changePoopButtonStateImage{
@@ -72,9 +80,10 @@
 }
 
 - (IBAction)feedButtonPressed:(id)sender {
-    [self changeFeedButtonStateImage];
-    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
-
+//    [self changeFeedButtonStateImage];
+//    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
+    [alert show];
 }
 
 -(void)changeFeedButtonStateImage{
@@ -91,14 +100,17 @@
 }
 
 - (IBAction)sleepOrAwakeButtonPressed:(id)sender {
-    if(self.sleepOrAwakeButton.tag==0){
-        self.sleepOrAwakeButton.tag = 1 ; //setting the mode to selected
-        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"awake"] forState:UIControlStateNormal];
-    } else {
-        self.sleepOrAwakeButton.tag = 0 ; //setting the mode to unselected
-        [self removeTheBlackOutBackground];
-        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"sleep"] forState:UIControlStateNormal];
-    }
+    
+    SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
+    [self presentViewController:sleep animated:YES completion:nil];
+//    if(self.sleepOrAwakeButton.tag==0){
+//        self.sleepOrAwakeButton.tag = 1 ; //setting the mode to selected
+//        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"awake"] forState:UIControlStateNormal];
+//    } else {
+//        self.sleepOrAwakeButton.tag = 0 ; //setting the mode to unselected
+//        [self removeTheBlackOutBackground];
+//        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"sleep"] forState:UIControlStateNormal];
+//    }
     
 }
 

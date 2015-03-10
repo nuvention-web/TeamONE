@@ -45,8 +45,8 @@ typedef NS_ENUM(NSUInteger, ICSDrawerControllerState)
 
 @interface ICSDrawerController () <UIGestureRecognizerDelegate>
 
-@property(nonatomic, strong, readwrite) UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *leftViewController;
-@property(nonatomic, strong, readwrite) UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *centerViewController;
+@property(nonatomic, strong, readwrite) UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *leftViewController;
+@property(nonatomic, strong, readwrite) UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *centerViewController;
 
 @property(nonatomic, strong) UIView *leftView;
 @property(nonatomic, strong) ICSDropShadowView *centerView;
@@ -63,8 +63,8 @@ typedef NS_ENUM(NSUInteger, ICSDrawerControllerState)
 
 @implementation ICSDrawerController
 
-- (id)initWithLeftViewController:(UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)leftViewController
-            centerViewController:(UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)centerViewController
+- (id)initWithLeftViewController:(UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)leftViewController
+            centerViewController:(UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)centerViewController
 {
     NSParameterAssert(leftViewController);
     NSParameterAssert(centerViewController);
@@ -74,12 +74,12 @@ typedef NS_ENUM(NSUInteger, ICSDrawerControllerState)
         _leftViewController = leftViewController;
         _centerViewController = centerViewController;
         
-        if ([_leftViewController respondsToSelector:@selector(setDrawer:)]) {
-            _leftViewController.drawer = self;
-        }
-        if ([_centerViewController respondsToSelector:@selector(setDrawer:)]) {
-            _centerViewController.drawer = self;
-        }
+//        if ([_leftViewController respondsToSelector:@selector(setDrawer:)]) {
+            [[_leftViewController.viewControllers objectAtIndex:0] setDrawer:self];
+//        }
+//        if ([_centerViewController respondsToSelector:@selector(setDrawer:)]) {
+        [[_centerViewController.viewControllers objectAtIndex:0] setDrawer:self];
+//        }
     }
     
     return self;

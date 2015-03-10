@@ -33,13 +33,13 @@
     [super didDeactivate];
 }
 - (IBAction)sleepOrAwakeButtonPressed {
-    if(self.sleeping == YES){
-        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"awake"]];
-        self.sleeping = NO;
-    } else {
-        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"sleep"]];
-        self.sleeping = YES;
-    }
+//    if(self.sleeping == YES){
+//        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"awake"]];
+//        self.sleeping = NO;
+//    } else {
+//        [self.sleepOrAwakeButton setBackgroundImage:[UIImage imageNamed:@"sleep"]];
+//        self.sleeping = YES;
+//    }
 }
 
 

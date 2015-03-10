@@ -12,6 +12,8 @@
 		201024E21A7B030F00F248F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201024E11A7B030F00F248F3 /* Images.xcassets */; };
 		201024F11A7B030F00F248F3 /* BabyNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024F01A7B030F00F248F3 /* BabyNinjaTests.m */; };
 		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
+		20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20354A561AAEACF400B732D0 /* SleepModeViewController.m */; };
+		20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20354A571AAEACF400B732D0 /* SleepModeViewController.xib */; };
 		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
 		203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499C1A809D9C00F02E56 /* ICSDropShadowView.m */; };
 		203A49A31A809F7000F02E56 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A49A21A809F7000F02E56 /* MainViewController.m */; };
@@ -56,8 +58,18 @@
 		209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F41AA2D5F500463D41 /* ReportsListViewController.xib */; };
 		209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753F81AA3987600463D41 /* ReportScreenViewController.m */; };
 		209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F91AA3987600463D41 /* ReportScreenViewController.xib */; };
+		20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */; };
+		20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
+		20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EDB1AAEBB4600290220 /* ReportListViewController.m */; };
+		20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */; };
+		20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */; };
+		20BA8EE41AAF258F00290220 /* SleepModeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */; };
+		20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EE61AAF289F00290220 /* SleepReportViewController.m */; };
+		20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */; };
+		20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */; };
+		20BA8EEE1AAF4A2C00290220 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */; };
 		20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */; };
 		20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */; };
 		20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB301AA57DEA00C50831 /* TMCache.m */; };
@@ -116,6 +128,9 @@
 		201024EF1A7B030F00F248F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201024F01A7B030F00F248F3 /* BabyNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyNinjaTests.m; sourceTree = "<group>"; };
 		201024FE1A7B530E00F248F3 /* poop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poop.png; path = Images/poop.png; sourceTree = "<group>"; };
+		20354A551AAEACF400B732D0 /* SleepModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeViewController.h; sourceTree = "<group>"; };
+		20354A561AAEACF400B732D0 /* SleepModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeViewController.m; sourceTree = "<group>"; };
+		20354A571AAEACF400B732D0 /* SleepModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepModeViewController.xib; sourceTree = "<group>"; };
 		203A49991A809D9C00F02E56 /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
 		203A499A1A809D9C00F02E56 /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
 		203A499B1A809D9C00F02E56 /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
@@ -193,10 +208,26 @@
 		209753F71AA3987600463D41 /* ReportScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportScreenViewController.h; sourceTree = "<group>"; };
 		209753F81AA3987600463D41 /* ReportScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportScreenViewController.m; sourceTree = "<group>"; };
 		209753F91AA3987600463D41 /* ReportScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportScreenViewController.xib; sourceTree = "<group>"; };
+		20A02DC81AAEB88B00A285C2 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
 		20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialMenu.m; sourceTree = "<group>"; };
+		20BA8EDA1AAEBB4600290220 /* ReportListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportListViewController.h; sourceTree = "<group>"; };
+		20BA8EDB1AAEBB4600290220 /* ReportListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportListViewController.m; sourceTree = "<group>"; };
+		20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperChangeViewController.h; sourceTree = "<group>"; };
+		20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperChangeViewController.m; sourceTree = "<group>"; };
+		20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaperChangeViewController.xib; sourceTree = "<group>"; };
+		20BA8EE21AAF258F00290220 /* SleepModeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeInterfaceController.h; sourceTree = "<group>"; };
+		20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeInterfaceController.m; sourceTree = "<group>"; };
+		20BA8EE51AAF289F00290220 /* SleepReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepReportViewController.h; sourceTree = "<group>"; };
+		20BA8EE61AAF289F00290220 /* SleepReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepReportViewController.m; sourceTree = "<group>"; };
+		20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepReportViewController.xib; sourceTree = "<group>"; };
+		20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
+		20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
+		20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
 		20C693411AA6411C0055B62F /* DiaperSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperSettingsViewController.h; sourceTree = "<group>"; };
 		20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperSettingsViewController.m; sourceTree = "<group>"; };
 		20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaperSettingsViewController.xib; sourceTree = "<group>"; };
@@ -324,6 +355,9 @@
 			children = (
 				203A499F1A809F7000F02E56 /* LeftSideController */,
 				203A49A01A809F7000F02E56 /* MainViewController */,
+				20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */,
+				20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */,
+				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -342,6 +376,8 @@
 		203A499F1A809F7000F02E56 /* LeftSideController */ = {
 			isa = PBXGroup;
 			children = (
+				20BA8EDA1AAEBB4600290220 /* ReportListViewController.h */,
+				20BA8EDB1AAEBB4600290220 /* ReportListViewController.m */,
 				203A49A71A80A4E200F02E56 /* LeftSideController.h */,
 				203A49A81A80A4F500F02E56 /* LeftSideController.m */,
 				209753CC1AA0F35A00463D41 /* BabyProfileCell.h */,
@@ -376,6 +412,12 @@
 				20C693411AA6411C0055B62F /* DiaperSettingsViewController.h */,
 				20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */,
 				20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */,
+				20A02DC81AAEB88B00A285C2 /* TimelineViewController.h */,
+				20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */,
+				20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */,
+				20BA8EE51AAF289F00290220 /* SleepReportViewController.h */,
+				20BA8EE61AAF289F00290220 /* SleepReportViewController.m */,
+				20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -386,6 +428,12 @@
 				203A49A11A809F7000F02E56 /* MainViewController.h */,
 				203A49A21A809F7000F02E56 /* MainViewController.m */,
 				203A49AE1A815DB200F02E56 /* MainViewController.xib */,
+				20354A551AAEACF400B732D0 /* SleepModeViewController.h */,
+				20354A561AAEACF400B732D0 /* SleepModeViewController.m */,
+				20354A571AAEACF400B732D0 /* SleepModeViewController.xib */,
+				20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */,
+				20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */,
+				20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -431,6 +479,8 @@
 				206589DF1A8A666F0019F21D /* AlertInterfaceController.m */,
 				20F3BB381AA609F900C50831 /* ColorSelectionInterfaceController.h */,
 				20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */,
+				20BA8EE21AAF258F00290220 /* SleepModeInterfaceController.h */,
+				20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */,
 			);
 			path = "BabyNinja WatchKit Extension";
 			sourceTree = "<group>";
@@ -628,13 +678,18 @@
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
+				20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
+				20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
+				20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */,
 				209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */,
+				20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */,
+				20BA8EEE1AAF4A2C00290220 /* LaunchScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,13 +727,16 @@
 			files = (
 				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
+				20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
+				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,
 				209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
+				20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
@@ -690,6 +748,7 @@
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
+				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
@@ -699,8 +758,10 @@
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,
+				20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
+				20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
 				209753E11AA29DA500463D41 /* ConfigurationViewController.m in Sources */,
 			);
@@ -719,6 +780,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */,
+				20BA8EE41AAF258F00290220 /* SleepModeInterfaceController.m in Sources */,
 				206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */,
 				206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */,
 				20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */,
@@ -843,6 +905,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -854,6 +917,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

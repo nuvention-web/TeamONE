@@ -18,7 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setBackgroundColor:[UIColor blackColor]];
     self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     self.actions = [[NSArray alloc] initWithObjects:@"Configure Tasks",@"Configure Reminders", @"Change Theme",@"Feed Units", nil];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     // Uncomment the following line to preserve selection between presentations.
@@ -62,6 +64,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = [self.actions objectAtIndex:indexPath.row];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    [cell setBackgroundColor:[UIColor clearColor]];
     // Configure the cell...
     
     return cell;
@@ -76,6 +80,11 @@
         ReminderSettingsViewController *controller = [[ReminderSettingsViewController alloc]init];
         [self.navigationController pushViewController:controller animated:YES];
     }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    return @"Settings";
 }
 
 /*

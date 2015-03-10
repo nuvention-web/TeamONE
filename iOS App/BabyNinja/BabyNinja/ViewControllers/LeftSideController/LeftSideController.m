@@ -12,7 +12,8 @@
 #import "CareTakersListCell.h"
 #import "CustomTableFooter.h"
 #import "SettingsTableViewController.h"
-#import "ReportsListViewController.h"
+#import "ReportListViewController.h"
+#import "TimelineViewController.h"
 
 static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewControllerCellReuseId";
 
@@ -48,12 +49,12 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 {
     [super viewDidLoad];
     
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-40)];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 110, self.view.frame.size.height-40)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     [self.view addSubview:self.tableView];
-    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Settings", @"Logout", nil];
+    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Timeline",@"Settings", @"Logout", nil];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kICSColorsViewControllerCellReuseId];
     [self.tableView registerClass:[BabyProfileCell class] forCellReuseIdentifier:@"babyCell"];
     [self.tableView registerClass:[CareTakersListCell class] forCellReuseIdentifier:@"careTakerCell"];
@@ -64,7 +65,10 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     
     CustomTableFooter *footer = [[CustomTableFooter alloc]init];
     footer.frame = CGRectMake(0, self.view.frame.size.height-40, self.view.frame.size.width, 40);
+    [footer setBackgroundColor:[UIColor blackColor]];
     [self.view addSubview:footer];
+    
+    [self.tableView setBackgroundColor:[UIColor blackColor]];
 //    self.tableView.tableFooterView = footer;
 
 }
@@ -134,12 +138,13 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
             return profileCell;
         }
     } else {
-        NSParameterAssert(self.colors);
-        cell.textLabel.text = [self.actions objectAtIndex:indexPath.row];
-        //    cell.textLabel.text = [NSString stringWithFormat:@"Color %ld", (long)indexPath.row];
-        cell.textLabel.textColor = [UIColor whiteColor];
-        
-        cell.backgroundColor = self.colors[indexPath.row];
+        [cell setBackgroundView:[[UIImageView alloc]initWithImage:[UIImage imageNamed:[self.actions objectAtIndex:indexPath.row]]]];
+//        NSParameterAssert(self.colors);
+//        cell.textLabel.text = [self.actions objectAtIndex:indexPath.row];
+//        //    cell.textLabel.text = [NSString stringWithFormat:@"Color %ld", (long)indexPath.row];
+//        cell.textLabel.textColor = [UIColor whiteColor];
+//        
+//        cell.backgroundColor = self.colors[indexPath.row];
         
         return cell;
     }
@@ -148,14 +153,17 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-
-    if([cell.textLabel.text isEqualToString:@"Settings"]){
-        SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
-        [self.navigationController pushViewController:settings animated:YES];
-    } else if ([cell.textLabel.text isEqualToString:@"Reports"]){
-        ReportsListViewController *reports = [[ReportsListViewController alloc]init];
-        [self.navigationController pushViewController:reports animated:YES];
+    if(indexPath.section == 1){
+        if(indexPath.row==2){
+            SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
+            [self.navigationController pushViewController:settings animated:YES];
+        } else if(indexPath.row==0){
+            ReportListViewController *reports = [[ReportListViewController alloc]init];
+            [self.navigationController pushViewController:reports animated:YES];
+        } else if(indexPath.row==1){
+            TimelineViewController *timeline = [[TimelineViewController alloc]init];
+            [self presentViewController:timeline animated:YES completion:nil];
+        }
     }
     
     //    if (indexPath.row == self.previousRow) {
@@ -185,7 +193,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     else if (indexPath.section==0 && indexPath.row ==1)
         return 90;
     else
-        return 44;
+        return 64;
 }
 
 #pragma mark - ICSDrawerControllerPresenting

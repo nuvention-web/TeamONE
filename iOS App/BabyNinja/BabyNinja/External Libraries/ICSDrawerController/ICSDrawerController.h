@@ -74,7 +74,7 @@
  
  @see initWithLeftViewController:centerViewController:
  */
-@property(nonatomic, strong, readonly) UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *leftViewController;
+@property(nonatomic, strong, readonly) UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *leftViewController;
 /**
  The center view controller.
 
@@ -83,7 +83,7 @@
 
  @see replaceCenterViewControllerWithViewController:
  */
-@property(nonatomic, strong, readonly) UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *centerViewController;
+@property(nonatomic, strong, readonly) UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *centerViewController;
 
 /**
  @name Initialization
@@ -97,8 +97,8 @@
 
  @return An initialized drawer object or nil if the object couldn't be created.
  */
-- (id)initWithLeftViewController:(UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)leftViewController
-            centerViewController:(UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)centerViewController;
+- (id)initWithLeftViewController:(UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)leftViewController
+            centerViewController:(UINavigationController<ICSDrawerControllerChild, ICSDrawerControllerPresenting> *)centerViewController;
 
 /**
  @name Drawer functionality

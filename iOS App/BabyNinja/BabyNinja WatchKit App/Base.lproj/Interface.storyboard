@@ -16,9 +16,10 @@
                         <group width="132" height="54" alignment="left" id="O0o-CH-XcW">
                             <items>
                                 <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN"/>
-                                <button width="50" height="50" alignment="right" backgroundImage="awake" id="SqG-JY-Q27">
+                                <button width="50" height="50" alignment="right" backgroundImage="sleep" id="SqG-JY-Q27">
                                     <connections>
                                         <action selector="sleepOrAwakeButtonPressed" destination="AgC-eL-Hgc" id="MfP-0r-B6u"/>
+                                        <segue destination="NuI-9q-TyQ" kind="push" id="CBF-uY-vXv"/>
                                     </connections>
                                 </button>
                             </items>
@@ -29,12 +30,41 @@
                             </connections>
                         </button>
                     </items>
+                    <menu key="menu" id="wyQ-05-Asv">
+                        <items>
+                            <menuItem title="Fed" icon="accept" id="9kE-Sp-RcQ"/>
+                            <menuItem title="Cancel" icon="trash" id="z8E-ho-Ykt"/>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="sleepOrAwakeButton" destination="SqG-JY-Q27" id="SCh-cs-A78"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="96" y="345"/>
+        </scene>
+        <!--Sleep Mode Interface Controller-->
+        <scene sceneID="JUo-yW-7DH">
+            <objects>
+                <controller id="NuI-9q-TyQ" customClass="SleepModeInterfaceController">
+                    <items>
+                        <imageView width="136" height="38" alignment="left" image="sleep-watch" id="aFI-vP-r71"/>
+                        <label width="136" height="40" alignment="left" text="Baby Charlie is sleeping" textAlignment="center" numberOfLines="0" id="5xN-Q4-35P">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="133" height="22" alignment="left" textAlignment="center" id="Xmq-WX-m7O"/>
+                        <button width="1" alignment="left" backgroundImage="awakeButton" id="BT5-AJ-8Oo">
+                            <connections>
+                                <action selector="awakeButtonPressed" destination="NuI-9q-TyQ" id="kkr-up-ScZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="timeLabel" destination="Xmq-WX-m7O" id="PYl-Hg-aLx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="269" y="90"/>
         </scene>
         <!--Diaper Type Interface Controller-->
         <scene sceneID="bER-Q4-Rh4">
