@@ -30,10 +30,20 @@
 //    [self.diaperNumberAlertLabel setText:[NSString stringWithFormat:@"             Alert!                            You are just left with %ld diapers. Time to buy more!", self.diaperCount]];
     [NSTimer scheduledTimerWithTimeInterval:2.5f
                                      target:self
-                                   selector:@selector(goBackToRootController)
+                                   selector:@selector(smartAlert)
                                    userInfo:nil
                                     repeats:NO];
     
+}
+
+-(void)smartAlert{
+    NSString *string = [NSString stringWithFormat:@"Charlie have been pooping loose from last 3 times. Please take good care of hydration and check for skin rashes."];
+    [self.diaperNumberAlertLabel setText:string];
+    [NSTimer scheduledTimerWithTimeInterval:4.5f
+                                     target:self
+                                   selector:@selector(goBackToRootController)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 -(void)goBackToRootController{
