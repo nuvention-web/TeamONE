@@ -10,6 +10,7 @@
 #import "ICSDrawerController.h"
 #import "MainViewController.h"
 #import "LeftSideController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,11 @@
 // cameron testing
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Parse setApplicationId:@"0iY4J5cRhjyh2vwkMcfLlQCTnalQ4JdNTtGyAlkg"
+                  clientKey:@"Gkj3LuUho7ejgdHjls0nVEZXkeqM83aKCdAvKTmd"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor blackColor];
