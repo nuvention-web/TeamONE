@@ -12,6 +12,8 @@
 		201024E21A7B030F00F248F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201024E11A7B030F00F248F3 /* Images.xcassets */; };
 		201024F11A7B030F00F248F3 /* BabyNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 201024F01A7B030F00F248F3 /* BabyNinjaTests.m */; };
 		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
+		201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201332BA1ADCD9E70012B498 /* LoginViewController.m */; };
+		201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201332BF1ADCDA010012B498 /* LoginViewController.xib */; };
 		20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20354A561AAEACF400B732D0 /* SleepModeViewController.m */; };
 		20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20354A571AAEACF400B732D0 /* SleepModeViewController.xib */; };
 		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
@@ -35,6 +37,9 @@
 		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
 		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */; };
+		2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */; };
+		2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */; };
 		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -150,6 +155,9 @@
 		201024EF1A7B030F00F248F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		201024F01A7B030F00F248F3 /* BabyNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BabyNinjaTests.m; sourceTree = "<group>"; };
 		201024FE1A7B530E00F248F3 /* poop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = poop.png; path = Images/poop.png; sourceTree = "<group>"; };
+		201332B91ADCD9E70012B498 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		201332BA1ADCD9E70012B498 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		201332BF1ADCDA010012B498 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = BabyNinja/ViewControllers/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		20354A551AAEACF400B732D0 /* SleepModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeViewController.h; sourceTree = "<group>"; };
 		20354A561AAEACF400B732D0 /* SleepModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeViewController.m; sourceTree = "<group>"; };
 		20354A571AAEACF400B732D0 /* SleepModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepModeViewController.xib; sourceTree = "<group>"; };
@@ -193,6 +201,9 @@
 		203A49E61A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A49E81A828C7300F02E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		203A49EA1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		20440A661A97F0AE0066CB7F /* Baby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baby.h; sourceTree = "<group>"; };
 		20440A671A97F0AE0066CB7F /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
 		20440A691A97F0C70066CB7F /* CareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTaker.h; sourceTree = "<group>"; };
@@ -286,6 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */,
 				205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */,
 				205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */,
@@ -299,6 +311,8 @@
 				205B98311ACB34B400B5E3D5 /* CFNetwork.framework in Frameworks */,
 				205B982F1ACB34AC00B5E3D5 /* AudioToolbox.framework in Frameworks */,
 				205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */,
+				2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */,
+				2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */,
 				205B982B1ACB343100B5E3D5 /* Parse.framework in Frameworks */,
 				205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */,
 			);
@@ -413,6 +427,8 @@
 				20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */,
 				20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */,
 				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
+				201332B91ADCD9E70012B498 /* LoginViewController.h */,
+				201332BA1ADCD9E70012B498 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -489,6 +505,7 @@
 				20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */,
 				20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */,
 				20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */,
+				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -584,6 +601,9 @@
 			isa = PBXGroup;
 			children = (
 				205B98441ACB351200B5E3D5 /* libsqlite3.dylib */,
+				2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */,
+				2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */,
+				2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */,
 				205B98421ACB350900B5E3D5 /* libz.dylib */,
 				205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */,
 				205B983E1ACB34F400B5E3D5 /* StoreKit.framework */,
@@ -776,6 +796,7 @@
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
 				209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */,
+				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
@@ -850,6 +871,7 @@
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
+				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
@@ -1010,6 +1032,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
+					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
+					/Users/sneha/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
@@ -1026,6 +1050,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
+					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
+					/Users/sneha/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
