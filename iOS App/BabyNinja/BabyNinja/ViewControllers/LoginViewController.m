@@ -13,6 +13,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    self.loginFBButton.delegate = self;
+    
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
     }

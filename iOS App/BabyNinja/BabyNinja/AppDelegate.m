@@ -27,6 +27,7 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [FBSDKLoginButton class];
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
