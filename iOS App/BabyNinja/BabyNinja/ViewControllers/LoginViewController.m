@@ -16,12 +16,16 @@
     
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
     }
 }
 
+-(void)profileUpdated:(NSNotification *) notification{
+    NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
+    NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
+}
 
 #pragma mark FBSDKLoginButtonDelegate methods
 
