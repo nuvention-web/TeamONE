@@ -13,6 +13,8 @@
 #import <Parse/Parse.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+//#import <FacebookSDK/FacebookSDK.h>
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,13 +29,17 @@
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [FBSDKLoginButton class];
+//    [FBSDKLoginView class];
+    [FBSDKProfilePictureView class];
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+    
+    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor blackColor];
     
-    self.window.rootViewController = [self addSideViewController];
+    self.window.rootViewController = login; //[self addSideViewController];
     [self.window makeKeyAndVisible];
     [self initiateUserDefaultVarialbles]; //dirty way for demonstration -- SA
     return [[FBSDKApplicationDelegate sharedInstance] application:application

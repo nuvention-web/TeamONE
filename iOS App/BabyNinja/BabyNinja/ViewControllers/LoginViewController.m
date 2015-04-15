@@ -22,4 +22,17 @@
     }
 }
 
+
+#pragma mark FBSDKLoginButtonDelegate methods
+
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error{
+    
+}
+
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    
+}
+
 @end
