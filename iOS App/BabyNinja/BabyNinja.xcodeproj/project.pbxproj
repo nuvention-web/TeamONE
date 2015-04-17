@@ -263,6 +263,7 @@
 		20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 		20A29CAA1AE0B65F009936F5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		20A29CAB1AE0B65F009936F5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		20A29CAD1AE0B8C4009936F5 /* BabyNinja.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyNinja.pch; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -383,6 +384,7 @@
 			children = (
 				201024D51A7B030F00F248F3 /* Info.plist */,
 				201024D61A7B030F00F248F3 /* main.m */,
+				20A29CAD1AE0B8C4009936F5 /* BabyNinja.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1042,6 +1044,7 @@
 					/Users/sneha/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1061,6 +1064,7 @@
 					/Users/sneha/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

@@ -59,6 +59,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
                 error:(NSError *)error{
     
     if(error == nil){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UDefaultLoggedIn];
         [self presentViewController:[self addSideViewController] animated:NO completion:nil];
     }
     

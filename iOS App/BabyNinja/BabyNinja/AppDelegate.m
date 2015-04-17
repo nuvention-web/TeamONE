@@ -39,7 +39,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor blackColor];
     
-    self.window.rootViewController = login; //[self addSideViewController];
+    if([[NSUserDefaults standardUserDefaults] boolForKey:UDefaultLoggedIn] == NO)
+        self.window.rootViewController = login;
+    else
+        self.window.rootViewController = [self addSideViewController];
+    
     [self.window makeKeyAndVisible];
     [self initiateUserDefaultVarialbles]; //dirty way for demonstration -- SA
     return [[FBSDKApplicationDelegate sharedInstance] application:application
