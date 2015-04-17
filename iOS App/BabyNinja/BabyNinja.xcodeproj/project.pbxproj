@@ -80,6 +80,7 @@
 		209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F91AA3987600463D41 /* ReportScreenViewController.xib */; };
 		20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */; };
 		20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */; };
+		20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A29CAB1AE0B65F009936F5 /* Constants.m */; };
 		20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87B1A84884300B4C8CC /* ALRadialButton.m */; };
 		20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A87D1A84884300B4C8CC /* ALRadialMenu.m */; };
 		20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EDB1AAEBB4600290220 /* ReportListViewController.m */; };
@@ -260,6 +261,8 @@
 		20A02DC81AAEB88B00A285C2 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 		20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
+		20A29CAA1AE0B65F009936F5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		20A29CAB1AE0B65F009936F5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		20B3A87A1A84884300B4C8CC /* ALRadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialButton.h; sourceTree = "<group>"; };
 		20B3A87B1A84884300B4C8CC /* ALRadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALRadialButton.m; sourceTree = "<group>"; };
 		20B3A87C1A84884300B4C8CC /* ALRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALRadialMenu.h; sourceTree = "<group>"; };
@@ -415,6 +418,8 @@
 		201024FB1A7B135F00F248F3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				20A29CAA1AE0B65F009936F5 /* Constants.h */,
+				20A29CAB1AE0B65F009936F5 /* Constants.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -870,6 +875,7 @@
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
+				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
 				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
 				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
