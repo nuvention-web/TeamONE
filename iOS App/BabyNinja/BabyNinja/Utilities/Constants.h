@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 FOUNDATION_EXPORT NSString *const UDefaultLoggedIn;
+FOUNDATION_EXPORT NSString *const ULogoutNotification;

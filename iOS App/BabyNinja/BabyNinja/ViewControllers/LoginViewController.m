@@ -20,7 +20,15 @@
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
         // User is logged in, do work such as go to next view controller.
     }
 }
@@ -52,6 +60,24 @@
     return drawer;
 }
 
+- (IBAction)logoutButtonPressed:(id)sender {
+    NSLog(@"Logged out of facebook");
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies])
+    {
+        NSString* domainName = [cookie domain];
+        NSRange domainRange = [domainName rangeOfString:@"facebook"];
+        if(domainRange.length > 0)
+        {
+            [storage deleteCookie:cookie];
+        }
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:UDefaultLoggedIn];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark FBSDKLoginButtonDelegate methods
 
 - (void)loginButton:(FBSDKLoginButton *)loginButton
@@ -68,5 +94,6 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
     
 }
+
 
 @end

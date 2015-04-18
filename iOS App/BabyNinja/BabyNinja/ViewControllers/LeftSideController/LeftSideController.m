@@ -163,6 +163,9 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
         } else if(indexPath.row==1){
             TimelineViewController *timeline = [[TimelineViewController alloc]init];
             [self presentViewController:timeline animated:YES completion:nil];
+        } else if(indexPath.row ==3){
+            [[NSNotificationCenter defaultCenter] postNotificationName:ULogoutNotification object:nil];
+            [self.drawer close];
         }
     }
     

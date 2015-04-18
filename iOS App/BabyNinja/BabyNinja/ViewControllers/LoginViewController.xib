@@ -17,6 +17,9 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FV6-C6-DJx" customClass="FBSDKLoginButton">
                     <rect key="frame" x="76" y="305" width="234" height="53"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="logoutButtonPressed:" destination="-1" eventType="valueChanged" id="eQe-qm-Cvb"/>
+                    </connections>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9ND-71-xzA">
                     <rect key="frame" x="92" y="178" width="194" height="68"/>

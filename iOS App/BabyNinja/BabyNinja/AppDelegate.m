@@ -39,10 +39,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor blackColor];
     
-    if([[NSUserDefaults standardUserDefaults] boolForKey:UDefaultLoggedIn] == NO)
+//    if([[NSUserDefaults standardUserDefaults] boolForKey:UDefaultLoggedIn] == NO)
         self.window.rootViewController = login;
-    else
-        self.window.rootViewController = [self addSideViewController];
+//    else
+//        self.window.rootViewController = [self addSideViewController];
     
     [self.window makeKeyAndVisible];
     [self initiateUserDefaultVarialbles]; //dirty way for demonstration -- SA
@@ -129,5 +129,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

@@ -9,3 +9,4 @@
 #import "Constants.h"
 
 NSString *const UDefaultLoggedIn = @"UDefaultLoggedIn";
+NSString *const ULogoutNotification = @"ULogoutNotification";

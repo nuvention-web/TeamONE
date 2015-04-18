@@ -10,8 +10,10 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
+
 @interface LoginViewController : UIViewController<FBSDKLoginButtonDelegate>
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginFBButton;
+- (IBAction)logoutButtonPressed:(id)sender;
 
 @end
