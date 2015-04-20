@@ -19,6 +19,8 @@
     
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
+    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
