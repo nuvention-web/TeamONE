@@ -1227,6 +1227,7 @@
 			baseConfigurationReference = C31908A3199813D400B61898 /* CorePlot.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_SYMBOL_SEPARATION = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1235,6 +1236,7 @@
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_CPTLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "CorePlot-CocoaTouch";
+				PROVISIONING_PROFILE = "cfd4560e-b9ae-4b46-941e-615334ea068a";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 			};
 			name = Debug;
@@ -1244,6 +1246,7 @@
 			baseConfigurationReference = C31908A3199813D400B61898 /* CorePlot.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_SYMBOL_SEPARATION = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1251,6 +1254,7 @@
 				INSTALL_PATH = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				OTHER_CPTLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "CorePlot-CocoaTouch";
+				PROVISIONING_PROFILE = "cfd4560e-b9ae-4b46-941e-615334ea068a";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				ZERO_LINK = NO;
 			};

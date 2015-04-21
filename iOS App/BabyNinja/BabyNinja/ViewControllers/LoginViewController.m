@@ -10,6 +10,7 @@
 #import "ICSDrawerController.h"
 #import "MainViewController.h"
 #import "LeftSideController.h"
+#import <Parse/Parse.h>
 
 @implementation LoginViewController
 
@@ -17,9 +18,13 @@
 {
     [super viewDidLoad];
     
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
-    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
+//    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
@@ -31,6 +36,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     if ([FBSDKAccessToken currentAccessToken]) {
         [self presentViewController:[self addSideViewController] animated:NO completion:nil];
+        NSLog(@"%@", [PFUser currentUser]);
         // User is logged in, do work such as go to next view controller.
     }
 }
@@ -90,6 +96,8 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UDefaultLoggedIn];
         [self presentViewController:[self addSideViewController] animated:NO completion:nil];
     }
+    
+    NSLog(@"%@", [PFUser currentUser]);
     
 }
 

@@ -10,4 +10,7 @@
 
 @interface SleepReportViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *header;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end

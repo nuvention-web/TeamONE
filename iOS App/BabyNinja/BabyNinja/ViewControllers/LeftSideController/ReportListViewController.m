@@ -21,7 +21,7 @@
     [self.tableView setBackgroundColor:[UIColor blackColor]];
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    self.actions = [[NSArray alloc] initWithObjects:@"Milk Report",@"Sleep Report", nil];
+    self.actions = [[NSArray alloc] initWithObjects:@"Feed Report",@"Diaper Report",@"Sleep Report",@"360 Report", nil];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.scrollEnabled = NO;
     // Uncomment the following line to preserve selection between presentations.
@@ -80,6 +80,24 @@
     } else if([cell.textLabel.text isEqualToString:@"Sleep Report"]){
         SleepReportViewController *report = [[SleepReportViewController alloc]init];
         [self presentViewController:report animated:YES completion:nil];
+    }else if([cell.textLabel.text isEqualToString:@"Feed Report"]){
+        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        
+        [self presentViewController:report animated:YES completion:nil];
+        report.imageView.image = [UIImage imageNamed:@"Feed"];
+        report.header.text = @"The Feed Report";
+    }else if([cell.textLabel.text isEqualToString:@"360 Report"]){
+        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        
+        [self presentViewController:report animated:YES completion:nil];
+        report.imageView.image = [UIImage imageNamed:@"360Report"];
+        report.header.text = @"";
+    }else if([cell.textLabel.text isEqualToString:@"Diaper Report"]){
+        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        
+        [self presentViewController:report animated:YES completion:nil];
+        report.imageView.image = [UIImage imageNamed:@"DiaperReport"];
+        report.header.text = @"The Diaper Report";
     }
 }
 

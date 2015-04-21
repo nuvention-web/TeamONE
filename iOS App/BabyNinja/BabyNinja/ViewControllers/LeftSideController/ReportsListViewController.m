@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.actions = [[NSArray alloc] initWithObjects:@"Milk Report",@"Diaper Report", nil];
+    self.actions = [[NSArray alloc] initWithObjects:@"Feed Report",@"Milk Report",@"Diaper Report","360 Report", nil];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.scrollEnabled = NO;
     
