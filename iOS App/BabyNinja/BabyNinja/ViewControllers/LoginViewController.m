@@ -44,6 +44,7 @@
 -(void)profileUpdated:(NSNotification *) notification{
     NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
     NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
+//    [PFUser currentUser].username =
 }
 
 -(UIViewController*)addSideViewController{
