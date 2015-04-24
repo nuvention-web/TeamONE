@@ -148,9 +148,13 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
     {
         NSMutableArray *mutableChartData = [NSMutableArray array];
+        
+        ////////here you will insert the data
+        
         for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
         {
-            [mutableChartData addObject:[NSNumber numberWithFloat:((double)arc4random() / ARC4RANDOM_MAX)]]; // random number between 0 and 1
+            [mutableChartData addObject:[NSNumber numberWithFloat:3+i]]; // random number between 0 and 1
+            
         }
         [mutableLineCharts addObject:mutableChartData];
     }
@@ -188,7 +192,7 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
-    headerView.titleLabel.text = [kJBStringLabelAverageDailyRainfall uppercaseString];
+    headerView.titleLabel.text = @"Feed";
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
@@ -201,6 +205,17 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     
     JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartFooterHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartFooterHeight)];
     footerView.backgroundColor = [UIColor clearColor];
+    
+    
+    
+    //// Changing the range of the y axes
+    
+    
+    
+    footerView.leftLabel.text = [[self.daysOfWeek objectAtIndex:(NSUInteger)0] uppercaseString];
+    footerView.leftLabel.textColor = [UIColor whiteColor];
+    footerView.rightLabel.text = [[self.daysOfWeek objectAtIndex:(NSUInteger)3] uppercaseString];;
+    
     footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
     footerView.leftLabel.textColor = [UIColor whiteColor];
     footerView.rightLabel.text = [[self.daysOfWeek lastObject] uppercaseString];;
