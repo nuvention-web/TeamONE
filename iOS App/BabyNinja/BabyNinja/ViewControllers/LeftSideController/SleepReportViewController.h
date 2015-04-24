@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JBChartTooltipView.h"
+#import "JBChartView.h"
 
 @interface SleepReportViewController : UIViewController
 
+@property (nonatomic, strong, readonly) JBChartTooltipView *tooltipView;
+@property (nonatomic, assign) BOOL tooltipVisible;
+
+// Settres
+- (void)setTooltipVisible:(BOOL)tooltipVisible animated:(BOOL)animated atTouchPoint:(CGPoint)touchPoint;
+- (void)setTooltipVisible:(BOOL)tooltipVisible animated:(BOOL)animated;
+
+// Getters
+- (JBChartView *)chartView; // subclasses to return chart instance for tooltip functionality
 @property (weak, nonatomic) IBOutlet UILabel *header;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 

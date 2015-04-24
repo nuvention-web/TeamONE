@@ -193,6 +193,11 @@
 		2029C8D91AEADD660086B506 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBChartView/Views/JBLineChartView.m; sourceTree = "<group>"; };
 		2029C8DD1AEADD730086B506 /* JBChartTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTableCell.h; path = JBChartView/Cells/JBChartTableCell.h; sourceTree = "<group>"; };
 		2029C8DE1AEADD730086B506 /* JBChartTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTableCell.m; path = JBChartView/Cells/JBChartTableCell.m; sourceTree = "<group>"; };
+		2029C8E61AEAE2D40086B506 /* JBColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
+		2029C8E71AEAE2D40086B506 /* JBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBConstants.h; sourceTree = "<group>"; };
+		2029C8E81AEAE2D40086B506 /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
+		2029C8E91AEAE2D40086B506 /* JBStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
+		2029C8EA1AEAE2D40086B506 /* JBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
 		20354A551AAEACF400B732D0 /* SleepModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeViewController.h; sourceTree = "<group>"; };
 		20354A561AAEACF400B732D0 /* SleepModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeViewController.m; sourceTree = "<group>"; };
 		20354A571AAEACF400B732D0 /* SleepModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepModeViewController.xib; sourceTree = "<group>"; };
@@ -486,6 +491,7 @@
 		2029C8B21AEADC940086B506 /* JBChartView */ = {
 			isa = PBXGroup;
 			children = (
+				2029C8E01AEAE24F0086B506 /* Constants */,
 				2029C8C11AEADCF90086B506 /* Misc */,
 				2029C8C01AEADCF40086B506 /* Headers */,
 				2029C8BF1AEADCEE0086B506 /* Footers */,
@@ -548,6 +554,19 @@
 				2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		2029C8E01AEAE24F0086B506 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8E61AEAE2D40086B506 /* JBColorConstants.h */,
+				2029C8E71AEAE2D40086B506 /* JBConstants.h */,
+				2029C8E81AEAE2D40086B506 /* JBFontConstants.h */,
+				2029C8E91AEAE2D40086B506 /* JBStringConstants.h */,
+				2029C8EA1AEAE2D40086B506 /* JBUIConstants.h */,
+			);
+			name = Constants;
+			path = JBChartView/Constants;
 			sourceTree = "<group>";
 		};
 		203A49981A809D9C00F02E56 /* ICSDrawerController */ = {
