@@ -60,6 +60,8 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view bringSubviewToFront:self.toolBar];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -78,8 +80,11 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
  }
  */
 - (IBAction)closeButtonPressed:(id)sender {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
+
 
 #pragma mark - Configuring the view’s layout behavior
 
@@ -213,6 +218,13 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     [self.view addSubview:self.informationView];
     
     [self.lineChartView reloadData];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setTitle:@"Close" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [button setFrame:CGRectMake(10, 600, 100, 50)];
+    [self.view addSubview:button];
+    [self.view bringSubviewToFront:self.toolBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -446,6 +458,12 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 {
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:kJBImageIconArrow] style:UIBarButtonItemStylePlain target:target action:action];
     return button;
+}
+
+- (IBAction)closeButtonPressed {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 
