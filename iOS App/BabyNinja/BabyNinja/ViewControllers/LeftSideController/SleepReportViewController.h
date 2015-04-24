@@ -23,7 +23,7 @@
 // Settres
 - (void)setTooltipVisible:(BOOL)tooltipVisible animated:(BOOL)animated atTouchPoint:(CGPoint)touchPoint;
 - (void)setTooltipVisible:(BOOL)tooltipVisible animated:(BOOL)animated;
- 
+
 // Getters
 - (JBChartView *)chartView; // subclasses to return chart instance for tooltip functionality
 
