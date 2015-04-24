@@ -10,6 +10,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DiaperChangeViewController.h"
 #import "SleepModeViewController.h"
+#import <Parse/Parse.h>
+
+
+
 
 @interface MainViewController (){
     UIView *blackView;
@@ -53,6 +57,9 @@
     self.radialFeedMenu = [[ALRadialMenu alloc] init];
     self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
+    
+    
+    
 }
 
 - (IBAction)poopButtonPressed:(id)sender {
@@ -62,6 +69,7 @@
     DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
 
 -(void)changePoopButtonStateImage{
     if(self.poopButton.tag==0){
@@ -84,6 +92,11 @@
 //    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
     [alert show];
+    
+    
+    
+    
+    
 }
 
 -(void)changeFeedButtonStateImage{

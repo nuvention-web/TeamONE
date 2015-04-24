@@ -37,9 +37,6 @@
 		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
 		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */; };
-		2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */; };
-		2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */; };
 		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -98,6 +95,16 @@
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
+		E3334E481AE9E49400C85CFF /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3334E421AE9E49400C85CFF /* JBLineChartView.m */; };
+		E3334E491AE9E49400C85CFF /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3334E441AE9E49400C85CFF /* JBChartView.m */; };
+		E3334E4A1AE9E49400C85CFF /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3334E461AE9E49400C85CFF /* JBBarChartView.m */; };
+		E36228B41AE9BCBD00E7AEED /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E36228B31AE9BCBD00E7AEED /* Poop.m */; };
+		E36228B81AE9C07E00E7AEED /* PoopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E36228B61AE9C07E00E7AEED /* PoopDetailViewController.m */; };
+		E36228B91AE9C07E00E7AEED /* PoopDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36228B71AE9C07E00E7AEED /* PoopDetailViewController.xib */; };
+		E3E7C2BC1AE739ED00C77417 /* FacebookSDK in Resources */ = {isa = PBXBuildFile; fileRef = E3E7C2BB1AE739ED00C77417 /* FacebookSDK */; };
+		E3E7C2BE1AE73A0D00C77417 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E7C2BD1AE73A0D00C77417 /* FBSDKLoginKit.framework */; };
+		E3E7C2C01AE73A1600C77417 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E7C2BF1AE73A1600C77417 /* FBSDKCoreKit.framework */; };
+		E3E7C2C21AE73A1900C77417 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E7C2C11AE73A1900C77417 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +301,22 @@
 		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
 		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
+		E3334E421AE9E49400C85CFF /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		E3334E431AE9E49400C85CFF /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
+		E3334E441AE9E49400C85CFF /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
+		E3334E451AE9E49400C85CFF /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartView.h; sourceTree = "<group>"; };
+		E3334E461AE9E49400C85CFF /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartView.m; sourceTree = "<group>"; };
+		E3334E471AE9E49400C85CFF /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartView.h; sourceTree = "<group>"; };
+		E36228B21AE9BCBD00E7AEED /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
+		E36228B31AE9BCBD00E7AEED /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
+		E36228B51AE9C07E00E7AEED /* PoopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopDetailViewController.h; sourceTree = "<group>"; };
+		E36228B61AE9C07E00E7AEED /* PoopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopDetailViewController.m; sourceTree = "<group>"; };
+		E36228B71AE9C07E00E7AEED /* PoopDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopDetailViewController.xib; sourceTree = "<group>"; };
+		E3E7C2B91AE7338B00C77417 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E3E7C2BB1AE739ED00C77417 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FacebookSDK; sourceTree = "<group>"; };
+		E3E7C2BD1AE73A0D00C77417 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E3E7C2BF1AE73A1600C77417 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E3E7C2C11AE73A1900C77417 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,11 +324,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */,
 				205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */,
 				205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */,
 				205B983F1ACB34F400B5E3D5 /* StoreKit.framework in Frameworks */,
+				E3E7C2C01AE73A1600C77417 /* FBSDKCoreKit.framework in Frameworks */,
 				205B983D1ACB34EE00B5E3D5 /* Social.framework in Frameworks */,
 				205B983B1ACB34E200B5E3D5 /* Security.framework in Frameworks */,
 				205B98391ACB34DC00B5E3D5 /* QuartzCore.framework in Frameworks */,
@@ -314,9 +337,9 @@
 				205B98331ACB34BD00B5E3D5 /* CoreGraphics.framework in Frameworks */,
 				205B98311ACB34B400B5E3D5 /* CFNetwork.framework in Frameworks */,
 				205B982F1ACB34AC00B5E3D5 /* AudioToolbox.framework in Frameworks */,
+				E3E7C2BE1AE73A0D00C77417 /* FBSDKLoginKit.framework in Frameworks */,
 				205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */,
-				2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */,
-				2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */,
+				E3E7C2C21AE73A1900C77417 /* FBSDKShareKit.framework in Frameworks */,
 				205B982B1ACB343100B5E3D5 /* Parse.framework in Frameworks */,
 				205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */,
 			);
@@ -342,6 +365,8 @@
 		201024C81A7B030F00F248F3 = {
 			isa = PBXGroup;
 			children = (
+				E3E7C2BB1AE739ED00C77417 /* FacebookSDK */,
+				E3E7C2B91AE7338B00C77417 /* FBSDKLoginKit.framework */,
 				205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */,
 				201024D31A7B030F00F248F3 /* BabyNinja */,
 				201024ED1A7B030F00F248F3 /* BabyNinjaTests */,
@@ -512,6 +537,9 @@
 				20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */,
 				20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */,
 				20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */,
+				E36228B51AE9C07E00E7AEED /* PoopDetailViewController.h */,
+				E36228B61AE9C07E00E7AEED /* PoopDetailViewController.m */,
+				E36228B71AE9C07E00E7AEED /* PoopDetailViewController.xib */,
 				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
 			);
 			path = MainViewController;
@@ -596,6 +624,8 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E36228B21AE9BCBD00E7AEED /* Poop.h */,
+				E36228B31AE9BCBD00E7AEED /* Poop.m */,
 				20440A661A97F0AE0066CB7F /* Baby.h */,
 				20440A671A97F0AE0066CB7F /* Baby.m */,
 				20440A691A97F0C70066CB7F /* CareTaker.h */,
@@ -607,6 +637,15 @@
 		205B98271ACB340700B5E3D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3334E421AE9E49400C85CFF /* JBLineChartView.m */,
+				E3334E431AE9E49400C85CFF /* JBLineChartView.h */,
+				E3334E441AE9E49400C85CFF /* JBChartView.m */,
+				E3334E451AE9E49400C85CFF /* JBChartView.h */,
+				E3334E461AE9E49400C85CFF /* JBBarChartView.m */,
+				E3334E471AE9E49400C85CFF /* JBBarChartView.h */,
+				E3E7C2C11AE73A1900C77417 /* FBSDKShareKit.framework */,
+				E3E7C2BF1AE73A1600C77417 /* FBSDKCoreKit.framework */,
+				E3E7C2BD1AE73A0D00C77417 /* FBSDKLoginKit.framework */,
 				205B98441ACB351200B5E3D5 /* libsqlite3.dylib */,
 				2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */,
 				2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */,
@@ -804,6 +843,7 @@
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
 				209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */,
+				E3E7C2BC1AE739ED00C77417 /* FacebookSDK in Resources */,
 				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
@@ -811,6 +851,7 @@
 				20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
+				E36228B91AE9C07E00E7AEED /* PoopDetailViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
@@ -856,6 +897,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
+				E3334E491AE9E49400C85CFF /* JBChartView.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
@@ -868,8 +910,10 @@
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
+				E3334E4A1AE9E49400C85CFF /* JBBarChartView.m in Sources */,
 				209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
+				E3334E481AE9E49400C85CFF /* JBLineChartView.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
@@ -886,6 +930,7 @@
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
+				E36228B41AE9BCBD00E7AEED /* Poop.m in Sources */,
 				20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
@@ -895,6 +940,7 @@
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
 				20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
+				E36228B81AE9C07E00E7AEED /* PoopDetailViewController.m in Sources */,
 				209753E11AA29DA500463D41 /* ConfigurationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1049,6 +1095,8 @@
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
 					/Users/sneha/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/framework/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
@@ -1072,6 +1120,8 @@
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
 					/Users/sneha/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/framework/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;

@@ -42,9 +42,13 @@
 }
 
 -(void)profileUpdated:(NSNotification *) notification{
-    NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
-    NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
+//    NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
+//    NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
 }
+
+
+
+// SIDE VIEW CONTROLLER
 
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
@@ -67,6 +71,7 @@
     ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
     return drawer;
 }
+
 
 - (IBAction)logoutButtonPressed:(id)sender {
     NSLog(@"Logged out of facebook");

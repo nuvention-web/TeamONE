@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PoopDetailViewController.h"
 
 @interface DiaperChangeViewController : UIViewController
+
+- (IBAction)poopPressed:(id)sender;
 
 @end

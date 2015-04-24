@@ -34,4 +34,11 @@
 }
 */
 
+- (IBAction)poopPressed:(id)sender {
+    
+    PoopDetailViewController *controller = [[PoopDetailViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+    
+}
 @end
