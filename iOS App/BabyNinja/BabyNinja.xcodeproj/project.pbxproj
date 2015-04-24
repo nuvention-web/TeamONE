@@ -14,6 +14,16 @@
 		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
 		201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201332BA1ADCD9E70012B498 /* LoginViewController.m */; };
 		201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201332BF1ADCDA010012B498 /* LoginViewController.xib */; };
+		2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */; };
+		2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */; };
+		2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */; };
+		2029C8CD1AEADD320086B506 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8CC1AEADD320086B506 /* JBChartHeaderView.m */; };
+		2029C8D21AEADD3F0086B506 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8CF1AEADD3E0086B506 /* JBBarChartFooterView.m */; };
+		2029C8D31AEADD3F0086B506 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D11AEADD3E0086B506 /* JBLineChartFooterView.m */; };
+		2029C8DA1AEADD660086B506 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D51AEADD660086B506 /* JBBarChartView.m */; };
+		2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D71AEADD660086B506 /* JBChartView.m */; };
+		2029C8DC1AEADD660086B506 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D91AEADD660086B506 /* JBLineChartView.m */; };
+		2029C8DF1AEADD730086B506 /* JBChartTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8DE1AEADD730086B506 /* JBChartTableCell.m */; };
 		20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20354A561AAEACF400B732D0 /* SleepModeViewController.m */; };
 		20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20354A571AAEACF400B732D0 /* SleepModeViewController.xib */; };
 		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
@@ -163,6 +173,26 @@
 		201332B91ADCD9E70012B498 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		201332BA1ADCD9E70012B498 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		201332BF1ADCDA010012B498 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = BabyNinja/ViewControllers/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+		2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/Misc/JBChartInformationView.h; sourceTree = "<group>"; };
+		2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/Misc/JBChartInformationView.m; sourceTree = "<group>"; };
+		2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/Misc/JBChartTooltipTipView.h; sourceTree = "<group>"; };
+		2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipTipView.m; path = JBChartView/Misc/JBChartTooltipTipView.m; sourceTree = "<group>"; };
+		2029C8C61AEADD0C0086B506 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipView.h; path = JBChartView/Misc/JBChartTooltipView.h; sourceTree = "<group>"; };
+		2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTooltipView.m; path = JBChartView/Misc/JBChartTooltipView.m; sourceTree = "<group>"; };
+		2029C8CB1AEADD320086B506 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartHeaderView.h; path = JBChartView/Headers/JBChartHeaderView.h; sourceTree = "<group>"; };
+		2029C8CC1AEADD320086B506 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartHeaderView.m; path = JBChartView/Headers/JBChartHeaderView.m; sourceTree = "<group>"; };
+		2029C8CE1AEADD3E0086B506 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartFooterView.h; path = JBChartView/Footers/JBBarChartFooterView.h; sourceTree = "<group>"; };
+		2029C8CF1AEADD3E0086B506 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartFooterView.m; path = JBChartView/Footers/JBBarChartFooterView.m; sourceTree = "<group>"; };
+		2029C8D01AEADD3E0086B506 /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartFooterView.h; path = JBChartView/Footers/JBLineChartFooterView.h; sourceTree = "<group>"; };
+		2029C8D11AEADD3E0086B506 /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartFooterView.m; path = JBChartView/Footers/JBLineChartFooterView.m; sourceTree = "<group>"; };
+		2029C8D41AEADD660086B506 /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBChartView/Views/JBBarChartView.h; sourceTree = "<group>"; };
+		2029C8D51AEADD660086B506 /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = JBChartView/Views/JBBarChartView.m; sourceTree = "<group>"; };
+		2029C8D61AEADD660086B506 /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = JBChartView/Views/JBChartView.h; sourceTree = "<group>"; };
+		2029C8D71AEADD660086B506 /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = JBChartView/Views/JBChartView.m; sourceTree = "<group>"; };
+		2029C8D81AEADD660086B506 /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = JBChartView/Views/JBLineChartView.h; sourceTree = "<group>"; };
+		2029C8D91AEADD660086B506 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBChartView/Views/JBLineChartView.m; sourceTree = "<group>"; };
+		2029C8DD1AEADD730086B506 /* JBChartTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTableCell.h; path = JBChartView/Cells/JBChartTableCell.h; sourceTree = "<group>"; };
+		2029C8DE1AEADD730086B506 /* JBChartTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartTableCell.m; path = JBChartView/Cells/JBChartTableCell.m; sourceTree = "<group>"; };
 		20354A551AAEACF400B732D0 /* SleepModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeViewController.h; sourceTree = "<group>"; };
 		20354A561AAEACF400B732D0 /* SleepModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeViewController.m; sourceTree = "<group>"; };
 		20354A571AAEACF400B732D0 /* SleepModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepModeViewController.xib; sourceTree = "<group>"; };
@@ -420,6 +450,7 @@
 		201024FA1A7B135F00F248F3 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2029C8B21AEADC940086B506 /* JBChartView */,
 				20558F241AE967BB00A42961 /* WYPopoverController */,
 				20F3BB2E1AA57DEA00C50831 /* TMCache */,
 				20B3A8791A84884300B4C8CC /* ALRadial */,
@@ -450,6 +481,73 @@
 				201332BA1ADCD9E70012B498 /* LoginViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2029C8B21AEADC940086B506 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8C11AEADCF90086B506 /* Misc */,
+				2029C8C01AEADCF40086B506 /* Headers */,
+				2029C8BF1AEADCEE0086B506 /* Footers */,
+				2029C8BE1AEADCE00086B506 /* Views */,
+				2029C8BD1AEADCD10086B506 /* Cells */,
+			);
+			name = JBChartView;
+			sourceTree = "<group>";
+		};
+		2029C8BD1AEADCD10086B506 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8DD1AEADD730086B506 /* JBChartTableCell.h */,
+				2029C8DE1AEADD730086B506 /* JBChartTableCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2029C8BE1AEADCE00086B506 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8D41AEADD660086B506 /* JBBarChartView.h */,
+				2029C8D51AEADD660086B506 /* JBBarChartView.m */,
+				2029C8D61AEADD660086B506 /* JBChartView.h */,
+				2029C8D71AEADD660086B506 /* JBChartView.m */,
+				2029C8D81AEADD660086B506 /* JBLineChartView.h */,
+				2029C8D91AEADD660086B506 /* JBLineChartView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2029C8BF1AEADCEE0086B506 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8CE1AEADD3E0086B506 /* JBBarChartFooterView.h */,
+				2029C8CF1AEADD3E0086B506 /* JBBarChartFooterView.m */,
+				2029C8D01AEADD3E0086B506 /* JBLineChartFooterView.h */,
+				2029C8D11AEADD3E0086B506 /* JBLineChartFooterView.m */,
+			);
+			name = Footers;
+			sourceTree = "<group>";
+		};
+		2029C8C01AEADCF40086B506 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8CB1AEADD320086B506 /* JBChartHeaderView.h */,
+				2029C8CC1AEADD320086B506 /* JBChartHeaderView.m */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		2029C8C11AEADCF90086B506 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */,
+				2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */,
+				2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */,
+				2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */,
+				2029C8C61AEADD0C0086B506 /* JBChartTooltipView.h */,
+				2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */,
+			);
+			name = Misc;
 			sourceTree = "<group>";
 		};
 		203A49981A809D9C00F02E56 /* ICSDrawerController */ = {
@@ -882,8 +980,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2029C8DA1AEADD660086B506 /* JBBarChartView.m in Sources */,
+				2029C8CD1AEADD320086B506 /* JBChartHeaderView.m in Sources */,
+				2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */,
 				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
 				20558F191AE95A7D00A42961 /* PoopTypeSelectionViewController.m in Sources */,
+				2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
@@ -892,13 +994,16 @@
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,
+				2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */,
 				20558F2A1AE967F800A42961 /* WYStoryboardPopoverSegue.m in Sources */,
 				209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */,
 				203A49A91A80A4F500F02E56 /* LeftSideController.m in Sources */,
 				209753DD1AA1820600463D41 /* SettingsTableViewController.m in Sources */,
+				2029C8DF1AEADD730086B506 /* JBChartTableCell.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
+				2029C8D31AEADD3F0086B506 /* JBLineChartFooterView.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
@@ -909,6 +1014,7 @@
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
 				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
+				2029C8DC1AEADD660086B506 /* JBLineChartView.m in Sources */,
 				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
@@ -919,7 +1025,9 @@
 				20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
+				2029C8D21AEADD3F0086B506 /* JBBarChartFooterView.m in Sources */,
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,
+				2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */,
 				20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
