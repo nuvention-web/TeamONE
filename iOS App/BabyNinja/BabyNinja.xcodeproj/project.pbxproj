@@ -72,6 +72,7 @@
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
 		2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */; };
 		2067B55D1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */; };
+		2067B5601AEC013B00FCEBAE /* BabyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B55F1AEC013B00FCEBAE /* BabyActivity.m */; };
 		209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753CD1AA0F35A00463D41 /* BabyProfileCell.m */; };
 		209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */; };
 		209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D21AA15E2B00463D41 /* CareTakersListCell.m */; };
@@ -111,9 +112,10 @@
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
-		9991761E1AEAE4A3007B0C30 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */; };
-		9991761F1AEAE4A3007B0C30 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */; };
-		999176201AEAE4A3007B0C30 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */; };
+		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
+		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
+		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
+		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,8 @@
 		2067B5591AEBEEAC00FCEBAE /* BabyVitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyVitalsViewController.h; sourceTree = "<group>"; };
 		2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyVitalsViewController.m; sourceTree = "<group>"; };
 		2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyVitalsViewController.xib; sourceTree = "<group>"; };
+		2067B55E1AEC013B00FCEBAE /* BabyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyActivity.h; sourceTree = "<group>"; };
+		2067B55F1AEC013B00FCEBAE /* BabyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyActivity.m; sourceTree = "<group>"; };
 		209753CC1AA0F35A00463D41 /* BabyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyProfileCell.h; sourceTree = "<group>"; };
 		209753CD1AA0F35A00463D41 /* BabyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyProfileCell.m; sourceTree = "<group>"; };
 		209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyProfileCell.xib; sourceTree = "<group>"; };
@@ -334,9 +338,11 @@
 		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
 		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
-		9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		E358A89D1AEBFB5E003680C7 /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
+		E358A89E1AEBFB5E003680C7 /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
+		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,22 +350,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9991761F1AEAE4A3007B0C30 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */,
+				E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */,
 				205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */,
 				205B983F1ACB34F400B5E3D5 /* StoreKit.framework in Frameworks */,
 				205B983D1ACB34EE00B5E3D5 /* Social.framework in Frameworks */,
 				205B983B1ACB34E200B5E3D5 /* Security.framework in Frameworks */,
 				205B98391ACB34DC00B5E3D5 /* QuartzCore.framework in Frameworks */,
+				E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */,
 				205B98371ACB34D200B5E3D5 /* MobileCoreServices.framework in Frameworks */,
 				205B98351ACB34C600B5E3D5 /* CoreLocation.framework in Frameworks */,
 				205B98331ACB34BD00B5E3D5 /* CoreGraphics.framework in Frameworks */,
 				205B98311ACB34B400B5E3D5 /* CFNetwork.framework in Frameworks */,
 				205B982F1ACB34AC00B5E3D5 /* AudioToolbox.framework in Frameworks */,
 				205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */,
-				999176201AEAE4A3007B0C30 /* FBSDKShareKit.framework in Frameworks */,
-				9991761E1AEAE4A3007B0C30 /* FBSDKCoreKit.framework in Frameworks */,
+				E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */,
 				205B982B1ACB343100B5E3D5 /* Parse.framework in Frameworks */,
 				205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */,
 			);
@@ -727,10 +733,14 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E358A89D1AEBFB5E003680C7 /* Poop.h */,
+				E358A89E1AEBFB5E003680C7 /* Poop.m */,
 				20440A661A97F0AE0066CB7F /* Baby.h */,
 				20440A671A97F0AE0066CB7F /* Baby.m */,
 				20440A691A97F0C70066CB7F /* CareTaker.h */,
 				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
+				2067B55E1AEC013B00FCEBAE /* BabyActivity.h */,
+				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -749,9 +759,9 @@
 		205B98271ACB340700B5E3D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */,
-				9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */,
-				9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */,
+				E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */,
+				E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */,
+				E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */,
 				205B98441ACB351200B5E3D5 /* libsqlite3.dylib */,
 				205B98421ACB350900B5E3D5 /* libz.dylib */,
 				205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */,
@@ -1006,6 +1016,7 @@
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
+				E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
@@ -1020,6 +1031,7 @@
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
+				2067B5601AEC013B00FCEBAE /* BabyActivity.m in Sources */,
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
 				2029C8D21AEADD3F0086B506 /* JBBarChartFooterView.m in Sources */,
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,

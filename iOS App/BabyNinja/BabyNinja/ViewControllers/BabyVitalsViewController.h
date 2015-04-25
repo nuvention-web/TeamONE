@@ -30,5 +30,7 @@
 
 - (IBAction)nextScreenButtonPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 
 @end
