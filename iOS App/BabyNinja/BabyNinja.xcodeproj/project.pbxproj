@@ -72,6 +72,7 @@
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
 		2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */; };
 		2067B55D1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */; };
+		2067B5601AEC013B00FCEBAE /* BabyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B55F1AEC013B00FCEBAE /* BabyActivity.m */; };
 		209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753CD1AA0F35A00463D41 /* BabyProfileCell.m */; };
 		209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */; };
 		209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D21AA15E2B00463D41 /* CareTakersListCell.m */; };
@@ -270,6 +271,8 @@
 		2067B5591AEBEEAC00FCEBAE /* BabyVitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyVitalsViewController.h; sourceTree = "<group>"; };
 		2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyVitalsViewController.m; sourceTree = "<group>"; };
 		2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyVitalsViewController.xib; sourceTree = "<group>"; };
+		2067B55E1AEC013B00FCEBAE /* BabyActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyActivity.h; sourceTree = "<group>"; };
+		2067B55F1AEC013B00FCEBAE /* BabyActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyActivity.m; sourceTree = "<group>"; };
 		209753CC1AA0F35A00463D41 /* BabyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyProfileCell.h; sourceTree = "<group>"; };
 		209753CD1AA0F35A00463D41 /* BabyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyProfileCell.m; sourceTree = "<group>"; };
 		209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyProfileCell.xib; sourceTree = "<group>"; };
@@ -736,6 +739,8 @@
 				20440A671A97F0AE0066CB7F /* Baby.m */,
 				20440A691A97F0C70066CB7F /* CareTaker.h */,
 				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
+				2067B55E1AEC013B00FCEBAE /* BabyActivity.h */,
+				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1026,6 +1031,7 @@
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,
+				2067B5601AEC013B00FCEBAE /* BabyActivity.m in Sources */,
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
 				2029C8D21AEADD3F0086B506 /* JBBarChartFooterView.m in Sources */,
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,

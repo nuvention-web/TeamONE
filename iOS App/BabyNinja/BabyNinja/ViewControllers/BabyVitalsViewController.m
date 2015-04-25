@@ -7,6 +7,9 @@
 //
 
 #import "BabyVitalsViewController.h"
+#import "ICSDrawerController.h"
+#import "MainViewController.h"
+#import "LeftSideController.h"
 
 @interface BabyVitalsViewController ()
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.babyImageView.layer.cornerRadius = 70;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -42,7 +46,7 @@
 }
 
 - (IBAction)nextScreenButtonPressed:(id)sender {
-    
+    [self presentViewController:[self addSideViewController] animated:NO completion:nil];
 }
 
 -(void)showDatePicker{
@@ -65,6 +69,28 @@
                                                               self.datePicker.frame.size.height)];
                      }
                      completion:nil];
+}
+
+-(UIViewController*)addSideViewController{
+    NSArray *colors ;
+    //    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
+    //                        ];
+    colors = @[[UIColor clearColor],
+               [UIColor clearColor],
+               [UIColor clearColor]
+               ];
+    
+    LeftSideController *colorsVC = [[LeftSideController alloc] initWithColors:colors];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
+    MainViewController *plainColorVC = [[MainViewController alloc] init];
+    plainColorVC.view.backgroundColor = colors[0];
+    UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
+    navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    navController.title = @"BABYNINJA";
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
+    return drawer;
 }
 
 #pragma mark UITextFieldDelegate

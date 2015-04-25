@@ -20,4 +20,5 @@
 
 @property (nonatomic, strong) NSString *babyGender;
 
+@property (nonatomic, strong) NSMutableArray *activities; /// the object type inside it would be BabyActivity <BabyActivity.h>
 @end
