@@ -47,9 +47,6 @@
 		203A49E91A828C7300F02E56 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 203A49E71A828C7300F02E56 /* Interface.storyboard */; };
 		203A49EB1A828C7300F02E56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 203A49EA1A828C7300F02E56 /* Images.xcassets */; };
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */; };
-		2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */; };
-		2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */; };
 		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
 		20558F191AE95A7D00A42961 /* PoopTypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */; };
@@ -114,6 +111,9 @@
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
+		9991761E1AEAE4A3007B0C30 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */; };
+		9991761F1AEAE4A3007B0C30 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */; };
+		999176201AEAE4A3007B0C30 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,9 +236,6 @@
 		203A49E61A828C7300F02E56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		203A49E81A828C7300F02E56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		203A49EA1A828C7300F02E56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		20440A661A97F0AE0066CB7F /* Baby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baby.h; sourceTree = "<group>"; };
 		20440A671A97F0AE0066CB7F /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
 		20440A691A97F0C70066CB7F /* CareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTaker.h; sourceTree = "<group>"; };
@@ -337,6 +334,9 @@
 		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
 		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
+		9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../../../../Downloads/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,7 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2040F99A1AD99C8B003B3110 /* FBSDKLoginKit.framework in Frameworks */,
+				9991761F1AEAE4A3007B0C30 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */,
 				205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */,
 				205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */,
@@ -358,8 +358,8 @@
 				205B98311ACB34B400B5E3D5 /* CFNetwork.framework in Frameworks */,
 				205B982F1ACB34AC00B5E3D5 /* AudioToolbox.framework in Frameworks */,
 				205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */,
-				2040F99B1AD99C8B003B3110 /* FBSDKShareKit.framework in Frameworks */,
-				2040F9991AD99C8A003B3110 /* FBSDKCoreKit.framework in Frameworks */,
+				999176201AEAE4A3007B0C30 /* FBSDKShareKit.framework in Frameworks */,
+				9991761E1AEAE4A3007B0C30 /* FBSDKCoreKit.framework in Frameworks */,
 				205B982B1ACB343100B5E3D5 /* Parse.framework in Frameworks */,
 				205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */,
 			);
@@ -749,10 +749,10 @@
 		205B98271ACB340700B5E3D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9991761B1AEAE4A3007B0C30 /* FBSDKCoreKit.framework */,
+				9991761C1AEAE4A3007B0C30 /* FBSDKLoginKit.framework */,
+				9991761D1AEAE4A3007B0C30 /* FBSDKShareKit.framework */,
 				205B98441ACB351200B5E3D5 /* libsqlite3.dylib */,
-				2040F9961AD99C8A003B3110 /* FBSDKCoreKit.framework */,
-				2040F9971AD99C8A003B3110 /* FBSDKLoginKit.framework */,
-				2040F9981AD99C8A003B3110 /* FBSDKShareKit.framework */,
 				205B98421ACB350900B5E3D5 /* libz.dylib */,
 				205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */,
 				205B983E1ACB34F400B5E3D5 /* StoreKit.framework */,
@@ -1183,6 +1183,7 @@
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
 					/Users/sneha/Documents/FacebookSDK,
+					/Users/Rawan/Downloads/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
@@ -1206,6 +1207,7 @@
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks/FacebookSDK",
 					/Users/sneha/Documents/FacebookSDK,
+					/Users/Rawan/Downloads/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
