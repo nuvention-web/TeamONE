@@ -154,6 +154,8 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
+    [self.babyWeightTextField resignFirstResponder];
+    [self.babyNameTextField resignFirstResponder];
     return YES;
 }
 @end
