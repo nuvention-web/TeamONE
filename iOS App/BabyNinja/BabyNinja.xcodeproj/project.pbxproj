@@ -56,6 +56,8 @@
 		205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98441ACB351200B5E3D5 /* libsqlite3.dylib */; };
 		206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */; };
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
+		2067B5571AEBE84600FCEBAE /* BabyVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B5551AEBE84600FCEBAE /* BabyVitalsViewController.m */; };
+		2067B5581AEBE84600FCEBAE /* BabyVitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2067B5561AEBE84600FCEBAE /* BabyVitalsViewController.xib */; };
 		209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753CD1AA0F35A00463D41 /* BabyProfileCell.m */; };
 		209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */; };
 		209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D21AA15E2B00463D41 /* CareTakersListCell.m */; };
@@ -228,6 +230,9 @@
 		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
 		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
 		206589DF1A8A666F0019F21D /* AlertInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInterfaceController.m; sourceTree = "<group>"; };
+		2067B5541AEBE84600FCEBAE /* BabyVitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BabyVitalsViewController.h; path = BabyNinja/ViewControllers/BabyVitalsViewController.h; sourceTree = SOURCE_ROOT; };
+		2067B5551AEBE84600FCEBAE /* BabyVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BabyVitalsViewController.m; path = BabyNinja/ViewControllers/BabyVitalsViewController.m; sourceTree = SOURCE_ROOT; };
+		2067B5561AEBE84600FCEBAE /* BabyVitalsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BabyVitalsViewController.xib; path = BabyNinja/ViewControllers/BabyVitalsViewController.xib; sourceTree = SOURCE_ROOT; };
 		209753CC1AA0F35A00463D41 /* BabyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyProfileCell.h; sourceTree = "<group>"; };
 		209753CD1AA0F35A00463D41 /* BabyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyProfileCell.m; sourceTree = "<group>"; };
 		209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyProfileCell.xib; sourceTree = "<group>"; };
@@ -448,6 +453,7 @@
 				203A499F1A809F7000F02E56 /* LeftSideController */,
 				203A49A01A809F7000F02E56 /* MainViewController */,
 				20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */,
+				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
 				20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */,
 				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
 				201332B91ADCD9E70012B498 /* LoginViewController.h */,
@@ -531,7 +537,9 @@
 				E36228B51AE9C07E00E7AEED /* PoopDetailViewController.h */,
 				E36228B61AE9C07E00E7AEED /* PoopDetailViewController.m */,
 				E36228B71AE9C07E00E7AEED /* PoopDetailViewController.xib */,
-				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
+				2067B5541AEBE84600FCEBAE /* BabyVitalsViewController.h */,
+				2067B5551AEBE84600FCEBAE /* BabyVitalsViewController.m */,
+				2067B5561AEBE84600FCEBAE /* BabyVitalsViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -814,6 +822,7 @@
 				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
+				2067B5581AEBE84600FCEBAE /* BabyVitalsViewController.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
@@ -885,6 +894,7 @@
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
+				2067B5571AEBE84600FCEBAE /* BabyVitalsViewController.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
