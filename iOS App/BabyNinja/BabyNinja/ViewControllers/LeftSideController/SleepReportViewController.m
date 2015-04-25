@@ -140,6 +140,16 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     return self;
 }
 
+-(id)initWithActitvityType:(NSString*)activityType{
+    self = [super init];
+    if (self)
+    {
+        self.activityType = activityType;
+        [self initFakeData];
+    }
+    return self;
+}
+
 #pragma mark - Data
 
 - (void)initFakeData
