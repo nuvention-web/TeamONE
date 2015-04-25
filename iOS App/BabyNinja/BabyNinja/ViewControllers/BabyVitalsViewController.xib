@@ -10,6 +10,7 @@
                 <outlet property="babyImageView" destination="oF4-mm-Pkn" id="TAo-yW-eCk"/>
                 <outlet property="babyNameTextField" destination="Xwh-c4-f9q" id="eoV-HK-VMH"/>
                 <outlet property="babyWeightTextField" destination="tZd-BF-KIS" id="izf-jS-LFR"/>
+                <outlet property="datePicker" destination="O2T-iR-Yv9" id="2uG-dw-zhw"/>
                 <outlet property="genderSegmentControl" destination="DOs-P4-8wJ" id="KVf-oq-xb2"/>
                 <outlet property="imageEditButton" destination="sCr-bv-lqY" id="Bcq-P7-ncf"/>
                 <outlet property="nextScreenButton" destination="FNf-dO-jg4" id="7Se-Sd-ZB8"/>
@@ -42,17 +43,17 @@
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-c4-f9q">
                     <rect key="frame" x="39" y="295" width="303" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-BF-KIS">
                     <rect key="frame" x="39" y="386" width="303" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Date of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-lh-twb">
                     <rect key="frame" x="39" y="340" width="303" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-P4-8wJ">
                     <rect key="frame" x="39" y="251" width="303" height="29"/>
@@ -73,6 +74,12 @@
                         <action selector="nextScreenButtonPressed:" destination="-1" eventType="touchUpInside" id="b7L-vG-CWE"/>
                     </connections>
                 </button>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2T-iR-Yv9">
+                    <rect key="frame" x="0.0" y="438" width="401" height="214"/>
+                    <date key="date" timeIntervalSinceReferenceDate="451670541.43388897">
+                        <!--2015-04-25 16:02:21 +0000-->
+                    </date>
+                </datePicker>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
