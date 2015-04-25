@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BabyVitalsViewController">
+            <connections>
+                <outlet property="babyDOBTextField" destination="VZ4-lh-twb" id="kSj-v2-q1Z"/>
+                <outlet property="babyImageView" destination="oF4-mm-Pkn" id="TAo-yW-eCk"/>
+                <outlet property="babyNameTextField" destination="Xwh-c4-f9q" id="eoV-HK-VMH"/>
+                <outlet property="babyWeightTextField" destination="tZd-BF-KIS" id="izf-jS-LFR"/>
+                <outlet property="genderSegmentControl" destination="DOs-P4-8wJ" id="KVf-oq-xb2"/>
+                <outlet property="imageEditButton" destination="sCr-bv-lqY" id="Bcq-P7-ncf"/>
+                <outlet property="nextScreenButton" destination="FNf-dO-jg4" id="7Se-Sd-ZB8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL8-ML-liz">
+                    <rect key="frame" x="0.0" y="0.0" width="438" height="232"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
+                            <rect key="frame" x="117" y="30" width="152" height="138"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-bv-lqY">
+                            <rect key="frame" x="178" y="176" width="30" height="30"/>
+                            <state key="normal" title="Edit">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="imageEditButtonPressed:" destination="-1" eventType="touchUpInside" id="mgp-3l-ID9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.51070926909166348" blue="0.35183096865026586" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-c4-f9q">
+                    <rect key="frame" x="39" y="295" width="303" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-BF-KIS">
+                    <rect key="frame" x="39" y="386" width="303" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Date of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-lh-twb">
+                    <rect key="frame" x="39" y="340" width="303" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-P4-8wJ">
+                    <rect key="frame" x="39" y="251" width="303" height="29"/>
+                    <segments>
+                        <segment title="Male"/>
+                        <segment title="Female"/>
+                    </segments>
+                    <connections>
+                        <action selector="genderSegmentControlChanged:" destination="-1" eventType="valueChanged" id="Uui-l5-EHT"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNf-dO-jg4">
+                    <rect key="frame" x="149" y="508" width="82" height="30"/>
+                    <state key="normal" title="Good to go!">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextScreenButtonPressed:" destination="-1" eventType="touchUpInside" id="b7L-vG-CWE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+        </view>
+    </objects>
+</document>
