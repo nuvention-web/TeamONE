@@ -9,7 +9,13 @@
 #import "Activity.h"
 
 @implementation Activity
+@dynamic activityID;
+@dynamic timeStamp;
+@dynamic activityType;
 
+
+
+//+ (Activity* )returnActivityWithAttibutes:
 
 
 
