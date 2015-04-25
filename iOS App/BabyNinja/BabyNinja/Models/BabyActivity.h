@@ -9,11 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface BabyActivity : NSObject
-
 @property (nonatomic, strong) NSString * activityType;
-
 @property (nonatomic, strong) NSDate *timeStamp;
-
 @property (nonatomic, strong) NSString *activityID;
 
 @end

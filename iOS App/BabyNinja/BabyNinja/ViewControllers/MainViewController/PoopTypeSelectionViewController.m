@@ -15,6 +15,19 @@
 @implementation PoopTypeSelectionViewController
 
 
+
+-(Activity *)returnPoopActivity:(NSString*)color{
+    Activity *newActivity = [[Activity alloc] init];
+    
+    
+    return newActivity;
+    
+}
+
+
+
+
+
 -(Poop *)returnPoopWithColor:(NSString*)color{
     Poop *newPoop = [[Poop alloc] init];
     newPoop.poopColor = color;

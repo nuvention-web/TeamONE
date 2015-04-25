@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
-
+#import "Diapers.h"
 
 
 @interface Activity : PFObject<PFSubclassing>
@@ -16,6 +16,9 @@
 @property (nonatomic, strong) NSString * activityType;
 @property (nonatomic, strong) NSDate *timeStamp;
 @property (nonatomic, strong) NSString *activityID;
+
+
+@property (nonatomic, strong) PFObject *diaperObject;
 
 
 
