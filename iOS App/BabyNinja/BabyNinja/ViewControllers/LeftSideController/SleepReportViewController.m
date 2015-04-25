@@ -192,14 +192,14 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
-    headerView.titleLabel.text = @"Feed";
+    headerView.titleLabel.text = @"Sleep";
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
-    headerView.subtitleLabel.text = kJBStringLabel2013;
-    headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
-    headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
-    headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
+    //headerView.subtitleLabel.text = kJBStringLabel2013;
+   // headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
+   // headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
+   // headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
     headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
     self.lineChartView.headerView = headerView;
     
