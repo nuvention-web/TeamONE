@@ -30,6 +30,9 @@
                     <state key="normal" backgroundImage="pee-iPhone">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="preeButtonPressed:" destination="-1" eventType="touchUpInside" id="l3o-yS-aN3"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

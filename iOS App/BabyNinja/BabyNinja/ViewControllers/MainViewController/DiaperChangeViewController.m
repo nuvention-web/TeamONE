@@ -121,4 +121,13 @@
 }
 */
 
+- (IBAction)preeButtonPressed:(id)sender {
+    
+    PeeTypeSelectionViewController *controller = [[PeeTypeSelectionViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+    
+    
+    
+    
+}
 @end
