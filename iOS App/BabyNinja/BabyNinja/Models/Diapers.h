@@ -8,7 +8,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+#import <Parse/PFObject+Subclass.h>
+#import "Constants.h"
 
 @interface Diapers : PFObject<PFSubclassing>
 
@@ -16,6 +17,11 @@
 @property (nonatomic, strong) NSString *poopTexture;
 @property (nonatomic, strong) NSString *type;
 
+
++(Diapers *)returnPoopDiapierObject:(NSString*)poopColor :(NSString*)poopTexture;
+
+
++(Diapers *)returnPeeDiapierObject:(NSString*)peeColor;
 
 
 

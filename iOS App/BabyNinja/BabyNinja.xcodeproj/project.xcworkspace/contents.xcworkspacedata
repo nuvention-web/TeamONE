@@ -2,10 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Diapers.h">
+      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.h">
    </FileRef>
    <FileRef
-      location = "group:../Diapers.m">
+      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.xib">
    </FileRef>
    <FileRef
       location = "self:BabyNinja.xcodeproj">

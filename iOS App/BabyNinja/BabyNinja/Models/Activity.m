@@ -9,13 +9,41 @@
 #import "Activity.h"
 
 @implementation Activity
+
 @dynamic activityID;
 @dynamic timeStamp;
 @dynamic activityType;
+@dynamic diaperObject;
+
+//-(NSTimeInterval*)getTimeStamp{
+//   NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+//   return &timeStamp;
+//}
 
 
 
-//+ (Activity* )returnActivityWithAttibutes:
++ (void)load {
+    [self registerSubclass];
+}
+
++ (NSString *)parseClassName {
+    return @"Activity";
+}
+
+
++(Activity *)returnActivityWithAttibutes:(NSString*)type:(NSString*)activityID{
+    
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInt:timeStamp];
+    Activity *newActivity = [[Activity alloc] init];
+    newActivity.activityID = activityID;
+    newActivity.activityType = type;
+    newActivity.timeStamp = timeStampObj;
+    newActivity.diaperObject = nil;
+    return newActivity;
+}
+
+
 
 
 

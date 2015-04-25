@@ -115,6 +115,8 @@
 		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
 		E358A8A21AEC031C003680C7 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A11AEC031C003680C7 /* Activity.m */; };
 		E358A8A81AEC0833003680C7 /* Diapers.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A71AEC0833003680C7 /* Diapers.m */; };
+		E358A8BA1AEC3DDC003680C7 /* PeeTypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */; };
+		E358A8BB1AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -346,6 +348,10 @@
 		E358A8A11AEC031C003680C7 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		E358A8A61AEC0833003680C7 /* Diapers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diapers.h; sourceTree = "<group>"; };
 		E358A8A71AEC0833003680C7 /* Diapers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diapers.m; sourceTree = "<group>"; };
+		E358A8AC1AEC3267003680C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../ViewControllers/MainViewController/Constants.h; sourceTree = "<group>"; };
+		E358A8B71AEC3DDC003680C7 /* PeeTypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeeTypeSelectionViewController.h; sourceTree = "<group>"; };
+		E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeeTypeSelectionViewController.m; sourceTree = "<group>"; };
+		E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeeTypeSelectionViewController.xib; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -644,6 +650,9 @@
 		203A49A01A809F7000F02E56 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E358A8B71AEC3DDC003680C7 /* PeeTypeSelectionViewController.h */,
+				E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */,
+				E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */,
 				203A49A11A809F7000F02E56 /* MainViewController.h */,
 				203A49A21A809F7000F02E56 /* MainViewController.m */,
 				203A49AE1A815DB200F02E56 /* MainViewController.xib */,
@@ -739,6 +748,7 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E358A8AC1AEC3267003680C7 /* Constants.h */,
 				E358A8A61AEC0833003680C7 /* Diapers.h */,
 				E358A8A71AEC0833003680C7 /* Diapers.m */,
 				E358A89D1AEBFB5E003680C7 /* Poop.h */,
@@ -955,6 +965,7 @@
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
+				E358A8BB1AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib in Resources */,
 				20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */,
 				209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */,
 				2067B55D1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib in Resources */,
@@ -1007,6 +1018,7 @@
 				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
+				E358A8BA1AEC3DDC003680C7 /* PeeTypeSelectionViewController.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */,
 				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,

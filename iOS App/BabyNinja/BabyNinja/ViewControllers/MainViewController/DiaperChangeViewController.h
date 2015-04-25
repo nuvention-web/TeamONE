@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PeeTypeSelectionViewController.h"
 
 @interface DiaperChangeViewController : UIViewController
+- (IBAction)preeButtonPressed:(id)sender;
 
 @end
