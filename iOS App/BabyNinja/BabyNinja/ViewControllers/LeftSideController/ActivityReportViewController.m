@@ -5,7 +5,7 @@
 //  Created by Sneha on 3/10/15.
 //  Copyright (c) 2015 TeamONE Software. All rights reserved.
 //
-#import "SleepReportViewController.h"
+#import "ActivityReportViewController.h"
 
 // Views
 #import "JBLineChartView.h"
@@ -39,7 +39,7 @@ NSString * const kJBLineChartViewControllerNavButtonViewKey = @"view";
 
 CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
-@interface  SleepReportViewController () <JBLineChartViewDelegate, JBLineChartViewDataSource>
+@interface  ActivityReportViewController () <JBLineChartViewDelegate, JBLineChartViewDataSource>
 @property (nonatomic, strong) JBChartTooltipView *tooltipView;
 @property (nonatomic, strong) JBChartTooltipTipView *tooltipTipView;
 @property (nonatomic, strong) JBLineChartView *lineChartView;
@@ -56,7 +56,7 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
 @end
 
-@implementation SleepReportViewController
+@implementation ActivityReportViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -191,6 +191,8 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 {
     [super loadView];
     
+    
+    
     self.view.backgroundColor = kJBColorLineChartControllerBackground;
     self.navigationItem.rightBarButtonItem = [self chartToggleButtonWithTarget:self action:@selector(chartToggleButtonPressed:)];
     
@@ -202,14 +204,16 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     self.lineChartView.backgroundColor = kJBColorLineChartBackground;
     
     JBChartHeaderView *headerView = [[JBChartHeaderView alloc] initWithFrame:CGRectMake(kJBLineChartViewControllerChartPadding, ceil(self.view.bounds.size.height * 0.5) - ceil(kJBLineChartViewControllerChartHeaderHeight * 0.5), self.view.bounds.size.width - (kJBLineChartViewControllerChartPadding * 2), kJBLineChartViewControllerChartHeaderHeight)];
-    headerView.titleLabel.text = @"Feed";
+    
+    
+    headerView.titleLabel.text = [self.activityType stringByAppendingString:@" Report"];
     headerView.titleLabel.textColor = kJBColorLineChartHeader;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
-    headerView.subtitleLabel.text = kJBStringLabel2013;
-    headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
-    headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
-    headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
+    //headerView.subtitleLabel.text = kJBStringLabel2013;
+   // headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
+   // headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
+   // headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
     headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
     self.lineChartView.headerView = headerView;
     
@@ -220,16 +224,25 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     
     //// Changing the range of the y axes
     
+    NSDate *today = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EE"];
+    NSLog(@"%@", [dateFormatter stringFromDate:today]);
+    
+    NSDate *last = [today dateByAddingTimeInterval: -(86400.0*6)];
+    NSLog(@"%@", [dateFormatter stringFromDate:last]);
     
     
-    footerView.leftLabel.text = [[self.daysOfWeek objectAtIndex:(NSUInteger)0] uppercaseString];
+    footerView.leftLabel.text = [[dateFormatter stringFromDate:last] uppercaseString];
     footerView.leftLabel.textColor = [UIColor whiteColor];
-    footerView.rightLabel.text = [[self.daysOfWeek objectAtIndex:(NSUInteger)3] uppercaseString];;
+    footerView.rightLabel.text = @"TODAY";
+    footerView.rightLabel.textColor = [UIColor whiteColor];
     
-    footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
+    /*footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
     footerView.leftLabel.textColor = [UIColor whiteColor];
     footerView.rightLabel.text = [[self.daysOfWeek lastObject] uppercaseString];;
-    footerView.rightLabel.textColor = [UIColor whiteColor];
+    footerView.rightLabel.textColor = [UIColor whiteColor];*/
     footerView.sectionCount = [[self largestLineData] count];
     self.lineChartView.footerView = footerView;
     
@@ -301,9 +314,11 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
 {
+
     NSNumber *valueNumber = [[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex];
-    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:kJBStringLabelMm];
-    [self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
+    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:@" H"];
+    //[self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
+    [self.informationView setTitleText:@"Daily Total"];
     [self.informationView setHidden:NO animated:YES];
     [self setTooltipVisible:YES animated:YES atTouchPoint:touchPoint];
     [self.tooltipView setText:[[self.daysOfWeek objectAtIndex:horizontalIndex] uppercaseString]];
