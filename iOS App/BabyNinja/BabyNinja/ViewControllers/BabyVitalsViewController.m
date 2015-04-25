@@ -19,11 +19,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.babyImageView.layer.cornerRadius = 70;
+    
+    
     
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.babyImageView.layer.cornerRadius = 90;
+    self.babyImageView.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +55,39 @@
 }
 
 - (IBAction)imageEditButtonPressed:(id)sender {
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Edit Photo"
+                                          message:@""
+                                          preferredStyle:UIAlertControllerStyleActionSheet];
     
+    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"Take Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *imagePickController = [[UIImagePickerController alloc]init];
+        imagePickController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            imagePickController.delegate=self;
+            imagePickController.allowsEditing=TRUE;
+            [self presentViewController:imagePickController animated:YES completion:nil];
+ 
+        }
+    }] ;
+    UIAlertAction *choosePhotoAction = [UIAlertAction actionWithTitle:@"Choose Existing Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *imagePickController = [[UIImagePickerController alloc]init];
+        imagePickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            imagePickController.delegate=self;
+            imagePickController.allowsEditing=TRUE;
+            [self presentViewController:imagePickController animated:YES completion:nil];
+            
+        }
+    }] ;
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        // do stuff here
+    }] ;
+    [alertController addAction:takePhotoAction];
+    [alertController addAction:choosePhotoAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)nextScreenButtonPressed:(id)sender {
@@ -158,4 +200,15 @@
     [self.babyNameTextField resignFirstResponder];
     return YES;
 }
+
+#pragma mark UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
+    self.babyImageView.image=image;
+//    saveImageBotton.enabled=TRUE;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

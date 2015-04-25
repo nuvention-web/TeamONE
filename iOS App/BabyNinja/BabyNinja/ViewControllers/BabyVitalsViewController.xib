@@ -25,11 +25,8 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL8-ML-liz">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
-                            <rect key="frame" x="117" y="30" width="140" height="140"/>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-bv-lqY">
-                            <rect key="frame" x="175" y="176" width="30" height="30"/>
+                            <rect key="frame" x="175" y="207" width="30" height="30"/>
                             <state key="normal" title="Edit">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -37,6 +34,9 @@
                                 <action selector="imageEditButtonPressed:" destination="-1" eventType="touchUpInside" id="mgp-3l-ID9"/>
                             </connections>
                         </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
+                            <rect key="frame" x="97" y="25" width="180" height="180"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.51070926909166348" blue="0.35183096865026586" alpha="1" colorSpace="calibratedRGB"/>
                 </view>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BabyVitalsViewController : UIViewController <UITextFieldDelegate>
+@interface BabyVitalsViewController : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *babyImageView;
 
