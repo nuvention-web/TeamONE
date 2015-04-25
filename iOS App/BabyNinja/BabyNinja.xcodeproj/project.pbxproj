@@ -111,6 +111,7 @@
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
+		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -334,6 +335,8 @@
 		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
 		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
+		E358A89D1AEBFB5E003680C7 /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
+		E358A89E1AEBFB5E003680C7 /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -727,6 +730,8 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E358A89D1AEBFB5E003680C7 /* Poop.h */,
+				E358A89E1AEBFB5E003680C7 /* Poop.m */,
 				20440A661A97F0AE0066CB7F /* Baby.h */,
 				20440A671A97F0AE0066CB7F /* Baby.m */,
 				20440A691A97F0C70066CB7F /* CareTaker.h */,
@@ -1006,6 +1011,7 @@
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
+				E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
