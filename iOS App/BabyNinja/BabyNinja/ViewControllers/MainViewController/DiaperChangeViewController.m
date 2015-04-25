@@ -62,6 +62,15 @@
 //    [alertController setValue:v forKey:@"contentViewController"];
 //    alertController.view.frame = CGRectMake(0, 0, 400, 400);
 //    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+        PoopTypeSelectionViewController *controller = [[PoopTypeSelectionViewController alloc]init];
+   [self.navigationController pushViewController:controller animated:YES];
+    
+    
+    
+    
+    
 }
 
 #pragma mark - WYPopoverControllerDelegate
