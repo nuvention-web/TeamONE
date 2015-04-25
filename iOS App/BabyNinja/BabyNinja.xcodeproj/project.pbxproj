@@ -70,6 +70,8 @@
 		205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98441ACB351200B5E3D5 /* libsqlite3.dylib */; };
 		206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */; };
 		206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 206589DF1A8A666F0019F21D /* AlertInterfaceController.m */; };
+		2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */; };
+		2067B55D1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */; };
 		209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753CD1AA0F35A00463D41 /* BabyProfileCell.m */; };
 		209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */; };
 		209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753D21AA15E2B00463D41 /* CareTakersListCell.m */; };
@@ -135,13 +137,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 203A49D01A828C7300F02E56;
 			remoteInfo = "BabyNinja WatchKit Extension";
-		};
-		205B98501AD0ADE000B5E3D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
-			remoteInfo = "CorePlot-CocoaTouch";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -267,11 +262,13 @@
 		205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		205B98421ACB350900B5E3D5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		205B98441ACB351200B5E3D5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		206589DB1A8A61500019F21D /* TextureSelectionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureSelectionInterfaceController.h; sourceTree = "<group>"; };
 		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
 		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
 		206589DF1A8A666F0019F21D /* AlertInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertInterfaceController.m; sourceTree = "<group>"; };
+		2067B5591AEBEEAC00FCEBAE /* BabyVitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyVitalsViewController.h; sourceTree = "<group>"; };
+		2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyVitalsViewController.m; sourceTree = "<group>"; };
+		2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyVitalsViewController.xib; sourceTree = "<group>"; };
 		209753CC1AA0F35A00463D41 /* BabyProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyProfileCell.h; sourceTree = "<group>"; };
 		209753CD1AA0F35A00463D41 /* BabyProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyProfileCell.m; sourceTree = "<group>"; };
 		209753CF1AA0F36F00463D41 /* BabyProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BabyProfileCell.xib; sourceTree = "<group>"; };
@@ -388,7 +385,6 @@
 		201024C81A7B030F00F248F3 = {
 			isa = PBXGroup;
 			children = (
-				205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */,
 				201024D31A7B030F00F248F3 /* BabyNinja */,
 				201024ED1A7B030F00F248F3 /* BabyNinjaTests */,
 				203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */,
@@ -484,6 +480,10 @@
 				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
 				201332B91ADCD9E70012B498 /* LoginViewController.h */,
 				201332BA1ADCD9E70012B498 /* LoginViewController.m */,
+				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
+				2067B5591AEBEEAC00FCEBAE /* BabyVitalsViewController.h */,
+				2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */,
+				2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -641,7 +641,6 @@
 				20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */,
 				20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */,
 				20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */,
-				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
 				20558F161AE95A7D00A42961 /* PoopTypeSelectionViewController.h */,
 				20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */,
 				20558F181AE95A7D00A42961 /* PoopTypeSelectionViewController.xib */,
@@ -770,14 +769,6 @@
 				205B98291ACB343100B5E3D5 /* Parse.framework */,
 			);
 			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		205B984B1AD0ADE000B5E3D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				205B98511AD0ADE000B5E3D5 /* libCorePlot-CocoaTouch.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		20B3A8791A84884300B4C8CC /* ALRadial */ = {
@@ -913,12 +904,6 @@
 			mainGroup = 201024C81A7B030F00F248F3;
 			productRefGroup = 201024D21A7B030F00F248F3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 205B984B1AD0ADE000B5E3D5 /* Products */;
-					ProjectRef = 205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				201024D01A7B030F00F248F3 /* BabyNinja */,
@@ -928,16 +913,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		205B98511AD0ADE000B5E3D5 /* libCorePlot-CocoaTouch.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libCorePlot-CocoaTouch.a";
-			remoteRef = 205B98501AD0ADE000B5E3D5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		201024CF1A7B030F00F248F3 /* Resources */ = {
@@ -962,6 +937,7 @@
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
 				20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */,
 				209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */,
+				2067B55D1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib in Resources */,
 				20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */,
 				20BA8EEE1AAF4A2C00290220 /* LaunchScreenViewController.xib in Resources */,
 			);
@@ -1012,6 +988,7 @@
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
+				2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */,
 				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,
 				2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */,
 				20558F2A1AE967F800A42961 /* WYStoryboardPopoverSegue.m in Sources */,
