@@ -11,7 +11,9 @@
 #import "MainViewController.h"
 #import "LeftSideController.h"
 
-@interface BabyVitalsViewController ()
+@interface BabyVitalsViewController (){
+    BOOL didSetDOB;
+}
 
 @end
 
@@ -19,11 +21,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.babyImageView.layer.cornerRadius = 70;
+    didSetDOB = NO;
     
+    self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.babyImageView.layer.cornerRadius = 90;
+    self.babyImageView.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,33 +57,65 @@
 }
 
 - (IBAction)imageEditButtonPressed:(id)sender {
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Edit Photo"
+                                          message:@""
+                                          preferredStyle:UIAlertControllerStyleActionSheet];
     
+    UIAlertAction *takePhotoAction = [UIAlertAction actionWithTitle:@"Take Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *imagePickController = [[UIImagePickerController alloc]init];
+        imagePickController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            imagePickController.delegate=self;
+            imagePickController.allowsEditing=TRUE;
+            [self presentViewController:imagePickController animated:YES completion:nil];
+ 
+        }
+    }] ;
+    UIAlertAction *choosePhotoAction = [UIAlertAction actionWithTitle:@"Choose Existing Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *imagePickController = [[UIImagePickerController alloc]init];
+        imagePickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+            imagePickController.delegate=self;
+            imagePickController.allowsEditing=TRUE;
+            [self presentViewController:imagePickController animated:YES completion:nil];
+            
+        }
+    }] ;
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        // do stuff here
+    }] ;
+    [alertController addAction:takePhotoAction];
+    [alertController addAction:choosePhotoAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (IBAction)nextScreenButtonPressed:(id)sender {
-    [self presentViewController:[self addSideViewController] animated:NO completion:nil];
+    [self presentViewController:[self addSideViewController] animated:YES completion:nil];
 }
 
 - (IBAction)babyDOBButtonPressed:(id)sender {
     
     if(self.babyDOBButton.tag == 0){
         [self showDatePicker];
-        self.babyDOBButton.tag = 1;
+        
     } else {
         [self hideDatePicker];
-        self.babyDOBButton.tag = 0;
+        
     }
 }
 
 -(void)showDatePicker{
     self.nextScreenButton.alpha = 0;
-    
+    self.babyDOBButton.tag = 1;
     [UIView animateWithDuration:0.5f
                      animations:^{
-                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
-                                                         450,
-                                                         self.datePicker.frame.size.width,
-                                                         self.datePicker.frame.size.height)];
+                         [self.datePickerView setFrame:CGRectMake(self.datePickerView.frame.origin.x,
+                                                         410,
+                                                         self.datePickerView.frame.size.width,
+                                                         self.datePickerView.frame.size.height)];
                      }
                      completion:nil];
 }
@@ -79,15 +123,27 @@
 -(void)hideDatePicker{
     [UIView animateWithDuration:0.5f
                      animations:^{
-                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
+                         [self.datePickerView setFrame:CGRectMake(self.datePickerView.frame.origin.x,
                                                               667,
-                                                              self.datePicker.frame.size.width,
-                                                              self.datePicker.frame.size.height)];
+                                                              self.datePickerView.frame.size.width,
+                                                              self.datePickerView.frame.size.height)];
                      }
                      completion:nil];
-    
+    self.babyDOBButton.tag = 0;
     self.nextScreenButton.alpha = 1;
 }
+
+- (IBAction)doneButtonPressed:(id)sender {
+    didSetDOB = YES;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSString *string = [dateFormatter stringFromDate:self.datePicker.date];
+    [self.babyDOBButton setTitle:string forState:UIControlStateNormal];
+    [self hideDatePicker];
+    [self validateDataEntries];
+}
+
 
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
@@ -111,12 +167,16 @@
     return drawer;
 }
 
-
+-(void)validateDataEntries{
+    if(![self.babyNameTextField.text isEqualToString:@""] && ![self.babyWeightTextField.text isEqualToString:@""] && didSetDOB){
+        self.nextScreenButton.enabled = YES;
+    }
+}
 
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    
+    [self hideDatePicker];
 //    if(textField == self.babyDOBTextField){
 //        [self showDatePicker];
 //        return NO;
@@ -138,6 +198,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     
+    [self validateDataEntries];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -154,6 +215,18 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
+    [self.babyWeightTextField resignFirstResponder];
+    [self.babyNameTextField resignFirstResponder];
     return YES;
 }
+
+#pragma mark UIImagePickerControllerDelegate
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
+    self.babyImageView.image=image;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
