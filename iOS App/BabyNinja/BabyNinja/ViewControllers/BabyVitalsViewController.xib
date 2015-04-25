@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BabyVitalsViewController">
             <connections>
-                <outlet property="babyDOBTextField" destination="VZ4-lh-twb" id="kSj-v2-q1Z"/>
+                <outlet property="babyDOBButton" destination="65Y-He-Zcw" id="A28-bZ-FBS"/>
                 <outlet property="babyImageView" destination="oF4-mm-Pkn" id="TAo-yW-eCk"/>
                 <outlet property="babyNameTextField" destination="Xwh-c4-f9q" id="eoV-HK-VMH"/>
                 <outlet property="babyWeightTextField" destination="tZd-BF-KIS" id="izf-jS-LFR"/>
@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL8-ML-liz">
-                    <rect key="frame" x="0.0" y="0.0" width="438" height="232"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="238"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
                             <rect key="frame" x="117" y="30" width="140" height="140"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-bv-lqY">
-                            <rect key="frame" x="178" y="176" width="30" height="30"/>
+                            <rect key="frame" x="175" y="176" width="30" height="30"/>
                             <state key="normal" title="Edit">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -41,19 +41,14 @@
                     <color key="backgroundColor" red="1" green="0.51070926909166348" blue="0.35183096865026586" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-c4-f9q">
-                    <rect key="frame" x="39" y="295" width="303" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-BF-KIS">
-                    <rect key="frame" x="39" y="386" width="303" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Date of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZ4-lh-twb">
                     <rect key="frame" x="39" y="340" width="303" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Weight in Pounds" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-BF-KIS">
+                    <rect key="frame" x="39" y="386" width="173" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-P4-8wJ">
                     <rect key="frame" x="39" y="251" width="303" height="29"/>
@@ -65,8 +60,29 @@
                         <action selector="genderSegmentControlChanged:" destination="-1" eventType="valueChanged" id="Uui-l5-EHT"/>
                     </connections>
                 </segmentedControl>
+                <datePicker tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2T-iR-Yv9">
+                    <rect key="frame" x="0.0" y="667" width="375" height="217"/>
+                    <date key="date" timeIntervalSinceReferenceDate="451670541.43388897">
+                        <!--2015-04-25 16:02:21 +0000-->
+                    </date>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-iW-U6B">
+                    <rect key="frame" x="226" y="390" width="58" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-He-Zcw">
+                    <rect key="frame" x="39" y="294" width="303" height="30"/>
+                    <state key="normal" title="Date of Birth">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="babyDOBButtonPressed:" destination="-1" eventType="touchUpInside" id="Kf3-dH-Lr0"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNf-dO-jg4">
-                    <rect key="frame" x="149" y="508" width="82" height="30"/>
+                    <rect key="frame" x="149" y="551" width="82" height="30"/>
                     <state key="normal" title="Good to go!">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -74,12 +90,6 @@
                         <action selector="nextScreenButtonPressed:" destination="-1" eventType="touchUpInside" id="b7L-vG-CWE"/>
                     </connections>
                 </button>
-                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O2T-iR-Yv9">
-                    <rect key="frame" x="0.0" y="438" width="401" height="214"/>
-                    <date key="date" timeIntervalSinceReferenceDate="451670541.43388897">
-                        <!--2015-04-25 16:02:21 +0000-->
-                    </date>
-                </datePicker>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

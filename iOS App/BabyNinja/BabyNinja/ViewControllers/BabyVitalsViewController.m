@@ -20,6 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.babyImageView.layer.cornerRadius = 70;
+    
+    self.babyNameTextField.delegate = self;
+    self.babyWeightTextField.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -49,11 +52,24 @@
     [self presentViewController:[self addSideViewController] animated:NO completion:nil];
 }
 
+- (IBAction)babyDOBButtonPressed:(id)sender {
+    
+    if(self.babyDOBButton.tag == 0){
+        [self showDatePicker];
+        self.babyDOBButton.tag = 1;
+    } else {
+        [self hideDatePicker];
+        self.babyDOBButton.tag = 0;
+    }
+}
+
 -(void)showDatePicker{
+    self.nextScreenButton.alpha = 0;
+    
     [UIView animateWithDuration:0.5f
                      animations:^{
                          [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
-                                                         0,
+                                                         450,
                                                          self.datePicker.frame.size.width,
                                                          self.datePicker.frame.size.height)];
                      }
@@ -64,11 +80,13 @@
     [UIView animateWithDuration:0.5f
                      animations:^{
                          [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
-                                                              0,
+                                                              667,
                                                               self.datePicker.frame.size.width,
                                                               self.datePicker.frame.size.height)];
                      }
                      completion:nil];
+    
+    self.nextScreenButton.alpha = 1;
 }
 
 -(UIViewController*)addSideViewController{
@@ -93,16 +111,18 @@
     return drawer;
 }
 
+
+
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     
-    if(textField == self.babyDOBTextField){
-        [self showDatePicker];
-        return NO;
-    } else {
+//    if(textField == self.babyDOBTextField){
+//        [self showDatePicker];
+//        return NO;
+//    } else {
         return YES;
-    }
+//    }
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{

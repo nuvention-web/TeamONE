@@ -18,7 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *babyNameTextField;
 
-@property (weak, nonatomic) IBOutlet UITextField *babyDOBTextField;
+@property (weak, nonatomic) IBOutlet UIButton *babyDOBButton;
 
 @property (weak, nonatomic) IBOutlet UITextField *babyWeightTextField;
 
@@ -29,6 +29,9 @@
 - (IBAction)imageEditButtonPressed:(id)sender;
 
 - (IBAction)nextScreenButtonPressed:(id)sender;
+
+- (IBAction)babyDOBButtonPressed:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
