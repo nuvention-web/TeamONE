@@ -38,12 +38,76 @@
 }
 
 - (IBAction)imageEditButtonPressed:(id)sender {
+    
 }
 
 - (IBAction)nextScreenButtonPressed:(id)sender {
+    
+}
+
+-(void)showDatePicker{
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
+                                                         0,
+                                                         self.datePicker.frame.size.width,
+                                                         self.datePicker.frame.size.height)];
+                     }
+                     completion:nil];
+}
+
+-(void)hideDatePicker{
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
+                                                              0,
+                                                              self.datePicker.frame.size.width,
+                                                              self.datePicker.frame.size.height)];
+                     }
+                     completion:nil];
 }
 
 #pragma mark UITextFieldDelegate
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if(textField == self.babyDOBTextField){
+        [self showDatePicker];
+        return NO;
+    } else {
+        return YES;
+    }
+}
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+    
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    
+    return YES;
+    
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    return YES;
+    
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField{
+    
+    return YES;
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    return YES;
+}
 @end
