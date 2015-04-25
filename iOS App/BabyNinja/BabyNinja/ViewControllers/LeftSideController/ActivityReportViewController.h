@@ -1,5 +1,5 @@
 //
-//  SleepReportViewController.h
+//  ActivityReportViewController.h
 //  BabyNinja
 //
 //  Created by Sneha on 3/10/15.
@@ -10,7 +10,7 @@
 #import "JBChartTooltipView.h"
 #import "JBChartView.h"
 
-@interface SleepReportViewController : UIViewController
+@interface ActivityReportViewController : UIViewController
 
 @property (nonatomic, strong, readonly) JBChartTooltipView *tooltipView;
 @property (nonatomic, assign) BOOL tooltipVisible;

@@ -8,7 +8,7 @@
 
 #import "ReportListViewController.h"
 #import "ReportScreenViewController.h"
-#import "SleepReportViewController.h"
+#import "ActivityReportViewController.h"
 
 @interface ReportListViewController ()
 @property(nonatomic, strong) NSArray *actions;
@@ -78,22 +78,22 @@
         ReportScreenViewController *report = [[ReportScreenViewController alloc]init];
         [self presentViewController:report animated:YES completion:nil];
     } else if([cell.textLabel.text isEqualToString:@"Sleep Report"]){
-        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Sleep"];
         [self presentViewController:report animated:YES completion:nil];
     }else if([cell.textLabel.text isEqualToString:@"Feed Report"]){
-        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Feed"];
         
         [self presentViewController:report animated:YES completion:nil];
         report.imageView.image = [UIImage imageNamed:@"Feed"];
         report.header.text = @"The Feed Report";
     }else if([cell.textLabel.text isEqualToString:@"360 Report"]){
-        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]init];
         
         [self presentViewController:report animated:YES completion:nil];
         report.imageView.image = [UIImage imageNamed:@"360Report"];
         report.header.text = @"";
     }else if([cell.textLabel.text isEqualToString:@"Diaper Report"]){
-        SleepReportViewController *report = [[SleepReportViewController alloc]init];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Diaper"];
         
         [self presentViewController:report animated:YES completion:nil];
         report.imageView.image = [UIImage imageNamed:@"DiaperReport"];
