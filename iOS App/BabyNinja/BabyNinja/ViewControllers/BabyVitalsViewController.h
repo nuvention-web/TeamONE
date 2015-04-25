@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *babyWeightTextField;
 
 @property (weak, nonatomic) IBOutlet UIButton *nextScreenButton;
+@property (weak, nonatomic) IBOutlet UIView *datePickerView;
 
 - (IBAction)genderSegmentControlChanged:(id)sender;
 

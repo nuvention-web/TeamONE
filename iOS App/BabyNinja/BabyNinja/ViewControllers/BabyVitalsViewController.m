@@ -11,7 +11,9 @@
 #import "MainViewController.h"
 #import "LeftSideController.h"
 
-@interface BabyVitalsViewController ()
+@interface BabyVitalsViewController (){
+    BOOL didSetDOB;
+}
 
 @end
 
@@ -19,9 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    didSetDOB = NO;
     
-    
-    
+    self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
     
@@ -91,29 +93,29 @@
 }
 
 - (IBAction)nextScreenButtonPressed:(id)sender {
-    [self presentViewController:[self addSideViewController] animated:NO completion:nil];
+    [self presentViewController:[self addSideViewController] animated:YES completion:nil];
 }
 
 - (IBAction)babyDOBButtonPressed:(id)sender {
     
     if(self.babyDOBButton.tag == 0){
         [self showDatePicker];
-        self.babyDOBButton.tag = 1;
+        
     } else {
         [self hideDatePicker];
-        self.babyDOBButton.tag = 0;
+        
     }
 }
 
 -(void)showDatePicker{
     self.nextScreenButton.alpha = 0;
-    
+    self.babyDOBButton.tag = 1;
     [UIView animateWithDuration:0.5f
                      animations:^{
-                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
-                                                         450,
-                                                         self.datePicker.frame.size.width,
-                                                         self.datePicker.frame.size.height)];
+                         [self.datePickerView setFrame:CGRectMake(self.datePickerView.frame.origin.x,
+                                                         410,
+                                                         self.datePickerView.frame.size.width,
+                                                         self.datePickerView.frame.size.height)];
                      }
                      completion:nil];
 }
@@ -121,15 +123,27 @@
 -(void)hideDatePicker{
     [UIView animateWithDuration:0.5f
                      animations:^{
-                         [self.datePicker setFrame:CGRectMake(self.datePicker.frame.origin.x,
+                         [self.datePickerView setFrame:CGRectMake(self.datePickerView.frame.origin.x,
                                                               667,
-                                                              self.datePicker.frame.size.width,
-                                                              self.datePicker.frame.size.height)];
+                                                              self.datePickerView.frame.size.width,
+                                                              self.datePickerView.frame.size.height)];
                      }
                      completion:nil];
-    
+    self.babyDOBButton.tag = 0;
     self.nextScreenButton.alpha = 1;
 }
+
+- (IBAction)doneButtonPressed:(id)sender {
+    didSetDOB = YES;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    
+    NSString *string = [dateFormatter stringFromDate:self.datePicker.date];
+    [self.babyDOBButton setTitle:string forState:UIControlStateNormal];
+    [self hideDatePicker];
+    [self validateDataEntries];
+}
+
 
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
@@ -153,12 +167,16 @@
     return drawer;
 }
 
-
+-(void)validateDataEntries{
+    if(![self.babyNameTextField.text isEqualToString:@""] && ![self.babyWeightTextField.text isEqualToString:@""] && didSetDOB){
+        self.nextScreenButton.enabled = YES;
+    }
+}
 
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    
+    [self hideDatePicker];
 //    if(textField == self.babyDOBTextField){
 //        [self showDatePicker];
 //        return NO;
@@ -180,6 +198,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     
+    [self validateDataEntries];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -207,7 +226,6 @@
 {
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
     self.babyImageView.image=image;
-//    saveImageBotton.enabled=TRUE;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
