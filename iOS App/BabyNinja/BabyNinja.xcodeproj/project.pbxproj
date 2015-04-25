@@ -129,13 +129,6 @@
 			remoteGlobalIDString = 203A49D01A828C7300F02E56;
 			remoteInfo = "BabyNinja WatchKit Extension";
 		};
-		205B98501AD0ADE000B5E3D5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
-			remoteInfo = "CorePlot-CocoaTouch";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -231,7 +224,6 @@
 		205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		205B98421ACB350900B5E3D5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		205B98441ACB351200B5E3D5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
 		206589DB1A8A61500019F21D /* TextureSelectionInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureSelectionInterfaceController.h; sourceTree = "<group>"; };
 		206589DC1A8A61500019F21D /* TextureSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureSelectionInterfaceController.m; sourceTree = "<group>"; };
 		206589DE1A8A666F0019F21D /* AlertInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertInterfaceController.h; sourceTree = "<group>"; };
@@ -367,7 +359,6 @@
 			children = (
 				E3E7C2BB1AE739ED00C77417 /* FacebookSDK */,
 				E3E7C2B91AE7338B00C77417 /* FBSDKLoginKit.framework */,
-				205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */,
 				201024D31A7B030F00F248F3 /* BabyNinja */,
 				201024ED1A7B030F00F248F3 /* BabyNinjaTests */,
 				203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */,
@@ -668,14 +659,6 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		205B984B1AD0ADE000B5E3D5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				205B98511AD0ADE000B5E3D5 /* libCorePlot-CocoaTouch.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		20B3A8791A84884300B4C8CC /* ALRadial */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,12 +792,6 @@
 			mainGroup = 201024C81A7B030F00F248F3;
 			productRefGroup = 201024D21A7B030F00F248F3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 205B984B1AD0ADE000B5E3D5 /* Products */;
-					ProjectRef = 205B984A1AD0ADE000B5E3D5 /* CorePlot-CocoaTouch.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				201024D01A7B030F00F248F3 /* BabyNinja */,
@@ -824,16 +801,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		205B98511AD0ADE000B5E3D5 /* libCorePlot-CocoaTouch.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libCorePlot-CocoaTouch.a";
-			remoteRef = 205B98501AD0ADE000B5E3D5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		201024CF1A7B030F00F248F3 /* Resources */ = {
