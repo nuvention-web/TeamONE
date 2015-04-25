@@ -113,6 +113,8 @@
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
 		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
+		E358A8A21AEC031C003680C7 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A11AEC031C003680C7 /* Activity.m */; };
+		E358A8A81AEC0833003680C7 /* Diapers.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A71AEC0833003680C7 /* Diapers.m */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -340,6 +342,10 @@
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
 		E358A89D1AEBFB5E003680C7 /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
 		E358A89E1AEBFB5E003680C7 /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
+		E358A8A01AEC031C003680C7 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		E358A8A11AEC031C003680C7 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		E358A8A61AEC0833003680C7 /* Diapers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diapers.h; sourceTree = "<group>"; };
+		E358A8A71AEC0833003680C7 /* Diapers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diapers.m; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -733,6 +739,8 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E358A8A61AEC0833003680C7 /* Diapers.h */,
+				E358A8A71AEC0833003680C7 /* Diapers.m */,
 				E358A89D1AEBFB5E003680C7 /* Poop.h */,
 				E358A89E1AEBFB5E003680C7 /* Poop.m */,
 				20440A661A97F0AE0066CB7F /* Baby.h */,
@@ -741,6 +749,8 @@
 				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
 				2067B55E1AEC013B00FCEBAE /* BabyActivity.h */,
 				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
+				E358A8A01AEC031C003680C7 /* Activity.h */,
+				E358A8A11AEC031C003680C7 /* Activity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1013,6 +1023,7 @@
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
+				E358A8A81AEC0833003680C7 /* Diapers.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
@@ -1021,6 +1032,7 @@
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
 				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
+				E358A8A21AEC031C003680C7 /* Activity.m in Sources */,
 				2029C8DC1AEADD660086B506 /* JBLineChartView.m in Sources */,
 				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
