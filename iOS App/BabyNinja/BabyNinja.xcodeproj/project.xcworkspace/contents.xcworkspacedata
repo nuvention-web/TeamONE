@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Diapers.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Diapers.m">
+   </FileRef>
+   <FileRef
       location = "self:BabyNinja.xcodeproj">
    </FileRef>
 </Workspace>

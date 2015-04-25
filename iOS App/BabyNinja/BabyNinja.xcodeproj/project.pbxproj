@@ -101,8 +101,8 @@
 		20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */; };
 		20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */; };
 		20BA8EE41AAF258F00290220 /* SleepModeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */; };
-		20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EE61AAF289F00290220 /* SleepReportViewController.m */; };
-		20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */; };
+		20BA8EE81AAF289F00290220 /* ActivityReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EE61AAF289F00290220 /* ActivityReportViewController.m */; };
+		20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EE71AAF289F00290220 /* ActivityReportViewController.xib */; };
 		20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */; };
 		20BA8EEE1AAF4A2C00290220 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */; };
 		20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */; };
@@ -113,6 +113,8 @@
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
 		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
+		E358A8A21AEC031C003680C7 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A11AEC031C003680C7 /* Activity.m */; };
+		E358A8A81AEC0833003680C7 /* Diapers.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A71AEC0833003680C7 /* Diapers.m */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -319,9 +321,9 @@
 		20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaperChangeViewController.xib; sourceTree = "<group>"; };
 		20BA8EE21AAF258F00290220 /* SleepModeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeInterfaceController.h; sourceTree = "<group>"; };
 		20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeInterfaceController.m; sourceTree = "<group>"; };
-		20BA8EE51AAF289F00290220 /* SleepReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepReportViewController.h; sourceTree = "<group>"; };
-		20BA8EE61AAF289F00290220 /* SleepReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepReportViewController.m; sourceTree = "<group>"; };
-		20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepReportViewController.xib; sourceTree = "<group>"; };
+		20BA8EE51AAF289F00290220 /* ActivityReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityReportViewController.h; sourceTree = "<group>"; };
+		20BA8EE61AAF289F00290220 /* ActivityReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityReportViewController.m; sourceTree = "<group>"; };
+		20BA8EE71AAF289F00290220 /* ActivityReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityReportViewController.xib; sourceTree = "<group>"; };
 		20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
 		20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
 		20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
@@ -340,6 +342,10 @@
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
 		E358A89D1AEBFB5E003680C7 /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
 		E358A89E1AEBFB5E003680C7 /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
+		E358A8A01AEC031C003680C7 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		E358A8A11AEC031C003680C7 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		E358A8A61AEC0833003680C7 /* Diapers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diapers.h; sourceTree = "<group>"; };
+		E358A8A71AEC0833003680C7 /* Diapers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diapers.m; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -628,9 +634,9 @@
 				20A02DC81AAEB88B00A285C2 /* TimelineViewController.h */,
 				20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */,
 				20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */,
-				20BA8EE51AAF289F00290220 /* SleepReportViewController.h */,
-				20BA8EE61AAF289F00290220 /* SleepReportViewController.m */,
-				20BA8EE71AAF289F00290220 /* SleepReportViewController.xib */,
+				20BA8EE51AAF289F00290220 /* ActivityReportViewController.h */,
+				20BA8EE61AAF289F00290220 /* ActivityReportViewController.m */,
+				20BA8EE71AAF289F00290220 /* ActivityReportViewController.xib */,
 			);
 			path = LeftSideController;
 			sourceTree = "<group>";
@@ -733,6 +739,8 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E358A8A61AEC0833003680C7 /* Diapers.h */,
+				E358A8A71AEC0833003680C7 /* Diapers.m */,
 				E358A89D1AEBFB5E003680C7 /* Poop.h */,
 				E358A89E1AEBFB5E003680C7 /* Poop.m */,
 				20440A661A97F0AE0066CB7F /* Baby.h */,
@@ -741,6 +749,8 @@
 				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
 				2067B55E1AEC013B00FCEBAE /* BabyActivity.h */,
 				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
+				E358A8A01AEC031C003680C7 /* Activity.h */,
+				E358A8A11AEC031C003680C7 /* Activity.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -936,7 +946,7 @@
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
-				20BA8EE91AAF289F00290220 /* SleepReportViewController.xib in Resources */,
+				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				20558F1A1AE95A7D00A42961 /* PoopTypeSelectionViewController.xib in Resources */,
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
@@ -992,7 +1002,7 @@
 				20558F191AE95A7D00A42961 /* PoopTypeSelectionViewController.m in Sources */,
 				2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
-				20BA8EE81AAF289F00290220 /* SleepReportViewController.m in Sources */,
+				20BA8EE81AAF289F00290220 /* ActivityReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
 				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
@@ -1013,6 +1023,7 @@
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
+				E358A8A81AEC0833003680C7 /* Diapers.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
@@ -1021,6 +1032,7 @@
 				20F3BB361AA57DEA00C50831 /* TMDiskCache.m in Sources */,
 				20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */,
 				20BA8EDC1AAEBB4600290220 /* ReportListViewController.m in Sources */,
+				E358A8A21AEC031C003680C7 /* Activity.m in Sources */,
 				2029C8DC1AEADD660086B506 /* JBLineChartView.m in Sources */,
 				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,

@@ -36,9 +36,9 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     if ([FBSDKAccessToken currentAccessToken]) {
-//        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
-        BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]init];
-        [self presentViewController:controller animated:NO completion:nil];
+        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
+//        BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]init];
+//        [self presentViewController:controller animated:NO completion:nil];
         NSLog(@"%@", [PFUser currentUser]);
         // User is logged in, do work such as go to next view controller.
     }
@@ -98,9 +98,9 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     
     if(error == nil){
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UDefaultLoggedIn];
-//        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
-        BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]init];
-        [self presentViewController:controller animated:NO completion:nil];
+        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
+//        BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]init];
+//        [self presentViewController:controller animated:NO completion:nil];
     }
     
     NSLog(@"%@", [PFUser currentUser]);
