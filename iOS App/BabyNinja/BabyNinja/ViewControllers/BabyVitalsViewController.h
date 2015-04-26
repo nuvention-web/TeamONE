@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Baby.h"
+#import "CareTaker.h"
 
 @interface BabyVitalsViewController : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -34,6 +35,7 @@
 
 - (IBAction)babyDOBButtonPressed:(id)sender;
 
+-(id)initWithCareGiver:(CareTaker*)careTaker;
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 

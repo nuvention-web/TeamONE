@@ -175,6 +175,7 @@
 		201332BA1ADCD9E70012B498 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		201332BF1ADCDA010012B498 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = BabyNinja/ViewControllers/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		201739761AED711A00F44EFD /* ModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelConstants.h; sourceTree = "<group>"; };
+		201739771AED88D600F44EFD /* BabyNinjaModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyNinjaModels.h; sourceTree = "<group>"; };
 		2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/Misc/JBChartInformationView.h; sourceTree = "<group>"; };
 		2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/Misc/JBChartInformationView.m; sourceTree = "<group>"; };
 		2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/Misc/JBChartTooltipTipView.h; sourceTree = "<group>"; };
@@ -761,6 +762,7 @@
 				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
 				E358A8A01AEC031C003680C7 /* Activity.h */,
 				E358A8A11AEC031C003680C7 /* Activity.m */,
+				201739771AED88D600F44EFD /* BabyNinjaModels.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";

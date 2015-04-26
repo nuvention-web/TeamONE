@@ -20,6 +20,14 @@
 
 @implementation BabyVitalsViewController
 
+-(id)initWithCareGiver:(CareTaker*)careTaker{
+    self = [super init];
+    if(self){
+        
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
