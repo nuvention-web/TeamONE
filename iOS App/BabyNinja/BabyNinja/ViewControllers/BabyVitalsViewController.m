@@ -23,7 +23,7 @@
 -(id)initWithCareGiver:(CareTaker*)careTaker{
     self = [super init];
     if(self){
-        
+        self.careTaker = careTaker;
     }
     
     return self;

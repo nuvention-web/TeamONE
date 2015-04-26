@@ -11,6 +11,7 @@
 #import "CareTaker.h"
 
 @interface BabyVitalsViewController : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (nonatomic, strong) CareTaker *careTaker;
 
 @property (weak, nonatomic) IBOutlet UIImageView *babyImageView;
 

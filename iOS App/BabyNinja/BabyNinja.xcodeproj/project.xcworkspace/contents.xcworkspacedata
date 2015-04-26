@@ -2,15 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.h">
-   </FileRef>
-   <FileRef
-      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.m">
-   </FileRef>
-   <FileRef
-      location = "group:../BabyNinja/ViewControllers/MainViewController/PeeTypeSelectionViewController.xib">
-   </FileRef>
-   <FileRef
-      location = "self:BabyNinja.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
