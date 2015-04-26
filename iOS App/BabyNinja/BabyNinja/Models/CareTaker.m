@@ -36,6 +36,17 @@
 }
 
 
++ (void)load {
+    [self registerSubclass];
+}
+
++ (NSString *)parseClassName {
+    return @"CareTaker";
+}
+
+
+
+
 
 
 @end
