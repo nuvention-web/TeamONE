@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Diapers.h"
-#import <Parse/PFObject+Subclass.h>
+//#import <Parse/PFObject+Subclass.h>
 
 
 

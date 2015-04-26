@@ -1221,6 +1221,7 @@
 					/Users/sneha/Documents/FacebookSDK,
 					/Users/Rawan/Downloads/FacebookSDK,
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
 				INFOPLIST_FILE = BabyNinja/Info.plist;
@@ -1245,6 +1246,7 @@
 					/Users/sneha/Documents/FacebookSDK,
 					/Users/Rawan/Downloads/FacebookSDK,
 				);
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BabyNinja/BabyNinja.pch;
 				INFOPLIST_FILE = BabyNinja/Info.plist;

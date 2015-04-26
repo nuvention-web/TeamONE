@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
-#import "Constants.h"
 
 @interface Baby : PFObject<PFSubclassing>
 

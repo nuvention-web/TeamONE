@@ -10,7 +10,6 @@
 #import "ICSDrawerController.h"
 #import "MainViewController.h"
 #import "LeftSideController.h"
-#import <Parse/Parse.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 //#import <FacebookSDK/FacebookSDK.h>
