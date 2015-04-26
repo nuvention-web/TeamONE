@@ -20,6 +20,8 @@
 
 @interface PoopTypeSelectionViewController : UIViewController
 
+@property (strong, nonatomic) Baby *dummyBaby;
+
 
 
 // BUTTON PRESSED

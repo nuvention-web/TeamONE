@@ -19,7 +19,14 @@
 @dynamic babyWeight;
 @dynamic activities;
 
-
+-(id)init{
+    self = [super init];
+    if(self) {
+        self.activities = [NSMutableArray array];
+        self.caretakers = [NSMutableArray array];
+    }
+    return self;
+}
 
 + (void)load {
     [self registerSubclass];

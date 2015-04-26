@@ -10,4 +10,43 @@
 
 @implementation CareTaker
 
+@dynamic careTakerName;
+
+@dynamic careTakerId;
+
+@dynamic careTakerUsername;
+
+@dynamic careTakerImageURL;
+
+@dynamic careTakerRelationToBaby;
+
+@dynamic careTakerGender;
+
+@dynamic careTakerBabyArray;
+
+
+
+
+-(id)init{
+    self = [super init];
+    if(self) {
+        self.careTakerBabyArray = [NSMutableArray array];
+    }
+    return self;
+}
+
+
++ (void)load {
+    [self registerSubclass];
+}
+
++ (NSString *)parseClassName {
+    return @"CareTaker";
+}
+
+
+
+
+
+
 @end
