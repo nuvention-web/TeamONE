@@ -8,7 +8,7 @@
 
 #ifndef BabyNinja_BabyNinja_pch
 #define BabyNinja_BabyNinja_pch
-
+#import "ModelConstants.h"
 #import "Constants.h"
 #import "JBConstants.h"
 #import <UIKit/UIKit.h>
