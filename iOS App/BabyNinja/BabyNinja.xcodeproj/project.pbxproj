@@ -14,6 +14,8 @@
 		201024FF1A7B530E00F248F3 /* poop.png in Resources */ = {isa = PBXBuildFile; fileRef = 201024FE1A7B530E00F248F3 /* poop.png */; };
 		201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201332BA1ADCD9E70012B498 /* LoginViewController.m */; };
 		201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201332BF1ADCDA010012B498 /* LoginViewController.xib */; };
+		2017397B1AED8E2900F44EFD /* FeedActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201739791AED8E2900F44EFD /* FeedActivityViewController.m */; };
+		2017397C1AED8E2900F44EFD /* FeedActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */; };
 		2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */; };
 		2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */; };
 		2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */; };
@@ -176,6 +178,9 @@
 		201332BF1ADCDA010012B498 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = BabyNinja/ViewControllers/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
 		201739761AED711A00F44EFD /* ModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelConstants.h; sourceTree = "<group>"; };
 		201739771AED88D600F44EFD /* BabyNinjaModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BabyNinjaModels.h; sourceTree = "<group>"; };
+		201739781AED8E2900F44EFD /* FeedActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedActivityViewController.h; sourceTree = "<group>"; };
+		201739791AED8E2900F44EFD /* FeedActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedActivityViewController.m; sourceTree = "<group>"; };
+		2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedActivityViewController.xib; sourceTree = "<group>"; };
 		2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/Misc/JBChartInformationView.h; sourceTree = "<group>"; };
 		2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/Misc/JBChartInformationView.m; sourceTree = "<group>"; };
 		2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/Misc/JBChartTooltipTipView.h; sourceTree = "<group>"; };
@@ -666,6 +671,9 @@
 				20558F161AE95A7D00A42961 /* PoopTypeSelectionViewController.h */,
 				20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */,
 				20558F181AE95A7D00A42961 /* PoopTypeSelectionViewController.xib */,
+				201739781AED8E2900F44EFD /* FeedActivityViewController.h */,
+				201739791AED8E2900F44EFD /* FeedActivityViewController.m */,
+				2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -960,6 +968,7 @@
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
+				2017397C1AED8E2900F44EFD /* FeedActivityViewController.xib in Resources */,
 				20558F1A1AE95A7D00A42961 /* PoopTypeSelectionViewController.xib in Resources */,
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
@@ -1063,6 +1072,7 @@
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,
 				2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */,
 				20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */,
+				2017397B1AED8E2900F44EFD /* FeedActivityViewController.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
 				20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */,

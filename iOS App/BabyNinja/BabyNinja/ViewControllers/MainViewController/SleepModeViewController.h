@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SleepActivityProtocol <NSObject>
+
+-(void)sleepRecorded:(BabyActivity*)activity;  //TODO: change the BabyActivity type
+
+@end
+
 @interface SleepModeViewController : UIViewController
+
+@property (nonatomic, assign) id <SleepActivityProtocol> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
 
