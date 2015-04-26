@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ALRadialMenu.h"
-
+#import "Baby.h"
 #import "ICSDrawerController.h"
 
 
@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *feedButton;
 @property (weak, nonatomic) IBOutlet UIButton *sleepOrAwakeButton;
+@property (strong, nonatomic) Baby *currentBaby;
 
 @end
 

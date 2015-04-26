@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/PFObject+Subclass.h>
-#import "ModelConstants.h"
+#import <Parse/PFObject+Subclass.h>e
+#import "Constants.h"
 
 @interface Baby : PFObject<PFSubclassing>
 
@@ -17,7 +17,8 @@
 @property (nonatomic, strong) NSString *babyImageURL;
 @property (nonatomic, strong) NSDate *babyDOB;
 @property (nonatomic, strong) NSString *babyGender;
-@property (nonatomic, strong) NSMutableArray *activities; /// the object type inside it would be BabyActivity <BabyActivity.h>
+@property (nonatomic, strong) NSNumber *babyWeight;
+@property (nonatomic, strong) NSMutableArray *activities; /// the object type inside it would be BabyActivity <Activity.h>
 
 
 @end

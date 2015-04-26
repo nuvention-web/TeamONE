@@ -1,3 +1,4 @@
+
 //
 //  Baby.m
 //  BabyNinja
@@ -9,5 +10,25 @@
 #import "Baby.h"
 
 @implementation Baby
+
+@dynamic babyName;
+@dynamic babyId;
+@dynamic babyImageURL;
+@dynamic babyDOB;
+@dynamic babyGender;
+@dynamic babyWeight;
+@dynamic activities;
+
+
+
++ (void)load {
+    [self registerSubclass];
+}
+
++ (NSString *)parseClassName {
+    return @"Baby";
+}
+
+
 
 @end

@@ -13,24 +13,29 @@
 
 @interface BabyVitalsViewController (){
     BOOL didSetDOB;
+    Baby *makeBabyObject;
 }
 
 @end
 
 @implementation BabyVitalsViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    makeBabyObject = [[Baby alloc] init];
+    makeBabyObject.activities = [[NSMutableArray alloc] init];
     didSetDOB = NO;
     
     self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
     
-    
-    
     // Do any additional setup after loading the view from its nib.
 }
+
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -92,9 +97,39 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+//****************
+// GOOD TO GO BUTTON
 - (IBAction)nextScreenButtonPressed:(id)sender {
+    
+    NSNumberFormatter *formatNumber = [[NSNumberFormatter alloc] init];
+    formatNumber.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *babyWeight = [formatNumber numberFromString:self.babyWeightTextField.text];
+    makeBabyObject.babyName =  self.babyNameTextField.text;
+    makeBabyObject.babyWeight = babyWeight;
+    makeBabyObject.babyId = @"SOME BABY ID";           // Modify this section to someID
+    
+    if(self.genderSegmentControl.selectedSegmentIndex == 0)
+    {
+        makeBabyObject.babyGender = @"MALE";
+    }else{
+        makeBabyObject.babyGender = @"FEMALE";
+        
+    }
+    
+    
+    
     [self presentViewController:[self addSideViewController] animated:YES completion:nil];
+    [makeBabyObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"BABY OBJECT MADE");
+        } else {
+            NSLog(@"NOT DONE");        }
+    }];
 }
+
+
+
+
 
 - (IBAction)babyDOBButtonPressed:(id)sender {
     
@@ -133,17 +168,22 @@
     self.nextScreenButton.alpha = 1;
 }
 
+
 - (IBAction)doneButtonPressed:(id)sender {
     didSetDOB = YES;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     NSString *string = [dateFormatter stringFromDate:self.datePicker.date];
+    
+    // set the Baby Birth Day
+    makeBabyObject.babyDOB = self.datePicker.date;
+    
     [self.babyDOBButton setTitle:string forState:UIControlStateNormal];
     [self hideDatePicker];
     [self validateDataEntries];
+    NSLog(@"but button is pressed");
 }
-
 
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
@@ -159,13 +199,24 @@
     LeftSideController *colorsVC = [[LeftSideController alloc] initWithColors:colors];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
     MainViewController *plainColorVC = [[MainViewController alloc] init];
+    
+    // NEW CODE ADDED FOR IF WE DECIDE TO SEND OBJECT FROM VIEW CONTROLLERS
+    plainColorVC.currentBaby = makeBabyObject;
+    
     plainColorVC.view.backgroundColor = colors[0];
     UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
     navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
     navController.title = @"BABYNINJA";
     ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
     return drawer;
+    
+    
+    
+    
 }
+
+
+
 
 -(void)validateDataEntries{
     if(![self.babyNameTextField.text isEqualToString:@""] && ![self.babyWeightTextField.text isEqualToString:@""] && didSetDOB){
