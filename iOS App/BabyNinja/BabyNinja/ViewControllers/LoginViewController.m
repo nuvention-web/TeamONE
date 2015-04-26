@@ -106,7 +106,11 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 }
 
 -(void)showBabyVitalsScreen{
-    BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:[CareTaker new]];
+    CareTaker *careTaker = [[CareTaker alloc]init];
+    careTaker.careTakerName = [FBSDKProfile currentProfile].name;
+    careTaker.careTakerId = [FBSDKProfile currentProfile].userID;
+//    careTaker.careTakerGender = [FBSDKProfile currentProfile]
+    BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:careTaker];
     [self presentViewController:controller animated:NO completion:nil];
 }
 
