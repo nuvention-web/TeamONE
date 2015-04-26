@@ -13,6 +13,9 @@
 #import <Parse/Parse.h>
 #import "BabyVitalsViewController.h"
 
+NSString *const UDefaultLoggedIn = @"UDefaultLoggedIn";
+NSString *const ULogoutNotification = @"ULogoutNotification";
+
 @implementation LoginViewController
 
 - (void)viewDidLoad
