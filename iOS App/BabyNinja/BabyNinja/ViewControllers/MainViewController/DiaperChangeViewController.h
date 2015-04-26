@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PeeTypeSelectionViewController.h"
+
+@protocol DiaperChangeProtocol <NSObject>
+
+-(void)diaperChangeRecorded:(Diapers*)activity;
+
+@end
 
 @interface DiaperChangeViewController : UIViewController
+
+@property (nonatomic, assign) id <DiaperChangeProtocol> delegate;
+
 - (IBAction)preeButtonPressed:(id)sender;
 
 @end

@@ -9,6 +9,8 @@
 #import "DiaperChangeViewController.h"
 #import "PoopTypeSelectionViewController.h"
 #import "WYPopoverController.h"
+#import "PeeTypeSelectionViewController.h"
+
 
 @interface DiaperChangeViewController ()<UIPopoverPresentationControllerDelegate, WYPopoverControllerDelegate>{
     WYPopoverController * popController;
