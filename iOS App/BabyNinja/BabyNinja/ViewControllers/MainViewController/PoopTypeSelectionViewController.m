@@ -30,6 +30,17 @@
 
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor :poopTexture];
+    
+    //Dummuy Baby Tester
+    self.dummyBaby = [[Baby alloc] init];
+    [self.dummyBaby.activities addObject:newActivity];
+    
+    
+    
+    //
+    NSLog(@"HEERE %@", self.dummyBaby.activities[0]);
+    NSLog(@"HEERE2 %@", newActivity);
+    
     [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
@@ -39,7 +50,6 @@
     
 
 }
-
 
 
 - (void)viewDidLoad {
