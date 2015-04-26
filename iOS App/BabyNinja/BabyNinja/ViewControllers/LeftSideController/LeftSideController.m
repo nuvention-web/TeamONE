@@ -21,6 +21,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 
 @interface LeftSideController ()
 
+@property(nonatomic, strong) CareTaker *careTaker;
 @property(nonatomic, strong) NSArray *colors;
 @property(nonatomic, assign) NSInteger previousRow;
 @property(nonatomic, strong) NSArray *actions;
@@ -40,6 +41,18 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     if (self) {
         _colors = colors;
     }
+    return self;
+}
+
+- (id)initWithCareTaker:(CareTaker*)careTaker
+{
+    self = [super init];
+    
+    //    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        _careTaker = careTaker;
+    }
+    
     return self;
 }
 
@@ -105,7 +118,6 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     if(section==0){
         return 2;
     }else {
-        NSParameterAssert(self.colors);
         return self.actions.count;
         //        return self.colors.count;
     }
@@ -129,6 +141,12 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     if(indexPath.section==0){
         if(indexPath.row==0){
             BabyProfileCell *profileCell = (BabyProfileCell *)cell;
+            profileCell.nameLabel.text = [(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyName];
+            
+            profileCell.ageLabel.text= [self calculateTheBabyAgeWithDOB:[(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyDOB]];
+
+            
+            
             [profileCell configureCell];
             
             return profileCell;
@@ -148,6 +166,42 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
         
         return cell;
     }
+}
+
+
+-(NSString*)calculateTheBabyAgeWithDOB:(NSDate*)babyDOB{
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *startDate = [(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyDOB];
+    NSDate *endDate = [NSDate date];
+    unsigned int unitFlags = NSCalendarUnitYear |NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSDateComponents *comps = [calendar components:unitFlags fromDate:startDate  toDate:endDate  options:0];
+    NSInteger years = [comps year];
+    NSInteger months = [comps month];
+    NSInteger days = [comps day];
+    
+    NSString *age = @"";
+    
+    if(years!=0){
+        if(years == 1)
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld year ", (long)years]];
+        else
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld years ", (long)years]];
+    }
+    if(months!=0){
+        if(months == 1)
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld month ", (long)months]];
+        else
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld months ", (long)months]];
+    }
+    if(days!=0){
+        if(days == 1)
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld day", (long)days]];
+        else
+            age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld days", (long)days]];
+    }
+    
+    return age;
 }
 
 #pragma mark - Table view delegate

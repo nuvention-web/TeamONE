@@ -12,6 +12,6 @@
 
 @property(nonatomic, weak) ICSDrawerController *drawer;
 
-- (id)initWithColors:(NSArray *)colors;
+- (id)initWithCareTaker:(CareTaker*)careTaker;
 
 @end
