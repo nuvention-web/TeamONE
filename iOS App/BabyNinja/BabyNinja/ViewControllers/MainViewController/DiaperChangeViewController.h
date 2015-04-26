@@ -18,6 +18,6 @@
 
 @property (nonatomic, assign) id <DiaperChangeProtocol> delegate;
 
-- (IBAction)preeButtonPressed:(id)sender;
+- (IBAction)peeButtonPressed:(id)sender;
 
 @end

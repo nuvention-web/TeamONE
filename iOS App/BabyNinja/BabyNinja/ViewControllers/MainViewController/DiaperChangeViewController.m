@@ -25,6 +25,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -49,9 +54,9 @@
         
     popController = [[WYPopoverController alloc] initWithContentViewController:v];
     popController.delegate = self;
-    popController.passthroughViews = @[self.poopButton];
+//    popController.passthroughViews = @[self.poopButton];
     popController.popoverLayoutMargins = UIEdgeInsetsMake(50, 50, 50, 50);
-    popController.wantsDefaultContentAppearance = NO;
+    popController.wantsDefaultContentAppearance = YES;
         
     }
 
@@ -66,8 +71,8 @@
 //    [self presentViewController:alertController animated:YES completion:nil];
     
     
-        PoopTypeSelectionViewController *controller = [[PoopTypeSelectionViewController alloc]init];
-   [self.navigationController pushViewController:controller animated:YES];
+//        PoopTypeSelectionViewController *controller = [[PoopTypeSelectionViewController alloc]init];
+//   [self.navigationController pushViewController:controller animated:YES];
     
     
     
