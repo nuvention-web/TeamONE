@@ -208,10 +208,9 @@
     
     LeftSideController *colorsVC = [[LeftSideController alloc] initWithColors:colors];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
-    MainViewController *plainColorVC = [[MainViewController alloc] init];
+    MainViewController *plainColorVC = [[MainViewController alloc] initWithCareTaker:self.careTaker];
     
     // NEW CODE ADDED FOR IF WE DECIDE TO SEND OBJECT FROM VIEW CONTROLLERS
-    plainColorVC.currentBaby = makeBabyObject;
     
     plainColorVC.view.backgroundColor = colors[0];
     UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
