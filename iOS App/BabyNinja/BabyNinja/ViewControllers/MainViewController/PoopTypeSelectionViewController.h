@@ -12,7 +12,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "Activity.h"
 #import "Diapers.h"
-//#import "Constants.h"
+#import "ModelConstants.h"
 
 #import "Poop.h"
 

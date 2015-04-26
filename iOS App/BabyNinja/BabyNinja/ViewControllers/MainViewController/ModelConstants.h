@@ -1,5 +1,5 @@
 //
-//  Constants.h
+//  ModelConstants.h
 //  BabyNinja
 //
 //  Created by EVA on 4/25/15.

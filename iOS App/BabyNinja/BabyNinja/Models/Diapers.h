@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
-//#import "Constants.h"
+#import "ModelConstants.h"
 
 @interface Diapers : PFObject<PFSubclassing>
 

@@ -348,7 +348,7 @@
 		E358A8A11AEC031C003680C7 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		E358A8A61AEC0833003680C7 /* Diapers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diapers.h; sourceTree = "<group>"; };
 		E358A8A71AEC0833003680C7 /* Diapers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diapers.m; sourceTree = "<group>"; };
-		E358A8AC1AEC3267003680C7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../ViewControllers/MainViewController/Constants.h; sourceTree = "<group>"; };
+		E358A8AC1AEC3267003680C7 /* ModelConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelConstants.h; path = ../ViewControllers/MainViewController/ModelConstants.h; sourceTree = "<group>"; };
 		E358A8B71AEC3DDC003680C7 /* PeeTypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeeTypeSelectionViewController.h; sourceTree = "<group>"; };
 		E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeeTypeSelectionViewController.m; sourceTree = "<group>"; };
 		E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeeTypeSelectionViewController.xib; sourceTree = "<group>"; };
@@ -748,7 +748,7 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E358A8AC1AEC3267003680C7 /* Constants.h */,
+				E358A8AC1AEC3267003680C7 /* ModelConstants.h */,
 				E358A8A61AEC0833003680C7 /* Diapers.h */,
 				E358A8A71AEC0833003680C7 /* Diapers.m */,
 				E358A89D1AEBFB5E003680C7 /* Poop.h */,

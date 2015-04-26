@@ -13,7 +13,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "Activity.h"
 #import "Diapers.h"
-//#import "Constants.h"
+#import "ModelConstants.h"
 
 @interface PeeTypeSelectionViewController : UIViewController
 - (IBAction)yellowPeePressed:(id)sender;
