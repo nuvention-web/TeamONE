@@ -37,6 +37,8 @@
     makeBabyObject.activities = [[NSMutableArray alloc] init];
     didSetDOB = NO;
     
+    [self.careTaker.careTakerBabyArray addObject:makeBabyObject];
+    
     self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
