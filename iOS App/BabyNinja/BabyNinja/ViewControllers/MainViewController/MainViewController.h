@@ -14,9 +14,9 @@
 
 
 @interface MainViewController : UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting, ALRadialMenuDelegate>
-
+-(id)initWithCareTaker:(CareTaker*)careTaker;
 @property(nonatomic, weak) ICSDrawerController *drawer;
-
+@property (nonatomic, strong) CareTaker *careTaker;
 @property (strong, nonatomic) ALRadialMenu *radialMenu;
 @property (strong, nonatomic) ALRadialMenu *radialFeedMenu;
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;

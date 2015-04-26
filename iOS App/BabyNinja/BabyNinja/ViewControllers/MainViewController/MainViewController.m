@@ -27,6 +27,14 @@
 @implementation MainViewController
 
 #pragma mark - Managing the view
+-(id)initWithCareTaker:(CareTaker*)careTaker{
+    self = [super init];
+    
+    if(self){
+        self.careTaker = careTaker;
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
