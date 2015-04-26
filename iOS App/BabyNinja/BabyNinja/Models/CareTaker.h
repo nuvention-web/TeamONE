@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/PFObject+Subclass.h>
 
-@interface CareTaker : NSObject
+@interface CareTaker : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *careTakerName;
 
@@ -21,5 +22,7 @@
 @property (nonatomic, strong) NSDate *careTakerRelationToBaby;
 
 @property (nonatomic, strong) NSString *careTakerGender;
+
+@property (nonatomic, strong) NSMutableArray *careTakerBabyArray;
 
 @end

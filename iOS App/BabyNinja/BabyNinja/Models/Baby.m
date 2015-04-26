@@ -23,6 +23,7 @@
     self = [super init];
     if(self) {
         self.activities = [NSMutableArray array];
+        self.caretakers = [NSMutableArray array];
     }
     return self;
 }
