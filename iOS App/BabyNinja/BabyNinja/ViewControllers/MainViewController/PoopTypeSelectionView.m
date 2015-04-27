@@ -50,8 +50,6 @@
     self.dummyBaby = [[Baby alloc] init];
     [self.dummyBaby.activities addObject:newActivity];
     
-    
-    
     //
 //    NSLog(@"HEERE %@", self.dummyBaby.activities[0]);
 //    NSLog(@"HEERE2 %@", newActivity);
@@ -62,17 +60,8 @@
 //        } else {
 //            NSLog(@"NOT DONE");        }
 //    }];
-    
-    
-    
+  
     [self.delegate poopTypeRecorded:newActivity];
-
-    
-    
-
-    
-    
-
 }
 
 // TEXTURE BUTTON PRESSED
@@ -86,26 +75,34 @@
 
 // COLOR BUTTON PRESSED
 - (IBAction)colorBrownPoopPressed:(id)sender {
-    [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    
 }
 
 - (IBAction)colorYellowPoopPressed:(id)sender {
-    [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    
 }
 - (IBAction)colorBlackPoopPressed:(id)sender {
-    [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    
 }
 
 - (IBAction)colorGreenPoopPressed:(id)sender {
-    [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
-}
-
-- (IBAction)textureSelected:(id)sender {
     
 }
 
-- (IBAction)colorSelected:(id)sender {
+- (IBAction)textureSelected:(UIButton*)sender {
     
+}
+
+- (IBAction)colorSelected:(UIButton*)sender {
+    if(sender.tag ==0){
+        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    }else if(sender.tag ==1){
+        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    }else if(sender.tag ==2){
+        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    }else if(sender.tag ==3){
+        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+    }
 }
 
 - (IBAction)okayButtonPressed:(id)sender {
