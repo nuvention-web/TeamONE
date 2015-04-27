@@ -27,7 +27,7 @@ PoopTypeSelectionView *poopTypeView;
     [super viewDidLoad];
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(poopTypeRecorded:) name:@"poopRecorded" object:nil];
-    
+
     
     poopTypeView = [[PoopTypeSelectionView alloc] init];
     poopTypeView.delegate = self;

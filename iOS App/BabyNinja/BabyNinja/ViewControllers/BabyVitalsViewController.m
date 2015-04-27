@@ -24,6 +24,7 @@
     self = [super init];
     if(self){
         self.careTaker = careTaker;
+        self.careTaker.careTakerBabyArray = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -37,7 +38,7 @@
     makeBabyObject.activities = [[NSMutableArray alloc] init];
     didSetDOB = NO;
     
-    [self.careTaker.careTakerBabyArray addObject:makeBabyObject];
+
     
 //    self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
@@ -206,11 +207,12 @@
                [UIColor clearColor]
                ];
     
+    
+    [self.careTaker.careTakerBabyArray addObject:makeBabyObject];
     LeftSideController *colorsVC = [[LeftSideController alloc] initWithCareTaker:self.careTaker];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
     MainViewController *plainColorVC = [[MainViewController alloc] initWithCareTaker:self.careTaker];
     
-    // NEW CODE ADDED FOR IF WE DECIDE TO SEND OBJECT FROM VIEW CONTROLLERS
     
     plainColorVC.view.backgroundColor = colors[0];
     UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
