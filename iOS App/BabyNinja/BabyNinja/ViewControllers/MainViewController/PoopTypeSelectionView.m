@@ -110,6 +110,7 @@
 
 - (IBAction)okayButtonPressed:(id)sender {
     NSLog(@"OK BUTTON");
+    [self.delegate poopTypeRecorded:[Poop new]];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
 //    [self.poopTypedelegate poopTypeRecorded:[Poop new]];
     
