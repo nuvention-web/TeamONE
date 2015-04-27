@@ -113,6 +113,18 @@
     [self.delegate poopTypeRecorded:[Activity new]];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
 //    [self.poopTypedelegate poopTypeRecorded:[Poop new]];
+
+    
+    
+    //    CareTaker *care = [[CareTaker alloc] init];
+//    care.careTakerName = @"Hollu";
+//        [care saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//            if (succeeded) {
+//                NSLog(@"DONE DONE");
+//            } else {
+//                NSLog(@"NOT DONE");        }
+//        }];
+//    
     
 }
 

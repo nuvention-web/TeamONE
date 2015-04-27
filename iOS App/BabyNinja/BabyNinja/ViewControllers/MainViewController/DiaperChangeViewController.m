@@ -74,6 +74,7 @@ PoopTypeSelectionView *poopTypeView;
 //    }];
     
 //    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(removePoopTypeView) userInfo:nil repeats:NO];
+    NSLog(@"here again");
     
     [self.delegate diaperChangeRecorded:activity];
     
