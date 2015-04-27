@@ -18,6 +18,11 @@
 
 #import "Poop.h"
 
+@protocol PoopTypeSelectionViewDelegate <NSObject>
+
+-(void)poopTypeRecorded:(Poop*)poop;
+
+@end
 
 @interface PoopTypeSelectionView : UIViewController
 
@@ -30,6 +35,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *greenColorButton;
 @property (strong, nonatomic) IBOutlet UIButton *blackColorButton;
 @property (strong, nonatomic) IBOutlet UIButton *okayButton;
+@property (strong, nonatomic) id <PoopTypeSelectionViewDelegate> delegate;
 
 - (IBAction)textureSelected:(id)sender;
 
