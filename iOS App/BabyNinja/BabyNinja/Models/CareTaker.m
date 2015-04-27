@@ -30,7 +30,7 @@
 -(id)init{
     self = [super init];
     if(self) {
-//        self.careTakerBabyArray = [NSMutableArray array];
+     //   self.careTakerBabyArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
