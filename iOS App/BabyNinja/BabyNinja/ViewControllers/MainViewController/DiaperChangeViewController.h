@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PoopTypeSelectionView.h"
+#import "PeeTypeSelectionViewController.h"
 #import "Activity.h"
 
 @protocol DiaperChangeProtocol <NSObject>

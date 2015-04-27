@@ -16,8 +16,20 @@
 #import "Diapers.h"
 #import "ModelConstants.h"
 
+
+@protocol peeTypeSelectionViewDelegate <NSObject>
+
+-(void)peeTypeRecorded:(Activity*)activity;
+
+@end
+
 @interface PeeTypeSelectionViewController : UIViewController
+
+@property (strong, nonatomic) id <peeTypeSelectionViewDelegate> delegate;
+
 - (IBAction)yellowPeePressed:(id)sender;
 - (IBAction)brownPeePressed:(id)sender;
+
+
 
 @end

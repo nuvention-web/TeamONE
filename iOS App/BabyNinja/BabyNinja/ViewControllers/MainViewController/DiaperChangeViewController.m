@@ -10,8 +10,9 @@
 #import "PeeTypeSelectionViewController.h"
 
 PoopTypeSelectionView *poopTypeView;
+PeeTypeSelectionViewController *peeTypeView;
 
-@interface DiaperChangeViewController ()<PoopTypeSelectionViewDelegate>{
+@interface DiaperChangeViewController ()<PoopTypeSelectionViewDelegate, peeTypeSelectionViewDelegate>{
    
 }
 
@@ -31,6 +32,10 @@ PoopTypeSelectionView *poopTypeView;
     
     poopTypeView = [[PoopTypeSelectionView alloc] init];
     poopTypeView.delegate = self;
+    
+    peeTypeView = [[PeeTypeSelectionViewController alloc] init];
+    peeTypeView.delegate=self;
+    
     
     
     
@@ -79,6 +84,16 @@ PoopTypeSelectionView *poopTypeView;
     [self.delegate diaperChangeRecorded:activity];
     
 }
+
+
+-(void)peeTypeRecorded:(Activity*)activity{
+
+    NSLog(@"here again");
+    
+    [self.delegate diaperChangeRecorded:activity];
+    
+}
+
 
 //-(void)removePoopTypeView{
 //    [poopTypeView removeFromSuperview];
