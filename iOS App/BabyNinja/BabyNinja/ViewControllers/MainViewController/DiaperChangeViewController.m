@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *peeButton;
 
-
 @end
 
 @implementation DiaperChangeViewController
@@ -65,9 +64,6 @@
     
     PeeTypeSelectionViewController *controller = [[PeeTypeSelectionViewController alloc]init];
     [self.navigationController pushViewController:controller animated:YES];
-    
-    
-    
     
 }
 @end
