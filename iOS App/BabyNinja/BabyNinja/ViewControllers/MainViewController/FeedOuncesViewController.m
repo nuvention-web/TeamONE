@@ -41,7 +41,7 @@
 }
 
 - (IBAction)okayButtonPressed:(id)sender {
-    
+    [self.delegate FeedOuncesRecorded:[Activity new]];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
