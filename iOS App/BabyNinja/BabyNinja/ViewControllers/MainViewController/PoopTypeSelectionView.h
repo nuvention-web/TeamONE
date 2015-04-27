@@ -14,11 +14,12 @@
 #import "Activity.h"
 #import "Diapers.h"
 #import "ModelConstants.h"
+#import "MainViewController.h"
 
 #import "Poop.h"
 
 
-@interface PoopTypeSelectionView : UIView
+@interface PoopTypeSelectionView : UIView<CareTakerDelegate>
 
 @property (strong, nonatomic) Baby *dummyBaby;
 @property (weak, nonatomic) IBOutlet UIButton *looseTextureButton;
