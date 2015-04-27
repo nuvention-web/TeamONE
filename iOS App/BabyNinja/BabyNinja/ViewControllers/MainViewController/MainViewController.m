@@ -98,11 +98,9 @@
 //    NSLog(@"CARE TAKER %@!", activity);
 //    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
 //    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
-    CareTaker *testerCaretaker = [[CareTaker alloc] init];
-    
-    testerCaretaker = self.careTaker;
-    self.careTaker.careTakerName = @"Janne";
-    [testerCaretaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+
+
+    [self.careTaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
         } else {
