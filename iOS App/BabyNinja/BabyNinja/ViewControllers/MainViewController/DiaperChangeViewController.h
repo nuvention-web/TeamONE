@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PoopTypeSelectionView.h"
-
+#import "Activity.h"
 
 @protocol DiaperChangeProtocol <NSObject>
 
--(void)diaperChangeRecorded:(Diapers*)activity;
+-(void)diaperChangeRecorded:(Activity*)activity;
 
 @end
 

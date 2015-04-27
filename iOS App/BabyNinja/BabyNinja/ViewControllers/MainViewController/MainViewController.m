@@ -12,7 +12,7 @@
 #import "SleepModeViewController.h"
 #import "PoopTypeSelectionView.h"
 
-@interface MainViewController (){
+@interface MainViewController ()<DiaperChangeProtocol>{
     UIView *blackView;
     UIButton *selectedButton;
 }
@@ -87,6 +87,30 @@
     [self.view addSubview:self.openDrawerButton];
 }
 
+
+
+//////////////////////////
+-(void)diaperChangeRecorded:(Activity*)activity{
+    NSLog(@"HEREHERHEH");
+    
+    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
+    [getBaby.activities addObject:activity];
+    NSLog(@"CARE TAKER %@!", activity);
+    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
+    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"DONE DONE");
+        } else {
+            NSLog(@"NOT DONE");        }
+    }];
+    
+    
+    
+}
+
+
+
 - (IBAction)poopButtonPressed:(id)sender {
 //    PoopTypeSelectionView *controller = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
 //    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
@@ -127,8 +151,9 @@
     }];
 
     
-    DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+    DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
+    controller2.delegate = self;
+    [self.navigationController pushViewController:controller2 animated:YES];
 }
 
 -(void)changePoopButtonStateImage{

@@ -11,8 +11,8 @@
 
 PoopTypeSelectionView *poopTypeView;
 
-@interface DiaperChangeViewController (){
-    
+@interface DiaperChangeViewController ()<PoopTypeSelectionViewDelegate>{
+   
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
@@ -27,7 +27,13 @@ PoopTypeSelectionView *poopTypeView;
     [super viewDidLoad];
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(poopTypeRecorded:) name:@"poopRecorded" object:nil];
+    
+    
     poopTypeView = [[PoopTypeSelectionView alloc] init];
+    poopTypeView.delegate = self;
+    
+    
+    
     //    poopTypeView.poopTypedelegate = self;
 //    poopTypeView.frame = CGRectMake(0, 0, 375, 667);
 //    poopTypeView.alpha = 0.0;
@@ -47,6 +53,7 @@ PoopTypeSelectionView *poopTypeView;
 
 - (IBAction)poopButtonPressed:(id)sender {
     
+    
     [self.navigationController pushViewController:poopTypeView animated:YES];
 
 //    [self.view addSubview:poopTypeView];
@@ -59,7 +66,7 @@ PoopTypeSelectionView *poopTypeView;
 
 #pragma mark PoopTypeSelectionDelegate methods
 
--(void)poopTypeRecorded:(NSNotification*)notification{
+-(void)poopTypeRecorded:(Activity*)activity{
     
 //    Poop *poop = [notification object];
 //    [UIView animateWithDuration:0.5 animations:^{
@@ -67,6 +74,9 @@ PoopTypeSelectionView *poopTypeView;
 //    }];
     
 //    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(removePoopTypeView) userInfo:nil repeats:NO];
+    
+    [self.delegate diaperChangeRecorded:activity];
+    
 }
 
 //-(void)removePoopTypeView{

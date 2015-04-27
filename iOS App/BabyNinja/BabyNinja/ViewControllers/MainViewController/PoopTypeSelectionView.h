@@ -38,9 +38,7 @@
 @property (strong, nonatomic) id <PoopTypeSelectionViewDelegate> delegate;
 
 - (IBAction)textureSelected:(id)sender;
-
 - (IBAction)colorSelected:(id)sender;
-
 - (IBAction)okayButtonPressed:(id)sender;
 
 
