@@ -18,12 +18,13 @@
 @dynamic babyGender;
 @dynamic babyWeight;
 @dynamic activities;
+@dynamic caretakers;
 
 -(id)init{
     self = [super init];
     if(self) {
-        self.activities = [NSMutableArray array];
-        self.caretakers = [NSMutableArray array];
+      //  self.activities = [NSMutableArray array];
+      //  self.caretakers = [NSMutableArray array];
     }
     return self;
 }

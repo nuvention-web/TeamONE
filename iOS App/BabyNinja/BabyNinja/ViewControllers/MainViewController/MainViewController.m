@@ -64,6 +64,9 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"WHAT JUST CAME -> %@",self.careTaker.careTakerBabyArray[0]);
+    
+    
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
     NSParameterAssert(hamburger);
@@ -95,9 +98,13 @@
     
 //    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
 //    [getBaby.activities addObject:activity];
-//    NSLog(@"CARE TAKER %@!", activity);
+//      NSLog(@"CARE TAKER %@!", activity);
 //    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
+    
+    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
+    NSLog(@"CARE Before %@!", self.careTaker.careTakerBabyArray[0]);
+    [getBaby.activities addObject:activity];
+    NSLog(@"CARE AFTER %@!", self.careTaker.careTakerBabyArray[0]);
 
 
     [self.careTaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

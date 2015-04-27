@@ -46,21 +46,10 @@
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
     
-    //Dummuy Baby Tester
-    self.dummyBaby = [[Baby alloc] init];
-    [self.dummyBaby.activities addObject:newActivity];
-    
-    //
-//    NSLog(@"HEERE %@", self.dummyBaby.activities[0]);
-//    NSLog(@"HEERE2 %@", newActivity);
-//    
-//    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"DONE DONE");
-//        } else {
-//            NSLog(@"NOT DONE");        }
-//    }];
-  
+//    //Dummuy Baby Tester
+//    self.dummyBaby = [[Baby alloc] init];
+//    [self.dummyBaby.activities addObject:newActivity];
+
     [self.delegate poopTypeRecorded:newActivity];
 }
 
@@ -107,22 +96,14 @@
 
 - (IBAction)okayButtonPressed:(id)sender {
     NSLog(@"OK BUTTON");
+    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
+//    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
+    
     [self.delegate poopTypeRecorded:[Activity new]];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
 //    [self.poopTypedelegate poopTypeRecorded:[Poop new]];
 
-    
-    
-    //    CareTaker *care = [[CareTaker alloc] init];
-//    care.careTakerName = @"Hollu";
-//        [care saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//            if (succeeded) {
-//                NSLog(@"DONE DONE");
-//            } else {
-//                NSLog(@"NOT DONE");        }
-//        }];
-//    
-    
+
 }
 
 @end
