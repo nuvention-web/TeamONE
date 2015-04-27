@@ -20,7 +20,7 @@
 
 @protocol PoopTypeSelectionViewDelegate <NSObject>
 
--(void)poopTypeRecorded:(Poop*)poop;
+-(void)poopTypeRecorded:(Activity*)activity;
 
 @end
 
