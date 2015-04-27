@@ -51,6 +51,10 @@
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
+		204471B81AEE9E9F00D35BDD /* BreastSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471B61AEE9E9F00D35BDD /* BreastSideViewController.m */; };
+		204471B91AEE9E9F00D35BDD /* BreastSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204471B71AEE9E9F00D35BDD /* BreastSideViewController.xib */; };
+		204471BD1AEE9F8200D35BDD /* FeedOuncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */; };
+		204471BE1AEE9F8200D35BDD /* FeedOuncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */; };
 		20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */; };
 		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -251,6 +255,12 @@
 		20440A671A97F0AE0066CB7F /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
 		20440A691A97F0C70066CB7F /* CareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTaker.h; sourceTree = "<group>"; };
 		20440A6A1A97F0C70066CB7F /* CareTaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareTaker.m; sourceTree = "<group>"; };
+		204471B51AEE9E9F00D35BDD /* BreastSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreastSideViewController.h; sourceTree = "<group>"; };
+		204471B61AEE9E9F00D35BDD /* BreastSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreastSideViewController.m; sourceTree = "<group>"; };
+		204471B71AEE9E9F00D35BDD /* BreastSideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BreastSideViewController.xib; sourceTree = "<group>"; };
+		204471BA1AEE9F8200D35BDD /* FeedOuncesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedOuncesViewController.h; sourceTree = "<group>"; };
+		204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedOuncesViewController.m; sourceTree = "<group>"; };
+		204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedOuncesViewController.xib; sourceTree = "<group>"; };
 		20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionView.h; sourceTree = "<group>"; };
 		20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionView.m; sourceTree = "<group>"; };
 		20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionView.xib; sourceTree = "<group>"; };
@@ -667,6 +677,12 @@
 				201739781AED8E2900F44EFD /* FeedActivityViewController.h */,
 				201739791AED8E2900F44EFD /* FeedActivityViewController.m */,
 				2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */,
+				204471B51AEE9E9F00D35BDD /* BreastSideViewController.h */,
+				204471B61AEE9E9F00D35BDD /* BreastSideViewController.m */,
+				204471B71AEE9E9F00D35BDD /* BreastSideViewController.xib */,
+				204471BA1AEE9F8200D35BDD /* FeedOuncesViewController.h */,
+				204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */,
+				204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -943,6 +959,8 @@
 			files = (
 				209753DA1AA16EC400463D41 /* CustomTableFooter.xib in Resources */,
 				209753E21AA29DA500463D41 /* ConfigurationViewController.xib in Resources */,
+				204471B91AEE9E9F00D35BDD /* BreastSideViewController.xib in Resources */,
+				204471BE1AEE9F8200D35BDD /* FeedOuncesViewController.xib in Resources */,
 				209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */,
 				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
@@ -1028,6 +1046,7 @@
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,
 				E358A8A81AEC0833003680C7 /* Diapers.m in Sources */,
+				204471BD1AEE9F8200D35BDD /* FeedOuncesViewController.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
@@ -1041,6 +1060,7 @@
 				201332BB1ADCD9E70012B498 /* LoginViewController.m in Sources */,
 				209753F01AA2CF7F00463D41 /* ReminderSettingsViewController.m in Sources */,
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
+				204471B81AEE9E9F00D35BDD /* BreastSideViewController.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
