@@ -14,6 +14,7 @@
 #import "Activity.h"
 #import "Diapers.h"
 #import "ModelConstants.h"
+#import "MainViewController.h"
 
 #import "Poop.h"
 

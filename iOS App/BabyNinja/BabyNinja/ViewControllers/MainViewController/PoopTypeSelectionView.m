@@ -63,6 +63,17 @@
             NSLog(@"NOT DONE");        }
     }];
     
+    
+    
+    MainViewController *mvc = [[MainViewController alloc] init];
+    // assign delegate
+    mvc.delegate = self;
+    [mvc addActivityToCurrentBaby:newActivity];
+    
+    
+
+    
+    
 
 }
 
