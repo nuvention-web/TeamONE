@@ -53,15 +53,15 @@
     
     
     //
-    NSLog(@"HEERE %@", self.dummyBaby.activities[0]);
-    NSLog(@"HEERE2 %@", newActivity);
-    
-    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"DONE DONE");
-        } else {
-            NSLog(@"NOT DONE");        }
-    }];
+//    NSLog(@"HEERE %@", self.dummyBaby.activities[0]);
+//    NSLog(@"HEERE2 %@", newActivity);
+//    
+//    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//        } else {
+//            NSLog(@"NOT DONE");        }
+//    }];
     
     
     
