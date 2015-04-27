@@ -49,6 +49,11 @@
         self.view.alpha = 1.0;
     }];
 
+    
+//    PoopTypeSelectionView *controller2 = [[PoopTypeSelectionView alloc]init];
+//    [self.navigationController pushViewController:controller animated:YES];
+    
+    
 }
 
 

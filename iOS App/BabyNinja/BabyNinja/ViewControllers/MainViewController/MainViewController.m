@@ -125,9 +125,12 @@
         
         controller.alpha = 1.0;
     }];
+
     
-//    DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
-//    [self.navigationController pushViewController:controller animated:YES];
+    //********* UN-COMMENTED JUST FOR TESTER  *************
+    
+//    DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
+//    [self.navigationController pushViewController:controller2 animated:YES];
 }
 
 -(void)changePoopButtonStateImage{
