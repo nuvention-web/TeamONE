@@ -10,7 +10,7 @@
 #import "PoopTypeSelectionView.h"
 #import "PeeTypeSelectionViewController.h"
 
-@interface DiaperChangeViewController ()< >{
+@interface DiaperChangeViewController (){
 
 }
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
@@ -40,14 +40,12 @@
 - (IBAction)poopButtonPressed:(id)sender {
     
     PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-    controller.backgroundColor = [UIColor clearColor];
-    //    controller.backgroundColor = [UIColor blackColor];
-    controller.frame = CGRectMake(0 , 0 , 375, 667);
-    controller.alpha = 0;
+    controller.frame = CGRectMake(0, 0, 400, 600);
+    controller.alpha = 0.0;
     [self.view addSubview:controller];
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         
-        controller.alpha = 1.0;
+        self.view.alpha = 1.0;
     }];
 
 }
