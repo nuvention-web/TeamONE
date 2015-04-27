@@ -51,10 +51,8 @@
 		203A49EE1A828C7300F02E56 /* BabyNinja WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 203A49D11A828C7300F02E56 /* BabyNinja WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20440A681A97F0AE0066CB7F /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A671A97F0AE0066CB7F /* Baby.m */; };
 		20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 20440A6A1A97F0C70066CB7F /* CareTaker.m */; };
-		20558F191AE95A7D00A42961 /* PoopTypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */; };
-		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionViewController.xib */; };
-		20558F291AE967F800A42961 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F261AE967F800A42961 /* WYPopoverController.m */; };
-		20558F2A1AE967F800A42961 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F281AE967F800A42961 /* WYStoryboardPopoverSegue.m */; };
+		20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */; };
+		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
 		205B982B1ACB343100B5E3D5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98291ACB343100B5E3D5 /* Parse.framework */; };
 		205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B982C1ACB349F00B5E3D5 /* Accounts.framework */; };
@@ -253,13 +251,9 @@
 		20440A671A97F0AE0066CB7F /* Baby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baby.m; sourceTree = "<group>"; };
 		20440A691A97F0C70066CB7F /* CareTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareTaker.h; sourceTree = "<group>"; };
 		20440A6A1A97F0C70066CB7F /* CareTaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareTaker.m; sourceTree = "<group>"; };
-		20558F161AE95A7D00A42961 /* PoopTypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionViewController.h; sourceTree = "<group>"; };
-		20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionViewController.m; sourceTree = "<group>"; };
-		20558F181AE95A7D00A42961 /* PoopTypeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionViewController.xib; sourceTree = "<group>"; };
-		20558F251AE967F800A42961 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYPopoverController.h; path = WYPopoverController/WYPopoverController.h; sourceTree = "<group>"; };
-		20558F261AE967F800A42961 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYPopoverController.m; path = WYPopoverController/WYPopoverController.m; sourceTree = "<group>"; };
-		20558F271AE967F800A42961 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYStoryboardPopoverSegue.h; path = WYPopoverController/WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
-		20558F281AE967F800A42961 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYStoryboardPopoverSegue.m; path = WYPopoverController/WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionView.h; sourceTree = "<group>"; };
+		20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionView.m; sourceTree = "<group>"; };
+		20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionView.xib; sourceTree = "<group>"; };
 		205B98281ACB343100B5E3D5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		205B98291ACB343100B5E3D5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		205B982C1ACB349F00B5E3D5 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -476,7 +470,6 @@
 			isa = PBXGroup;
 			children = (
 				2029C8B21AEADC940086B506 /* JBChartView */,
-				20558F241AE967BB00A42961 /* WYPopoverController */,
 				20F3BB2E1AA57DEA00C50831 /* TMCache */,
 				20B3A8791A84884300B4C8CC /* ALRadial */,
 				203A49B01A8165EE00F02E56 /* AFNetworking */,
@@ -668,9 +661,9 @@
 				20BA8EDD1AAECD8900290220 /* DiaperChangeViewController.h */,
 				20BA8EDE1AAECD8900290220 /* DiaperChangeViewController.m */,
 				20BA8EDF1AAECD8900290220 /* DiaperChangeViewController.xib */,
-				20558F161AE95A7D00A42961 /* PoopTypeSelectionViewController.h */,
-				20558F171AE95A7D00A42961 /* PoopTypeSelectionViewController.m */,
-				20558F181AE95A7D00A42961 /* PoopTypeSelectionViewController.xib */,
+				20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */,
+				20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */,
+				20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */,
 				201739781AED8E2900F44EFD /* FeedActivityViewController.h */,
 				201739791AED8E2900F44EFD /* FeedActivityViewController.m */,
 				2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */,
@@ -773,17 +766,6 @@
 				201739771AED88D600F44EFD /* BabyNinjaModels.h */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		20558F241AE967BB00A42961 /* WYPopoverController */ = {
-			isa = PBXGroup;
-			children = (
-				20558F251AE967F800A42961 /* WYPopoverController.h */,
-				20558F261AE967F800A42961 /* WYPopoverController.m */,
-				20558F271AE967F800A42961 /* WYStoryboardPopoverSegue.h */,
-				20558F281AE967F800A42961 /* WYStoryboardPopoverSegue.m */,
-			);
-			name = WYPopoverController;
 			sourceTree = "<group>";
 		};
 		205B98271ACB340700B5E3D5 /* Frameworks */ = {
@@ -969,7 +951,7 @@
 				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				2017397C1AED8E2900F44EFD /* FeedActivityViewController.xib in Resources */,
-				20558F1A1AE95A7D00A42961 /* PoopTypeSelectionViewController.xib in Resources */,
+				20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */,
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */,
@@ -1021,7 +1003,7 @@
 				2029C8CD1AEADD320086B506 /* JBChartHeaderView.m in Sources */,
 				2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */,
 				209753F51AA2D5F500463D41 /* ReportsListViewController.m in Sources */,
-				20558F191AE95A7D00A42961 /* PoopTypeSelectionViewController.m in Sources */,
+				20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */,
 				2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
 				20BA8EE81AAF289F00290220 /* ActivityReportViewController.m in Sources */,
@@ -1034,7 +1016,6 @@
 				2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */,
 				209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */,
 				2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */,
-				20558F2A1AE967F800A42961 /* WYStoryboardPopoverSegue.m in Sources */,
 				209753EB1AA2B9BD00463D41 /* MilkSettingsViewController.m in Sources */,
 				20440A681A97F0AE0066CB7F /* Baby.m in Sources */,
 				20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */,
@@ -1062,7 +1043,6 @@
 				209753D41AA15E2B00463D41 /* CareTakersListCell.m in Sources */,
 				20440A6B1A97F0C70066CB7F /* CareTaker.m in Sources */,
 				203A499E1A809D9C00F02E56 /* ICSDropShadowView.m in Sources */,
-				20558F291AE967F800A42961 /* WYPopoverController.m in Sources */,
 				203A49C51A8165EE00F02E56 /* AFHTTPRequestOperationManager.m in Sources */,
 				20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */,
 				203A49C81A8165EE00F02E56 /* AFSecurityPolicy.m in Sources */,

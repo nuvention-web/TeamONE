@@ -6,14 +6,23 @@
 //  Copyright (c) 2015 TeamONE Software. All rights reserved.
 //
 
-#import "PoopTypeSelectionViewController.h"
+#import "PoopTypeSelectionView.h"
 
-@interface PoopTypeSelectionViewController ()
+@interface PoopTypeSelectionView ()
 
 @end
 
-@implementation PoopTypeSelectionViewController
+@implementation PoopTypeSelectionView
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        self = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
+    }
+    
+    return self;
+}
 
 // THIS CODE IS SPECIFIC FOR POOP  - DELETE IF CLASS FUNCTION WORKS
 -(Diapers *)returnPoopDiapierObject:(NSString*)poopColor :(NSString*)poopTexture :(NSString*)type{
@@ -50,18 +59,6 @@
     
 
 }
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
-}
-
 
 // TEXTURE BUTTON PRESSED
 - (IBAction)textureLoosePoopPressed:(id)sender {

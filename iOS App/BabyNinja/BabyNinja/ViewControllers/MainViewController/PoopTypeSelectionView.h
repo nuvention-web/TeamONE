@@ -18,7 +18,7 @@
 #import "Poop.h"
 
 
-@interface PoopTypeSelectionViewController : UIViewController
+@interface PoopTypeSelectionView : UIView
 
 @property (strong, nonatomic) Baby *dummyBaby;
 

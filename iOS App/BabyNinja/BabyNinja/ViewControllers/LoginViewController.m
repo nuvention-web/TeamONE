@@ -100,9 +100,6 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
         [self showBabyVitalsScreen];
     }
-    
-    NSLog(@"%@", [PFUser currentUser]);
-    
 }
 
 -(void)showBabyVitalsScreen{
