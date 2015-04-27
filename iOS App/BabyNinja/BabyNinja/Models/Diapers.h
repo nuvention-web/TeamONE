@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSString *type;
 
 
-+(Diapers *)returnPoopDiapierObject:(NSString*)poopColor :(NSString*)poopTexture;
++(Diapers *)returnPoopDiapierObject:(NSString*)poopColor texture:(NSString*)poopTexture;
 
 
 +(Diapers *)returnPeeDiapierObject:(NSString*)peeColor;
