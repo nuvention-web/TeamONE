@@ -41,10 +41,10 @@
 
 
 
--(void)sendPoopToParse:(const NSString *)poopColor :(const NSString *)poopTexture{
+-(void)sendPoopToParse:( NSString *)poopColor :( NSString *)poopTexture{
 
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
-    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor :poopTexture];
+    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
     
     //Dummuy Baby Tester
     self.dummyBaby = [[Baby alloc] init];
@@ -116,9 +116,6 @@
     
 }
 
--(void)dealloc{
-    NSLog(@"I am %x", self);
-}
 @end
 
 

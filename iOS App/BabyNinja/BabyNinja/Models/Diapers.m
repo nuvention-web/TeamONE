@@ -25,7 +25,7 @@
 }
 
 
-+(Diapers *)returnPoopDiapierObject:(NSString*)poopColor :(NSString*)poopTexture{
++(Diapers *)returnPoopDiapierObject:(NSString*)poopColor texture:(NSString*)poopTexture{
     Diapers *newDiaperObject = [[Diapers alloc] init];
     newDiaperObject.color = poopColor;
     newDiaperObject.poopTexture = poopTexture;
