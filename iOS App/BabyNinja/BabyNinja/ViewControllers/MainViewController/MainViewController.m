@@ -11,6 +11,7 @@
 #import "DiaperChangeViewController.h"
 #import "SleepModeViewController.h"
 #import "PoopTypeSelectionView.h"
+#import "FeedOuncesViewController.h"
 
 @interface MainViewController ()<DiaperChangeProtocol>{
     UIView *blackView;
