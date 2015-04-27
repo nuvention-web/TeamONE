@@ -116,6 +116,15 @@
 //    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
     
 //    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
+    UIView *controller = [[UIView alloc] init];
+    controller.backgroundColor = [UIColor yellowColor];
+    controller.frame = CGRectMake(0, 0, 400, 600);
+    controller.alpha = 0.0;
+    [self.view addSubview:controller];
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        controller.alpha = 1.0;
+    }];
 
     
     DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
