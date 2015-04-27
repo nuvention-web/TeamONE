@@ -66,16 +66,16 @@
 
 - (IBAction)poopButtonPressed:(id)sender {
 //    PoopTypeSelectionView *controller = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
-    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-    controller.backgroundColor = [UIColor clearColor];
+//    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
+//    controller.backgroundColor = [UIColor clearColor];
 //    controller.backgroundColor = [UIColor blackColor];
-    controller.frame = CGRectMake(0 , 0 , 375, 667);
-    controller.alpha = 0;
-    [self.view addSubview:controller];
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        controller.alpha = 1.0;
-    }];
+//    controller.frame = CGRectMake(0 , 0 , 375, 667);
+//    controller.alpha = 0;
+//    [self.view addSubview:controller];
+//    [UIView animateWithDuration:0.5 animations:^{
+//
+//        controller.alpha = 1.0;
+//    }];
     
     
     
@@ -91,8 +91,8 @@
 
 //    [self changePoopButtonStateImage];
 //    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
-//    DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
-//    [self.navigationController pushViewController:controller animated:YES];
+    DiaperChangeViewController *controller = [[DiaperChangeViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)changePoopButtonStateImage{

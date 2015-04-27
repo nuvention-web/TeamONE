@@ -9,11 +9,9 @@
 #import "DiaperChangeViewController.h"
 #import "PoopTypeSelectionView.h"
 #import "PeeTypeSelectionViewController.h"
-#import "FPPopoverController.h"
-#import "ARCMacros.h"
 
-@interface DiaperChangeViewController ()< FPPopoverControllerDelegate>{
-    FPPopoverController *popover;
+@interface DiaperChangeViewController ()< >{
+
 }
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *peeButton;
@@ -42,12 +40,14 @@
 - (IBAction)poopButtonPressed:(id)sender {
     
     PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-    controller.frame = CGRectMake(0, 0, 400, 600);
-    controller.alpha = 0.0;
+    controller.backgroundColor = [UIColor clearColor];
+    //    controller.backgroundColor = [UIColor blackColor];
+    controller.frame = CGRectMake(0 , 0 , 375, 667);
+    controller.alpha = 0;
     [self.view addSubview:controller];
-    [UIView animateWithDuration:0.2 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         
-        self.view.alpha = 1.0;
+        controller.alpha = 1.0;
     }];
 
 }
