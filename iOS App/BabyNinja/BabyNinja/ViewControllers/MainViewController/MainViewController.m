@@ -12,16 +12,22 @@
 #import "SleepModeViewController.h"
 #import "PoopTypeSelectionView.h"
 #import "FeedOuncesViewController.h"
+#import "BreastSideViewController.h"
 
 @interface MainViewController ()<DiaperChangeProtocol>{
     UIView *blackView;
     UIButton *selectedButton;
+    
+    BOOL isBreastMode;
 }
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
 
 @property (nonatomic) NSInteger selectedColorIndex;
 @property (nonatomic) NSInteger selectedTextureIndex;
+@property (weak, nonatomic) IBOutlet UILabel *lastFeedActivityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastSleepActivityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastDiaperActivityLabel;
 
 @end
 
@@ -64,7 +70,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    isBreastMode = YES;
     NSLog(@"WHAT JUST CAME -> %@",self.careTaker.careTakerBabyArray[0]);
     
     
@@ -185,8 +191,15 @@
 - (IBAction)feedButtonPressed:(id)sender {
 //    [self changeFeedButtonStateImage];
 //    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
+//    [alert show];
+    if(isBreastMode){
+        BreastSideViewController *controller = [[BreastSideViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else {
+        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 -(void)changeFeedButtonStateImage{

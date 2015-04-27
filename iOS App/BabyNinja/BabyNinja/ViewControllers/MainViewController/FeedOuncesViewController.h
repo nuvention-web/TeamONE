@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FeedOuncesViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+@protocol FeedOuncesDelegate <NSObject>
 
+-(void)FeedOuncesRecorded:(Activity*)activity;
+
+@end
+
+@interface FeedOuncesViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
+@property (nonatomic, strong) id<FeedOuncesDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 @property (weak, nonatomic) IBOutlet UILabel *ouncesLabel;

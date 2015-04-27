@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="feedButton" destination="LeO-Dg-eC1" id="AdR-mF-Agd"/>
+                <outlet property="lastDiaperActivityLabel" destination="bqF-jb-tcX" id="YrS-Mf-a4q"/>
+                <outlet property="lastFeedActivityLabel" destination="6Gu-as-orj" id="Ip6-4t-rZt"/>
+                <outlet property="lastSleepActivityLabel" destination="lOo-Pf-uKT" id="1hz-F2-luV"/>
                 <outlet property="poopButton" destination="Ek7-s3-pkM" id="IXc-Ol-8pb"/>
                 <outlet property="sleepOrAwakeButton" destination="IWd-me-rA7" id="Sij-Sy-BPd"/>
                 <outlet property="view" destination="bam-bt-g9l" id="RFt-dQ-O0M"/>

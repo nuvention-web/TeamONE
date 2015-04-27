@@ -34,4 +34,15 @@
 }
 */
 
+- (IBAction)leftSelected:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)rightSelected:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)bothSidesSelected:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
