@@ -18,20 +18,23 @@
 #import "Poop.h"
 
 
-@interface PoopTypeSelectionView : UIView
+@interface PoopTypeSelectionView : UIViewController
+
 
 @property (strong, nonatomic) Baby *dummyBaby;
-@property (weak, nonatomic) IBOutlet UIButton *looseTextureButton;
-@property (weak, nonatomic) IBOutlet UIButton *solidTextureButton;
-@property (weak, nonatomic) IBOutlet UIButton *yellowColorButton;
-@property (weak, nonatomic) IBOutlet UIButton *brownColorButton;
-@property (weak, nonatomic) IBOutlet UIButton *greenColorButton;
-@property (weak, nonatomic) IBOutlet UIButton *blackColorButton;
+@property (strong, nonatomic) IBOutlet UIButton *looseTextureButton;
+@property (strong, nonatomic) IBOutlet UIButton *solidTextureButton;
+@property (strong, nonatomic) IBOutlet UIButton *yellowColorButton;
+@property (strong, nonatomic) IBOutlet UIButton *brownColorButton;
+@property (strong, nonatomic) IBOutlet UIButton *greenColorButton;
+@property (strong, nonatomic) IBOutlet UIButton *blackColorButton;
+@property (strong, nonatomic) IBOutlet UIButton *okayButton;
 
 - (IBAction)textureSelected:(id)sender;
 
 - (IBAction)colorSelected:(id)sender;
 
+- (IBAction)okayButtonPressed:(id)sender;
 
 
 @end

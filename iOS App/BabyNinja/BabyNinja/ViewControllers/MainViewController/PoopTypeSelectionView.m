@@ -16,13 +16,19 @@
 
 -(id)init{
     self = [super init];
-    
     if(self){
-        self = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
+//        self = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
     }
     
     return self;
 }
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+}
+//-(void)setPoopTypedelegate:(id<PoopTypeSelectionDelegate>)poopTypedelegate{
+//    _poopTypedelegate = poopTypedelegate;
+//}
 
 // THIS CODE IS SPECIFIC FOR POOP  - DELETE IF CLASS FUNCTION WORKS
 -(Diapers *)returnPoopDiapierObject:(NSString*)poopColor :(NSString*)poopTexture :(NSString*)type{
@@ -86,9 +92,22 @@
 }
 
 - (IBAction)textureSelected:(id)sender {
+    
 }
 
 - (IBAction)colorSelected:(id)sender {
+    
+}
+
+- (IBAction)okayButtonPressed:(id)sender {
+    NSLog(@"OK BUTTON");
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
+//    [self.poopTypedelegate poopTypeRecorded:[Poop new]];
+    
+}
+
+-(void)dealloc{
+    NSLog(@"I am %x", self);
 }
 @end
 

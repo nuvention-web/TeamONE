@@ -7,15 +7,17 @@
 //
 
 #import "DiaperChangeViewController.h"
-#import "PoopTypeSelectionView.h"
 #import "PeeTypeSelectionViewController.h"
 
-@interface DiaperChangeViewController (){
+PoopTypeSelectionView *poopTypeView;
 
+@interface DiaperChangeViewController (){
+    
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *peeButton;
+//@property (strong, nonatomic) PoopTypeSelectionView *poopTypeView;
 
 @end
 
@@ -23,6 +25,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(poopTypeRecorded:) name:@"poopRecorded" object:nil];
+    poopTypeView = [[PoopTypeSelectionView alloc] init];
+    //    poopTypeView.poopTypedelegate = self;
+//    poopTypeView.frame = CGRectMake(0, 0, 375, 667);
+//    poopTypeView.alpha = 0.0;
     
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
     {
@@ -39,18 +47,31 @@
 
 - (IBAction)poopButtonPressed:(id)sender {
     
-    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-    controller.backgroundColor = [UIColor yellowColor];
-    controller.frame = CGRectMake(0, 0, 400, 600);
-    controller.alpha = 0.0;
-    [self.view addSubview:controller];
-    [UIView animateWithDuration:0.2 animations:^{
-        
-        self.view.alpha = 1.0;
-    }];
+    [self.navigationController pushViewController:poopTypeView animated:YES];
+
+//    [self.view addSubview:poopTypeView];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        
+//        poopTypeView.alpha = 1.0;
+//    }];
 
 }
 
+#pragma mark PoopTypeSelectionDelegate methods
+
+-(void)poopTypeRecorded:(NSNotification*)notification{
+    
+//    Poop *poop = [notification object];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        poopTypeView.hidden = YES;
+//    }];
+    
+//    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(removePoopTypeView) userInfo:nil repeats:NO];
+}
+
+//-(void)removePoopTypeView{
+//    [poopTypeView removeFromSuperview];
+//}
 
 /*
 #pragma mark - Navigation

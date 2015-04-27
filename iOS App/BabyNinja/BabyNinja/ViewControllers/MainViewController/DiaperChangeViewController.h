@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PoopTypeSelectionView.h"
+
 
 @protocol DiaperChangeProtocol <NSObject>
 
@@ -19,5 +21,7 @@
 @property (nonatomic, assign) id <DiaperChangeProtocol> delegate;
 
 - (IBAction)peeButtonPressed:(id)sender;
+
+//@property (nonatomic, strong) PoopTypeSelectionView *poopTypeView;
 
 @end
