@@ -38,23 +38,23 @@
 }
 
 
-
-
-// THIS HAS ISSUES WITH CARETAKER WHEN ACTIVITY IS PASSED
--(void)addActivityToCurrentBaby:(Activity*)activity{
-    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-    [getBaby.activities addObject:activity];
-    NSLog(@"CARE TAKER %@!", activity);
-    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
-    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"DONE DONE");
-        } else {
-            NSLog(@"NOT DONE");        }
-    }];
-    
-}
+//
+//
+//// THIS HAS ISSUES WITH CARETAKER WHEN ACTIVITY IS PASSED
+//-(void)addActivityToCurrentBaby:(Activity*)activity{
+//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
+//    [getBaby.activities addObject:activity];
+//    NSLog(@"CARE TAKER %@!", activity);
+//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
+//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
+//    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//        } else {
+//            NSLog(@"NOT DONE");        }
+//    }];
+//    
+//}
 
 
 
@@ -91,14 +91,18 @@
 
 //////////////////////////
 -(void)diaperChangeRecorded:(Activity*)activity{
-    NSLog(@"HEREHERHEH");
+    NSLog(@"*************************************************************************");
     
-    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-    [getBaby.activities addObject:activity];
-    NSLog(@"CARE TAKER %@!", activity);
-    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
-    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
+//    [getBaby.activities addObject:activity];
+//    NSLog(@"CARE TAKER %@!", activity);
+//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
+//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
+    CareTaker *testerCaretaker = [[CareTaker alloc] init];
+    
+    testerCaretaker = self.careTaker;
+    self.careTaker.careTakerName = @"Janne";
+    [testerCaretaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
         } else {
