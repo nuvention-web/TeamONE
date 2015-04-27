@@ -8,7 +8,10 @@
 
 #import "PoopTypeSelectionView.h"
 
-@interface PoopTypeSelectionView ()
+@interface PoopTypeSelectionView (){
+    NSArray *colorsArray;
+    NSArray *textureArray;
+}
 
 @end
 
@@ -25,6 +28,8 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    colorsArray = [NSArray arrayWithObjects:_colorYellowSelected,_colorBrownSelected, _colorGreenSelected, _colorBlackSelected, nil];
+    textureArray = [NSArray arrayWithObjects:_textureLooseSelected, _textureSolidSelected, nil];
 }
 //-(void)setPoopTypedelegate:(id<PoopTypeSelectionDelegate>)poopTypedelegate{
 //    _poopTypedelegate = poopTypedelegate;
@@ -90,10 +95,11 @@
 }
 
 - (IBAction)textureSelected:(UIButton*)sender {
-    
+    [self processTextureSelectionForIndex:sender.tag];
 }
 
 - (IBAction)colorSelected:(UIButton*)sender {
+    [self processColorSelectionForIndex:sender.tag];
     if(sender.tag ==0){
         [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
     }else if(sender.tag ==1){
@@ -105,9 +111,31 @@
     }
 }
 
+-(void)processColorSelectionForIndex:(NSInteger)tag{
+    
+    for (int i=0; i<4; i++) {
+        if(i==tag)
+            [(UIImageView*)[colorsArray objectAtIndex:i] setHidden:NO];
+        else
+            [(UIImageView*)[colorsArray objectAtIndex:i] setHidden:YES];
+    }
+}
+
+-(void)processTextureSelectionForIndex:(NSInteger)tag{
+    
+    for (int i=0; i<2; i++) {
+        if(i==tag)
+            [(UIImageView*)[textureArray objectAtIndex:i] setHidden:NO];
+        else
+            [(UIImageView*)[textureArray objectAtIndex:i] setHidden:YES];
+    }
+}
+
 - (IBAction)okayButtonPressed:(id)sender {
     NSLog(@"OK BUTTON");
     [self.delegate poopTypeRecorded:[Activity new]];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
 //    [self.poopTypedelegate poopTypeRecorded:[Poop new]];
 

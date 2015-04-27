@@ -26,6 +26,12 @@
 
 @interface PoopTypeSelectionView : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *textureLooseSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *textureSolidSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *colorYellowSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *colorBrownSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *colorGreenSelected;
+@property (weak, nonatomic) IBOutlet UIImageView *colorBlackSelected;
 
 @property (strong, nonatomic) Baby *dummyBaby;
 @property (strong, nonatomic) IBOutlet UIButton *looseTextureButton;
