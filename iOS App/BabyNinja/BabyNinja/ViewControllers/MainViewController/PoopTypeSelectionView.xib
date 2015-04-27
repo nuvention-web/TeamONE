@@ -8,10 +8,16 @@
             <connections>
                 <outlet property="blackColorButton" destination="Fgq-rh-Y8d" id="Sk5-g9-NRQ"/>
                 <outlet property="brownColorButton" destination="Chj-gS-1nS" id="LxL-Ez-Tya"/>
+                <outlet property="colorBlackSelected" destination="MM1-by-4j3" id="S3u-fc-r2S"/>
+                <outlet property="colorBrownSelected" destination="xfb-um-5LR" id="9EI-iS-4VM"/>
+                <outlet property="colorGreenSelected" destination="Dkt-yN-0VZ" id="P8B-vb-cw9"/>
+                <outlet property="colorYellowSelected" destination="QHo-B2-T7W" id="m4v-RW-Rng"/>
                 <outlet property="greenColorButton" destination="hzd-6R-jRq" id="MRS-nH-wiF"/>
                 <outlet property="looseTextureButton" destination="qfc-hE-Jg6" id="YHE-dE-OMU"/>
                 <outlet property="okayButton" destination="XQP-1F-Uc3" id="wkD-9w-5mO"/>
                 <outlet property="solidTextureButton" destination="59b-vl-UUO" id="hLs-zK-yDa"/>
+                <outlet property="textureLooseSelected" destination="8Bz-7b-YK1" id="5Oe-dq-uCf"/>
+                <outlet property="textureSolidSelected" destination="vOy-9t-FLu" id="9nB-zS-eia"/>
                 <outlet property="view" destination="nZj-rn-8CS" id="H4Z-Nq-ZWZ"/>
                 <outlet property="yellowColorButton" destination="9PS-zc-CLn" id="PkD-Ld-9Ch"/>
             </connections>
@@ -106,19 +112,19 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-7b-YK1">
                                     <rect key="frame" x="45" y="134" width="29" height="28"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="vOy-9t-FLu">
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="vOy-9t-FLu">
                                     <rect key="frame" x="187" y="134" width="29" height="28"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="QHo-B2-T7W">
                                     <rect key="frame" x="57" y="341" width="29" height="28"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-um-5LR">
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-um-5LR">
                                     <rect key="frame" x="187" y="341" width="29" height="28"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-yN-0VZ">
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Dkt-yN-0VZ">
                                     <rect key="frame" x="57" y="449" width="29" height="28"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="MM1-by-4j3">
+                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="MM1-by-4j3">
                                     <rect key="frame" x="187" y="449" width="29" height="28"/>
                                 </imageView>
                             </subviews>
