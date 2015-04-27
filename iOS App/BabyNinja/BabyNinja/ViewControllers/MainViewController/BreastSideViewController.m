@@ -34,4 +34,18 @@
 }
 */
 
+- (IBAction)leftSelected:(id)sender {
+    [self.delegate breastFeedRecorded:[Activity new]];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)rightSelected:(id)sender {
+    [self.delegate breastFeedRecorded:[Activity new]];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (IBAction)bothSidesSelected:(id)sender {
+    [self.delegate breastFeedRecorded:[Activity new]];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end
