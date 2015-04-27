@@ -13,6 +13,7 @@
 @interface DiaperChangeViewController (){
 
 }
+
 @property (weak, nonatomic) IBOutlet UIButton *poopButton;
 @property (weak, nonatomic) IBOutlet UIButton *peeButton;
 
@@ -39,6 +40,7 @@
 - (IBAction)poopButtonPressed:(id)sender {
     
     PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
+    controller.backgroundColor = [UIColor yellowColor];
     controller.frame = CGRectMake(0, 0, 400, 600);
     controller.alpha = 0.0;
     [self.view addSubview:controller];

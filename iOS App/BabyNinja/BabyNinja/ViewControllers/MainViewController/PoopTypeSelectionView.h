@@ -21,17 +21,17 @@
 @interface PoopTypeSelectionView : UIView
 
 @property (strong, nonatomic) Baby *dummyBaby;
+@property (weak, nonatomic) IBOutlet UIButton *looseTextureButton;
+@property (weak, nonatomic) IBOutlet UIButton *solidTextureButton;
+@property (weak, nonatomic) IBOutlet UIButton *yellowColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *brownColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *greenColorButton;
+@property (weak, nonatomic) IBOutlet UIButton *blackColorButton;
 
+- (IBAction)textureSelected:(id)sender;
 
+- (IBAction)colorSelected:(id)sender;
 
-// BUTTON PRESSED
-- (IBAction)textureLoosePoopPressed:(id)sender;
-- (IBAction)textureSolidPoopPressed:(id)sender;
-// COLOR PRESSED
-- (IBAction)colorBrownPoopPressed:(id)sender;
-- (IBAction)colorYellowPoopPressed:(id)sender;
-- (IBAction)colorBlackPoopPressed:(id)sender;
-- (IBAction)colorGreenPoopPressed:(id)sender;
 
 
 @end

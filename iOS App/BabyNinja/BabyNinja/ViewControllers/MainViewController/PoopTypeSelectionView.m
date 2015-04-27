@@ -85,6 +85,11 @@
     [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
 }
 
+- (IBAction)textureSelected:(id)sender {
+}
+
+- (IBAction)colorSelected:(id)sender {
+}
 @end
 
 
