@@ -111,8 +111,15 @@ PeeTypeSelectionViewController *peeTypeView;
 
 - (IBAction)peeButtonPressed:(id)sender {
     
+    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
+    newActivity = [Diapers returnPeeDiapierObject:nil];
+    [self.delegate diaperChangeRecorded:newActivity];
     
-    [self.navigationController pushViewController:peeTypeView animated:YES];
+    
+    
+    
+    
+    //[self.navigationController pushViewController:peeTypeView animated:YES];
     
 }
 @end

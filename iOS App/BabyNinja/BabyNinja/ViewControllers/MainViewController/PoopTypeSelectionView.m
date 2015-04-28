@@ -121,10 +121,23 @@
 
 - (IBAction)okayButtonPressed:(id)sender {
     NSLog(@"OK BUTTON");
-    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
+//    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
 //    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
     
-    [self.delegate poopTypeRecorded:[Activity new]];
+//    [self.delegate poopTypeRecorded:[Activity new]];
+//
+//    [self processColorSelectionForIndex:sender.tag];
+//    if(sender.tag ==0){
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(sender.tag ==1){
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(sender.tag ==2){
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(sender.tag ==3){
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }
+//    
+//    
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
