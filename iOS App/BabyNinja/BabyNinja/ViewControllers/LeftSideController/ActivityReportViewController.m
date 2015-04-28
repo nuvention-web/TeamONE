@@ -154,22 +154,249 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
 - (void)initFakeData
 {
-    NSMutableArray *mutableLineCharts = [NSMutableArray array];
-    for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
-    {
-        NSMutableArray *mutableChartData = [NSMutableArray array];
-        
-        ////////here you will insert the data
-        
-        for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
-        {
-            [mutableChartData addObject:[NSNumber numberWithFloat:3+i]]; // random number between 0 and 1
-            
-        }
-        [mutableLineCharts addObject:mutableChartData];
+    NSMutableArray *counter = [NSMutableArray array];
+    
+    
+    for (NSInteger i = 0; i < 7; i++)
+        [counter addObject: [NSNumber numberWithInteger:1]];
+    
+    
+    //__block int counter[7];  // Check how many poops today
+    //counter[0]=2;
+    
+    NSUInteger limit = 1500;
+    PFQuery *query;
+    
+    if ([self.activityType  isEqual: @"Diaper"])
+    {   query=[PFQuery queryWithClassName:@"Activity"];
+        [query whereKey:@"activityType" equalTo:@"Diaper"];
     }
-    _chartData = [NSArray arrayWithArray:mutableLineCharts];
-    _daysOfWeek = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];
+    else if ([self.activityType isEqual: @"Feed"])
+    {   query=[PFQuery queryWithClassName:@"Activity"];
+        [query whereKey:@"activityType" equalTo:@"Feed"];
+    }
+    else if ([self.activityType isEqual: @"Sleep"])
+    {
+        query=[PFQuery queryWithClassName:@"Activity"];
+        [query whereKey:@"activityType" equalTo:@"Sleep"];
+    }
+    
+
+    
+
+    
+    //NSString *dateToday = [NSString stringWithFormat:@"%@",[NSDate date]];
+    
+    
+    [query setLimit: limit];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
+     {
+         if (!error) {
+             NSString *dates[7];
+             
+             NSDate *today = [NSDate date];
+            /*
+             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+             [dateFormatter setDateFormat:@"EE"];
+             NSLog(@"%@", [dateFormatter stringFromDate:today]);
+             
+             NSDate *last = [today dateByAddingTimeInterval: -(86400.0*6)];
+             NSLog(@"%@", [dateFormatter stringFromDate:last]);*/
+            
+
+             
+            // NSString * todayTimestamp = [NSString stringWithFormat:@"%d", (long)[[NSDate date] timeIntervalSince1970]];
+             
+             int todayTimestamp = [[NSDate date] timeIntervalSince1970];
+             NSString * timeStampString =[NSString stringWithFormat:@"%d",todayTimestamp];
+             NSTimeInterval _interval=[timeStampString doubleValue];
+             
+             NSDate *todayDate = [NSDate dateWithTimeIntervalSince1970:_interval];
+
+             
+    
+            /* dates[0]=@"2015-04-21";
+             dates[1]=@"2015-04-22";
+             dates[2]=@"2015-04-23";
+             dates[3]=@"2015-04-24";
+             dates[4]=@"2015-04-25";
+             dates[5]=@"2015-04-26";
+             dates[6]=@"2015-04-27";*/
+             
+             NSMutableArray *count = [NSMutableArray array];
+             
+             NSMutableArray *dayweek = [NSMutableArray array];
+             for (int j=0; j< 7; j++)
+                 [dayweek setObject:@"" atIndexedSubscript:j];
+             
+             
+             int d = 6;
+             
+             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+             [dateFormatter setDateFormat:@"EE"];
+             
+             for (int j=0; j< 7; j++)
+             {
+                 NSDate *date = [todayDate dateByAddingTimeInterval: -(86400.0*j)];
+                 NSDateFormatter *_formatter=[[NSDateFormatter alloc]init];
+                 [_formatter setDateFormat:@"dd.MM.yyyy"];
+                 
+                 dates[d]=[_formatter stringFromDate:date];
+                 
+                 [dayweek setObject:[NSString stringWithString:[dateFormatter stringFromDate:date]] atIndexedSubscript:d];
+                 
+                // NSLog(dayweek[d]);
+                 
+                // _daysOfWeek
+               //  NSLog(dates[d]);
+                 d --;
+                 [count setObject:[NSNumber numberWithInt:0] atIndexedSubscript:j];
+                 
+                 
+             }//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+             
+             //  NSDate *today = [NSDate date];
+             
+             
+             
+             
+             
+             
+             NSUInteger x = 0;
+             // NSLog(@"x: %d",x);
+             int v =0;
+             
+             for (id element in objects){
+                 
+                 
+                 
+                 NSString *dateDB = [NSString stringWithFormat:@"%@", element[@"timeStamp"]];
+                 
+                 NSTimeInterval _interval=[dateDB doubleValue];
+                 
+                 NSDate *dbDate = [NSDate dateWithTimeIntervalSince1970:_interval];
+                 
+                 NSDateFormatter *_formatter=[[NSDateFormatter alloc]init];
+                 [_formatter setDateFormat:@"dd.MM.yyyy"];
+
+                // NSLog([_formatter stringFromDate:dbDate]);
+                 
+                 
+                 
+                for(int i=0;i<7;i++){
+                   
+                    
+                     
+                     
+                     if([[_formatter stringFromDate:dbDate] isEqualToString:dates[i]] )  {
+                         
+                        /// NSLog(@"i: %d",i);
+                         
+                         int b;
+                         
+                         if ([self.activityType  isEqual: @"Diaper"])
+                         {   b = [[count objectAtIndex:i] intValue] +1;
+                         }
+                         else if ([self.activityType isEqual: @"Feed"])
+                         {
+                             
+                            b = [[count objectAtIndex:i] intValue] + [element[@"volume"] integerValue];
+                             NSLog(@"b: %d",b);
+                             
+                         }
+                         else if ([self.activityType isEqual: @"Sleep"])
+                         {
+                            b = [[count objectAtIndex:i] intValue] + ([element[@"endTime"] integerValue]-[element[@"timeStamp"] integerValue]);
+                             NSLog(@"b: %d",b);
+                             
+                         }
+                         //[[count objectAtIndex:i] intValue] +1;
+                         
+                         [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
+                         
+                         
+                         //NSLog(@"i = %d",i);
+                         //NSLog(@"count = %@",[count objectAtIndex:i]);
+                         
+                       //  [counter replaceObjectAtIndex:i withObject:[count objectAtIndex:i]];
+                         
+                         
+                         
+                         
+                     }
+                 }
+                 
+                 x++;
+                 if (element == [objects lastObject]) {
+                     
+                     for(int i=0;i<7;i++)
+                         NSLog(@"count = %@",[count objectAtIndex:i]);
+                     NSMutableArray *mutableLineCharts = [NSMutableArray array];
+                     for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
+                     {
+                         NSMutableArray *mutableChartData = [NSMutableArray array];
+                         
+                         
+                         ////////here you will insert the data
+                         
+                         for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+                      {
+                             
+                             
+                         [mutableChartData addObject:[count objectAtIndex:i]]; // random number between 0 and 1
+                            // mutableChartData = counter;
+                         //NSLog(counter[lineIndex]);
+                      
+                        }
+                         [mutableLineCharts addObject:mutableChartData];
+                     }
+                     
+                     _chartData = [NSArray arrayWithArray:mutableLineCharts];
+                     _daysOfWeek =  dayweek;
+                     [self.chartView reloadData];
+                     
+                 }
+             }
+             
+             
+             
+             
+             
+         } else {
+             NSString *errorString = [[error userInfo] objectForKey:@"error"];
+             NSLog(@"Error: %@", errorString);
+         }
+         //         self.poopCounter.text =[@(counter) stringValue];
+         
+         
+         
+         
+     }];
+    
+    //
+    //    NSMutableArray *mutableLineCharts = [NSMutableArray array];
+    //    for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
+    //    {
+    //        NSMutableArray *mutableChartData = [NSMutableArray array];
+    //
+    //        ////////here you will insert the data
+    //
+    //        for (int i=0; i<kJBLineChartViewControllerMaxNumChartPoints; i++)
+    //        {
+    //            NSLog(@"here");
+    //            [mutableChartData addObject:[NSNumber numberWithFloat:3+i]]; // random number between 0 and 1
+    //
+    //        }
+    //        [mutableLineCharts addObject:mutableChartData];
+    //    }
+    //
+    //    _chartData = [NSArray arrayWithArray:mutableLineCharts];
+    //    _daysOfWeek = [[[NSDateFormatter alloc] init] shortWeekdaySymbols];
+    //
+    
+    
+    
 }
 
 - (NSArray *)largestLineData
@@ -179,7 +406,9 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     {
         if ([lineData count] > [largestLineData count])
         {
+           
             largestLineData = lineData;
+            
         }
     }
     return largestLineData;
@@ -211,9 +440,9 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     headerView.titleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
     headerView.titleLabel.shadowOffset = CGSizeMake(0, 1);
     //headerView.subtitleLabel.text = kJBStringLabel2013;
-   // headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
-   // headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
-   // headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
+    // headerView.subtitleLabel.textColor = kJBColorLineChartHeader;
+    // headerView.subtitleLabel.shadowColor = [UIColor colorWithWhite:1.0 alpha:0.25];
+    // headerView.subtitleLabel.shadowOffset = CGSizeMake(0, 1);
     headerView.separatorColor = kJBColorLineChartHeaderSeparatorColor;
     self.lineChartView.headerView = headerView;
     
@@ -240,9 +469,9 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     footerView.rightLabel.textColor = [UIColor whiteColor];
     
     /*footerView.leftLabel.text = [[self.daysOfWeek firstObject] uppercaseString];
-    footerView.leftLabel.textColor = [UIColor whiteColor];
-    footerView.rightLabel.text = [[self.daysOfWeek lastObject] uppercaseString];;
-    footerView.rightLabel.textColor = [UIColor whiteColor];*/
+     footerView.leftLabel.textColor = [UIColor whiteColor];
+     footerView.rightLabel.text = [[self.daysOfWeek lastObject] uppercaseString];;
+     footerView.rightLabel.textColor = [UIColor whiteColor];*/
     footerView.sectionCount = [[self largestLineData] count];
     self.lineChartView.footerView = footerView;
     
@@ -300,10 +529,10 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     return lineIndex == JBLineChartViewLineStyleDashed;
 }
 
-- (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
-{
-    return lineIndex == JBLineChartViewLineStyleSolid;
-}
+//- (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
+//{
+   // return lineIndex == JBLineChartViewLineStyleSolid;
+//}
 
 #pragma mark - JBLineChartViewDelegate
 
@@ -314,9 +543,31 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
 {
-
+    
     NSNumber *valueNumber = [[self.chartData objectAtIndex:lineIndex] objectAtIndex:horizontalIndex];
-    [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:@" H"];
+    NSString *unit;
+    if ([self.activityType  isEqual: @"Diaper"])
+    {
+        unit = @" Diapers";
+        [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:unit];
+    }
+    else if ([self.activityType isEqual: @"Feed"])
+    {
+        unit = @" oz";
+        [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:unit];
+    }
+    else if ([self.activityType isEqual: @"Sleep"])
+    {
+        unit = @" H";
+        [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]/(60*60)] unitText:unit];
+        
+    }
+    else
+        unit = self.activityType;
+        
+    
+        
+   // [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:unit];
     //[self.informationView setTitleText:lineIndex == JBLineChartLineSolid ? kJBStringLabelMetropolitanAverage : kJBStringLabelNationalAverage];
     [self.informationView setTitleText:@"Daily Total"];
     [self.informationView setHidden:NO animated:YES];
