@@ -9,7 +9,8 @@
 #import "FeedOuncesViewController.h"
 
 @interface FeedOuncesViewController (){
-    Feed *feedObject;
+     Activity *currentActivity;
+     Feed *feedObject;
 }
 
 @end
@@ -22,7 +23,7 @@
     self.pickerView.dataSource = self;
     
     feedObject = [[Feed alloc] init];
-    
+    currentActivity = [Activity returnActivityWithAttibutes:TYPE_FEED :@"SOME ID"];
     
     
     
@@ -43,6 +44,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
 
 - (IBAction)presetButtonSelected:(UIButton*)sender {
     self.ouncesLabel.text = [NSString stringWithFormat:@"%ld",sender.tag *5 + 5 ];

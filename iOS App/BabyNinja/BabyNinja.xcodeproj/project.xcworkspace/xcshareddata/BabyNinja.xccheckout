@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B52DA574F6A051176911D5C4436CB22F7BC70C65</key>
-		<string>https://github.com/nuvention-web/TeamONE.git</string>
+		<string>https://github.com/nuvention-web/TeamONE</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iOS App/BabyNinja/BabyNinja.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/nuvention-web/TeamONE.git</string>
+	<string>https://github.com/nuvention-web/TeamONE</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>B52DA574F6A051176911D5C4436CB22F7BC70C65</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MVP-new</string>
+			<string>TeamONE</string>
 		</dict>
 	</array>
 </dict>
