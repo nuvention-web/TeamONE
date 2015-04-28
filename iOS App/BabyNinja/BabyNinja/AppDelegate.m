@@ -78,7 +78,9 @@
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     NSLog(@"***** %@", userInfo);
+    
     if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
+        
         
         NSLog(@"containing app received message from watch");
 
@@ -90,6 +92,7 @@
         reply(response);
     } else
         reply(nil);
+    
     
 }
 

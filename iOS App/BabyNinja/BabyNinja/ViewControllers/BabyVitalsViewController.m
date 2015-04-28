@@ -40,7 +40,7 @@
     
 
     
-//    self.nextScreenButton.enabled = NO;
+    self.nextScreenButton.enabled = NO;
     self.babyNameTextField.delegate = self;
     self.babyWeightTextField.delegate = self;
     
