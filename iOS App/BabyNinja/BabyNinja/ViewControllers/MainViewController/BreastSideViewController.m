@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    currentActivity = [Activity returnActivityWithAttibutes:@"FEED" :@"SOME ID"];
+    currentActivity = [Activity returnActivityWithAttibutes:TYPE_FEED :@"SOME ID"];
     
     // Do any additional setup after loading the view from its nib.
 }
