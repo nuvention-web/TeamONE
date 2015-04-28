@@ -78,7 +78,7 @@
         if (error) {
             NSLog(@"%@", error);
         } else {
-
+            NSLog(@"%@",replyInfo);
         }
         
     }];
