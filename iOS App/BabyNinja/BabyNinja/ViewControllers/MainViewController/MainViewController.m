@@ -90,7 +90,7 @@
     
     
     
-    
+    getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
     NSLog(@"WHAT JUST CAME -> %@",self.careTaker.careTakerBabyArray[0]);
     
