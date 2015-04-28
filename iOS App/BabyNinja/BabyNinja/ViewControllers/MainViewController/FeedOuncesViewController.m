@@ -8,7 +8,9 @@
 
 #import "FeedOuncesViewController.h"
 
-@interface FeedOuncesViewController ()
+@interface FeedOuncesViewController (){
+    Feed *feedObject;
+}
 
 @end
 
@@ -18,6 +20,12 @@
     [super viewDidLoad];
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
+    
+    feedObject = [[Feed alloc] init];
+    
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 

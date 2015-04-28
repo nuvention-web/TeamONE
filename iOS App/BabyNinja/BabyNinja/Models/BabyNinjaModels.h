@@ -8,6 +8,8 @@
 
 #import "CareTaker.h"
 #import "Baby.h"
+#import "Feed.h"
+#import "Sleep.h"
 #import "Poop.h"
 #import "BabyActivity.h"
 #import "ModelConstants.h"

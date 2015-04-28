@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BabyNinjaModels.h"
 @protocol SleepActivityProtocol <NSObject>
 
--(void)sleepRecorded:(BabyActivity*)activity;  //TODO: change the BabyActivity type
-
+//-(void)sleepRecorded:(BabyActivity*)activity;  //TODO: change the BabyActivity type
+-(void)sleepRecorded:(Activity*)activity;  //TODO: change the BabyActivity type
 @end
 
 @interface SleepModeViewController : UIViewController
