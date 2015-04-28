@@ -9,8 +9,9 @@
 #ifndef BabyNinja_Constants_h
 #define BabyNinja_Constants_h
 
+////////////////////////////////// DIAPERS //////////////////////////
 // DIAPER CONSTANTS
-#define TYPE_DIAPERS @"DIAPERS"
+#define TYPE_DIAPERS @"DIAPER"
 #define TYPE_DIAPERS_POOP @"POOP"
 #define TYPE_DIAPERS_PEE @"PEE"
 
@@ -23,6 +24,22 @@
 //TEXUTRE
 #define TYPE_DIAPERS_POOP_TEXTURE_SOLID @"SOLID"
 #define TYPE_DIAPERS_POOP_TEXTURE_LOOSE @"LOOSE"
+
+////////////////////////////////// FEED //////////////////////////
+
+// FEED CONSTANTS
+#define TYPE_FEED @"FEED"
+#define FEED_TYPE_BREAST @"BREAST"
+#define FEED_TYPE_BREAST_LEFT @"LEFT"
+#define FEED_TYPE_BREAST_RIGHT @"RIGHT"
+#define FEED_TYPE_BREAST_BOTH @"BOTH"
+#define FEED_TYPE_FORMULA @"FORMULA"
+
+////////////////////////////////// SLEEP //////////////////////////
+#define TYPE_SLEEP @"SLEEP"
+#define SLEEP_TYPE_SLEEP @"SLEEP"
+#define SLEEP_TYPE_NAP @"NAP"
+
 
 
 

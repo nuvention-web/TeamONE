@@ -14,15 +14,15 @@
 #import "FeedOuncesViewController.h"
 #import "BreastSideViewController.h"
 
-@interface MainViewController ()<DiaperChangeProtocol>{
+@interface MainViewController ()<DiaperChangeProtocol, BreastSideFeedDelegate, SleepActivityProtocol>{
     UIView *blackView;
     UIButton *selectedButton;
-    
+    Baby *getBaby;
     BOOL isBreastMode;
+    
 }
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
-
 @property (nonatomic) NSInteger selectedColorIndex;
 @property (nonatomic) NSInteger selectedTextureIndex;
 @property (weak, nonatomic) IBOutlet UILabel *lastFeedActivityLabel;
@@ -43,26 +43,6 @@
     }
     return self;
 }
-
-
-//
-//
-//// THIS HAS ISSUES WITH CARETAKER WHEN ACTIVITY IS PASSED
-//-(void)addActivityToCurrentBaby:(Activity*)activity{
-//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-//    [getBaby.activities addObject:activity];
-//    NSLog(@"CARE TAKER %@!", activity);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
-//    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"DONE DONE");
-//        } else {
-//            NSLog(@"NOT DONE");        }
-//    }];
-//    
-//}
-
 
 
 
@@ -142,50 +122,58 @@
 
 //////////////////////////
 -(void)diaperChangeRecorded:(Activity*)activity{
-    NSLog(@"*************************************************************************");
     
-//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-//    [getBaby.activities addObject:activity];
-//      NSLog(@"CARE TAKER %@!", activity);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
+
     
-    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-    //NSLog(@"CARE Before %@!", getBaby.activities[0]);
     [getBaby.activities addObject:activity];
-    NSLog(@"CARE AFTER %@!", getBaby.activities[0]);
-
-
-    [self.careTaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
         } else {
             NSLog(@"NOT DONE");        }
     }];
     
-//    NSLog(@"RETRIVE^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-//    PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
-////    [query whereKey:@"playerName" equalTo:@"Dan Stemkoski"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            // The find succeeded.
-//            //NSLog(@"Successfully retrieved %d scores.", objects.count);
-//            // Do something with the found objects
-//            for (PFObject *object in objects) {
-//                CareTaker *here = object;
-//                Baby *baby2 =  here.careTakerBabyArray[0];
-//                NSLog(@"%@", baby2);
-//              
-//                
-//                
-//            }
-//        }else{
-//            // Log details of the failure
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-//    }];
+    
     
 }
 
+
+
+-(void)breastFeedRecorded:(Activity*)activity{
+    
+
+//    NSLog(@"IT IS GETTING IT FROM BREAST");
+//    
+//    NSLog(@"BREAST %@", activity);
+//    NSLog(@"Baby Name %@", getBaby.babyName);
+   [getBaby.activities addObject:activity];
+   [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"DONE DONE");
+        } else {
+            NSLog(@"NOT DONE");
+        }
+   }];
+
+}
+
+
+-(void)sleepRecorded:(Activity*)activity{
+    
+    [getBaby.activities addObject:activity];
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"DONE DONE");
+        } else {
+            NSLog(@"NOT DONE");
+        }
+    }];
+    
+}
+
+    
+    
+    
 
 
 - (IBAction)poopButtonPressed:(id)sender {
@@ -254,8 +242,12 @@
 //    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
 //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
 //    [alert show];
+    
+    
+    
     if(isBreastMode){
         BreastSideViewController *controller = [[BreastSideViewController alloc]init];
+        controller.delegate =self;
         [self.navigationController pushViewController:controller animated:YES];
     }else {
         FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
@@ -279,6 +271,7 @@
 - (IBAction)sleepOrAwakeButtonPressed:(id)sender {
     
     SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
+    sleep.delegate = self;
     [self presentViewController:sleep animated:YES completion:nil];
 //    if(self.sleepOrAwakeButton.tag==0){
 //        self.sleepOrAwakeButton.tag = 1 ; //setting the mode to selected

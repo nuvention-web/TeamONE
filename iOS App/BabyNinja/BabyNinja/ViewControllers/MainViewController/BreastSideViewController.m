@@ -8,7 +8,9 @@
 
 #import "BreastSideViewController.h"
 
-@interface BreastSideViewController ()
+@interface BreastSideViewController (){
+    Activity *currentActivity;
+}
 
 @end
 
@@ -16,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentActivity = [Activity returnActivityWithAttibutes:@"FEED" :@"SOME ID"];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,28 +28,45 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(Feed *)returnFeedObject:(NSNumber*)volume :(NSString*)type :(NSString*)breastSide{
+    Feed *newFeed = [[Feed alloc] init];
+    newFeed.volume = volume;
+    newFeed.type = type;
+    newFeed.breastSide = breastSide;
+    return newFeed;
 }
-*/
+
 
 - (IBAction)leftSelected:(id)sender {
-    [self.delegate breastFeedRecorded:[Activity new]];
+    currentActivity.feedObject = [self returnFeedObject:nil :FEED_TYPE_BREAST :FEED_TYPE_BREAST_LEFT];
+//    
+//    Feed *newFeed = [[Feed alloc] init];
+//    newFeed.volume = @12;
+//    newFeed.type = @"HELLO";
+//    newFeed.breastSide = @"HELLO";
+//    
+    
+    
+    
+    
+    
+    
+    [self.delegate breastFeedRecorded:currentActivity];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)rightSelected:(id)sender {
-    [self.delegate breastFeedRecorded:[Activity new]];
+    currentActivity.feedObject = [self returnFeedObject:nil :FEED_TYPE_BREAST :FEED_TYPE_BREAST_RIGHT];
+    
+    [self.delegate breastFeedRecorded:currentActivity];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)bothSidesSelected:(id)sender {
-    [self.delegate breastFeedRecorded:[Activity new]];
+    currentActivity.feedObject = [self returnFeedObject:nil :FEED_TYPE_BREAST :FEED_TYPE_BREAST_BOTH];
+    
+    [self.delegate breastFeedRecorded:currentActivity];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

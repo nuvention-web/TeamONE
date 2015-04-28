@@ -13,14 +13,14 @@
 @dynamic volume;
 @dynamic type;
 @dynamic breastSide;
-@dynamic timeStamp;
+
 
 + (void)load {
     [self registerSubclass];
 }
 
 + (NSString *)parseClassName {
-    return @"Feed";
+    return @"feed";
 }
 
 

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "JBChartTooltipView.h"
 #import "JBChartView.h"
+#import "Diapers.h"
+#import <Parse/PFObject+Subclass.h>
+
 
 @interface ActivityReportViewController : UIViewController
 

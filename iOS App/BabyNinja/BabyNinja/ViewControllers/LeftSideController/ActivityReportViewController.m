@@ -172,13 +172,16 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
         [query whereKey:@"activityType" equalTo:@"Diaper"];
     }
     else if ([self.activityType isEqual: @"Feed"])
-    {   query=[PFQuery queryWithClassName:@"Activity"];
+    {
+        query=[PFQuery queryWithClassName:@"Activity"];
         [query whereKey:@"activityType" equalTo:@"Feed"];
+        [query includeKey:@"feedObject"];
     }
     else if ([self.activityType isEqual: @"Sleep"])
     {
         query=[PFQuery queryWithClassName:@"Activity"];
         [query whereKey:@"activityType" equalTo:@"Sleep"];
+        [query includeKey:@"sleepObject"];
     }
     
 
@@ -296,24 +299,72 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
                          int b;
                          
                          if ([self.activityType  isEqual: @"Diaper"])
-                         {   b = [[count objectAtIndex:i] intValue] +1;
+                         {
+                             
+                             b = [[count objectAtIndex:i] intValue] +1;
+                             [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
                          }
                          else if ([self.activityType isEqual: @"Feed"])
                          {
+
                              
-                            b = [[count objectAtIndex:i] intValue] + [element[@"volume"] integerValue];
-                             NSLog(@"b: %d",b);
+                          
+                            //[query includeKey:@"diaperObject"];
+                             
+                             //for (PFObject *object in objects) {
+                            PFObject *object =  element;
+                             
+                                 PFObject *feed = [object objectForKey:@"feedObject"];
+                                 
+                                 NSLog(@"FEED   %@", feed[@"volume"]);
+                             
+                             
+                                 //Diapers *diaper = [[Diapers alloc] init];
+                                 //Activity *at = [[Activity alloc] init];
+                                 //at = object;
+                                 
+                                 
+                                 //                diaper = at.diaperObject;
+                                 //                NSLog(@"Diaper   %@", diaper);
+                                 //                NSLog(@"COLORRRR THIS I ITTI!@$!@$  %@", diaper.color);
+                                 
+                            // }
+                             
+                            //b = [[count objectAtIndex:i] intValue] + [element[@"volume"] integerValue];
+                           /*  NSLog(@"element********b: %@", element);
+                                                          NSLog(@"000");
+                             Activity *at = [[Activity alloc] init];
+                             //at = element;
+                            // NSLog(@"activityID********b: %@",at.activityID);
+                             NSLog(@"11111");
+                             NSLog(@"2222");
+                             
+                             
+                             
+                           //  NSLog(@"%@",   )
+                             NSLog(@"3333");
+    
+                             //NSLog(@"myDiper %@", element[@"diaperObject"][@"color"]);
+                             NSLog(@"44444");*/
+                             b = [[count objectAtIndex:i] intValue] + [feed[@"volume"] integerValue];
+                             [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
+
+
                              
                          }
                          else if ([self.activityType isEqual: @"Sleep"])
                          {
-                            b = [[count objectAtIndex:i] intValue] + ([element[@"endTime"] integerValue]-[element[@"timeStamp"] integerValue]);
+                             PFObject *object =  element;
+                             PFObject *sleep = [object objectForKey:@"sleepObject"];
+                             NSLog(@"Sleep: %d",[sleep[@"endTime"] integerValue]);
+                            b = [[count objectAtIndex:i] intValue] + ([sleep[@"endTime"] integerValue]-[element[@"timeStamp"] integerValue]);
                              NSLog(@"b: %d",b);
+                             [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
                              
                          }
                          //[[count objectAtIndex:i] intValue] +1;
                          
-                         [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
+                         
                          
                          
                          //NSLog(@"i = %d",i);
@@ -330,8 +381,12 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
                  x++;
                  if (element == [objects lastObject]) {
                      
+                    // NSLog(@"***********HOPE : %@", hope);
+                     
+                     
                      for(int i=0;i<7;i++)
                          NSLog(@"count = %@",[count objectAtIndex:i]);
+                     
                      NSMutableArray *mutableLineCharts = [NSMutableArray array];
                      for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
                      {
@@ -549,7 +604,7 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     if ([self.activityType  isEqual: @"Diaper"])
     {
         unit = @" Diapers";
-        [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]] unitText:unit];
+        [self.informationView setValueText:[NSString stringWithFormat:@"%.0f", [valueNumber floatValue]] unitText:unit];
     }
     else if ([self.activityType isEqual: @"Feed"])
     {
@@ -558,8 +613,23 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     }
     else if ([self.activityType isEqual: @"Sleep"])
     {
-        unit = @" H";
-        [self.informationView setValueText:[NSString stringWithFormat:@"%.2f", [valueNumber floatValue]/(60*60)] unitText:unit];
+        unit = @"";
+        
+        NSInteger hours = [valueNumber integerValue]/(60*60) ;
+        NSLog(@"%d",hours);
+        NSInteger minutes = ([valueNumber doubleValue]/(60*60)-hours)*60;
+        NSLog(@"%d",minutes);
+        
+        NSString *duration = @"";
+        
+        if(hours!=0){
+                duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld:", (long)hours]];
+        }
+        if(minutes!=0){
+                duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld", (long)minutes]];
+        }
+        
+        [self.informationView setValueText:duration  unitText:unit];
         
     }
     else
