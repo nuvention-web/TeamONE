@@ -13,7 +13,7 @@
                         <label alignment="left" text="test" id="Q6n-cx-ZYQ">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
-                        <group width="132" height="54" alignment="left" id="O0o-CH-XcW">
+                        <group width="1" height="54" alignment="left" id="O0o-CH-XcW">
                             <items>
                                 <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN"/>
                                 <button width="50" height="50" alignment="right" backgroundImage="sleep" id="SqG-JY-Q27">

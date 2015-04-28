@@ -50,7 +50,7 @@
 -(void)initiateUserDefaultVarialbles{
     
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
-    
+   NSLog(@"%@",[[Utility sharedUtility] userDefaultForKey:DiaperCount]) ;
 }
 
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
@@ -77,7 +77,7 @@
 }
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
-    
+    NSLog(@"***** %@", userInfo);
     if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
         
         NSLog(@"containing app received message from watch");
@@ -88,9 +88,11 @@
         
         NSDictionary *response = @{@"newDiaperCount" :[[Utility sharedUtility] userDefaultForKey:DiaperCount] ,MinDiaperCount :[[Utility sharedUtility] userDefaultForKey:MinDiaperCount]};
         reply(response);
-    }
+    } else
+        reply(nil);
     
 }
+
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [[FBSDKApplicationDelegate sharedInstance] application:application
