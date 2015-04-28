@@ -29,14 +29,19 @@
     
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPeeDiapierObject:peeColor];
-    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"DONE DONE");
-        } else {
-            NSLog(@"NOT DONE");        }
-    }];
     
     
+//    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//        } else {
+//            NSLog(@"NOT DONE");        }
+//    }];
+//    
+    
+    NSLog(@"PEE WORLKS HERE");
+     [self.delegate peeTypeRecorded:newActivity];
+
 }
 
 

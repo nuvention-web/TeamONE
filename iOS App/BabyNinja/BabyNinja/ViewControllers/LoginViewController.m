@@ -18,11 +18,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-    
+//    
+//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//    testObject[@"foo"] = @"bar";
+//    [testObject saveInBackground];
+//    
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
 //    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
