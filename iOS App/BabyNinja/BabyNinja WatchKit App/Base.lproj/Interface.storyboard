@@ -66,6 +66,54 @@
             </objects>
             <point key="canvasLocation" x="269" y="90"/>
         </scene>
+        <!--Breast Side Interface Controller-->
+        <scene sceneID="b6e-ca-8ie">
+            <objects>
+                <controller id="ywP-3w-w1M" customClass="BreastSideInterfaceController">
+                    <items>
+                        <label alignment="left" text="test" id="CuQ-CL-pgP">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <group width="132" height="54" alignment="left" id="Smd-hF-sbo">
+                            <items>
+                                <button width="50" height="50" alignment="left" title="L" id="tX4-Ul-jz6">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                </button>
+                                <button width="50" height="50" alignment="right" title="R" id="a3d-UG-laO">
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <connections>
+                                        <action selector="sleepOrAwakeButtonPressed" destination="AgC-eL-Hgc" id="OE7-dt-QzX"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="80" height="50" alignment="center" title="Both" id="LuG-Ef-6ic">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="477" y="85"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="yMM-Mg-S0d">
+            <objects>
+                <controller id="GdN-eT-nCV">
+                    <items>
+                        <group width="1" height="213" alignment="left" layout="vertical" id="zQC-bl-wqP">
+                            <items>
+                                <button width="1" alignment="left" title="2 Oz" id="D99-IY-Ogg"/>
+                                <button width="1" alignment="left" title="5 Oz" id="Q1R-zQ-sRj"/>
+                                <button width="1" alignment="left" title="10 Oz" id="EQY-aG-zz7"/>
+                                <button width="1" alignment="left" title="15 Oz" id="sNG-3x-zEf"/>
+                                <button width="1" alignment="left" title="20 Oz" id="PDc-x5-Y7Z"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="648" y="54"/>
+        </scene>
         <!--Diaper Type Interface Controller-->
         <scene sceneID="bER-Q4-Rh4">
             <objects>

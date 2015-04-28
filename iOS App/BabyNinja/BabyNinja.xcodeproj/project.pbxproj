@@ -55,6 +55,8 @@
 		204471B91AEE9E9F00D35BDD /* BreastSideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204471B71AEE9E9F00D35BDD /* BreastSideViewController.xib */; };
 		204471BD1AEE9F8200D35BDD /* FeedOuncesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */; };
 		204471BE1AEE9F8200D35BDD /* FeedOuncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */; };
+		204471C11AEEE00A00D35BDD /* BreastSideInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C01AEEE00A00D35BDD /* BreastSideInterfaceController.m */; };
+		204471C41AEEE02C00D35BDD /* FeedOuncesInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */; };
 		20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */; };
 		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -261,6 +263,12 @@
 		204471BA1AEE9F8200D35BDD /* FeedOuncesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedOuncesViewController.h; sourceTree = "<group>"; };
 		204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedOuncesViewController.m; sourceTree = "<group>"; };
 		204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedOuncesViewController.xib; sourceTree = "<group>"; };
+		204471BF1AEEE00A00D35BDD /* BreastSideInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreastSideInterfaceController.h; sourceTree = "<group>"; };
+		204471C01AEEE00A00D35BDD /* BreastSideInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreastSideInterfaceController.m; sourceTree = "<group>"; };
+		204471C21AEEE02C00D35BDD /* FeedOuncesInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedOuncesInterfaceController.h; sourceTree = "<group>"; };
+		204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedOuncesInterfaceController.m; sourceTree = "<group>"; };
+		204471C51AEEE72600D35BDD /* BabyNinja.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BabyNinja.entitlements; sourceTree = "<group>"; };
+		204471C61AEEE75000D35BDD /* BabyNinja WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BabyNinja WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionView.h; sourceTree = "<group>"; };
 		20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionView.m; sourceTree = "<group>"; };
 		20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionView.xib; sourceTree = "<group>"; };
@@ -435,6 +443,7 @@
 		201024D31A7B030F00F248F3 /* BabyNinja */ = {
 			isa = PBXGroup;
 			children = (
+				204471C51AEEE72600D35BDD /* BabyNinja.entitlements */,
 				205B98271ACB340700B5E3D5 /* Frameworks */,
 				20440A651A97F0790066CB7F /* Models */,
 				201024FA1A7B135F00F248F3 /* External Libraries */,
@@ -716,6 +725,7 @@
 		203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				204471C61AEEE75000D35BDD /* BabyNinja WatchKit Extension.entitlements */,
 				203A49D61A828C7300F02E56 /* InterfaceController.h */,
 				203A49D71A828C7300F02E56 /* InterfaceController.m */,
 				203A49D91A828C7300F02E56 /* NotificationController.h */,
@@ -730,6 +740,10 @@
 				20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */,
 				20BA8EE21AAF258F00290220 /* SleepModeInterfaceController.h */,
 				20BA8EE31AAF258F00290220 /* SleepModeInterfaceController.m */,
+				204471BF1AEEE00A00D35BDD /* BreastSideInterfaceController.h */,
+				204471C01AEEE00A00D35BDD /* BreastSideInterfaceController.m */,
+				204471C21AEEE02C00D35BDD /* FeedOuncesInterfaceController.h */,
+				204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */,
 			);
 			path = "BabyNinja WatchKit Extension";
 			sourceTree = "<group>";
@@ -918,6 +932,11 @@
 					201024D01A7B030F00F248F3 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = PMZ3J4E6RV;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					201024E91A7B030F00F248F3 = {
 						CreatedOnToolsVersion = 6.2;
@@ -925,6 +944,12 @@
 					};
 					203A49D01A828C7300F02E56 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = PMZ3J4E6RV;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					203A49DF1A828C7300F02E56 = {
 						CreatedOnToolsVersion = 6.2;
@@ -1099,6 +1124,8 @@
 				206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */,
 				206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */,
 				20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */,
+				204471C41AEEE02C00D35BDD /* FeedOuncesInterfaceController.m in Sources */,
+				204471C11AEEE00A00D35BDD /* BreastSideInterfaceController.m in Sources */,
 				20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */,
 				203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */,
 			);
@@ -1175,7 +1202,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1213,7 +1240,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1225,6 +1252,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1241,7 +1269,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 			};
 			name = Debug;
 		};
@@ -1250,6 +1278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1266,7 +1295,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 			};
 			name = Release;
 		};
@@ -1307,6 +1336,9 @@
 		203A49EF1A828C7300F02E56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1314,7 +1346,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1322,10 +1354,13 @@
 		203A49F01A828C7300F02E56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1344,7 +1379,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1361,7 +1396,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "36c5f837-619c-4453-89c3-b6e95bde540b";
+				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
