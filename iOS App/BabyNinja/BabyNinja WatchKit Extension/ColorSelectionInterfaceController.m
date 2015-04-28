@@ -72,22 +72,29 @@
 
 - (IBAction)yellowColorSelected {
     [poopDict setObject:@"yellow" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
 }
 
 
 
 - (IBAction)greenColorSelected {
     [poopDict setObject:@"green" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
 }
 
 
 - (IBAction)blackColorSelected {
     [poopDict setObject:@"black" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
 }
 
 
 - (IBAction)brownColorSelected {
     [poopDict setObject:@"brown" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
 }
 
 -(void)sendInformationToParentAppWithDict:(NSMutableDictionary*)dict{

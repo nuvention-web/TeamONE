@@ -99,24 +99,44 @@
             </objects>
             <point key="canvasLocation" x="429" y="-18"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Feed Ounces Interface Controller-->
         <scene sceneID="yMM-Mg-S0d">
             <objects>
-                <controller id="GdN-eT-nCV">
+                <controller id="GdN-eT-nCV" customClass="FeedOuncesInterfaceController">
                     <items>
                         <group width="1" height="213" alignment="left" layout="vertical" id="zQC-bl-wqP">
                             <items>
-                                <button width="1" alignment="left" title="2 Oz" id="D99-IY-Ogg"/>
-                                <button width="1" alignment="left" title="5 Oz" id="Q1R-zQ-sRj"/>
-                                <button width="1" alignment="left" title="10 Oz" id="EQY-aG-zz7"/>
-                                <button width="1" alignment="left" title="15 Oz" id="sNG-3x-zEf"/>
-                                <button width="1" alignment="left" title="20 Oz" id="PDc-x5-Y7Z"/>
+                                <button width="1" alignment="left" title="2 Oz" id="D99-IY-Ogg">
+                                    <connections>
+                                        <action selector="twoOzSelected" destination="GdN-eT-nCV" id="5ou-d0-e0r"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="5 Oz" id="Q1R-zQ-sRj">
+                                    <connections>
+                                        <action selector="fiveOzSelected" destination="GdN-eT-nCV" id="i1o-N2-P86"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="10 Oz" id="EQY-aG-zz7">
+                                    <connections>
+                                        <action selector="tenOzSelected" destination="GdN-eT-nCV" id="ytg-bJ-uWy"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="15 Oz" id="sNG-3x-zEf">
+                                    <connections>
+                                        <action selector="fifteenOzSelected" destination="GdN-eT-nCV" id="SB2-Fz-Uau"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="20 Oz" id="PDc-x5-Y7Z">
+                                    <connections>
+                                        <action selector="twentyOzSelected" destination="GdN-eT-nCV" id="397-VP-wdT"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="581" y="95"/>
+            <point key="canvasLocation" x="600" y="59"/>
         </scene>
         <!--Diaper Type Interface Controller-->
         <scene sceneID="bER-Q4-Rh4">
