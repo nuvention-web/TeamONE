@@ -39,6 +39,15 @@
     
 }
 
+- (id)contextForSegueWithIdentifier:(NSString *)segueIdentifier {
+    if ([segueIdentifier isEqualToString:@"SolidTexture"]) {
+        return [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"solid", nil] forKeys:[NSArray arrayWithObjects:@"texture", nil] ];
+    } else if ([segueIdentifier isEqualToString:@"LooseTexture"]) {
+        return [NSMutableDictionary dictionaryWithObjects:[NSArray arrayWithObjects:@"loose", nil] forKeys:[NSArray arrayWithObjects:@"texture", nil] ];
+    } else
+        return nil;
+}
+
 @end
 
 

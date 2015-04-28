@@ -79,17 +79,13 @@
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     NSLog(@"***** %@", userInfo);
     
-    if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
-        
+    
+    if ([[userInfo objectForKey:@"activity"] isEqualToString:@"diaper"]) {
         
         NSLog(@"containing app received message from watch");
-
-        NSInteger i = [[[Utility sharedUtility] userDefaultForKey:DiaperCount] integerValue];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"DiaperActivityFromWatch" object:userInfo];
         
-        [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInteger:i-1] forKey:DiaperCount];
-        
-        NSDictionary *response = @{@"newDiaperCount" :[[Utility sharedUtility] userDefaultForKey:DiaperCount] ,MinDiaperCount :[[Utility sharedUtility] userDefaultForKey:MinDiaperCount]};
-        reply(response);
+        reply(nil);
     } else
         reply(nil);
     

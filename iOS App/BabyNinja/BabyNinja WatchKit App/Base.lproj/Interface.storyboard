@@ -15,7 +15,11 @@
                         </label>
                         <group width="1" height="54" alignment="left" id="O0o-CH-XcW">
                             <items>
-                                <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN"/>
+                                <button width="50" height="50" alignment="left" backgroundImage="bottle" id="xjO-ut-aiN">
+                                    <connections>
+                                        <segue destination="GdN-eT-nCV" kind="push" id="t88-ku-gob"/>
+                                    </connections>
+                                </button>
                                 <button width="50" height="50" alignment="right" backgroundImage="sleep" id="SqG-JY-Q27">
                                     <connections>
                                         <action selector="sleepOrAwakeButtonPressed" destination="AgC-eL-Hgc" id="MfP-0r-B6u"/>
@@ -93,7 +97,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="85"/>
+            <point key="canvasLocation" x="429" y="-18"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="yMM-Mg-S0d">
@@ -112,7 +116,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="648" y="54"/>
+            <point key="canvasLocation" x="581" y="95"/>
         </scene>
         <!--Diaper Type Interface Controller-->
         <scene sceneID="bER-Q4-Rh4">
@@ -156,20 +160,20 @@
             <objects>
                 <controller id="RqV-rF-eeO" customClass="ColorSelectionInterfaceController">
                     <items>
-                        <group width="130" height="149" alignment="left" layout="vertical" id="dcT-Da-feP">
+                        <group width="1" height="149" alignment="left" layout="vertical" id="dcT-Da-feP">
                             <items>
                                 <group width="1" alignment="right" id="PIY-8Y-4fw">
                                     <items>
                                         <button width="50" height="50" alignment="right" backgroundImage="1" id="8q9-9l-Yoz">
                                             <fontDescription key="font" type="system" pointSize="9"/>
                                             <connections>
-                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="lhc-su-hgs"/>
+                                                <action selector="yellowColorSelected" destination="RqV-rF-eeO" id="7uC-Vp-7cX"/>
                                             </connections>
                                         </button>
                                         <button width="50" height="50" alignment="left" backgroundImage="4" id="qT3-cH-Tvo">
                                             <fontDescription key="font" type="system" pointSize="10"/>
                                             <connections>
-                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="q2G-GN-XnX"/>
+                                                <action selector="blackColorSelected" destination="RqV-rF-eeO" id="9f7-2u-VCE"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -182,13 +186,13 @@
                                         <button width="50" height="50" alignment="left" backgroundImage="2" id="fhk-jQ-j5E">
                                             <fontDescription key="font" type="system" pointSize="7"/>
                                             <connections>
-                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="nAd-rX-rxw"/>
+                                                <action selector="brownColorSelected" destination="RqV-rF-eeO" id="oWk-5H-zLJ"/>
                                             </connections>
                                         </button>
                                         <button width="50" height="50" alignment="right" backgroundImage="3" id="lzW-KW-zkP">
                                             <fontDescription key="font" type="system" pointSize="9"/>
                                             <connections>
-                                                <action selector="colorSelected" destination="RqV-rF-eeO" id="fYG-k7-3G3"/>
+                                                <action selector="greenColorSelected" destination="RqV-rF-eeO" id="pCB-C7-n1s"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -223,7 +227,7 @@
                             <items>
                                 <button width="50" height="50" alignment="center" backgroundImage="texture_solid" id="nSz-Hh-Bk7">
                                     <connections>
-                                        <segue destination="RqV-rF-eeO" kind="push" id="sLr-c1-JkK"/>
+                                        <segue destination="RqV-rF-eeO" kind="push" identifier="SolidTexture" id="sLr-c1-JkK"/>
                                     </connections>
                                 </button>
                                 <label alignment="center" text="Select the texture" id="9x4-D7-dIV">
@@ -232,7 +236,7 @@
                                 <button width="50" height="50" alignment="center" backgroundImage="texture_loose" id="RGZ-0q-GkY">
                                     <connections>
                                         <action selector="goBackToPreviousScreen" destination="2oi-MT-iyK" id="WZa-kb-Oa4"/>
-                                        <segue destination="RqV-rF-eeO" kind="push" id="Y4x-Ud-89v"/>
+                                        <segue destination="RqV-rF-eeO" kind="push" identifier="LooseTexture" id="Y4x-Ud-89v"/>
                                     </connections>
                                 </button>
                             </items>
@@ -277,10 +281,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="885" y="342"/>
+            <point key="canvasLocation" x="581" y="667"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sLr-c1-JkK"/>
+        <segue reference="Y4x-Ud-89v"/>
     </inferredMetricsTieBreakers>
 </document>

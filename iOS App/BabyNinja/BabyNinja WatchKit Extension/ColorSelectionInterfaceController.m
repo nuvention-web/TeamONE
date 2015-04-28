@@ -11,7 +11,9 @@
 #import "WatchConstants.h"
 #import "WatchUtility.h"
 
-@interface ColorSelectionInterfaceController()
+@interface ColorSelectionInterfaceController(){
+    NSMutableDictionary *poopDict;
+}
 
 @end
 
@@ -19,7 +21,10 @@
 @implementation ColorSelectionInterfaceController
 
 - (void)awakeWithContext:(id)context {
+    NSMutableDictionary *poop = (NSMutableDictionary *)context;
+    poopDict = poop;
     [super awakeWithContext:context];
+    
     
     // Configure interface objects here.
 }
@@ -62,7 +67,33 @@
 }
 
 - (IBAction)colorSelected {
-    NSDictionary *requst = @{@"diaper":@"changed"};
+
+}
+
+- (IBAction)yellowColorSelected {
+    [poopDict setObject:@"yellow" forKey:@"color"];
+}
+
+
+
+- (IBAction)greenColorSelected {
+    [poopDict setObject:@"green" forKey:@"color"];
+}
+
+
+- (IBAction)blackColorSelected {
+    [poopDict setObject:@"black" forKey:@"color"];
+}
+
+
+- (IBAction)brownColorSelected {
+    [poopDict setObject:@"brown" forKey:@"color"];
+}
+
+-(void)sendInformationToParentAppWithDict:(NSMutableDictionary*)dict{
+//    NSDictionary *requst = @{@"diaper":@"changed", @"color":@""};
+    [dict setObject:@"diaper" forKey:@"activity"];
+    [dict setObject:@"poop" forKey:@"type"];
     
     int diapers = [[[WatchUtility sharedUtility] userDefaultForKey:DiaperCount] intValue];
     [[WatchUtility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:diapers-1] forKey:DiaperCount];
@@ -73,7 +104,7 @@
         [self popToRootController];
     }
     
-    [ColorSelectionInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+    [ColorSelectionInterfaceController openParentApplication:dict reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
             NSLog(@"%@", error);
@@ -83,8 +114,6 @@
         
     }];
 }
-
-
 
 @end
 
