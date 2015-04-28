@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
 #import "ModelConstants.h"
+#import "Activity.h"
 
 @interface Diapers : PFObject<PFSubclassing>
 
