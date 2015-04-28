@@ -21,7 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    Activity *sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
     currentSleep = [[Sleep alloc] init];
+
     
     /// TO DEFINE IF SLEEP OR NAP
     isSleep = 0;
@@ -37,6 +39,11 @@
                                    userInfo:nil
                                     repeats:YES];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    NSLog(@"START: %@",    [NSDate date] );
+    
+    
 }
 
 -(void)updateTheTimeLabel{
@@ -73,7 +80,7 @@
         currentSleep.type = SLEEP_TYPE_NAP;
     }
     currentSleep.finishTime = timeStampObj;
-    Activity *sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
+
     sendActivity.sleepObject = currentSleep;
 
     

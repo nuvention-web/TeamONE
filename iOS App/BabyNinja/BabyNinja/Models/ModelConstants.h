@@ -11,7 +11,7 @@
 
 ////////////////////////////////// DIAPERS //////////////////////////
 // DIAPER CONSTANTS
-#define TYPE_DIAPERS @"DIAPERS"
+#define TYPE_DIAPERS @"DIAPER"
 #define TYPE_DIAPERS_POOP @"POOP"
 #define TYPE_DIAPERS_PEE @"PEE"
 
