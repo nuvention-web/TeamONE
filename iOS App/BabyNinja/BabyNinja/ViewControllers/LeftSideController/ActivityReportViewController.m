@@ -623,10 +623,10 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
         
         NSString *duration = @"";
         
-        if(hours!=0){
+        {
                 duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld:", (long)hours]];
         }
-        if(minutes!=0){
+        {
                 duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld", (long)minutes]];
         }
         
