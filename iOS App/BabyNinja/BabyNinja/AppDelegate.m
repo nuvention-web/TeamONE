@@ -79,6 +79,47 @@
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     NSLog(@"***** %@", userInfo);
     
+
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInt:timeStamp];
+    
+    Activity *sendActivity = [[Activity alloc] init];
+    sendActivity.activityType =userInfo[@"activity"];
+    sendActivity.timeStamp = timeStampObj;
+    sendActivity.activityID = @"SOME ACTIVITY";
+    
+    
+    
+    NSString *activityType = userInfo[@"activity"];
+    
+    BOOL res = [activityType isEqualToString:@"diaper"];
+    if(res){
+    Diapers *sendDiaperObject = [[Diapers alloc] init];
+        
+    sendDiaperObject.color = userInfo[@"color"];
+    sendDiaperObject.poopTexture = userInfo[@"texture"];
+    sendDiaperObject.type = userInfo[@"type"];
+    sendDiaperObject.timeStamp = timeStampObj;
+    sendActivity.diaperObject = sendDiaperObject;
+        
+    }
+    
+    
+    
+    
+    [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"DONE DONE");
+        } else {
+            NSLog(@"NOT DONE");
+        }
+    }];
+    
+    
+    
+    
+    
+
     
     if ([[userInfo objectForKey:@"activity"] isEqualToString:@"diaper"]) {
         
