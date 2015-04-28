@@ -20,11 +20,9 @@
     Baby *getBaby;
     BOOL isBreastMode;
     
-    
 }
 
 @property(nonatomic, strong) UIButton *openDrawerButton;
-
 @property (nonatomic) NSInteger selectedColorIndex;
 @property (nonatomic) NSInteger selectedTextureIndex;
 @property (weak, nonatomic) IBOutlet UILabel *lastFeedActivityLabel;
@@ -45,26 +43,6 @@
     }
     return self;
 }
-
-
-//
-//
-//// THIS HAS ISSUES WITH CARETAKER WHEN ACTIVITY IS PASSED
-//-(void)addActivityToCurrentBaby:(Activity*)activity{
-//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-//    [getBaby.activities addObject:activity];
-//    NSLog(@"CARE TAKER %@!", activity);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerBabyArray[0]);
-//    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-//        if (succeeded) {
-//            NSLog(@"DONE DONE");
-//        } else {
-//            NSLog(@"NOT DONE");        }
-//    }];
-//    
-//}
-
 
 
 
@@ -145,17 +123,10 @@
 //////////////////////////
 -(void)diaperChangeRecorded:(Activity*)activity{
     
-    
-//    Baby *getBaby = self.careTaker.careTakerBabyArray[0];
-//    [getBaby.activities addObject:activity];
-//      NSLog(@"CARE TAKER %@!", activity);
-//    NSLog(@"CARE TAKER %@!", self.careTaker.careTakerName);
-//NSLog(@"CARE Before %@!", getBaby.activities[0]);
-//    NSLog(@"CARE AFTER %@!", getBaby.activities[0]);
-    
+
     
     [getBaby.activities addObject:activity];
-    [self.careTaker saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
         } else {
@@ -163,30 +134,6 @@
     }];
     
     
-    
-    
-    
-//    NSLog(@"RETRIVE^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-//    PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
-////    [query whereKey:@"playerName" equalTo:@"Dan Stemkoski"];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            // The find succeeded.
-//            //NSLog(@"Successfully retrieved %d scores.", objects.count);
-//            // Do something with the found objects
-//            for (PFObject *object in objects) {
-//                CareTaker *here = object;
-//                Baby *baby2 =  here.careTakerBabyArray[0];
-//                NSLog(@"%@", baby2);
-//              
-//                
-//                
-//            }
-//        }else{
-//            // Log details of the failure
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-//    }];
     
 }
 
@@ -227,11 +174,6 @@
     
     
     
-    
-
-
-
-
 
 
 - (IBAction)poopButtonPressed:(id)sender {
