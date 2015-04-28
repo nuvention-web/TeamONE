@@ -169,18 +169,18 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     
     if ([self.activityType  isEqual: @"Diaper"])
     {   query=[PFQuery queryWithClassName:@"Activity"];
-        [query whereKey:@"activityType" equalTo:@"Diaper"];
+        [query whereKey:@"activityType" equalTo:@"DIAPER"];
     }
     else if ([self.activityType isEqual: @"Feed"])
     {
         query=[PFQuery queryWithClassName:@"Activity"];
-        [query whereKey:@"activityType" equalTo:@"Feed"];
+        [query whereKey:@"activityType" equalTo:@"FEED"];
         [query includeKey:@"feedObject"];
     }
     else if ([self.activityType isEqual: @"Sleep"])
     {
         query=[PFQuery queryWithClassName:@"Activity"];
-        [query whereKey:@"activityType" equalTo:@"Sleep"];
+        [query whereKey:@"activityType" equalTo:@"SLEEP"];
         [query includeKey:@"sleepObject"];
     }
     
@@ -356,8 +356,9 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
                          {
                              PFObject *object =  element;
                              PFObject *sleep = [object objectForKey:@"sleepObject"];
-                             NSLog(@"Sleep: %d",[sleep[@"endTime"] integerValue]);
-                            b = [[count objectAtIndex:i] intValue] + ([sleep[@"endTime"] integerValue]-[element[@"timeStamp"] integerValue]);
+                             NSLog(@"Finish: %d",[sleep[@"finishTime"] integerValue]);
+                             NSLog(@"start: %d",[element[@"timeStamp"] integerValue]);
+                            b = [[count objectAtIndex:i] intValue] + ([sleep[@"finishTime"] integerValue]-[element[@"timeStamp"] integerValue]);
                              NSLog(@"b: %d",b);
                              [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
                              
