@@ -78,7 +78,7 @@
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     NSLog(@"***** %@", userInfo);
-    
+    NSLog(@"you are herE!!!");
 
     NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
     NSNumber *timeStampObj = [NSNumber numberWithInt:timeStamp];
@@ -88,35 +88,70 @@
     sendActivity.timeStamp = timeStampObj;
     sendActivity.activityID = @"SOME ACTIVITY";
     
-    
-    
-    NSString *activityType = userInfo[@"activity"];
-    
-    BOOL res = [activityType isEqualToString:@"diaper"];
-    if(res){
     Diapers *sendDiaperObject = [[Diapers alloc] init];
-        
+    
     sendDiaperObject.color = userInfo[@"color"];
     sendDiaperObject.poopTexture = userInfo[@"texture"];
     sendDiaperObject.type = userInfo[@"type"];
     sendDiaperObject.timeStamp = timeStampObj;
     sendActivity.diaperObject = sendDiaperObject;
-        
-    }
     
     
     
-    
-    [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"DONE DONE");
-        } else {
-            NSLog(@"NOT DONE");
-        }
+   [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+         if (succeeded) {
+              NSLog(@"DONE DONE");
+            } else {
+                NSLog(@"NOT DONE");
+           }
     }];
+  
+//    BOOL res = [activityType isEqualToString:@"diaper"];
     
     
+//    
+//    NSString *activityType = userInfo[@"activity"];
+//    BOOL res = [activityType isEqualToString:@"diaper"];
+//    switch (res) {
+//        case NSOrderedAscending:
+//            // going up
+//            break;
+//        case NSOrderedSame:
+//            // even steven
+//            break;
+//        case NSOrderedDescending:
+//            // down i go
+//            break;
+//        default:
+//            break;
+//    }
+//    
+//    
+    //    BOOL res = [activityType isEqualToString:@"diaper"];
+
     
+//
+//    
+//    
+//    
+//    NSString *activityType = userInfo[@"activity"];
+//    
+//    BOOL res = [activityType isEqualToString:@"diaper"];
+//    if(res){
+//   
+//    }
+//    
+//   
+//    [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//        } else {
+//            NSLog(@"NOT DONE");
+//        }
+//    }];
+//    
+//    
+//    
     
     
 
