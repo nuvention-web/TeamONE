@@ -13,7 +13,7 @@
 @dynamic activityID;
 @dynamic timeStamp;
 @dynamic activityType;
-@dynamic diaperObject;
+//@dynamic diaperObject;
 
 //-(NSTimeInterval*)getTimeStamp{
 //   NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
@@ -39,10 +39,7 @@
     newActivity.activityID = activityID;
     newActivity.activityType = type;
     newActivity.timeStamp = timeStampObj;
-    newActivity.diaperObject = nil;
-    newActivity.feedObject = nil;
-    newActivity.sleepObject = nil;
-    
+    //newActivity.diaperObject = nil;
     return newActivity;
 }
 

@@ -48,17 +48,17 @@
                     <color key="backgroundColor" red="1" green="0.354430447426069" blue="0.22012338838925782" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwh-c4-f9q">
-                    <rect key="frame" x="39" y="392" width="303" height="30"/>
+                    <rect key="frame" x="39" y="357" width="303" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Baby Weight in Pounds" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tZd-BF-KIS">
-                    <rect key="frame" x="39" y="445" width="173" height="30"/>
+                    <rect key="frame" x="39" y="401" width="173" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-P4-8wJ">
-                    <rect key="frame" x="39" y="301" width="303" height="29"/>
+                    <rect key="frame" x="39" y="288" width="303" height="29"/>
                     <segments>
                         <segment title="Male"/>
                         <segment title="Female"/>
@@ -68,13 +68,13 @@
                     </connections>
                 </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-iW-U6B">
-                    <rect key="frame" x="225" y="448" width="58" height="21"/>
+                    <rect key="frame" x="220" y="404" width="58" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-He-Zcw">
-                    <rect key="frame" x="39" y="346" width="303" height="30"/>
+                    <rect key="frame" x="39" y="324" width="303" height="30"/>
                     <state key="normal" title="Date of Birth">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -105,7 +105,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNf-dO-jg4">
-                    <rect key="frame" x="45" y="520" width="290" height="65"/>
+                    <rect key="frame" x="42" y="511" width="290" height="65"/>
                     <fontDescription key="fontDescription" type="system" pointSize="31"/>
                     <state key="normal" title="Good to go!">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
