@@ -1232,7 +1232,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1270,7 +1270,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1299,7 +1299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 			};
 			name = Debug;
 		};
@@ -1325,7 +1325,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 			};
 			name = Release;
 		};
@@ -1376,7 +1376,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "cedd31e2-e484-4992-b120-5517c8954f1a";
+				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1390,7 +1390,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "cedd31e2-e484-4992-b120-5517c8954f1a";
+				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1409,7 +1409,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9cd5af23-1596-4dbb-a8b3-3f74e1fc9336";
+				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1426,7 +1426,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9cd5af23-1596-4dbb-a8b3-3f74e1fc9336";
+				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
