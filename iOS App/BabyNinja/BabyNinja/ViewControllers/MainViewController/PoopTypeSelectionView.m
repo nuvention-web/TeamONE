@@ -47,8 +47,8 @@
 
 
 -(void)sendPoopToParse:( NSString *)poopColor :( NSString *)poopTexture{
-    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
-    newActivity = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
+    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS :@"SOMEID"];
+    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
     
 //    //Dummuy Baby Tester
 //    self.dummyBaby = [[Baby alloc] init];
