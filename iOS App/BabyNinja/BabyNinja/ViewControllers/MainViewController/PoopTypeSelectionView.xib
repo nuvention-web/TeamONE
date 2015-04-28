@@ -106,7 +106,6 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="colorSelected:" destination="-1" eventType="touchUpInside" id="Dfa-pM-n76"/>
                                         <action selector="okayButtonPressed:" destination="-1" eventType="touchUpInside" id="Xtc-cb-VS5"/>
                                     </connections>
                                 </button>

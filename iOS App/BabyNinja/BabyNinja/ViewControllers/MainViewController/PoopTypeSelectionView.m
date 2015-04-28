@@ -11,6 +11,9 @@
 @interface PoopTypeSelectionView (){
     NSArray *colorsArray;
     NSArray *textureArray;
+    int currntTag;
+    int textureTag;
+    
 }
 
 @end
@@ -84,19 +87,30 @@
 
 - (IBAction)textureSelected:(UIButton*)sender {
     [self processTextureSelectionForIndex:sender.tag];
+    if(sender.tag ==0){
+        textureTag = 0;
+    }else{
+        textureTag = 10;
+    }
+    
 }
 
 - (IBAction)colorSelected:(UIButton*)sender {
     [self processColorSelectionForIndex:sender.tag];
     if(sender.tag ==0){
-        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+        currntTag = 0;
+//       [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
     }else if(sender.tag ==1){
-        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+        currntTag = 1;
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
     }else if(sender.tag ==2){
-        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+         currntTag = 2;
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
     }else if(sender.tag ==3){
-        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+        currntTag = 3;
+//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
     }
+ 
 }
 
 -(void)processColorSelectionForIndex:(NSInteger)tag{
@@ -119,25 +133,52 @@
     }
 }
 
-- (IBAction)okayButtonPressed:(id)sender {
-    NSLog(@"OK BUTTON");
-//    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_POOP :@"SOMEID"];
-//    newActivity.diaperObject = [Diapers returnPoopDiapierObject:poopColor texture:poopTexture];
+- (IBAction)okayButtonPressed:(UIButton*)sender {
+
+    int finalType = currntTag + textureTag;
+   
+
+    // Loose = 00 solid  = 10
+    // Coloor Yellow = 00, Brown= 01, Green = 02, Black = 03;
+    switch (finalType)
+    {
+        case 0:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+            break;
+            
+        case 1:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+            break;
+            
+        case 2:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+            break;
+            
+        case 3:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+            break;
+            
+        case 10:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_SOLID];
+            break;
+            
+        case 11:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_SOLID];
+            break;
+            
+        case 12:
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_SOLID];
+            break;
+
+        default:
+            
+            [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_SOLID];
+
+            
+            break;
+            
+    }
     
-//    [self.delegate poopTypeRecorded:[Activity new]];
-//
-//    [self processColorSelectionForIndex:sender.tag];
-//    if(sender.tag ==0){
-//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
-//    }else if(sender.tag ==1){
-//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
-//    }else if(sender.tag ==2){
-//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
-//    }else if(sender.tag ==3){
-//        [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
-//    }
-//    
-//    
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"poopRecorded" object:[Poop new]];
@@ -191,4 +232,23 @@
 //            NSLog(@"FAILED!!");
 //        }
 //    }];
+
+
+
+//    NSLog(@"OK BUTTON");
+//    [self processColorSelectionForIndex:sender.tag];
+//    if(currntTag == 0){
+//         NSLog(@"YELLOW");
+//         [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_YELLOW : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(currntTag == 1){
+//                 NSLog(@"YBROWN");
+//         [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BROWN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(currntTag == 2){
+//                 NSLog(@"GREEN");
+//         [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_GREEN : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }else if(currntTag == 3){
+//         [self sendPoopToParse:TYPE_DIAPERS_POOP_COLOR_BLACK : TYPE_DIAPERS_POOP_TEXTURE_LOOSE];
+//    }
+//
+
 
