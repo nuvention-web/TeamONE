@@ -7,7 +7,8 @@
 //
 
 #import "DiaperTypeInterfaceController.h"
-
+#import "WatchUtility.h"
+#import "WatchConstants.h"
 
 @interface DiaperTypeInterfaceController()
 
@@ -35,32 +36,40 @@
 - (IBAction)doMenuItemAction {
     // Handle menu action.
     NSLog(@"Menuuuuuuu");
-    NSDictionary *requst = @{@"diaper":@"changed"};
+//    NSDictionary *requst = @{@"diaper":@"changed"};
+
+    [self recordPee];
+}
+
+-(void)recordPee{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:@"diaper" forKey:@"activity"];
+    [dict setObject:@"pee" forKey:@"type"];
     
-    [DiaperTypeInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+    int diapers = [[[WatchUtility sharedUtility] userDefaultForKey:DiaperCount] intValue];
+    [[WatchUtility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:diapers-1] forKey:DiaperCount];
+    
+    if(diapers - 1 <= [[[WatchUtility sharedUtility] userDefaultForKey:MinDiaperCount] intValue]){
+        [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:diapers - 1]];
+    } else {
+        [self popToRootController];
+    }
+    
+    [DiaperTypeInterfaceController openParentApplication:dict reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
             NSLog(@"%@", error);
         } else {
-            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
-            NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
-            NSInteger minDiaperCount = [[replyInfo objectForKey:@"minDiaperCount"]integerValue];
-//            MinDiaperCount
-            if(newDiaperCount<=minDiaperCount){
-                //                AlertInterfaceController *alert = [[AlertInterfaceController alloc]init];
-//                [NSNumber numberWithInteger:newDiaperCount]
-                [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
-            } else {
-                [self popToRootController];
-            }
+            NSLog(@"%@", replyInfo);
             //            [self.label setText:[replyInfo objectForKey:@"response"]];
         }
         
     }];
-    
-    
 }
-     
-     
+
+- (IBAction)peeTapped {
+    [self recordPee];
+
+}
 @end
 

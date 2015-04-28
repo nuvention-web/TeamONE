@@ -10,5 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DiaperTypeInterfaceController : WKInterfaceController
+- (IBAction)peeTapped;
 
 @end

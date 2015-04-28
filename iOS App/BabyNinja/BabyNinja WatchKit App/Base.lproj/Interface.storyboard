@@ -133,6 +133,7 @@
                         </label>
                         <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="pee" id="CKX-Dx-cFg">
                             <connections>
+                                <action selector="peeTapped" destination="i61-Fq-IDJ" id="DxJ-WI-6cF"/>
                                 <segue destination="Xq4-nE-1Ub" kind="push" id="NKb-73-KNm"/>
                             </connections>
                         </button>
