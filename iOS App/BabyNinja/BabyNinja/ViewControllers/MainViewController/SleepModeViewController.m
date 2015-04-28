@@ -11,6 +11,7 @@
 @interface SleepModeViewController (){
     Sleep *currentSleep;
     BOOL isSleep; // Sleep is 1; Nap is 0;
+    Activity *sendActivity;
     
 }
 @property (strong,nonatomic) NSTimer* timer;
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Activity *sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
+    sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
     currentSleep = [[Sleep alloc] init];
 
     
