@@ -39,7 +39,7 @@
 //    }];
 //    
     
-    
+    NSLog(@"PEE WORLKS HERE");
      [self.delegate peeTypeRecorded:newActivity];
 
 }

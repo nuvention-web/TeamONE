@@ -88,7 +88,7 @@ PeeTypeSelectionViewController *peeTypeView;
 
 -(void)peeTypeRecorded:(Activity*)activity{
 
-    NSLog(@"here again");
+    NSLog(@"*********sPEEEEEE*******");
     
     [self.delegate diaperChangeRecorded:activity];
     
@@ -111,8 +111,8 @@ PeeTypeSelectionViewController *peeTypeView;
 
 - (IBAction)peeButtonPressed:(id)sender {
     
-    PeeTypeSelectionViewController *controller = [[PeeTypeSelectionViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+    
+    [self.navigationController pushViewController:peeTypeView animated:YES];
     
 }
 @end
