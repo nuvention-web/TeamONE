@@ -10,3 +10,8 @@
 
 NSString *const UDefaultLoggedIn = @"UDefaultLoggedIn";
 NSString *const ULogoutNotification = @"ULogoutNotification";
+
+NSString *const AppGroupFile = @"group.TOS.BabyNinja";
+NSString *const DiaperCount = @"DiaperCount";
+NSString *const MinDiaperCount = @"MinDiaperCount";
+NSString *const NewDiaperCount = @"newDiaperCount";
