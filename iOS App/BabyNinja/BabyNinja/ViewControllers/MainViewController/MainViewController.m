@@ -52,6 +52,23 @@
     [super viewDidLoad];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
+    
+    
+    NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: -"];
+    self.lastFeedActivityLabel.text = feedLabel;
+    
+    
+    NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -"];
+    self.lastSleepActivityLabel.text = sleepLabel;
+    
+    
+    NSString *diaperLabel = [NSString stringWithFormat:@"Last Diaper: -"];
+    self.lastDiaperActivityLabel.text = diaperLabel;
+    
+    
+    
+    
+    
 //
 //    
 //    
@@ -180,6 +197,21 @@
 -(void)sleepRecorded:(Activity*)activity{
     
 
+    //    Feed *getFeedObject = activity.feedObject;
+    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activity.timeStamp];
+    NSTimeInterval _interval=[myTimeStamp doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    
+    
+    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+    //    NSLog(@"%@", mySmallerString);
+    
+    
+
+    NSString *feedLabel = [NSString stringWithFormat:@"Last Sleep: %@", mySmallerString];
+    self.lastSleepActivityLabel.text = feedLabel;
+    
     
     [getBaby.activities addObject:activity];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
