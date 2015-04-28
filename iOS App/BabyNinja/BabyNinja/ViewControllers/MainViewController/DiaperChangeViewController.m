@@ -93,15 +93,15 @@ PeeTypeSelectionViewController *peeTypeView;
 
 
 - (IBAction)peeButtonPressed:(id)sender {
-    
+    NSLog(@"%HELP1");
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"We have just recorded your baby's PEE. Congratulations. " delegate:self cancelButtonTitle:@"Recorded" otherButtonTitles: nil];
    [alert show];
-    
+    NSLog(@"%HELP1");
     
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
-    newActivity = [Diapers returnPeeDiapierObject:nil];
+    newActivity.diaperObject = [Diapers returnPeeDiapierObject:nil];
     [self.delegate diaperChangeRecorded:newActivity];
-    
+        NSLog(@"%HELP1");
     //[self.navigationController pushViewController:peeTypeView animated:YES];
     
 }
