@@ -14,7 +14,7 @@
 #import "FeedOuncesViewController.h"
 #import "BreastSideViewController.h"
 
-@interface MainViewController ()<DiaperChangeProtocol, BreastSideFeedDelegate, SleepActivityProtocol>{
+@interface MainViewController ()<DiaperChangeProtocol, BreastSideFeedDelegate, SleepActivityProtocol, FeedOuncesDelegate>{
     UIView *blackView;
     UIButton *selectedButton;
     Baby *getBaby;
@@ -171,6 +171,19 @@
     
 }
 
+
+
+-(void)FeedOuncesRecorded:(Activity*)activity{
+    [getBaby.activities addObject:activity];
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"DONE DONE");
+        } else {
+            NSLog(@"NOT DONE");
+        }
+    }];
+}
+
     
     
     
@@ -243,14 +256,13 @@
 //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
 //    [alert show];
     
-    
-    
     if(isBreastMode){
         BreastSideViewController *controller = [[BreastSideViewController alloc]init];
         controller.delegate =self;
         [self.navigationController pushViewController:controller animated:YES];
     }else {
         FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+        controller.delegate =self;
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

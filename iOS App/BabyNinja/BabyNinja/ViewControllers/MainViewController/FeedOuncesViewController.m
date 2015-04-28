@@ -22,7 +22,7 @@
     self.pickerView.delegate = self;
     self.pickerView.dataSource = self;
     
-    feedObject = [[Feed alloc] init];
+
     currentActivity = [Activity returnActivityWithAttibutes:TYPE_FEED :@"SOME ID"];
     
     
@@ -52,9 +52,32 @@
     self.ouncesLabel.text = [NSString stringWithFormat:@"%ld",sender.tag *5 + 5 ];
 }
 
+
+
+-(Feed *)returnFeedObject:(NSNumber*)volume :(NSString*)type :(NSString*)breastSide{
+    Feed *newFeed = [[Feed alloc] init];
+    newFeed.volume = volume;
+    newFeed.type = type;
+    newFeed.breastSide = breastSide;
+    return newFeed;
+}
+
 - (IBAction)okayButtonPressed:(id)sender {
+    
     [self.delegate FeedOuncesRecorded:[Activity new]];
     [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    
+    NSNumberFormatter *ozNumber = [[NSNumberFormatter alloc] init];
+    ozNumber.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *myNumber = [ozNumber numberFromString:self.ouncesLabel.text];
+    
+    
+    feedObject = [self returnFeedObject:myNumber :FEED_TYPE_FORMULA :nil];
+    currentActivity.feedObject = feedObject;
+    
+    [self.delegate FeedOuncesRecorded:currentActivity];
+    
 }
 
 #pragma mark UIPickerViewDelegate methods
