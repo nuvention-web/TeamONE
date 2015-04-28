@@ -39,10 +39,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor blackColor];
     
-//    if([[NSUserDefaults standardUserDefaults] boolForKey:UDefaultLoggedIn] == NO)
-        self.window.rootViewController = login;
-//    else
-//        self.window.rootViewController = [self addSideViewController];
+    self.window.rootViewController = login;
     
     [self.window makeKeyAndVisible];
     [self initiateUserDefaultVarialbles]; //dirty way for demonstration -- SA
@@ -51,9 +48,9 @@
 }
 
 -(void)initiateUserDefaultVarialbles{
-    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-    NSString *key = @"DiaperCount";
-    [d setInteger:12 forKey:key];
+    
+    [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
+    
 }
 
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
@@ -79,22 +76,17 @@
     return drawer;
 }
 
-
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     
     if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
         
         NSLog(@"containing app received message from watch");
+
+        NSInteger i = [[[Utility sharedUtility] userDefaultForKey:DiaperCount] integerValue];
         
-        NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-        NSString *key = @"DiaperCount";
-        NSLog(@"%ld",(long)[d integerForKey:key]);
+        [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInteger:i-1] forKey:DiaperCount];
         
-        [d setInteger:([d integerForKey:key]-1) forKey:key];
-        
-        NSLog(@"%ld",(long)[d integerForKey:key]);
-        
-        NSDictionary *response = @{@"newDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:key]],@"minDiaperCount" :[NSNumber numberWithInt:(int)[d integerForKey:@"MinDiaperCount"]] };
+        NSDictionary *response = @{@"newDiaperCount" :[[Utility sharedUtility] userDefaultForKey:DiaperCount] ,MinDiaperCount :[[Utility sharedUtility] userDefaultForKey:MinDiaperCount]};
         reply(response);
     }
     

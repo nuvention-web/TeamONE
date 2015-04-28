@@ -84,7 +84,7 @@
             [storage deleteCookie:cookie];
         }
     }
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:UDefaultLoggedIn];
+    [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithBool:NO] forKey:UDefaultLoggedIn];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -96,7 +96,7 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
                 error:(NSError *)error{
     
     if(error == nil){
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:UDefaultLoggedIn];
+        [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithBool:YES] forKey:UDefaultLoggedIn];
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
         [self showBabyVitalsScreen];
     }
