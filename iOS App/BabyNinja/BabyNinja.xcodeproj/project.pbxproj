@@ -57,6 +57,7 @@
 		204471BE1AEE9F8200D35BDD /* FeedOuncesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */; };
 		204471C11AEEE00A00D35BDD /* BreastSideInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C01AEEE00A00D35BDD /* BreastSideInterfaceController.m */; };
 		204471C41AEEE02C00D35BDD /* FeedOuncesInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */; };
+		204471C91AEF30FD00D35BDD /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C81AEF30FD00D35BDD /* Utility.m */; };
 		20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */; };
 		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -270,6 +271,8 @@
 		204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedOuncesInterfaceController.m; sourceTree = "<group>"; };
 		204471C51AEEE72600D35BDD /* BabyNinja.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BabyNinja.entitlements; sourceTree = "<group>"; };
 		204471C61AEEE75000D35BDD /* BabyNinja WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BabyNinja WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		204471C71AEF30FD00D35BDD /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		204471C81AEF30FD00D35BDD /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionView.h; sourceTree = "<group>"; };
 		20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionView.m; sourceTree = "<group>"; };
 		20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionView.xib; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 			children = (
 				20A29CAA1AE0B65F009936F5 /* Constants.h */,
 				20A29CAB1AE0B65F009936F5 /* Constants.m */,
+				204471C71AEF30FD00D35BDD /* Utility.h */,
+				204471C81AEF30FD00D35BDD /* Utility.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1061,6 +1066,7 @@
 				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
+				204471C91AEF30FD00D35BDD /* Utility.m in Sources */,
 				E358A8BA1AEC3DDC003680C7 /* PeeTypeSelectionViewController.m in Sources */,
 				203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */,
 				2067B55C1AEBEEAC00FCEBAE /* BabyVitalsViewController.m in Sources */,

@@ -30,11 +30,8 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
-    NSString *key = @"DiaperCount";
-    [d setInteger:self.numberOfDiapers forKey:key];
-    NSString *key1 = @"MinDiaperCount";
-    [d setInteger:self.minNumberOfDiapers forKey:key1];
+    [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:self.numberOfDiapers] forKey:DiaperCount];
+    [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:self.minNumberOfDiapers] forKey:MinDiaperCount];
 }
 
 /*
