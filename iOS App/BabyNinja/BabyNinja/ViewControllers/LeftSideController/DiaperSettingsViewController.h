@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiaperSettingsViewController : UIViewController
+@interface DiaperSettingsViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *numberOfDiapersInStock;
 
 @property (weak, nonatomic) IBOutlet UITextField *thresholdNumberOfDiapers;
