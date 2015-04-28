@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSNumber *volume;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *breastSide;
-@property (nonatomic, strong) NSNumber *timeStamp;
+
 
 @end

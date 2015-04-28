@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BabyNinjaModels.h"
 
 @protocol BreastSideFeedDelegate <NSObject>
 

@@ -8,7 +8,11 @@
 
 #import "SleepModeViewController.h"
 
-@interface SleepModeViewController ()
+@interface SleepModeViewController (){
+    Sleep *currentSleep;
+    BOOL isSleep; // Sleep is 1; Nap is 0;
+    
+}
 @property (strong,nonatomic) NSTimer* timer;
 @property (strong, nonatomic) NSDate *startTime;
 @end
@@ -17,6 +21,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    currentSleep = [[Sleep alloc] init];
+    
+    /// TO DEFINE IF SLEEP OR NAP
+    isSleep = 0;
+    
+    
     self.startTime = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"hh:mm:ss a"];
@@ -53,6 +63,21 @@
 
 - (IBAction)awakeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInt:timeStamp];
+    
+    
+    if(isSleep){
+        currentSleep.type = SLEEP_TYPE_SLEEP;
+    }else{
+        currentSleep.type = SLEEP_TYPE_NAP;
+    }
+    currentSleep.finishTime = timeStampObj;
+    Activity *sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
+    sendActivity.sleepObject = currentSleep;
+
+    
+    [self.delegate sleepRecorded:sendActivity];
 }
 
 
