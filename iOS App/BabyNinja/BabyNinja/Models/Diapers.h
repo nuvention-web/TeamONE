@@ -10,17 +10,18 @@
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
 #import "ModelConstants.h"
+#import "Activity.h"
 
 @interface Diapers : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *color;
 @property (nonatomic, strong) NSString *poopTexture;
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSNumber *timeStamp;
+
 
 
 +(Diapers *)returnPoopDiapierObject:(NSString*)poopColor texture:(NSString*)poopTexture;
-
-
 +(Diapers *)returnPeeDiapierObject:(NSString*)peeColor;
 
 

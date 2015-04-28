@@ -40,6 +40,9 @@
     newActivity.activityType = type;
     newActivity.timeStamp = timeStampObj;
     newActivity.diaperObject = nil;
+    newActivity.feedObject = nil;
+    newActivity.sleepObject = nil;
+    
     return newActivity;
 }
 

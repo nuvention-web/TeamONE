@@ -14,6 +14,7 @@
 @dynamic color;
 @dynamic poopTexture;
 @dynamic type;
+@dynamic timeStamp;
 
 
 + (void)load {

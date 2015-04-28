@@ -13,4 +13,5 @@
 #import "ModelConstants.h"
 #import "Diapers.h"
 #import "Activity.h"
+#import <Parse/PFObject+Subclass.h>
 
