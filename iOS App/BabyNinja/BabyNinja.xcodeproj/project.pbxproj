@@ -125,6 +125,7 @@
 		E358A8BA1AEC3DDC003680C7 /* PeeTypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */; };
 		E358A8BB1AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */; };
 		E358A8F31AEF3070003680C7 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8F21AEF3070003680C7 /* Feed.m */; };
+		E358A8F61AEF4CBD003680C7 /* Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8F51AEF4CBD003680C7 /* Sleep.m */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -376,6 +377,8 @@
 		E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeeTypeSelectionViewController.xib; sourceTree = "<group>"; };
 		E358A8F11AEF3070003680C7 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
 		E358A8F21AEF3070003680C7 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		E358A8F41AEF4CBD003680C7 /* Sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sleep.h; sourceTree = "<group>"; };
+		E358A8F51AEF4CBD003680C7 /* Sleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sleep.m; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -788,7 +791,10 @@
 		20440A651A97F0790066CB7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				201739761AED711A00F44EFD /* ModelConstants.h */,
+				E358A8A01AEC031C003680C7 /* Activity.h */,
+				E358A8A11AEC031C003680C7 /* Activity.m */,
+				E358A8F41AEF4CBD003680C7 /* Sleep.h */,
+				E358A8F51AEF4CBD003680C7 /* Sleep.m */,
 				E358A8F11AEF3070003680C7 /* Feed.h */,
 				E358A8F21AEF3070003680C7 /* Feed.m */,
 				E358A8A61AEC0833003680C7 /* Diapers.h */,
@@ -801,8 +807,7 @@
 				20440A6A1A97F0C70066CB7F /* CareTaker.m */,
 				2067B55E1AEC013B00FCEBAE /* BabyActivity.h */,
 				2067B55F1AEC013B00FCEBAE /* BabyActivity.m */,
-				E358A8A01AEC031C003680C7 /* Activity.h */,
-				E358A8A11AEC031C003680C7 /* Activity.m */,
+				201739761AED711A00F44EFD /* ModelConstants.h */,
 				201739771AED88D600F44EFD /* BabyNinjaModels.h */,
 			);
 			path = Models;
@@ -1080,6 +1085,7 @@
 				2029C8DF1AEADD730086B506 /* JBChartTableCell.m in Sources */,
 				203A49C71A8165EE00F02E56 /* AFNetworkReachabilityManager.m in Sources */,
 				2029C8D31AEADD3F0086B506 /* JBLineChartFooterView.m in Sources */,
+				E358A8F61AEF4CBD003680C7 /* Sleep.m in Sources */,
 				201024DA1A7B030F00F248F3 /* AppDelegate.m in Sources */,
 				209753CE1AA0F35A00463D41 /* BabyProfileCell.m in Sources */,
 				203A49C91A8165EE00F02E56 /* AFURLConnectionOperation.m in Sources */,

@@ -10,11 +10,10 @@
 
 @implementation Feed
 
-
 @dynamic volume;
 @dynamic type;
 @dynamic breastSide;
-
+@dynamic timeStamp;
 
 + (void)load {
     [self registerSubclass];

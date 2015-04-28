@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
 
-@interface Feed : Activity<PFSubclassing>
+@interface Feed : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSNumber *volume;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *breastSide;
-
+@property (nonatomic, strong) NSNumber *timeStamp;
 
 @end
