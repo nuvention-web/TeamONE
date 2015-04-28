@@ -123,6 +123,7 @@
 		E358A8A81AEC0833003680C7 /* Diapers.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A71AEC0833003680C7 /* Diapers.m */; };
 		E358A8BA1AEC3DDC003680C7 /* PeeTypeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */; };
 		E358A8BB1AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */; };
+		E358A8F31AEF3070003680C7 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8F21AEF3070003680C7 /* Feed.m */; };
 		E3F680D01AEBF17D00574631 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */; };
 		E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */; };
 		E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */; };
@@ -370,6 +371,8 @@
 		E358A8B71AEC3DDC003680C7 /* PeeTypeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeeTypeSelectionViewController.h; sourceTree = "<group>"; };
 		E358A8B81AEC3DDC003680C7 /* PeeTypeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeeTypeSelectionViewController.m; sourceTree = "<group>"; };
 		E358A8B91AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeeTypeSelectionViewController.xib; sourceTree = "<group>"; };
+		E358A8F11AEF3070003680C7 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		E358A8F21AEF3070003680C7 /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
 		E3F680CF1AEBF17D00574631 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		E3F680D41AEBF18300574631 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		E3F680D61AEBF19400574631 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -781,6 +784,8 @@
 			isa = PBXGroup;
 			children = (
 				201739761AED711A00F44EFD /* ModelConstants.h */,
+				E358A8F11AEF3070003680C7 /* Feed.h */,
+				E358A8F21AEF3070003680C7 /* Feed.m */,
 				E358A8A61AEC0833003680C7 /* Diapers.h */,
 				E358A8A71AEC0833003680C7 /* Diapers.m */,
 				E358A89D1AEBFB5E003680C7 /* Poop.h */,
@@ -1050,6 +1055,7 @@
 				20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */,
 				2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */,
 				203A49CC1A8165EE00F02E56 /* AFURLSessionManager.m in Sources */,
+				E358A8F31AEF3070003680C7 /* Feed.m in Sources */,
 				20BA8EE81AAF289F00290220 /* ActivityReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
 				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,

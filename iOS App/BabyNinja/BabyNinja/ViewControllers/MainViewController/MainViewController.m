@@ -70,6 +70,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    
+//    
+//    
+//    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+//    [query includeKey:@"diaperObject"];
+//    
+////    [query whereKey:@"diaperObject" objectId:_conversation.objectid ];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            // The find succeeded.
+//            
+//            //NSLog(@"Successfully retrieved %d scores.", objects);
+//            // Do something with the found objects
+//            for (PFObject *object in objects) {
+//                
+//                PFObject *diaper2 = [object objectForKey:@"diaperObject"];
+//                
+//                NSLog(@"Activity   %@", diaper2[@"color"]);
+//                //Diapers *diaper = [[Diapers alloc] init];
+//                //Activity *at = [[Activity alloc] init];
+//                //at = object;
+//                
+//                
+////                diaper = at.diaperObject;
+////                NSLog(@"Diaper   %@", diaper);
+////                NSLog(@"COLORRRR THIS I ITTI!@$!@$  %@", diaper.color);
+//
+//            }
+//        } else {
+//            // Log details of the failure
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
+//    
+//    
+    
+    
+    
+    
+    
     isBreastMode = YES;
     NSLog(@"WHAT JUST CAME -> %@",self.careTaker.careTakerBabyArray[0]);
     

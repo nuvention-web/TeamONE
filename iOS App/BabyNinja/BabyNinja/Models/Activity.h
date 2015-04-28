@@ -18,7 +18,8 @@
 @property (nonatomic, strong) NSNumber *timeStamp;
 @property (nonatomic, strong) NSString *activityID;
 @property (nonatomic, strong) PFObject *diaperObject;
-
+@property (nonatomic, strong) PFObject *feedObject;
+@property (nonatomic, strong) PFObject *sleepObject;
 
 +(Activity *)returnActivityWithAttibutes:(NSString*)type:(NSString*)activityID;
 
