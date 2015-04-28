@@ -88,9 +88,6 @@
 //    
 //    
     
-    
-    
-    
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
     
@@ -120,9 +117,37 @@
 
 
 
-//////////////////////////
+
+
+
+#pragma mark - Protocol Methods
+
+
+-(NSString*)getLabel:(Activity*)activity{
+    //    Feed *getFeedObject = activity.feedObject;
+    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activity.timeStamp];
+    NSTimeInterval _interval=[myTimeStamp doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    
+    
+    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+    //    NSLog(@"%@", mySmallerString);
+    
+    return mySmallerString;
+    
+}
+
+
 -(void)diaperChangeRecorded:(Activity*)activity{
     
+    
+    NSString *myDateString =[self getLabel:activity];
+    NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
+    
+   // [self.lastDiaperActivityLabel sizeToFit];
+   // self.lastDiaperActivityLabel.numberOfLines=1;
+    self.lastDiaperActivityLabel.text = feedLabel;
 
     
     [getBaby.activities addObject:activity];
@@ -138,14 +163,8 @@
 }
 
 
-
 -(void)breastFeedRecorded:(Activity*)activity{
     
-
-//    NSLog(@"IT IS GETTING IT FROM BREAST");
-//    
-//    NSLog(@"BREAST %@", activity);
-//    NSLog(@"Baby Name %@", getBaby.babyName);
    [getBaby.activities addObject:activity];
    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
@@ -159,6 +178,8 @@
 
 
 -(void)sleepRecorded:(Activity*)activity{
+    
+
     
     [getBaby.activities addObject:activity];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -174,6 +195,14 @@
 
 
 -(void)FeedOuncesRecorded:(Activity*)activity{
+    //Last Feed: 12.30 pm , Used Left Breast
+    
+    
+
+    NSString *myDateString =[self getLabel:activity];
+    NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, activity.activityType];
+    self.lastFeedActivityLabel.text = feedLabel;
+    
     [getBaby.activities addObject:activity];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
@@ -184,55 +213,43 @@
     }];
 }
 
-    
-    
-    
+
+
+#pragma mark - When Buttons are Pressed
+
 
 
 - (IBAction)poopButtonPressed:(id)sender {
-//    PoopTypeSelectionView *controller = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
-//    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-//    controller.backgroundColor = [UIColor clearColor];
-//    controller.backgroundColor = [UIColor blackColor];
-//    controller.frame = CGRectMake(0 , 0 , 375, 667);
-//    controller.alpha = 0;
-//    [self.view addSubview:controller];
-//    [UIView animateWithDuration:0.5 animations:^{
-//
-//        controller.alpha = 1.0;
-//    }];
-    
-    
-    
-//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 400, 600)];
-//    label.backgroundColor = [UIColor yellowColor];
-//    [self.view addSubview:label];
-    
-    //    popover = [[FPPopoverController alloc] initWithViewController:controller];
-    //    popover.tint = FPPopoverWhiteTint;
-    //    popover.arrowDirection = FPPopoverNoArrow;
-    //    popover.contentSize = CGSizeMake(200, 300);
-    //    [popover presentPopoverFromPoint: CGPointMake(self.view.center.x, self.view.center.y - popover.contentSize.height/2)];
 
-//    [self changePoopButtonStateImage];
-//    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
     
-//    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
-//    UIView *controller = [[UIView alloc] init];
-//    controller.backgroundColor = [UIColor yellowColor];
-//    controller.frame = CGRectMake(0, 0, 400, 600);
-//    controller.alpha = 0.0;
-//    [self.view addSubview:controller];
-//    [UIView animateWithDuration:0.5 animations:^{
-//        
-//        controller.alpha = 1.0;
-//    }];
-
     
     DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
     controller2.delegate = self;
     [self.navigationController pushViewController:controller2 animated:YES];
 }
+
+
+
+
+- (IBAction)feedButtonPressed:(id)sender {
+    //    [self changeFeedButtonStateImage];
+    //    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
+    //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
+    //    [alert show];
+    
+    if(isBreastMode){
+        BreastSideViewController *controller = [[BreastSideViewController alloc]init];
+        controller.delegate =self;
+        [self.navigationController pushViewController:controller animated:YES];
+    }else {
+        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+        controller.delegate =self;
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+
+
+
 
 -(void)changePoopButtonStateImage{
     if(self.poopButton.tag==0){
@@ -247,23 +264,6 @@
         [self.poopButton setImage:[UIImage imageNamed:@"diaper"] forState:UIControlStateNormal];
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
-    }
-}
-
-- (IBAction)feedButtonPressed:(id)sender {
-//    [self changeFeedButtonStateImage];
-//    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
-//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
-//    [alert show];
-    
-    if(isBreastMode){
-        BreastSideViewController *controller = [[BreastSideViewController alloc]init];
-        controller.delegate =self;
-        [self.navigationController pushViewController:controller animated:YES];
-    }else {
-        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
-        controller.delegate =self;
-        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
@@ -470,3 +470,48 @@
 }
 
 @end
+
+
+
+
+
+/// REFERENCE
+
+//    PoopTypeSelectionView *controller = [[[NSBundle mainBundle] loadNibNamed:@"PoopTypeSelectionView" owner:self options:nil] objectAtIndex:0];
+//    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
+//    controller.backgroundColor = [UIColor clearColor];
+//    controller.backgroundColor = [UIColor blackColor];
+//    controller.frame = CGRectMake(0 , 0 , 375, 667);
+//    controller.alpha = 0;
+//    [self.view addSubview:controller];
+//    [UIView animateWithDuration:0.5 animations:^{
+//
+//        controller.alpha = 1.0;
+//    }];
+
+
+
+//    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 400, 600)];
+//    label.backgroundColor = [UIColor yellowColor];
+//    [self.view addSubview:label];
+
+//    popover = [[FPPopoverController alloc] initWithViewController:controller];
+//    popover.tint = FPPopoverWhiteTint;
+//    popover.arrowDirection = FPPopoverNoArrow;
+//    popover.contentSize = CGSizeMake(200, 300);
+//    [popover presentPopoverFromPoint: CGPointMake(self.view.center.x, self.view.center.y - popover.contentSize.height/2)];
+
+//    [self changePoopButtonStateImage];
+//    [self.radialMenu buttonsWillAnimateFromButton:sender withFrame:self.poopButton.frame inView:self.view];
+
+//    PoopTypeSelectionView *controller = [[PoopTypeSelectionView alloc] init];
+//    UIView *controller = [[UIView alloc] init];
+//    controller.backgroundColor = [UIColor yellowColor];
+//    controller.frame = CGRectMake(0, 0, 400, 600);
+//    controller.alpha = 0.0;
+//    [self.view addSubview:controller];
+//    [UIView animateWithDuration:0.5 animations:^{
+//
+//        controller.alpha = 1.0;
+//    }];
+
