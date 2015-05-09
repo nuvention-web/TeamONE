@@ -10,5 +10,11 @@
 #import <Foundation/Foundation.h>
 
 @interface FeedOuncesInterfaceController : WKInterfaceController
+- (IBAction)twoOzSelected;
+- (IBAction)fiveOzSelected;
+- (IBAction)tenOzSelected;
+- (IBAction)fifteenOzSelected;
+- (IBAction)twentyOzSelected;
+
 
 @end

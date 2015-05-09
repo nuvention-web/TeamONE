@@ -38,7 +38,7 @@
     if ([FBSDKAccessToken currentAccessToken]) {
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
         [self showBabyVitalsScreen];
-        NSLog(@"%@", [PFUser currentUser]);
+///        NSLog(@"%@", [PFUser currentUser]);
         // User is logged in, do work such as go to next view controller.
     }
 }

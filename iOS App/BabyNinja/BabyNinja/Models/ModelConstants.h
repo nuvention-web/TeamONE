@@ -29,11 +29,11 @@
 
 // FEED CONSTANTS
 #define TYPE_FEED @"FEED"
+#define FEED_TYPE_FORMULA @"FORMULA"
 #define FEED_TYPE_BREAST @"BREAST"
 #define FEED_TYPE_BREAST_LEFT @"LEFT"
 #define FEED_TYPE_BREAST_RIGHT @"RIGHT"
 #define FEED_TYPE_BREAST_BOTH @"BOTH"
-#define FEED_TYPE_FORMULA @"FORMULA"
 
 ////////////////////////////////// SLEEP //////////////////////////
 #define TYPE_SLEEP @"SLEEP"

@@ -7,7 +7,8 @@
 //
 
 #import "AlertInterfaceController.h"
-
+#import "WatchConstants.h"
+#import "WatchUtility.h"
 
 @interface AlertInterfaceController()
 
@@ -18,8 +19,8 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    NSNumber *number = (NSNumber*)context;
-    NSString *string = [NSString stringWithFormat:@"             Alert!                            You are just left with %ld diapers. Time to buy more!", [number integerValue]];
+//    NSNumber *number = (NSNumber*)context;
+    NSString *string = [NSString stringWithFormat:@"             Alert!                            You are just left with %d diapers. Time to buy more!", [[[WatchUtility sharedUtility] userDefaultForKey:DiaperCount] intValue] ];
         [self.diaperNumberAlertLabel setText:string];
     // Configure interface objects here.
 }

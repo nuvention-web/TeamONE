@@ -8,8 +8,12 @@
 
 #import "ColorSelectionInterfaceController.h"
 #import "AlertInterfaceController.h"
+#import "WatchConstants.h"
+#import "WatchUtility.h"
 
-@interface ColorSelectionInterfaceController()
+@interface ColorSelectionInterfaceController(){
+    NSMutableDictionary *poopDict;
+}
 
 @end
 
@@ -17,7 +21,10 @@
 @implementation ColorSelectionInterfaceController
 
 - (void)awakeWithContext:(id)context {
+    NSMutableDictionary *poop = (NSMutableDictionary *)context;
+    poopDict = poop;
     [super awakeWithContext:context];
+    
     
     // Configure interface objects here.
 }
@@ -60,27 +67,60 @@
 }
 
 - (IBAction)colorSelected {
-    NSDictionary *requst = @{@"diaper":@"changed"};
+
+}
+
+- (IBAction)yellowColorSelected {
+    [poopDict setObject:@"yellow" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+}
+
+
+
+- (IBAction)greenColorSelected {
+    [poopDict setObject:@"green" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
+}
+
+
+- (IBAction)blackColorSelected {
+    [poopDict setObject:@"black" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
+}
+
+
+- (IBAction)brownColorSelected {
+    [poopDict setObject:@"brown" forKey:@"color"];
+    [self sendInformationToParentAppWithDict:poopDict];
+
+}
+
+-(void)sendInformationToParentAppWithDict:(NSMutableDictionary*)dict{
+//    NSDictionary *requst = @{@"diaper":@"changed", @"color":@""};
+    [dict setObject:@"diaper" forKey:@"activity"];
+    [dict setObject:@"poop" forKey:@"type"];
     
-    [ColorSelectionInterfaceController openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+    int diapers = [[[WatchUtility sharedUtility] userDefaultForKey:DiaperCount] intValue];
+    [[WatchUtility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:diapers-1] forKey:DiaperCount];
+    
+    if(diapers - 1 <= [[[WatchUtility sharedUtility] userDefaultForKey:MinDiaperCount] intValue]){
+        [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:diapers - 1]];
+    } else {
+        [self popToRootController];
+    }
+    
+    [ColorSelectionInterfaceController openParentApplication:dict reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
             NSLog(@"%@", error);
         } else {
-            NSLog(@"%@", [replyInfo objectForKey:@"newDiaperCount"]);
-            NSInteger newDiaperCount = [[replyInfo objectForKey:@"newDiaperCount"]integerValue];
-            NSInteger minDiaperCount = [[replyInfo objectForKey:@"minDiaperCount"]integerValue];
-            if(newDiaperCount<=minDiaperCount){
-                [self pushControllerWithName:@"alert" context:[NSNumber numberWithInteger:newDiaperCount]];
-            } else {
-                [self popToRootController];
-            }
+            NSLog(@"%@",replyInfo);
         }
         
     }];
 }
-
-
 
 @end
 

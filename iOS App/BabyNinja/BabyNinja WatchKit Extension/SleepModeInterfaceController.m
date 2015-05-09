@@ -45,8 +45,27 @@
 }
 
 - (IBAction)awakeButtonPressed {
+    [self recordSleep];
     [self popController];
 //    [self dismissController];
+}
+
+-(void)recordSleep{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:@"sleep" forKey:@"activity"];
+    [dict setObject:self.startTime forKey:@"startTime"];
+    [dict setObject:[NSDate date] forKey:@"finishTime"];
+    
+    [SleepModeInterfaceController openParentApplication:dict reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            NSLog(@"%@",replyInfo);
+        }
+        
+    }];
+    
 }
 
 

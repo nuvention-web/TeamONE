@@ -29,7 +29,7 @@
     
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
     newActivity = [Diapers returnPeeDiapierObject:peeColor];
-    
+     [self.delegate peeTypeRecorded:newActivity];
     
 //    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 //        if (succeeded) {
@@ -39,8 +39,8 @@
 //    }];
 //    
     
-    NSLog(@"PEE WORLKS HERE");
-     [self.delegate peeTypeRecorded:newActivity];
+
+    // [self.delegate peeTypeRecorded:newActivity];
 
 }
 

@@ -58,6 +58,8 @@
 		204471C11AEEE00A00D35BDD /* BreastSideInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C01AEEE00A00D35BDD /* BreastSideInterfaceController.m */; };
 		204471C41AEEE02C00D35BDD /* FeedOuncesInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C31AEEE02C00D35BDD /* FeedOuncesInterfaceController.m */; };
 		204471C91AEF30FD00D35BDD /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471C81AEF30FD00D35BDD /* Utility.m */; };
+		204471CE1AEFD47200D35BDD /* WatchUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471CB1AEFD47200D35BDD /* WatchUtility.m */; };
+		204471CF1AEFD47200D35BDD /* WatchConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 204471CC1AEFD47200D35BDD /* WatchConstants.m */; };
 		20558F191AE95A7D00A42961 /* PoopTypeSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */; };
 		20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */; };
 		205B982A1ACB343100B5E3D5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98281ACB343100B5E3D5 /* Bolts.framework */; };
@@ -274,6 +276,10 @@
 		204471C61AEEE75000D35BDD /* BabyNinja WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "BabyNinja WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		204471C71AEF30FD00D35BDD /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		204471C81AEF30FD00D35BDD /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		204471CA1AEFD47200D35BDD /* WatchUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchUtility.h; sourceTree = "<group>"; };
+		204471CB1AEFD47200D35BDD /* WatchUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchUtility.m; sourceTree = "<group>"; };
+		204471CC1AEFD47200D35BDD /* WatchConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchConstants.m; sourceTree = "<group>"; };
+		204471CD1AEFD47200D35BDD /* WatchConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchConstants.h; sourceTree = "<group>"; };
 		20558F161AE95A7D00A42961 /* PoopTypeSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoopTypeSelectionView.h; sourceTree = "<group>"; };
 		20558F171AE95A7D00A42961 /* PoopTypeSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoopTypeSelectionView.m; sourceTree = "<group>"; };
 		20558F181AE95A7D00A42961 /* PoopTypeSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoopTypeSelectionView.xib; sourceTree = "<group>"; };
@@ -736,6 +742,10 @@
 		203A49D21A828C7300F02E56 /* BabyNinja WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				204471CA1AEFD47200D35BDD /* WatchUtility.h */,
+				204471CB1AEFD47200D35BDD /* WatchUtility.m */,
+				204471CC1AEFD47200D35BDD /* WatchConstants.m */,
+				204471CD1AEFD47200D35BDD /* WatchConstants.h */,
 				204471C61AEEE75000D35BDD /* BabyNinja WatchKit Extension.entitlements */,
 				203A49D61A828C7300F02E56 /* InterfaceController.h */,
 				203A49D71A828C7300F02E56 /* InterfaceController.m */,
@@ -1139,12 +1149,14 @@
 			files = (
 				203A49DB1A828C7300F02E56 /* NotificationController.m in Sources */,
 				20BA8EE41AAF258F00290220 /* SleepModeInterfaceController.m in Sources */,
+				204471CE1AEFD47200D35BDD /* WatchUtility.m in Sources */,
 				206589DD1A8A61500019F21D /* TextureSelectionInterfaceController.m in Sources */,
 				206589E01A8A666F0019F21D /* AlertInterfaceController.m in Sources */,
 				20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */,
 				204471C41AEEE02C00D35BDD /* FeedOuncesInterfaceController.m in Sources */,
 				204471C11AEEE00A00D35BDD /* BreastSideInterfaceController.m in Sources */,
 				20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */,
+				204471CF1AEFD47200D35BDD /* WatchConstants.m in Sources */,
 				203A49D81A828C7300F02E56 /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1220,7 +1232,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1258,7 +1270,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1287,7 +1299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 			};
 			name = Debug;
 		};
@@ -1313,7 +1325,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9ab379ab-8cfe-436c-917a-6f15d43934e6";
+				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
 			};
 			name = Release;
 		};
@@ -1364,7 +1376,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "cedd31e2-e484-4992-b120-5517c8954f1a";
+				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1378,7 +1390,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "cedd31e2-e484-4992-b120-5517c8954f1a";
+				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1397,7 +1409,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9cd5af23-1596-4dbb-a8b3-3f74e1fc9336";
+				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1414,7 +1426,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9cd5af23-1596-4dbb-a8b3-3f74e1fc9336";
+				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";

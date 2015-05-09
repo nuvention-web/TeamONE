@@ -201,6 +201,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
             age =[age stringByAppendingString:[NSString stringWithFormat:@"%ld days", (long)days]];
     }
     
+    age =[age stringByAppendingString:@" young"];
     return age;
 }
 

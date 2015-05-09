@@ -50,7 +50,7 @@
 -(void)initiateUserDefaultVarialbles{
     
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
-    
+   NSLog(@"%@",[[Utility sharedUtility] userDefaultForKey:DiaperCount]) ;
 }
 
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
@@ -77,20 +77,97 @@
 }
 
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
+    NSLog(@"***** %@", userInfo);
+    NSLog(@"you are herE!!!");
+
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    NSNumber *timeStampObj = [NSNumber numberWithInt:timeStamp];
     
-    if ([[userInfo objectForKey:@"diaper"] isEqualToString:@"changed"]) {
+    Activity *sendActivity = [[Activity alloc] init];
+    sendActivity.activityType =userInfo[@"activity"];
+    sendActivity.timeStamp = timeStampObj;
+    sendActivity.activityID = @"SOME ACTIVITY";
+    
+    Diapers *sendDiaperObject = [[Diapers alloc] init];
+    
+    sendDiaperObject.color = userInfo[@"color"];
+    sendDiaperObject.poopTexture = userInfo[@"texture"];
+    sendDiaperObject.type = userInfo[@"type"];
+    sendDiaperObject.timeStamp = timeStampObj;
+    sendActivity.diaperObject = sendDiaperObject;
+    
+    
+    
+   [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+         if (succeeded) {
+              NSLog(@"DONE DONE");
+            } else {
+                NSLog(@"NOT DONE");
+           }
+    }];
+  
+//    BOOL res = [activityType isEqualToString:@"diaper"];
+    
+    
+//    
+//    NSString *activityType = userInfo[@"activity"];
+//    BOOL res = [activityType isEqualToString:@"diaper"];
+//    switch (res) {
+//        case NSOrderedAscending:
+//            // going up
+//            break;
+//        case NSOrderedSame:
+//            // even steven
+//            break;
+//        case NSOrderedDescending:
+//            // down i go
+//            break;
+//        default:
+//            break;
+//    }
+//    
+//    
+    //    BOOL res = [activityType isEqualToString:@"diaper"];
+
+    
+//
+//    
+//    
+//    
+//    NSString *activityType = userInfo[@"activity"];
+//    
+//    BOOL res = [activityType isEqualToString:@"diaper"];
+//    if(res){
+//   
+//    }
+//    
+//   
+//    [sendActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//        } else {
+//            NSLog(@"NOT DONE");
+//        }
+//    }];
+//    
+//    
+//    
+    
+    
+
+    
+    if ([[userInfo objectForKey:@"activity"] isEqualToString:@"diaper"]) {
         
         NSLog(@"containing app received message from watch");
-
-        NSInteger i = [[[Utility sharedUtility] userDefaultForKey:DiaperCount] integerValue];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"DiaperActivityFromWatch" object:userInfo];
         
-        [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInteger:i-1] forKey:DiaperCount];
-        
-        NSDictionary *response = @{@"newDiaperCount" :[[Utility sharedUtility] userDefaultForKey:DiaperCount] ,MinDiaperCount :[[Utility sharedUtility] userDefaultForKey:MinDiaperCount]};
-        reply(response);
-    }
+        reply(nil);
+    } else
+        reply(nil);
+    
     
 }
+
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [[FBSDKApplicationDelegate sharedInstance] application:application

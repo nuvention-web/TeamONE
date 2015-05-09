@@ -79,7 +79,6 @@ PeeTypeSelectionViewController *peeTypeView;
 //    }];
     
 //    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(removePoopTypeView) userInfo:nil repeats:NO];
-    NSLog(@"here again");
     
     [self.delegate diaperChangeRecorded:activity];
     
@@ -87,32 +86,20 @@ PeeTypeSelectionViewController *peeTypeView;
 
 
 -(void)peeTypeRecorded:(Activity*)activity{
-
-    NSLog(@"*********sPEEEEEE*******");
-    
     [self.delegate diaperChangeRecorded:activity];
     
 }
 
 
-//-(void)removePoopTypeView{
-//    [poopTypeView removeFromSuperview];
-//}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)peeButtonPressed:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"We have just recorded your baby's PEE. Congratulations. " delegate:self cancelButtonTitle:@"Recorded" otherButtonTitles: nil];
+   [alert show];
     
-    
-    [self.navigationController pushViewController:peeTypeView animated:YES];
+    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
+    newActivity.diaperObject = [Diapers returnPeeDiapierObject:nil];
+    [self.delegate diaperChangeRecorded:newActivity];
+
     
 }
 @end
