@@ -20,6 +20,7 @@
 @property (nonatomic, strong) PFObject *diaperObject;
 @property (nonatomic, strong) PFObject *feedObject;
 @property (nonatomic, strong) PFObject *sleepObject;
+@property (nonatomic, strong) NSString *babyId;
 
 +(Activity *)returnActivityWithAttibutes:(NSString*)type:(NSString*)activityID;
 

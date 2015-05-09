@@ -117,7 +117,16 @@
     NSNumber *babyWeight = [formatNumber numberFromString:self.babyWeightTextField.text];
     makeBabyObject.babyName =  self.babyNameTextField.text;
     makeBabyObject.babyWeight = babyWeight;
-    makeBabyObject.babyId = @"SOME BABY ID";           // Modify this section to someID
+    
+    CareTaker *myCaretaker = [[CareTaker alloc] init];
+    myCaretaker = self.careTaker;
+    makeBabyObject.caretakers = [[NSMutableArray alloc] init];
+   [makeBabyObject.caretakers addObject:myCaretaker];
+    
+
+    
+
+   // makeBabyObject.babyId = @"SOME BABY ID";           // Modify this section to someID
     
     if(self.genderSegmentControl.selectedSegmentIndex == 0)
     {
@@ -127,15 +136,24 @@
         
     }
     
+
     
     
     [self presentViewController:[self addSideViewController] animated:YES completion:nil];
+    
     [makeBabyObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"BABY OBJECT MADE");
         } else {
             NSLog(@"NOT DONE");        }
     }];
+    [makeBabyObject save];
+    NSLog(@"Object id %@",[makeBabyObject objectId]);
+    NSString *myID = [makeBabyObject objectId];
+    makeBabyObject.babyId = myID;
+    NSLog(@"TESTER ### id %@", makeBabyObject.babyId);
+    
+    
 }
 
 

@@ -108,6 +108,10 @@
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
     
+
+    
+
+    
     
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
@@ -161,6 +165,7 @@
     
     NSString *myDateString =[self getLabel:activity];
     NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
+    activity.babyId = getBaby.objectId;
     
    // [self.lastDiaperActivityLabel sizeToFit];
    // self.lastDiaperActivityLabel.numberOfLines=1;
@@ -183,6 +188,7 @@
 -(void)breastFeedRecorded:(Activity*)activity{
     
    [getBaby.activities addObject:activity];
+    activity.babyId = getBaby.objectId;
    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
@@ -201,7 +207,7 @@
     NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activity.timeStamp];
     NSTimeInterval _interval=[myTimeStamp doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
-    
+    activity.babyId = getBaby.objectId;
     
     NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
     NSString *mySmallerString = [reTimeStamp substringToIndex:16];
@@ -234,6 +240,7 @@
     NSString *myDateString =[self getLabel:activity];
     NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, activity.activityType];
     self.lastFeedActivityLabel.text = feedLabel;
+    activity.babyId = getBaby.objectId;
     
     [getBaby.activities addObject:activity];
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

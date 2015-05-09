@@ -96,6 +96,8 @@ PeeTypeSelectionViewController *peeTypeView;
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"We have just recorded your baby's PEE. Congratulations. " delegate:self cancelButtonTitle:@"Recorded" otherButtonTitles: nil];
    [alert show];
     
+    NSLog(@"the parent: %@",[FBSDKProfile currentProfile].userID);
+    
     Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPeeDiapierObject:nil];
     [self.delegate diaperChangeRecorded:newActivity];
