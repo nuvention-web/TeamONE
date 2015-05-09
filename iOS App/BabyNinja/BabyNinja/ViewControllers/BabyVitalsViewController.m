@@ -118,11 +118,9 @@
     makeBabyObject.babyName =  self.babyNameTextField.text;
     makeBabyObject.babyWeight = babyWeight;
     
-    CareTaker *myCaretaker = [[CareTaker alloc] init];
-    myCaretaker = self.careTaker;
-    makeBabyObject.caretakers = [[NSMutableArray alloc] init];
-   [makeBabyObject.caretakers addObject:myCaretaker];
-    
+//    CareTaker *myCaretaker = [[CareTaker alloc] init];
+//    myCaretaker = self.careTaker;
+
 
     
 
@@ -137,7 +135,11 @@
     }
     
 
-    
+    makeBabyObject.caretakers = [[NSMutableArray alloc] init];
+    [makeBabyObject.caretakers addObject:self.careTaker];
+    NSString *myID = [makeBabyObject objectId];
+    makeBabyObject.babyId = myID;
+    [makeBabyObject save];
     
     [self presentViewController:[self addSideViewController] animated:YES completion:nil];
     
@@ -147,13 +149,6 @@
         } else {
             NSLog(@"NOT DONE");        }
     }];
-    [makeBabyObject save];
-    NSLog(@"Object id %@",[makeBabyObject objectId]);
-    NSString *myID = [makeBabyObject objectId];
-    makeBabyObject.babyId = myID;
-    NSLog(@"TESTER ### id %@", makeBabyObject.babyId);
-    
-    
 }
 
 
