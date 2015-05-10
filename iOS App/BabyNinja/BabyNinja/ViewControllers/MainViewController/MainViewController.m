@@ -40,6 +40,7 @@
     
     if(self){
         self.careTaker = careTaker;
+        
     }
     return self;
 }
@@ -49,17 +50,34 @@
 
 - (void)viewDidLoad
 {
+
+    
     [super viewDidLoad];
+    
+    //NSLog(@"name in main controller %@", self.careTaker.careTakerName);
+    
+    getBaby = self.careTaker.careTakerBabyArray[0];
+    isBreastMode = NO;
+    
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+    [query whereKey:@"babyId" equalTo:getBaby.objectId];
+    [query whereKey:@"activityType" equalTo:@"SLEEP"];
+    [query orderByDescending:@"createdAt"];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
+        self.lastSleepActivityLabel.text = sleepLabel;
+    }];
     
     
     NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: -"];
     self.lastFeedActivityLabel.text = feedLabel;
     
     
-    NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -"];
-    self.lastSleepActivityLabel.text = sleepLabel;
+    //NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -"];
+    //self.lastSleepActivityLabel.text = sleepLabel;
     
     
     NSString *diaperLabel = [NSString stringWithFormat:@"Last Diaper: -"];
@@ -104,10 +122,7 @@
 //    }];
 //    
 //
-    NSLog(@"name in main controller %@", self.careTaker.careTakerName);
-    
-    getBaby = self.careTaker.careTakerBabyArray[0];
-    isBreastMode = NO;
+
     
 
     
