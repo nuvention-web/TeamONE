@@ -103,7 +103,8 @@
 //        }
 //    }];
 //    
-//    
+//
+    NSLog(@"name in main controller %@", self.careTaker.careTakerName);
     
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
@@ -166,6 +167,7 @@
     NSString *myDateString =[self getLabel:activity];
     NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
     activity.babyId = getBaby.objectId;
+    NSLog(@" baby %@",getBaby.objectId);
     
    // [self.lastDiaperActivityLabel sizeToFit];
    // self.lastDiaperActivityLabel.numberOfLines=1;

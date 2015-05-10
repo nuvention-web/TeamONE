@@ -37,7 +37,45 @@
 -(void)viewDidAppear:(BOOL)animated{
     if ([FBSDKAccessToken currentAccessToken]) {
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
-        [self showBabyVitalsScreen];
+        PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
+        [query whereKey:@"careTakerId" equalTo:[FBSDKProfile currentProfile].userID];
+        [query includeKey:@"careTakerBabyArray"];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!object) {
+                NSLog(@"The getFirstObject request failed.");
+                [self showBabyVitalsScreen];
+                
+            } else {
+                // The find succeeded.
+                
+                // intialize care Taker
+                CareTaker *careTaker = [[CareTaker alloc]init];
+                careTaker = object;
+                NSLog(@"care taker name %@",careTaker.careTakerName);
+//                careTaker.careTakerName = object[@"careTakerName"];
+//                careTaker.careTakerId = object[@"careTakerId"];
+//                careTaker.careTakerBabyArray =object[@"careTakerBabyArray"];
+                
+                
+//                PFObject *baby = [object objectForKey:careTaker.careTakerBabyArray[0]];
+//                
+//                NSLog(@"baby   %@", baby);
+                
+                // intialize the baby
+                Baby *baby = [[Baby alloc]init];
+                
+                baby = careTaker.careTakerBabyArray[0];
+                
+                
+                
+                [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
+                
+                NSLog(@"Successfully retrieved %@",baby.babyName);
+            }
+        }];
+        
+        
+        
 ///        NSLog(@"%@", [PFUser currentUser]);
         // User is logged in, do work such as go to next view controller.
     }
@@ -49,7 +87,7 @@
 //    [PFUser currentUser].username =
 }
 
--(UIViewController*)addSideViewController{
+-(UIViewController*)addSideViewController:(CareTaker *)careTaker{
     NSArray *colors ;
     //    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
     //                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
@@ -62,7 +100,7 @@
     
     LeftSideController *colorsVC = [[LeftSideController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
-    MainViewController *plainColorVC = [[MainViewController alloc] init];
+    MainViewController *plainColorVC = [[MainViewController alloc] initWithCareTaker:(careTaker)];
     plainColorVC.view.backgroundColor = colors[0];
     UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
     navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
