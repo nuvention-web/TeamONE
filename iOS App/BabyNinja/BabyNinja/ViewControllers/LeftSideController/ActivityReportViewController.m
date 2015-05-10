@@ -633,14 +633,15 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
         NSLog(@"%d",hours);
         NSInteger minutes = ([valueNumber doubleValue]/(60*60)-hours)*60;
         NSLog(@"%d",minutes);
-        
+        NSInteger seconds = ( ([valueNumber doubleValue]/(60*60)-hours)*60 -minutes)*60;
         NSString *duration = @"";
         
         {
                 duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld:", (long)hours]];
         }
         {
-                duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld", (long)minutes]];
+                duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld:", (long)minutes]];
+                duration =[duration stringByAppendingString:[NSString stringWithFormat:@"%02ld", (long)seconds]];
         }
         
         [self.informationView setValueText:duration  unitText:unit];
