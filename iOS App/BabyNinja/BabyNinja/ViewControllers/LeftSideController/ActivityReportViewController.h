@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 
--(id)initWithActitvityType:(NSString*)activityType;
+-(id)initWithActitvityType:(NSString*)activityType forCareTaker:(CareTaker*)careTaker;
 
 // Settres
 - (void)setTooltipVisible:(BOOL)tooltipVisible animated:(BOOL)animated atTouchPoint:(CGPoint)touchPoint;

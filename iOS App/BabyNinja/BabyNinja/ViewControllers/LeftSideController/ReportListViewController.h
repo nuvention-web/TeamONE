@@ -10,4 +10,6 @@
 
 @interface ReportListViewController : UITableViewController
 
+- (id)initWithCareTaker:(CareTaker*)careTaker;
+
 @end

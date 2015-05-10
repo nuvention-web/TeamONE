@@ -12,10 +12,23 @@
 
 @interface ReportListViewController ()
 @property(nonatomic, strong) NSArray *actions;
+@property(nonatomic, strong) CareTaker *careTaker;
 @end
 
 @implementation ReportListViewController
 
+- (id)initWithCareTaker:(CareTaker*)careTaker
+{
+    self = [super init];
+    
+    
+    //    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        _careTaker = careTaker;
+    }
+    
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setBackgroundColor:[UIColor blackColor]];
@@ -78,10 +91,11 @@
         ReportScreenViewController *report = [[ReportScreenViewController alloc]init];
         [self presentViewController:report animated:YES completion:nil];
     } else if([cell.textLabel.text isEqualToString:@"Sleep Report"]){
-        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Sleep"];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Sleep" forCareTaker:_careTaker];
+        NSLog(@"careTaker in Reports %@",_careTaker.careTakerName);
         [self presentViewController:report animated:YES completion:nil];
     }else if([cell.textLabel.text isEqualToString:@"Feed Report"]){
-        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Feed"];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Feed" forCareTaker:_careTaker];
         
         [self presentViewController:report animated:YES completion:nil];
         report.imageView.image = [UIImage imageNamed:@"Feed"];
@@ -93,7 +107,7 @@
         report.imageView.image = [UIImage imageNamed:@"360Report"];
         report.header.text = @"";
     }else if([cell.textLabel.text isEqualToString:@"Diaper Report"]){
-        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Diaper"];
+        ActivityReportViewController *report = [[ActivityReportViewController alloc]initWithActitvityType:@"Diaper" forCareTaker:_careTaker];
         
         [self presentViewController:report animated:YES completion:nil];
         report.imageView.image = [UIImage imageNamed:@"DiaperReport"];

@@ -98,7 +98,7 @@
                [UIColor clearColor]
                ];
     
-    LeftSideController *colorsVC = [[LeftSideController alloc] init];
+    LeftSideController *colorsVC = [[LeftSideController alloc] initWithCareTaker:(careTaker)];
     UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
     MainViewController *plainColorVC = [[MainViewController alloc] initWithCareTaker:(careTaker)];
     plainColorVC.view.backgroundColor = colors[0];

@@ -46,6 +46,8 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
 @property (nonatomic, strong) JBChartInformationView *informationView;
 @property (nonatomic, strong) NSArray *chartData;
 @property (nonatomic, strong) NSArray *daysOfWeek;
+@property(nonatomic, strong) CareTaker *careTaker;
+@property(nonatomic, strong) Baby *baby;
 
 // Buttons
 - (void)chartToggleButtonPressed:(id)sender;
@@ -140,11 +142,14 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     return self;
 }
 
--(id)initWithActitvityType:(NSString*)activityType{
+-(id)initWithActitvityType:(NSString*)activityType forCareTaker:(CareTaker*)careTaker{
     self = [super init];
     if (self)
     {
         self.activityType = activityType;
+        self.careTaker = careTaker;
+        self.baby = self.careTaker.careTakerBabyArray[0];
+        
         [self initFakeData];
     }
     return self;
@@ -167,21 +172,29 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
     NSUInteger limit = 1500;
     PFQuery *query;
     
+   // NSString babyId = self.careTaker.careTakerBabyArray[0][@"objectId"]
+    
     if ([self.activityType  isEqual: @"Diaper"])
     {   query=[PFQuery queryWithClassName:@"Activity"];
         [query whereKey:@"activityType" equalTo:@"DIAPER"];
+        [query whereKey:@"babyId" equalTo:self.baby.objectId];
+        
+        
     }
     else if ([self.activityType isEqual: @"Feed"])
     {
         query=[PFQuery queryWithClassName:@"Activity"];
         [query whereKey:@"activityType" equalTo:@"FEED"];
         [query includeKey:@"feedObject"];
+        [query whereKey:@"babyId" equalTo:self.baby.objectId];
+        
     }
     else if ([self.activityType isEqual: @"Sleep"])
     {
         query=[PFQuery queryWithClassName:@"Activity"];
         [query whereKey:@"activityType" equalTo:@"SLEEP"];
         [query includeKey:@"sleepObject"];
+        [query whereKey:@"babyId" equalTo:self.baby.objectId];
     }
     
 

@@ -51,6 +51,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     //    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _careTaker = careTaker;
+        NSLog(@"in left side controller%@",_careTaker.careTakerName);
     }
     
     return self;
@@ -213,7 +214,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
             SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
             [self.navigationController pushViewController:settings animated:YES];
         } else if(indexPath.row==0){
-            ReportListViewController *reports = [[ReportListViewController alloc]init];
+            ReportListViewController *reports = [[ReportListViewController alloc]initWithCareTaker:_careTaker];
             [self.navigationController pushViewController:reports animated:YES];
         } else if(indexPath.row==1){
             TimelineViewController *timeline = [[TimelineViewController alloc]init];
