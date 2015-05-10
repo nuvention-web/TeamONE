@@ -31,35 +31,77 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
         // User is logged in, do work such as go to next view controller.
+
     }
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     if ([FBSDKAccessToken currentAccessToken]) {
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
-        PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
-        [query whereKey:@"careTakerId" equalTo:[FBSDKProfile currentProfile].userID];
-        [query includeKey:@"careTakerBabyArray"];
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            if (!object) {
-                NSLog(@"The getFirstObject request failed.");
-                [self showBabyVitalsScreen];
-                
-            } else {
-                // The find succeeded.
+//        PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
+//        [query whereKey:@"careTakerId" equalTo:[FBSDKProfile currentProfile].userID];
+//        [query includeKey:@"careTakerBabyArray"];
+//        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+//            if (!object) {
+//                NSLog(@"The getFirstObject request failed.");
+//                [self showBabyVitalsScreen];
+//                
+//            } else {
+//                // The find succeeded.
+//                
+//                // intialize care Taker
+//                CareTaker *careTaker = [[CareTaker alloc]init];
+//                careTaker = object;
+//                // NSLog(@"care taker name %@",careTaker.careTakerName);
+//                
+//                
+//                // intialize the baby
+//                Baby *baby = [[Baby alloc]init];
+//                
+//                baby = careTaker.careTakerBabyArray[0];
+//                
+//                
+//                
+//                [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
+//                
+//                NSLog(@"Successfully retrieved %@",baby.babyName);
+//            }
+//        }];
+        
+        
+///        NSLog(@"%@", [PFUser currentUser]);
+        // User is logged in, do work such as go to next view controller.
+    }
+    
+   // [self showBabyVitalsScreen];
+}
+
+-(void)profileUpdated:(NSNotification *) notification{
+    NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
+    NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
+//    [PFUser currentUser].username =
+    PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
+    [query whereKey:@"careTakerId" equalTo:[FBSDKProfile currentProfile].userID];
+    [query includeKey:@"careTakerBabyArray"];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (!object) {
+            [self showBabyVitalsScreen];
+            NSLog(@"The getFirstObject request failed.");
+            
+        } else {
+            // The find succeeded.
+            
+            NSLog(@"the object%@",object);
+            //                if(object == nil)
+            //                    [self showBabyVitalsScreen];
+            //                else
+            {
                 
                 // intialize care Taker
                 CareTaker *careTaker = [[CareTaker alloc]init];
                 careTaker = object;
-                NSLog(@"care taker name %@",careTaker.careTakerName);
-//                careTaker.careTakerName = object[@"careTakerName"];
-//                careTaker.careTakerId = object[@"careTakerId"];
-//                careTaker.careTakerBabyArray =object[@"careTakerBabyArray"];
+                // NSLog(@"care taker name %@",careTaker.careTakerName);
                 
-                
-//                PFObject *baby = [object objectForKey:careTaker.careTakerBabyArray[0]];
-//                
-//                NSLog(@"baby   %@", baby);
                 
                 // intialize the baby
                 Baby *baby = [[Baby alloc]init];
@@ -72,19 +114,8 @@
                 
                 NSLog(@"Successfully retrieved %@",baby.babyName);
             }
-        }];
-        
-        
-        
-///        NSLog(@"%@", [PFUser currentUser]);
-        // User is logged in, do work such as go to next view controller.
-    }
-}
-
--(void)profileUpdated:(NSNotification *) notification{
-    NSLog(@"User name: %@",[FBSDKProfile currentProfile].name);
-    NSLog(@"User ID: %@",[FBSDKProfile currentProfile].userID);
-//    [PFUser currentUser].username =
+        }
+    }];
 }
 
 -(UIViewController*)addSideViewController:(CareTaker *)careTaker{
@@ -136,7 +167,8 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     if(error == nil){
         [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithBool:YES] forKey:UDefaultLoggedIn];
 //        [self presentViewController:[self addSideViewController] animated:NO completion:nil];
-        [self showBabyVitalsScreen];
+
+        
     }
 }
 
