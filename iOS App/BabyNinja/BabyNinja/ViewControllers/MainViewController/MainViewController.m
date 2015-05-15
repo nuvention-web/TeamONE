@@ -194,23 +194,27 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ // 1
         detailActivityType = object[@"type"];
         dispatch_async(dispatch_get_main_queue(), ^{ // 2
-            NSLog(@"TESTER %@", detailActivityType);
+        NSLog(@"TESTER %@", detailActivityType);
             
             if([className isEqualToString:@"Diapers"]){
-            NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
-            self.lastDiaperTypeLabel.text = diaperLabel;
+                NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                diaperLabel = [diaperLabel lowercaseString];
+                diaperLabel = [diaperLabel capitalizedString];
+                NSLog(@"CAP TESTER: %@", diaperLabel);
+
+                self.lastDiaperTypeLabel.text = diaperLabel;
                 
             }else if ([className isEqualToString:@"feed"]){
-            NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
-            self.lastFeedTypeLabel.text = feedLabel;
+                NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                feedLabel = [feedLabel lowercaseString];
+                feedLabel = [feedLabel capitalizedString];
+                NSLog(@"CAP TESTER: %@", feedLabel);
+                self.lastFeedTypeLabel.text = feedLabel;
                 
             }
-            
-            
-            
         });
 
-        });
+    });
     }];
 }
 
