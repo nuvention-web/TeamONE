@@ -8,7 +8,9 @@
             <connections>
                 <outlet property="feedButton" destination="LeO-Dg-eC1" id="AdR-mF-Agd"/>
                 <outlet property="lastDiaperActivityLabel" destination="bqF-jb-tcX" id="YrS-Mf-a4q"/>
+                <outlet property="lastDiaperTypeLabel" destination="Mzi-qT-eFY" id="FBy-8T-zIt"/>
                 <outlet property="lastFeedActivityLabel" destination="6Gu-as-orj" id="Ip6-4t-rZt"/>
+                <outlet property="lastFeedTypeLabel" destination="Ngt-fn-NgR" id="eH5-0C-80z"/>
                 <outlet property="lastSleepActivityLabel" destination="lOo-Pf-uKT" id="1hz-F2-luV"/>
                 <outlet property="poopButton" destination="Ek7-s3-pkM" id="IXc-Ol-8pb"/>
                 <outlet property="sleepOrAwakeButton" destination="IWd-me-rA7" id="Sij-Sy-BPd"/>
@@ -61,6 +63,18 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Diaper: 11:30 am, Pee" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-jb-tcX">
                     <rect key="frame" x="8" y="476" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzi-qT-eFY">
+                    <rect key="frame" x="97" y="498" width="186" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngt-fn-NgR">
+                    <rect key="frame" x="53" y="97" width="281" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
