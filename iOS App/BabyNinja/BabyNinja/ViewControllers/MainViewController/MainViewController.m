@@ -50,11 +50,7 @@
 
 - (void)viewDidLoad
 {
-
-    
     [super viewDidLoad];
-    
-    //NSLog(@"name in main controller %@", self.careTaker.careTakerName);
     
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
@@ -62,12 +58,11 @@
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
     
-    
+    //Sets the labels
     [self setLatestLabelsByQuery:@"SLEEP"];
     [self setLatestLabelsByQuery:@"FEED"];
     [self setLatestLabelsByQuery:@"DIAPER"];
     
-
 
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
@@ -90,6 +85,7 @@
     self.radialFeedMenu = [[ALRadialMenu alloc] init];
     self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
+
 }
 
 
@@ -115,14 +111,12 @@
         if([activityType isEqualToString:@"SLEEP"]){
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
-                
             }else{
                 newLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
             }
             
             self.lastSleepActivityLabel.text = newLabel;
         }
-        
         
         if([activityType isEqualToString:@"FEED"]){
             if(object[@"timeStamp"] == nil){
@@ -133,10 +127,7 @@
                 NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
                 NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, @"Dummy"];
                 self.lastFeedActivityLabel.text = feedLabel;
-                //                newLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
             }
-            
-            
         }
         
         
@@ -145,18 +136,12 @@
                 newLabel = @"Last Sleep: -";
                 self.lastDiaperActivityLabel.text = newLabel;
             }else{
-                
                 NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
                 NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, @"Dummy"];
                 self.lastDiaperActivityLabel.text = feedLabel;
             }
-            
-            
         }
     }];
-    
-    
-    
 }
 
 
