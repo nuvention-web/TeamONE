@@ -67,21 +67,6 @@
     [self setLatestLabelsByQuery:@"DIAPER"];
 
 
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ // 1
-//
-//        dispatch_async(dispatch_get_main_queue(), ^{ // 2
-//            
-//            NSLog(@"RETURN STRING1 %@", returnString);
-//            
-//
-//        });
-//            NSLog(@"RETURN STRING2 %@", returnString);
-//
-//    });
-//            NSLog(@"RETURN STRING3 %@", returnString);
-//    
-//    
-
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
     NSParameterAssert(hamburger);
@@ -109,16 +94,12 @@
 
 
 
-
-
-#pragma mark - Protocol Methods
-
+#pragma mark - Label and Data Methods
 
 
 -(void)setLatestLabelsByQuery:(NSString*)activityType{
     
     __block NSString *newLabel = [[NSString alloc] init];
-    //    __block NSString *objectSearchString = [[NSString alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
     [query whereKey:@"babyId" equalTo:getBaby.objectId];
@@ -130,11 +111,12 @@
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
             }else{
-                newLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
+                Sleep *currentSleep = object[@"sleepObject"];
+                [self  getTypeByObjectID:currentSleep.objectId :@"Sleep" : object[@"timeStamp"]];
+                
             }
-            
-            self.lastSleepActivityLabel.text = newLabel;
         }
+        
         
         if([activityType isEqualToString:@"FEED"]){
             if(object[@"timeStamp"] == nil){
@@ -142,7 +124,7 @@
                 self.lastFeedActivityLabel.text = newLabel;
             }else{
                 Feed *currentFeed = object[@"feedObject"];
-                [self  getTypeByObjectID:currentFeed.objectId :@"feed"];
+                [self  getTypeByObjectID:currentFeed.objectId :@"feed" :nil];
                 NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
                 
                 
@@ -162,59 +144,67 @@
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
                 self.lastDiaperActivityLabel.text = newLabel;
-
-            }else{
-                    Diapers *currentDiaper = object[@"diaperObject"];
-                    [self  getTypeByObjectID:currentDiaper.objectId :@"Diapers"];
-                    NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
                 
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            }else{
+                Diapers *currentDiaper = object[@"diaperObject"];
+                [self  getTypeByObjectID:currentDiaper.objectId :@"Diapers" :nil];
+                NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                     returnString =  object[@"type"];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{ // 2
                         NSString *diaperLabel = [NSString stringWithFormat:@"Last Poop: %@", myDateString];
                         self.lastDiaperActivityLabel.text = diaperLabel;
-                        });
                     });
-                }
+                });
+            }
         }
     }];
 }
 
 
--(void)getTypeByObjectID:(NSString*)objectIDString :(NSString*)className{
+-(void)getTypeByObjectID:(NSString*)objectIDString :(NSString*)className :(NSNumber*)sleepStartTime{
     
     __block NSString *detailActivityType = [[NSString alloc] init];
-    NSLog(@"USING OBJECT ID %@", objectIDString);
+//    NSLog(@"USING OBJECT ID %@", objectIDString);
     
     PFQuery *query = [PFQuery queryWithClassName:className];
     [query whereKey:@"objectId" equalTo:objectIDString];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ // 1
-        detailActivityType = object[@"type"];
-        dispatch_async(dispatch_get_main_queue(), ^{ // 2
-        NSLog(@"TESTER %@", detailActivityType);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ 
+            detailActivityType = object[@"type"];
+            dispatch_async(dispatch_get_main_queue(), ^{
             
-            if([className isEqualToString:@"Diapers"]){
-                NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
-                diaperLabel = [diaperLabel lowercaseString];
-                diaperLabel = [diaperLabel capitalizedString];
-                NSLog(@"CAP TESTER: %@", diaperLabel);
-
-                self.lastDiaperTypeLabel.text = diaperLabel;
                 
-            }else if ([className isEqualToString:@"feed"]){
-                NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
-                feedLabel = [feedLabel lowercaseString];
-                feedLabel = [feedLabel capitalizedString];
-                NSLog(@"CAP TESTER: %@", feedLabel);
-                self.lastFeedTypeLabel.text = feedLabel;
+                if([className isEqualToString:@"Diapers"]){
+                    NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                    diaperLabel = [diaperLabel lowercaseString];
+                    diaperLabel = [diaperLabel capitalizedString];
+            
+                    
+                    self.lastDiaperTypeLabel.text = diaperLabel;
+                    
+                }else if ([className isEqualToString:@"feed"]){
+                    NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                    feedLabel = [feedLabel lowercaseString];
+                    feedLabel = [feedLabel capitalizedString];
+                   
+                    self.lastFeedTypeLabel.text = feedLabel;
+                    
+                }else if ([className isEqualToString:@"Sleep"]){
+                      NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
+                    // [self getLabelByTimeStamp:sleepStartTime];
+                    //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
+                    //                self.lastSleepActivityLabel.text = newLabel;
+                    
+                }
                 
-            }
+                
+            });
+            
         });
-
-    });
     }];
 }
 
@@ -249,6 +239,12 @@
     return mySmallerString;
     
 }
+
+
+
+
+
+#pragma mark - Protocol Methods
 
 
 -(void)diaperChangeRecorded:(Activity*)activity{
