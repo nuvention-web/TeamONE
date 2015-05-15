@@ -66,9 +66,17 @@
     [query whereKey:@"babyId" equalTo:getBaby.objectId];
     [query whereKey:@"activityType" equalTo:@"SLEEP"];
     [query orderByDescending:@"createdAt"];
+    
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
         NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
+        if(object[@"timeStamp"] == nil){
+            sleepLabel =@"Last Sleep: -";
+
+            
+        }
         self.lastSleepActivityLabel.text = sleepLabel;
+
     }];
     
     
@@ -183,9 +191,6 @@
     NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
     activity.babyId = getBaby.objectId;
     NSLog(@" baby %@",getBaby.objectId);
-    
-   // [self.lastDiaperActivityLabel sizeToFit];
-   // self.lastDiaperActivityLabel.numberOfLines=1;
     self.lastDiaperActivityLabel.text = feedLabel;
 
     
