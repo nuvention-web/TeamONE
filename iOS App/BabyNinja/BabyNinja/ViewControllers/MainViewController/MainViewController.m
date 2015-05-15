@@ -19,6 +19,7 @@
     UIButton *selectedButton;
     Baby *getBaby;
     BOOL isBreastMode;
+    __block NSString *returnString;
     
 }
 
@@ -51,7 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
     
@@ -125,6 +126,7 @@
             }else{
                 
                 NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
+
                 NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, @"Dummy"];
                 self.lastFeedActivityLabel.text = feedLabel;
             }
@@ -135,13 +137,50 @@
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
                 self.lastDiaperActivityLabel.text = newLabel;
+
             }else{
+                Diapers *currentDiaper = object[@"diaperObject"];
                 NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
-                NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, @"Dummy"];
+                [self  getTypeByObjectID:currentDiaper.objectId :@"Diapers"];
+                NSLog(@"USING**** %@", returnString);
+
+
+
+                
+                NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, returnString];
                 self.lastDiaperActivityLabel.text = feedLabel;
             }
         }
     }];
+}
+
+
+-(void)getTypeByObjectID:(NSString*)objectIDString :(NSString*)className{
+    
+    
+    NSLog(@"USING OBJECT ID %@", objectIDString);
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Diapers"];
+//    [query whereKey:@"babyId" equalTo:getBaby.objectId];
+//    [query whereKey:@"activityType" equalTo:@"feed"];
+    [query whereKey:@"objectId" equalTo:objectIDString];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+
+    returnString =  object[@"type"];
+    NSLog(@"USING RETURN STIRNG %@", returnString);
+
+//        if([activityType isEqualToString:@"SLEEP"]){
+//            if(object[@"timeStamp"] == nil){
+//                newLabel = @"Last Sleep: -";
+//            }else{
+//                newLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
+//            }
+//            
+//            self.lastSleepActivityLabel.text = newLabel;
+//        }
+    }];
+    //NSLog(@"Current String is  %@", returnString);
+    //return returnString;
 }
 
 
