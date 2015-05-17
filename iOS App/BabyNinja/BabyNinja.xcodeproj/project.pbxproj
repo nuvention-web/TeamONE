@@ -73,7 +73,6 @@
 		205B98391ACB34DC00B5E3D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98381ACB34DC00B5E3D5 /* QuartzCore.framework */; };
 		205B983B1ACB34E200B5E3D5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B983A1ACB34E200B5E3D5 /* Security.framework */; };
 		205B983D1ACB34EE00B5E3D5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B983C1ACB34EE00B5E3D5 /* Social.framework */; };
-		205B983F1ACB34F400B5E3D5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B983E1ACB34F400B5E3D5 /* StoreKit.framework */; };
 		205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */; };
 		205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98421ACB350900B5E3D5 /* libz.dylib */; };
 		205B98451ACB351200B5E3D5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 205B98441ACB351200B5E3D5 /* libsqlite3.dylib */; };
@@ -294,7 +293,6 @@
 		205B98381ACB34DC00B5E3D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		205B983A1ACB34E200B5E3D5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		205B983C1ACB34EE00B5E3D5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		205B983E1ACB34F400B5E3D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		205B98421ACB350900B5E3D5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		205B98441ACB351200B5E3D5 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -399,7 +397,6 @@
 				E3F680D51AEBF18300574631 /* FBSDKLoginKit.framework in Frameworks */,
 				205B98431ACB350900B5E3D5 /* libz.dylib in Frameworks */,
 				205B98411ACB34FF00B5E3D5 /* SystemConfiguration.framework in Frameworks */,
-				205B983F1ACB34F400B5E3D5 /* StoreKit.framework in Frameworks */,
 				205B983D1ACB34EE00B5E3D5 /* Social.framework in Frameworks */,
 				205B983B1ACB34E200B5E3D5 /* Security.framework in Frameworks */,
 				205B98391ACB34DC00B5E3D5 /* QuartzCore.framework in Frameworks */,
@@ -832,7 +829,6 @@
 				205B98441ACB351200B5E3D5 /* libsqlite3.dylib */,
 				205B98421ACB350900B5E3D5 /* libz.dylib */,
 				205B98401ACB34FF00B5E3D5 /* SystemConfiguration.framework */,
-				205B983E1ACB34F400B5E3D5 /* StoreKit.framework */,
 				205B983C1ACB34EE00B5E3D5 /* Social.framework */,
 				205B983A1ACB34E200B5E3D5 /* Security.framework */,
 				205B98381ACB34DC00B5E3D5 /* QuartzCore.framework */,
@@ -960,6 +956,9 @@
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
@@ -1233,7 +1232,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
+				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1271,7 +1270,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1284,8 +1284,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
@@ -1300,7 +1300,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
+				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
 			};
 			name = Debug;
 		};
@@ -1310,8 +1310,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
@@ -1326,7 +1326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3489a9a6-6267-4a5d-85a9-b5e0e3df6110";
+				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
 			};
 			name = Release;
 		};
@@ -1374,8 +1374,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1383,7 +1383,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
+				PROVISIONING_PROFILE = "d14077ff-6086-4dde-baff-b357e9c9077a";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1392,12 +1392,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "fbf43dcb-9d46-4979-9900-0aebe2a716dc";
+				PROVISIONING_PROFILE = "d14077ff-6086-4dde-baff-b357e9c9077a";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1405,7 +1405,7 @@
 		203A49F11A828C7300F02E56 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
@@ -1416,7 +1416,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
+				PROVISIONING_PROFILE = "805942cc-1b02-417f-a5c0-3dcc460e6830";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1426,14 +1426,14 @@
 		203A49F21A828C7300F02E56 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "90e9e355-ffac-43f0-a167-a531d5829e24";
+				PROVISIONING_PROFILE = "805942cc-1b02-417f-a5c0-3dcc460e6830";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
