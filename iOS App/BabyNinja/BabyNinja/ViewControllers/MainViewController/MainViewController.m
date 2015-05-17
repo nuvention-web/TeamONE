@@ -19,6 +19,7 @@
     UIButton *selectedButton;
     Baby *getBaby;
     BOOL isBreastMode;
+    __block NSString *returnString;
     
 }
 
@@ -28,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastFeedActivityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastSleepActivityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastDiaperActivityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastDiaperTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lastFeedTypeLabel;
 
 @end
 
@@ -50,85 +53,20 @@
 
 - (void)viewDidLoad
 {
-
-    
     [super viewDidLoad];
-    
-    //NSLog(@"name in main controller %@", self.careTaker.careTakerName);
-    
+    returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
     
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
-    [query whereKey:@"babyId" equalTo:getBaby.objectId];
-    [query whereKey:@"activityType" equalTo:@"SLEEP"];
-    [query orderByDescending:@"createdAt"];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -%@",object[@"timeStamp"]];
-        self.lastSleepActivityLabel.text = sleepLabel;
-    }];
-    
-    
-    NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: -"];
-    self.lastFeedActivityLabel.text = feedLabel;
-    
-    
-    //NSString *sleepLabel = [NSString stringWithFormat:@"Last Sleep: -"];
-    //self.lastSleepActivityLabel.text = sleepLabel;
-    
-    
-    NSString *diaperLabel = [NSString stringWithFormat:@"Last Diaper: -"];
-    self.lastDiaperActivityLabel.text = diaperLabel;
-    
-    
-    
-    
-    
-//
-//    
-//    
-//    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
-//    [query includeKey:@"diaperObject"];
-//    
-////    [query whereKey:@"diaperObject" objectId:_conversation.objectid ];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            // The find succeeded.
-//            
-//            //NSLog(@"Successfully retrieved %d scores.", objects);
-//            // Do something with the found objects
-//            for (PFObject *object in objects) {
-//                
-//                PFObject *diaper2 = [object objectForKey:@"diaperObject"];
-//                
-//                NSLog(@"Activity   %@", diaper2[@"color"]);
-//                //Diapers *diaper = [[Diapers alloc] init];
-//                //Activity *at = [[Activity alloc] init];
-//                //at = object;
-//                
-//                
-////                diaper = at.diaperObject;
-////                NSLog(@"Diaper   %@", diaper);
-////                NSLog(@"COLORRRR THIS I ITTI!@$!@$  %@", diaper.color);
-//
-//            }
-//        } else {
-//            // Log details of the failure
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-//    }];
-//    
-//
+    //Sets the labels
+    [self setLatestLabelsByQuery:@"SLEEP"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"DIAPER"];
 
-    
 
-    
-
-    
-    
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
     NSParameterAssert(hamburger);
@@ -150,14 +88,141 @@
     self.radialFeedMenu = [[ALRadialMenu alloc] init];
     self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
+
 }
 
 
 
 
+#pragma mark - Label and Data Methods
 
 
-#pragma mark - Protocol Methods
+-(void)setLatestLabelsByQuery:(NSString*)activityType{
+    
+    __block NSString *newLabel = [[NSString alloc] init];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Activity"];
+    [query whereKey:@"babyId" equalTo:getBaby.objectId];
+    [query whereKey:@"activityType" equalTo:activityType];
+    [query orderByDescending:@"createdAt"];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
+        if([activityType isEqualToString:@"SLEEP"]){
+            if(object[@"timeStamp"] == nil){
+                newLabel = @"Last Sleep: -";
+            }else{
+                Sleep *currentSleep = object[@"sleepObject"];
+                [self  getTypeByObjectID:currentSleep.objectId :@"Sleep" : object[@"timeStamp"]];
+                
+            }
+        }
+        
+        
+        if([activityType isEqualToString:@"FEED"]){
+            if(object[@"timeStamp"] == nil){
+                newLabel = @"Last Sleep: -";
+                self.lastFeedActivityLabel.text = newLabel;
+            }else{
+                Feed *currentFeed = object[@"feedObject"];
+                [self  getTypeByObjectID:currentFeed.objectId :@"feed" :nil];
+                NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
+                
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    returnString =  object[@"type"];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@", myDateString];
+                        self.lastFeedActivityLabel.text = feedLabel;
+                    });
+                });
+            }
+        }
+        
+        
+        if([activityType isEqualToString:@"DIAPER"]){
+            if(object[@"timeStamp"] == nil){
+                newLabel = @"Last Sleep: -";
+                self.lastDiaperActivityLabel.text = newLabel;
+                
+            }else{
+                Diapers *currentDiaper = object[@"diaperObject"];
+                [self  getTypeByObjectID:currentDiaper.objectId :@"Diapers" :nil];
+                NSString *myDateString =[self getLabelByTimeStamp:object[@"timeStamp"]];
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    returnString =  object[@"type"];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{ // 2
+                        NSString *diaperLabel = [NSString stringWithFormat:@"Last Poop: %@", myDateString];
+                        self.lastDiaperActivityLabel.text = diaperLabel;
+                    });
+                });
+            }
+        }
+    }];
+}
+
+
+-(void)getTypeByObjectID:(NSString*)objectIDString :(NSString*)className :(NSNumber*)sleepStartTime{
+    
+    __block NSString *detailActivityType = [[NSString alloc] init];
+//    NSLog(@"USING OBJECT ID %@", objectIDString);
+    
+    PFQuery *query = [PFQuery queryWithClassName:className];
+    [query whereKey:@"objectId" equalTo:objectIDString];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ 
+            detailActivityType = object[@"type"];
+            dispatch_async(dispatch_get_main_queue(), ^{
+            
+                
+                if([className isEqualToString:@"Diapers"]){
+                    NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                    diaperLabel = [diaperLabel lowercaseString];
+                    diaperLabel = [diaperLabel capitalizedString];
+            
+                    
+                    self.lastDiaperTypeLabel.text = diaperLabel;
+                    
+                }else if ([className isEqualToString:@"feed"]){
+                    NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
+                    feedLabel = [feedLabel lowercaseString];
+                    feedLabel = [feedLabel capitalizedString];
+                   
+                    self.lastFeedTypeLabel.text = feedLabel;
+                    
+                }else if ([className isEqualToString:@"Sleep"]){
+                      NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
+                    // [self getLabelByTimeStamp:sleepStartTime];
+                    //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
+                    //                self.lastSleepActivityLabel.text = newLabel;
+                    
+                }
+                
+                
+            });
+            
+        });
+    }];
+}
+
+
+-(NSString*)getLabelByTimeStamp:(NSString*)activityTime{
+    //    Feed *getFeedObject = activity.feedObject;
+    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
+    NSTimeInterval _interval=[myTimeStamp doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    
+    
+    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+    //    NSLog(@"%@", mySmallerString);
+    
+    return mySmallerString;
+    
+}
 
 
 -(NSString*)getLabel:(Activity*)activity{
@@ -176,6 +241,12 @@
 }
 
 
+
+
+
+#pragma mark - Protocol Methods
+
+
 -(void)diaperChangeRecorded:(Activity*)activity{
     
     
@@ -183,9 +254,6 @@
     NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
     activity.babyId = getBaby.objectId;
     NSLog(@" baby %@",getBaby.objectId);
-    
-   // [self.lastDiaperActivityLabel sizeToFit];
-   // self.lastDiaperActivityLabel.numberOfLines=1;
     self.lastDiaperActivityLabel.text = feedLabel;
 
     
