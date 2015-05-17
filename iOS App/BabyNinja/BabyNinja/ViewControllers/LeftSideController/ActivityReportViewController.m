@@ -369,8 +369,8 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
                          {
                              PFObject *object =  element;
                              PFObject *sleep = [object objectForKey:@"sleepObject"];
-                             NSLog(@"Finish: %d",[sleep[@"finishTime"] integerValue]);
-                             NSLog(@"start: %d",[element[@"timeStamp"] integerValue]);
+                             NSLog(@"Finish: %ld",[sleep[@"finishTime"] integerValue]);
+                             NSLog(@"start: %ld",(long)[element[@"timeStamp"] integerValue]);
                             b = [[count objectAtIndex:i] intValue] + ([sleep[@"finishTime"] integerValue]-[element[@"timeStamp"] integerValue]);
                              NSLog(@"b: %d",b);
                              [count replaceObjectAtIndex:i withObject:[NSNumber numberWithInt:b]];
@@ -630,9 +630,9 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
         unit = @"";
         
         NSInteger hours = [valueNumber integerValue]/(60*60) ;
-        NSLog(@"%d",hours);
+        NSLog(@"%ld",(long)hours);
         NSInteger minutes = ([valueNumber doubleValue]/(60*60)-hours)*60;
-        NSLog(@"%d",minutes);
+        NSLog(@"%ld",(long)minutes);
         NSInteger seconds = ( ([valueNumber doubleValue]/(60*60)-hours)*60 -minutes)*60;
         NSString *duration = @"";
         

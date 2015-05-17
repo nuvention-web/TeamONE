@@ -252,8 +252,6 @@
 -(void)FeedOuncesRecorded:(Activity*)activity{
     //Last Feed: 12.30 pm , Used Left Breast
     
-    
-
     NSString *myDateString =[self getLabel:activity];
     NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, activity.activityType];
     self.lastFeedActivityLabel.text = feedLabel;
