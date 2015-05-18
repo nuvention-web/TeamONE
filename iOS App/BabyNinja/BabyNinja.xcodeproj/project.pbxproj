@@ -960,6 +960,9 @@
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
 						};
 					};
 					201024E91A7B030F00F248F3 = {
@@ -974,11 +977,14 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
 						};
 					};
 					203A49DF1A828C7300F02E56 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 3UYTE98YJ6;
+						DevelopmentTeam = PMZ3J4E6RV;
 					};
 				};
 			};
@@ -1232,7 +1238,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
+				PROVISIONING_PROFILE = "45b346b4-14c1-41fb-b4f3-f93c287a3477";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1271,7 +1277,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
+				PROVISIONING_PROFILE = "45b346b4-14c1-41fb-b4f3-f93c287a3477";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1284,8 +1290,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
@@ -1300,7 +1306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
+				PROVISIONING_PROFILE = "45b346b4-14c1-41fb-b4f3-f93c287a3477";
 			};
 			name = Debug;
 		};
@@ -1310,8 +1316,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = BabyNinja/BabyNinja.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/Frameworks",
@@ -1326,7 +1332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b5518f23-b768-45bc-83c6-f2942f7048df";
+				PROVISIONING_PROFILE = "45b346b4-14c1-41fb-b4f3-f93c287a3477";
 			};
 			name = Release;
 		};
@@ -1374,8 +1380,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1383,7 +1389,7 @@
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "d14077ff-6086-4dde-baff-b357e9c9077a";
+				PROVISIONING_PROFILE = "64c24ee9-2f85-4730-8be8-7c1ff88038f7";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1392,12 +1398,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "BabyNinja WatchKit Extension/BabyNinja WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mak Karvekar (PMZ3J4E6RV)";
 				INFOPLIST_FILE = "BabyNinja WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "d14077ff-6086-4dde-baff-b357e9c9077a";
+				PROVISIONING_PROFILE = "64c24ee9-2f85-4730-8be8-7c1ff88038f7";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1416,7 +1422,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "805942cc-1b02-417f-a5c0-3dcc460e6830";
+				PROVISIONING_PROFILE = "1d035b6f-945a-4934-be1c-9051926fd655";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -1433,7 +1439,7 @@
 				IBSC_MODULE = BabyNinja_WatchKit_Extension;
 				INFOPLIST_FILE = "BabyNinja WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "805942cc-1b02-417f-a5c0-3dcc460e6830";
+				PROVISIONING_PROFILE = "1d035b6f-945a-4934-be1c-9051926fd655";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
