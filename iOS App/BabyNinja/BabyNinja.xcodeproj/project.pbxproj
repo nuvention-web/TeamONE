@@ -113,6 +113,8 @@
 		20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EE71AAF289F00290220 /* ActivityReportViewController.xib */; };
 		20BA8EED1AAF4A2C00290220 /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */; };
 		20BA8EEE1AAF4A2C00290220 /* LaunchScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */; };
+		20BB117D1B0C4CC600B163D5 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BB117B1B0C4CC600B163D5 /* SignUpViewController.m */; };
+		20BB117E1B0C4CC600B163D5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BB117C1B0C4CC600B163D5 /* SignUpViewController.xib */; };
 		20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */; };
 		20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */; };
 		20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB301AA57DEA00C50831 /* TMCache.m */; };
@@ -357,6 +359,9 @@
 		20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
 		20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
 		20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreenViewController.xib; sourceTree = "<group>"; };
+		20BB117A1B0C4CC600B163D5 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = BabyNinja/ViewControllers/SignUpViewController.h; sourceTree = SOURCE_ROOT; };
+		20BB117B1B0C4CC600B163D5 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = BabyNinja/ViewControllers/SignUpViewController.m; sourceTree = SOURCE_ROOT; };
+		20BB117C1B0C4CC600B163D5 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignUpViewController.xib; path = BabyNinja/ViewControllers/SignUpViewController.xib; sourceTree = SOURCE_ROOT; };
 		20C693411AA6411C0055B62F /* DiaperSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperSettingsViewController.h; sourceTree = "<group>"; };
 		20C693421AA6411C0055B62F /* DiaperSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperSettingsViewController.m; sourceTree = "<group>"; };
 		20C693431AA6411C0055B62F /* DiaperSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaperSettingsViewController.xib; sourceTree = "<group>"; };
@@ -525,6 +530,9 @@
 			children = (
 				203A499F1A809F7000F02E56 /* LeftSideController */,
 				203A49A01A809F7000F02E56 /* MainViewController */,
+				20BB117A1B0C4CC600B163D5 /* SignUpViewController.h */,
+				20BB117B1B0C4CC600B163D5 /* SignUpViewController.m */,
+				20BB117C1B0C4CC600B163D5 /* SignUpViewController.xib */,
 				20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */,
 				20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */,
 				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
@@ -1030,6 +1038,7 @@
 				20C693451AA6411C0055B62F /* DiaperSettingsViewController.xib in Resources */,
 				201024FF1A7B530E00F248F3 /* poop.png in Resources */,
 				20BA8EE11AAECD8900290220 /* DiaperChangeViewController.xib in Resources */,
+				20BB117E1B0C4CC600B163D5 /* SignUpViewController.xib in Resources */,
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
@@ -1085,6 +1094,7 @@
 				20BA8EE81AAF289F00290220 /* ActivityReportViewController.m in Sources */,
 				20C693441AA6411C0055B62F /* DiaperSettingsViewController.m in Sources */,
 				20BA8EE01AAECD8900290220 /* DiaperChangeViewController.m in Sources */,
+				20BB117D1B0C4CC600B163D5 /* SignUpViewController.m in Sources */,
 				20B3A87E1A84884300B4C8CC /* ALRadialButton.m in Sources */,
 				209753E61AA29F9B00463D41 /* ConfigurationTableViewCell.m in Sources */,
 				204471C91AEF30FD00D35BDD /* Utility.m in Sources */,

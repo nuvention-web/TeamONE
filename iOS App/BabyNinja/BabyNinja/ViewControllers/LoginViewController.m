@@ -12,6 +12,7 @@
 #import "LeftSideController.h"
 #import <Parse/Parse.h>
 #import "BabyVitalsViewController.h"
+#import "SignUpViewController.h"
 
 @implementation LoginViewController
 
@@ -33,6 +34,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
+        
         // User is logged in, do work such as go to next view controller.
 
     }
@@ -147,6 +149,8 @@
 }
 
 - (IBAction)signUpButtonPressed:(id)sender {
+    SignUpViewController *signup = [[SignUpViewController alloc]init];
+    [self presentViewController:signup animated:YES completion:nil];
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
