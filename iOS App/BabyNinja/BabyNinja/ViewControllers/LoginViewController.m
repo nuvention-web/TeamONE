@@ -22,7 +22,10 @@
 //    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
 //    testObject[@"foo"] = @"bar";
 //    [testObject saveInBackground];
-//    
+//
+    self.usernameTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
 //    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
@@ -140,6 +143,12 @@
     return drawer;
 }
 
+- (IBAction)signInButtonPressed:(id)sender {
+}
+
+- (IBAction)signUpButtonPressed:(id)sender {
+}
+
 - (IBAction)logoutButtonPressed:(id)sender {
     NSLog(@"Logged out of facebook");
     NSHTTPCookie *cookie;
@@ -185,5 +194,18 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if(textField == self.usernameTextField){
+        [self.passwordTextField becomeFirstResponder];
+        
+    } else if (textField == self.passwordTextField){
+        [self signInButtonPressed:nil];
+    }
+    
+    return YES;
+}
 
 @end
