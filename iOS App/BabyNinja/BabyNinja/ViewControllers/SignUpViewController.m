@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.emailTextField.delegate = self;
+    self.passwordTextField.delegate = self;
+    self.confirmPasswordTextField.delegate = self;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -34,4 +39,25 @@
 }
 */
 
+- (IBAction)signUpButtonPressed:(id)sender {
+}
+
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    if(textField== self.emailTextField){
+        [self.passwordTextField becomeFirstResponder];
+        
+    }else if (textField == self.passwordTextField){
+        [self.confirmPasswordTextField becomeFirstResponder];
+        
+    } else if (textField == self.confirmPasswordTextField){
+        
+        [self signUpButtonPressed:nil];
+        
+    }
+    return YES;
+    
+}
 @end
