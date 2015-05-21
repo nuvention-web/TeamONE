@@ -46,6 +46,8 @@
     [self.signUpView.additionalField setHidden:YES];
     // Do any additional setup after loading the view from its nib.
 }
+
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
@@ -99,6 +101,7 @@
 */
 
 - (IBAction)signUpButtonPressed:(id)sender {
+
 }
 
 #pragma mark UITextFieldDelegate

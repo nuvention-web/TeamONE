@@ -142,23 +142,17 @@
     /// ****** NEED TO SET NEW ATTRIBUTES **********
     self.careTaker = [[CareTaker alloc] init];
     
-//////////////// CRAP CODE ////////////////
-
     
+//////////////// CRAP CODE ////////////////
     PFQuery *query = [PFUser query];
-    //    [query whereKey:@"gender" equalTo:@"female"]; // find all the women
     NSArray *girls = [query findObjects];
 
-    
-    
-    
     for (int i = 0; i <  girls.count; i++){
         PFObject *myObject = girls[i];
-
         NSLog(@" SHOW: %@",  girls[i]);
-        
-        
     }
+    
+
     
     
 /////////////////////////////////////////////////////////////////////

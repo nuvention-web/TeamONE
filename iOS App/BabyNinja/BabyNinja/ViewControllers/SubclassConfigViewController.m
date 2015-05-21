@@ -32,26 +32,12 @@
     [super viewDidAppear:animated];
     
     
-    
-    PFQuery *query = [PFUser query];
-    //    [query whereKey:@"gender" equalTo:@"female"]; // find all the women
-    NSArray *girls = [query findObjects];
-    for (int i = 0; i <  girls.count; i++){
-        PFObject *myObject = girls[i];
-        
-        NSLog(@" SHOW: %@",  myObject.objectId);
-        
-    }
-    
-    
-
-    
     // Check if user is logged in
     if (![PFUser currentUser]) {        
         // Customize the Log In View Controller
         LoginViewController *logInViewController = [[LoginViewController alloc] init];
         logInViewController.delegate = self;
-     logInViewController.facebookPermissions = @[@"friends_about_me"];
+        logInViewController.facebookPermissions = @[@"friends_about_me"];
         logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
         
         // Customize the Sign Up View Controller
@@ -70,6 +56,8 @@
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+    
+    NSLog(@"");
     if (username && password && username.length && password.length) {
         return YES;
     }
@@ -111,9 +99,16 @@
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information thai", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
     
+    CareTaker *newCareTaker = [[CareTaker alloc] init];
+    newCareTaker.careTakerName = @"TesterName";
+    NSLog(@"name is %@",newCareTaker.careTakerName );
+    
+    
+    
     //return informationComplete;
     return YES;
 }
+
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
