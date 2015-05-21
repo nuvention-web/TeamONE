@@ -13,7 +13,10 @@
 #import "LeftSideController.h"
 #import "BabyVitalsViewController.h"
 
-@implementation SubclassConfigViewController
+@implementation SubclassConfigViewController{
+    NSString *newUserEmail;
+    
+}
 
 
 #pragma mark - UIViewController
@@ -22,15 +25,7 @@
     [self hideEverything:YES];
 
 
-    //////////////// CRAP CODE ////////////////
-    PFQuery *query = [PFUser query];
-    NSArray *girls = [query findObjects];
     
-    for (int i = 0; i <  girls.count; i++){
-        PFObject *myObject = girls[i];
-        NSLog(@" SHOW: %@",  myObject.objectId);
-        
-    }
 }
 
 
@@ -118,6 +113,8 @@
 //    [self hideEverything:NO];
 }
 
+
+
 -(void)presentLoginScreen{
     // Customize the Log In View Controller
     LoginViewController *logInViewController = [[LoginViewController alloc] init];
@@ -134,6 +131,8 @@
     // Present Log In View Controller
     [self presentViewController:logInViewController animated:NO completion:NULL];
 }
+
+
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
 -(UIViewController*)addSideViewController{
     NSArray *colors ;
@@ -213,10 +212,17 @@
     
     if (!informationComplete) {
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information thai", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+    }else{
+        
+        
+        
     }
+
+//    NSLog(@"Dictionary tester: %@", info   );
+    newUserEmail = [[NSString alloc] initWithString:info[@"username"]];
     
-    
-    
+//CareTaker *newCareTaker = [[CareTaker alloc] init];
+//    newCareTaker
     
     
     //return informationComplete;
@@ -224,11 +230,37 @@
 }
 
 // Sent to the delegate when a PFUser is signed up.
+
+
+
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [self showBabyVitalsScreen];
+     CareTaker *sendCareTaker = [[CareTaker alloc] init];
+ 
+    //////////////// CRAP CODE ////////////////
+    PFQuery *query = [PFUser query];
+    NSArray *girls = [query findObjects];
     
+    for (int i = 0; i <  girls.count; i++){
+        PFObject *myObject = girls[i];
+//        NSLog(@" SHOW searcher: %@",  myObject[@"username"]);
+//        NSLog(@" SHOW searcher: %@",  myObject.objectId);
+        
+        if([newUserEmail isEqualToString:myObject[@"username"]]){
+            sendCareTaker.careTakerId = myObject.objectId;
+        }
+        
+        
+    }
+    
+
+
+    BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:sendCareTaker];
+    [self presentViewController:controller animated:NO completion:nil];
+
 }
+
+
 
 // Sent to the delegate when the sign up attempt fails.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
@@ -239,6 +271,8 @@
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
     NSLog(@"User dismissed the signUpViewController");
 }
+
+
 
 
 #pragma mark - ()

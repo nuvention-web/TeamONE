@@ -33,6 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"TESING IF MATCH ID: %@,",    self.careTaker.careTakerId);
+
     
     makeBabyObject = [[Baby alloc] init];
     makeBabyObject.activities = [[NSMutableArray alloc] init];

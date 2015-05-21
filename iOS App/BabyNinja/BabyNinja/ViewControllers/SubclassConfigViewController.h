@@ -10,6 +10,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *welcomeLabel;
 
+
 - (IBAction)logOutButtonTapAction:(id)sender;
 
 @end
