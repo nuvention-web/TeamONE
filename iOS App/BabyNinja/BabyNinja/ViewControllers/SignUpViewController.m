@@ -19,7 +19,7 @@
     
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
-    self.confirmPasswordTextField.delegate = self;
+    //self.confirmPasswordTextField.delegate = self;
     
     
     
@@ -111,10 +111,10 @@
     }else if (textField == self.passwordTextField){
         [self.confirmPasswordTextField becomeFirstResponder];
         
-    } else if (textField == self.confirmPasswordTextField){
-        [textField resignFirstResponder];
-        [self signUpButtonPressed:nil];
-        
+//    } else if (textField == self.confirmPasswordTextField){
+//        [textField resignFirstResponder];
+//        [self signUpButtonPressed:nil];
+//        
     }
     return YES;
     
