@@ -21,7 +21,66 @@
     self.passwordTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
     
+    
+    
+    [self.signUpView setBackgroundColor:[UIColor whiteColor]];
+    [self.signUpView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]]];
+    
+    
+    // Remove text shadow
+    CALayer *layer = self.signUpView.usernameField.layer;
+    layer.shadowOpacity = 0.0f;
+    layer = self.signUpView.passwordField.layer;
+    layer.shadowOpacity = 0.0f;
+    layer = self.signUpView.emailField.layer;
+    layer.shadowOpacity = 0.0f;
+    layer = self.signUpView.additionalField.layer;
+    layer.shadowOpacity = 0.0f;
+    
+    // Set text color
+    [self.signUpView.usernameField setTextColor:[UIColor colorWithRed:135.0f/255.0f green:118.0f/255.0f blue:92.0f/255.0f alpha:1.0]];
+    [self.signUpView.passwordField setTextColor:[UIColor colorWithRed:135.0f/255.0f green:118.0f/255.0f blue:92.0f/255.0f alpha:1.0]];
+//    self.signUpView.additionalField.hidden = YES;
+//    [self.signUpView.usernameField setPlaceholder:@"Email"];
+    self.signUpView.emailAsUsername = YES;
+    [self.signUpView.additionalField setHidden:YES];
     // Do any additional setup after loading the view from its nib.
+}
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    // Move all fields down on smaller screen sizes
+    float yOffset = [UIScreen mainScreen].bounds.size.height <= 480.0f ? 30.0f : 0.0f;
+    
+    CGRect fieldFrame = self.signUpView.usernameField.frame;
+    
+    [self.signUpView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
+    [self.signUpView.logo setFrame:CGRectMake(66.5f, 70.0f, 187.0f, 58.5f)];
+    [self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 385.0f, 250.0f, 40.0f)];
+
+    
+    [self.signUpView.usernameField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
+                                                       fieldFrame.origin.y + yOffset,
+                                                       fieldFrame.size.width - 10.0f,
+                                                       fieldFrame.size.height)];
+    yOffset += fieldFrame.size.height;
+    
+    [self.signUpView.passwordField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
+                                                       fieldFrame.origin.y + yOffset,
+                                                       fieldFrame.size.width - 10.0f,
+                                                       fieldFrame.size.height)];
+    yOffset += fieldFrame.size.height;
+    
+    [self.signUpView.emailField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
+                                                    fieldFrame.origin.y + yOffset,
+                                                    fieldFrame.size.width - 10.0f,
+                                                    fieldFrame.size.height)];
+    yOffset += fieldFrame.size.height;
+    
+    [self.signUpView.additionalField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
+                                                         fieldFrame.origin.y + yOffset,
+                                                         fieldFrame.size.width - 10.0f,
+                                                         fieldFrame.size.height)];
 }
 
 - (void)didReceiveMemoryWarning {

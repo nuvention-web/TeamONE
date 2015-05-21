@@ -217,35 +217,11 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     [self.logInView setBackgroundColor:[UIColor whiteColor]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]]];
     
-    // Set buttons appearance
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
     self.logInView.dismissButton.hidden = YES;
     
     self.logInView.facebookButton.enabled = YES;
-//    [self.logInView.facebookButton setImage:nil forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setImage:nil forState:UIControlStateHighlighted];
-//    [self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"FacebookDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"Facebook.png"] forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setTitle:@"" forState:UIControlStateHighlighted];
-    
-//    [self.logInView.twitterButton setImage:nil forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setImage:nil forState:UIControlStateHighlighted];
-//    [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"Twitter.png"] forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"TwitterDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
-//    
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+
     self.logInView.logInButton.enabled = YES;
-    // Add login field background
-//    self.fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];
-//    [self.logInView addSubview:self.fieldsBackground];
-//    [self.logInView sendSubviewToBack:self.fieldsBackground];
     
     // Remove text shadow
     CALayer *layer = self.logInView.usernameField.layer;
