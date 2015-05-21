@@ -16,13 +16,23 @@
 
 
 #pragma mark - UIViewController
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self hideEverything:YES];
 
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
         self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
     } else {
         self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
+    }
+}
+
+-(void)hideEverything:(BOOL)hide{
+    for(UIView *view in [self.view subviews]){
+        [view setHidden:hide];
     }
 }
 
@@ -35,6 +45,7 @@
     } else {
 //        [self.navigationController pushViewController:[self addSideViewController] animated:YES];
     }
+//    [self hideEverything:NO];
 }
 
 -(void)presentLoginScreen{
@@ -51,7 +62,7 @@
     logInViewController.signUpController = signUpViewController;
     
     // Present Log In View Controller
-    [self presentViewController:logInViewController animated:YES completion:NULL];
+    [self presentViewController:logInViewController animated:NO completion:NULL];
 }
 // instantiates the sidecontroller and main controller with the library ICSDrawerController
 -(UIViewController*)addSideViewController{

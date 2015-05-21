@@ -56,13 +56,13 @@
     // Set frame for elements
     [self.logInView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
     [self.logInView.logo setFrame:CGRectMake((self.view.frame.size.width -250)/2, 60, 250.0f, 80.0f)];
-    [self.logInView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 150, 250.0f, 50.0f)];
-    [self.logInView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 210, 250.0f, 50.0f)];
-    [self.logInView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 300, 200.0f, 40.0f)];
-    label.frame = CGRectMake((self.view.frame.size.width -250)/2, 360, 250, 20);
+    [self.logInView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 200, 250.0f, 50.0f)];
+    [self.logInView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 260, 250.0f, 50.0f)];
+    [self.logInView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 350, 200.0f, 40.0f)];
+    label.frame = CGRectMake((self.view.frame.size.width -250)/2, 410, 250, 20);
 
-    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 390, 200.0f, 40.0f)];
-    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 440, 200.0f, 40.0f)];
+    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 440, 200.0f, 40.0f)];
+    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 490, 200.0f, 40.0f)];
     
 
 }

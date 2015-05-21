@@ -58,13 +58,13 @@
     [self.signUpView.logo setFrame:CGRectMake((self.view.frame.size.width -250)/2, 60, 250.0f, 80.0f)];
 
     
-    [self.signUpView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 160, 250.0f, 50.0f)];
+    [self.signUpView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 210, 250.0f, 50.0f)];
     yOffset += fieldFrame.size.height;
     
-    [self.signUpView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 220, 250.0f, 50.0f)];
+    [self.signUpView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 270, 250.0f, 50.0f)];
     yOffset += fieldFrame.size.height;
     
-    [self.signUpView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -250)/2, 290, 250.0f, 40.0f)];
+    [self.signUpView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -250)/2, 340, 250.0f, 40.0f)];
 
     
 }
