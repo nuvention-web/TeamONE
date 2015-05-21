@@ -54,33 +54,19 @@
     
     CGRect fieldFrame = self.signUpView.usernameField.frame;
     
-    [self.signUpView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
-    [self.signUpView.logo setFrame:CGRectMake(66.5f, 70.0f, 187.0f, 58.5f)];
-    [self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 385.0f, 250.0f, 40.0f)];
+    [self.signUpView.dismissButton setFrame:CGRectMake(0.0f, 10.0f, 87.5f, 45.5f)];
+    [self.signUpView.logo setFrame:CGRectMake((self.view.frame.size.width -250)/2, 60, 250.0f, 80.0f)];
 
     
-    [self.signUpView.usernameField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-                                                       fieldFrame.origin.y + yOffset,
-                                                       fieldFrame.size.width - 10.0f,
-                                                       fieldFrame.size.height)];
+    [self.signUpView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 160, 250.0f, 50.0f)];
     yOffset += fieldFrame.size.height;
     
-    [self.signUpView.passwordField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-                                                       fieldFrame.origin.y + yOffset,
-                                                       fieldFrame.size.width - 10.0f,
-                                                       fieldFrame.size.height)];
+    [self.signUpView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 220, 250.0f, 50.0f)];
     yOffset += fieldFrame.size.height;
     
-    [self.signUpView.emailField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-                                                    fieldFrame.origin.y + yOffset,
-                                                    fieldFrame.size.width - 10.0f,
-                                                    fieldFrame.size.height)];
-    yOffset += fieldFrame.size.height;
+    [self.signUpView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -250)/2, 290, 250.0f, 40.0f)];
+
     
-    [self.signUpView.additionalField setFrame:CGRectMake(fieldFrame.origin.x + 5.0f,
-                                                         fieldFrame.origin.y + yOffset,
-                                                         fieldFrame.size.width - 10.0f,
-                                                         fieldFrame.size.height)];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,11 @@
 #import "BabyVitalsViewController.h"
 #import "SignUpViewController.h"
 
+@interface LoginViewController(){
+    UILabel *label;
+}
+@end
+
 @implementation LoginViewController
 
 - (void)viewDidLoad
@@ -31,7 +36,11 @@
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
 //    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
-    
+    label = [[UILabel alloc]init];
+    label.text = @"You can also sign up with:";
+    label.textColor = [UIColor grayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.logInView addSubview:label];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
@@ -50,9 +59,10 @@
     [self.logInView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 150, 250.0f, 50.0f)];
     [self.logInView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 210, 250.0f, 50.0f)];
     [self.logInView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 300, 200.0f, 40.0f)];
-    
-    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 350, 200.0f, 40.0f)];
-    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 400, 200.0f, 40.0f)];
+    label.frame = CGRectMake((self.view.frame.size.width -250)/2, 360, 250, 20);
+
+    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 390, 200.0f, 40.0f)];
+    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 440, 200.0f, 40.0f)];
     
 
 }
