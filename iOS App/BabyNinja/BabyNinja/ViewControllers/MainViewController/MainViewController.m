@@ -65,6 +65,8 @@
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
     
     //Sets the labels
+    
+// THIS PART NEEDS MORE WORK....
 //    [self setLatestLabelsByQuery:@"SLEEP"];
 //    [self setLatestLabelsByQuery:@"FEED"];
 //    [self setLatestLabelsByQuery:@"DIAPER"];

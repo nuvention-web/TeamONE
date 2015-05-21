@@ -52,12 +52,9 @@
     [super viewDidAppear:animated];
     self.babyImageView.layer.cornerRadius = 90;
     self.babyImageView.clipsToBounds = YES;
-    
-    
-    
-    
-    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -139,7 +136,10 @@
         
     }
     
+    
+    /// ****** NEED TO SET NEW ATTRIBUTES ********** 
     self.careTaker = [[CareTaker alloc] init];
+    
 
     makeBabyObject.caretakers = [[NSMutableArray alloc] init];
     [makeBabyObject.caretakers addObject:self.careTaker];
