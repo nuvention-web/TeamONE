@@ -54,6 +54,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"GOES IN TILL HERE");
+    
+    
     returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
@@ -62,9 +65,9 @@
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
     
     //Sets the labels
-    [self setLatestLabelsByQuery:@"SLEEP"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"DIAPER"];
+//    [self setLatestLabelsByQuery:@"SLEEP"];
+//    [self setLatestLabelsByQuery:@"FEED"];
+//    [self setLatestLabelsByQuery:@"DIAPER"];
 
 
     // Initialize and add the openDrawerButton
