@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
 
-@interface CareTaker : PFObject<PFSubclassing>
+@interface CareTaker : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) NSString *careTakerName;
 

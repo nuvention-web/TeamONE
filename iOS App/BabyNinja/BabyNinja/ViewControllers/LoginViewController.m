@@ -120,8 +120,8 @@
             {
                 
                 // intialize care Taker
-                CareTaker *careTaker = [[CareTaker alloc]init];
-                careTaker = object;
+                CareTaker *careTaker = (CareTaker *)object ;//[[CareTaker alloc]init];
+//                careTaker = object;
                 // NSLog(@"care taker name %@",careTaker.careTakerName);
                 
                 
