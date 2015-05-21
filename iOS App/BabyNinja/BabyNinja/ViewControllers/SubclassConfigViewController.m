@@ -31,6 +31,21 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    
+    
+    PFQuery *query = [PFUser query];
+    //    [query whereKey:@"gender" equalTo:@"female"]; // find all the women
+    NSArray *girls = [query findObjects];
+    for (int i = 0; i <  girls.count; i++){
+        PFObject *myObject = girls[i];
+        
+        NSLog(@" SHOW: %@",  myObject.objectId);
+        
+    }
+    
+    
+
+    
     // Check if user is logged in
     if (![PFUser currentUser]) {        
         // Customize the Log In View Controller

@@ -34,6 +34,8 @@
     [super viewDidLoad];
     
     
+    
+    
     makeBabyObject = [[Baby alloc] init];
     makeBabyObject.activities = [[NSMutableArray alloc] init];
     didSetDOB = NO;
@@ -137,8 +139,29 @@
     }
     
     
-    /// ****** NEED TO SET NEW ATTRIBUTES ********** 
+    /// ****** NEED TO SET NEW ATTRIBUTES **********
     self.careTaker = [[CareTaker alloc] init];
+    
+//////////////// CRAP CODE ////////////////
+
+    
+    PFQuery *query = [PFUser query];
+    //    [query whereKey:@"gender" equalTo:@"female"]; // find all the women
+    NSArray *girls = [query findObjects];
+
+    
+    
+    
+    for (int i = 0; i <  girls.count; i++){
+        PFObject *myObject = girls[i];
+
+        NSLog(@" SHOW: %@",  girls[i]);
+        
+        
+    }
+    
+    
+/////////////////////////////////////////////////////////////////////
     
 
     makeBabyObject.caretakers = [[NSMutableArray alloc] init];
