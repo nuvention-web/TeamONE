@@ -37,10 +37,67 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
-        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+        //self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+        NSLog(@"%@",[PFUser currentUser].objectId);
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
+        [query whereKey:@"careTakerId" equalTo:[PFUser currentUser].objectId];
+        [query includeKey:@"careTakerBabyArray"];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            
+                // The find succeeded.
+                
+                NSLog(@"the object%@",object);
+                //                if(object == nil)
+                //                    [self showBabyVitalsScreen];
+                //                else
+                {
+                    
+                    // intialize care Taker
+                    CareTaker *careTaker = (CareTaker *)object ;//[[CareTaker alloc]init];
+                    //                careTaker = object;
+                    // NSLog(@"care taker name %@",careTaker.careTakerName);
+                    
+                    
+                    // intialize the baby
+                    Baby *baby = [[Baby alloc]init];
+                    
+                    baby = careTaker.careTakerBabyArray[0];
+                    
+                    
+                    
+                    [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
+                    
+                    NSLog(@"Successfully retrieved %@",baby.babyName);
+                
+            }
+        }];
+        
     } else {
         self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
+}
+
+-(UIViewController*)addSideViewController:(CareTaker *)careTaker{
+    NSArray *colors ;
+    //    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
+    //                        ];
+    colors = @[[UIColor clearColor],
+               [UIColor clearColor],
+               [UIColor clearColor]
+               ];
+    
+    LeftSideController *colorsVC = [[LeftSideController alloc] initWithCareTaker:(careTaker)];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
+    MainViewController *plainColorVC = [[MainViewController alloc] initWithCareTaker:(careTaker)];
+    plainColorVC.view.backgroundColor = colors[0];
+    UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
+    navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    navController.title = @"BABYNINJA";
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
+    return drawer;
 }
 
 -(void)hideEverything:(BOOL)hide{
