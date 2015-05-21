@@ -16,6 +16,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentControl;
+
+- (IBAction)genderSegmentControlChanged:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 
 - (IBAction)signUpButtonPressed:(id)sender;

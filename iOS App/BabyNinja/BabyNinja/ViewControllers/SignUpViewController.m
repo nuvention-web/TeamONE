@@ -53,11 +53,13 @@
         [self.confirmPasswordTextField becomeFirstResponder];
         
     } else if (textField == self.confirmPasswordTextField){
-        
+        [textField resignFirstResponder];
         [self signUpButtonPressed:nil];
         
     }
     return YES;
     
+}
+- (IBAction)genderSegmentControlChanged:(id)sender {
 }
 @end

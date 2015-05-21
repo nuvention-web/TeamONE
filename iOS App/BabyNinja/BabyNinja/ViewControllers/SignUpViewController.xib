@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="confirmPasswordTextField" destination="29j-eg-n32" id="ykS-S3-VqT"/>
                 <outlet property="emailTextField" destination="Rqb-k0-Jbx" id="1CR-gq-rMP"/>
+                <outlet property="genderSegmentControl" destination="Lqi-ok-Fe6" id="MjN-kN-OXW"/>
                 <outlet property="passwordTextField" destination="rea-Xe-Xfa" id="emf-pt-web"/>
                 <outlet property="signUpButton" destination="V9O-8t-Bnr" id="IS3-he-4rT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,19 +23,14 @@
                     <rect key="frame" x="92" y="60" width="194" height="68"/>
                 </imageView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqb-k0-Jbx">
-                    <rect key="frame" x="92" y="179" width="194" height="30"/>
+                    <rect key="frame" x="92" y="170" width="194" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rea-Xe-Xfa">
-                    <rect key="frame" x="92" y="231" width="194" height="30"/>
+                    <rect key="frame" x="92" y="215" width="194" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29j-eg-n32">
-                    <rect key="frame" x="92" y="285" width="194" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-8t-Bnr">
                     <rect key="frame" x="92" y="362" width="194" height="34"/>
@@ -47,6 +43,21 @@
                         <action selector="signUpButtonPressed:" destination="-1" eventType="touchUpInside" id="KTp-P2-bLF"/>
                     </connections>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29j-eg-n32">
+                    <rect key="frame" x="92" y="260" width="194" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                </textField>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lqi-ok-Fe6">
+                    <rect key="frame" x="92" y="313" width="194" height="29"/>
+                    <segments>
+                        <segment title="Female"/>
+                        <segment title="Male"/>
+                    </segments>
+                    <connections>
+                        <action selector="genderSegmentControlChanged:" destination="-1" eventType="valueChanged" id="SKB-GN-qAm"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
