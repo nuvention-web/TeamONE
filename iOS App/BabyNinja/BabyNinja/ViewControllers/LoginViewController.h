@@ -13,6 +13,7 @@
 
 
 @interface LoginViewController : PFLogInViewController <FBSDKLoginButtonDelegate, UITextFieldDelegate>//<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate> //
+@property (nonatomic, strong) UIImageView *fieldsBackground;
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginFBButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;

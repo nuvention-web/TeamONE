@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewController">
             <connections>
                 <outlet property="loginFBButton" destination="FV6-C6-DJx" id="a3k-mi-5ng"/>
                 <outlet property="passwordTextField" destination="33H-95-SuN" id="15K-p3-NDo"/>
