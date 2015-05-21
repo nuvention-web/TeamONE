@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <Parse/Parse.h>
 
 
-@interface LoginViewController : UIViewController<FBSDKLoginButtonDelegate, UITextFieldDelegate>
+@interface LoginViewController : PFLogInViewController <FBSDKLoginButtonDelegate, UITextFieldDelegate>//<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate> //
 
 @property (weak, nonatomic) IBOutlet FBSDKLoginButton *loginFBButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
