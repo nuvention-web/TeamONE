@@ -57,7 +57,6 @@
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
     
-    NSLog(@"");
     if (username && password && username.length && password.length) {
         return YES;
     }
@@ -86,6 +85,8 @@
 
 // Sent to the delegate to determine whether the sign up request should be submitted to the server.
 - (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+
+//    NSLog(@"*********userID: %@", info);
     BOOL informationComplete = YES;
     for (id key in info) {
         NSString *field = [info objectForKey:key];
