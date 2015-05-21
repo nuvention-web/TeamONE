@@ -9,6 +9,8 @@
 #import "SubclassConfigViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "BabyVitalsViewController.h"
+
 
 @implementation SubclassConfigViewController
 
@@ -18,7 +20,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
-        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
+        BabyVitalsViewController *myBabyView = [[BabyVitalsViewController alloc] init];
+        [self presentViewController:myBabyView animated:YES completion:NULL];
+//        self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
     } else {
         self.welcomeLabel.text = NSLocalizedString(@"Not logged in", nil);
     }
