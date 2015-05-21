@@ -236,12 +236,12 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 //    [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"TwitterDown.png"] forState:UIControlStateHighlighted];
 //    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
 //    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
-    
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
-    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
-    
+//    
+//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
+//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
+//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
+//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+    self.logInView.logInButton.enabled = YES;
     // Add login field background
 //    self.fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];
 //    [self.logInView addSubview:self.fieldsBackground];

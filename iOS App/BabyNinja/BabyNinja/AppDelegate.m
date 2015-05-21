@@ -15,6 +15,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 //#import <FacebookSDK/FacebookSDK.h>
 #import "LoginViewController.h"
+#import "SubclassConfigViewController.h"
 
 @interface AppDelegate ()
 
@@ -33,7 +34,7 @@
     [FBSDKProfilePictureView class];
     [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
     
-    LoginViewController *login = [[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:nil];
+    SubclassConfigViewController *login = [[SubclassConfigViewController alloc]initWithNibName:@"SubclassConfigViewController" bundle:nil];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
