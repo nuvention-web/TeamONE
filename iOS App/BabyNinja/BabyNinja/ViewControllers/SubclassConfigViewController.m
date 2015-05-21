@@ -21,7 +21,19 @@
     [super viewDidLoad];
     [self hideEverything:YES];
 
+
+    //////////////// CRAP CODE ////////////////
+    PFQuery *query = [PFUser query];
+    NSArray *girls = [query findObjects];
+    
+    for (int i = 0; i <  girls.count; i++){
+        PFObject *myObject = girls[i];
+        NSLog(@" SHOW: %@",  myObject.objectId);
+        
+    }
 }
+
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
@@ -145,6 +157,10 @@
     if (!informationComplete) {
         [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information thai", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
+    
+    
+    
+    
     
     //return informationComplete;
     return YES;
