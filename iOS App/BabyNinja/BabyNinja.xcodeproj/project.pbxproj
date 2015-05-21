@@ -18,6 +18,8 @@
 		2017397C1AED8E2900F44EFD /* FeedActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */; };
 		201EF8721B0E5533005D12BA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201EF8711B0E5533005D12BA /* FacebookSDK.framework */; };
 		201EF8741B0E56B4005D12BA /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201EF8731B0E56B4005D12BA /* ParseUI.framework */; };
+		201EF8781B0E5CFF005D12BA /* SubclassConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201EF8761B0E5CFF005D12BA /* SubclassConfigViewController.m */; };
+		201EF8791B0E5CFF005D12BA /* SubclassConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EF8771B0E5CFF005D12BA /* SubclassConfigViewController.xib */; };
 		2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */; };
 		2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */; };
 		2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */; };
@@ -195,6 +197,9 @@
 		2017397A1AED8E2900F44EFD /* FeedActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedActivityViewController.xib; sourceTree = "<group>"; };
 		201EF8711B0E5533005D12BA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		201EF8731B0E56B4005D12BA /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		201EF8751B0E5CFF005D12BA /* SubclassConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassConfigViewController.h; sourceTree = "<group>"; };
+		201EF8761B0E5CFF005D12BA /* SubclassConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassConfigViewController.m; sourceTree = "<group>"; };
+		201EF8771B0E5CFF005D12BA /* SubclassConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubclassConfigViewController.xib; sourceTree = "<group>"; };
 		2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/Misc/JBChartInformationView.h; sourceTree = "<group>"; };
 		2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/Misc/JBChartInformationView.m; sourceTree = "<group>"; };
 		2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/Misc/JBChartTooltipTipView.h; sourceTree = "<group>"; };
@@ -542,6 +547,9 @@
 				20BA8EEA1AAF4A2C00290220 /* LaunchScreenViewController.h */,
 				20BA8EEB1AAF4A2C00290220 /* LaunchScreenViewController.m */,
 				20BA8EEC1AAF4A2C00290220 /* LaunchScreenViewController.xib */,
+				201EF8751B0E5CFF005D12BA /* SubclassConfigViewController.h */,
+				201EF8761B0E5CFF005D12BA /* SubclassConfigViewController.m */,
+				201EF8771B0E5CFF005D12BA /* SubclassConfigViewController.xib */,
 				201332B91ADCD9E70012B498 /* LoginViewController.h */,
 				201332BA1ADCD9E70012B498 /* LoginViewController.m */,
 				201332BF1ADCDA010012B498 /* LoginViewController.xib */,
@@ -1050,6 +1058,7 @@
 				201024E21A7B030F00F248F3 /* Images.xcassets in Resources */,
 				209753D51AA15E2B00463D41 /* CareTakersListCell.xib in Resources */,
 				209753D01AA0F36F00463D41 /* BabyProfileCell.xib in Resources */,
+				201EF8791B0E5CFF005D12BA /* SubclassConfigViewController.xib in Resources */,
 				E358A8BB1AEC3DDC003680C7 /* PeeTypeSelectionViewController.xib in Resources */,
 				20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */,
 				209753F11AA2CF7F00463D41 /* ReminderSettingsViewController.xib in Resources */,
@@ -1127,6 +1136,7 @@
 				204471BD1AEE9F8200D35BDD /* FeedOuncesViewController.m in Sources */,
 				203A49C61A8165EE00F02E56 /* AFHTTPSessionManager.m in Sources */,
 				203A49CA1A8165EE00F02E56 /* AFURLRequestSerialization.m in Sources */,
+				201EF8781B0E5CFF005D12BA /* SubclassConfigViewController.m in Sources */,
 				201024D71A7B030F00F248F3 /* main.m in Sources */,
 				E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */,
 				203A49A31A809F7000F02E56 /* MainViewController.m in Sources */,
