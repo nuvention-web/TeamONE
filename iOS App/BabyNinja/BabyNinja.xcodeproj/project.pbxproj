@@ -20,6 +20,8 @@
 		201EF8741B0E56B4005D12BA /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201EF8731B0E56B4005D12BA /* ParseUI.framework */; };
 		201EF8781B0E5CFF005D12BA /* SubclassConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201EF8761B0E5CFF005D12BA /* SubclassConfigViewController.m */; };
 		201EF8791B0E5CFF005D12BA /* SubclassConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EF8771B0E5CFF005D12BA /* SubclassConfigViewController.xib */; };
+		201EF87C1B0E81E5005D12BA /* UserVitalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 201EF87B1B0E81E5005D12BA /* UserVitalsViewController.m */; };
+		201EF87E1B0E81FC005D12BA /* UserVitalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 201EF87D1B0E81FC005D12BA /* UserVitalsViewController.xib */; };
 		2029C8C81AEADD0C0086B506 /* JBChartInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */; };
 		2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C51AEADD0C0086B506 /* JBChartTooltipTipView.m */; };
 		2029C8CA1AEADD0C0086B506 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8C71AEADD0C0086B506 /* JBChartTooltipView.m */; };
@@ -200,6 +202,9 @@
 		201EF8751B0E5CFF005D12BA /* SubclassConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubclassConfigViewController.h; sourceTree = "<group>"; };
 		201EF8761B0E5CFF005D12BA /* SubclassConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubclassConfigViewController.m; sourceTree = "<group>"; };
 		201EF8771B0E5CFF005D12BA /* SubclassConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubclassConfigViewController.xib; sourceTree = "<group>"; };
+		201EF87A1B0E81E5005D12BA /* UserVitalsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserVitalsViewController.h; sourceTree = "<group>"; };
+		201EF87B1B0E81E5005D12BA /* UserVitalsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserVitalsViewController.m; sourceTree = "<group>"; };
+		201EF87D1B0E81FC005D12BA /* UserVitalsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVitalsViewController.xib; sourceTree = "<group>"; };
 		2029C8C21AEADD0C0086B506 /* JBChartInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartInformationView.h; path = JBChartView/Misc/JBChartInformationView.h; sourceTree = "<group>"; };
 		2029C8C31AEADD0C0086B506 /* JBChartInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartInformationView.m; path = JBChartView/Misc/JBChartInformationView.m; sourceTree = "<group>"; };
 		2029C8C41AEADD0C0086B506 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartTooltipTipView.h; path = JBChartView/Misc/JBChartTooltipTipView.h; sourceTree = "<group>"; };
@@ -556,6 +561,9 @@
 				2067B5591AEBEEAC00FCEBAE /* BabyVitalsViewController.h */,
 				2067B55A1AEBEEAC00FCEBAE /* BabyVitalsViewController.m */,
 				2067B55B1AEBEEAC00FCEBAE /* BabyVitalsViewController.xib */,
+				201EF87A1B0E81E5005D12BA /* UserVitalsViewController.h */,
+				201EF87B1B0E81E5005D12BA /* UserVitalsViewController.m */,
+				201EF87D1B0E81FC005D12BA /* UserVitalsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1048,6 +1056,7 @@
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
+				201EF87E1B0E81FC005D12BA /* UserVitalsViewController.xib in Resources */,
 				203A49AF1A815DB200F02E56 /* MainViewController.xib in Resources */,
 				2017397C1AED8E2900F44EFD /* FeedActivityViewController.xib in Resources */,
 				20558F1A1AE95A7D00A42961 /* PoopTypeSelectionView.xib in Resources */,
@@ -1163,6 +1172,7 @@
 				2017397B1AED8E2900F44EFD /* FeedActivityViewController.m in Sources */,
 				203A49CB1A8165EE00F02E56 /* AFURLResponseSerialization.m in Sources */,
 				20B3A87F1A84884300B4C8CC /* ALRadialMenu.m in Sources */,
+				201EF87C1B0E81E5005D12BA /* UserVitalsViewController.m in Sources */,
 				20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */,
 				203A49C41A8165EE00F02E56 /* AFHTTPRequestOperation.m in Sources */,
 				209753E11AA29DA500463D41 /* ConfigurationViewController.m in Sources */,

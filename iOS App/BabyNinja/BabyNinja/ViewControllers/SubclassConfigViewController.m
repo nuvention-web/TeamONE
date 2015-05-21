@@ -9,12 +9,19 @@
 #import "SubclassConfigViewController.h"
 #import "LoginViewController.h"
 #import "SignUpViewController.h"
+#import "MainViewController.h"
+#import "LeftSideController.h"
+#import "BabyVitalsViewController.h"
 
 @implementation SubclassConfigViewController
 
 
 #pragma mark - UIViewController
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    [self hideEverything:YES];
 
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
@@ -24,26 +31,61 @@
     }
 }
 
+-(void)hideEverything:(BOOL)hide{
+    for(UIView *view in [self.view subviews]){
+        [view setHidden:hide];
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     // Check if user is logged in
     if (![PFUser currentUser]) {        
-        // Customize the Log In View Controller
-        LoginViewController *logInViewController = [[LoginViewController alloc] init];
-        logInViewController.delegate = self;
-        logInViewController.facebookPermissions = @[@"friends_about_me"];
-        logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
-        
-        // Customize the Sign Up View Controller
-        SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
-        signUpViewController.delegate = self;
-        signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
-        logInViewController.signUpController = signUpViewController;
-        
-        // Present Log In View Controller
-        [self presentViewController:logInViewController animated:YES completion:NULL];
+        [self presentLoginScreen];
+    } else {
+//        [self.navigationController pushViewController:[self addSideViewController] animated:YES];
     }
+//    [self hideEverything:NO];
+}
+
+-(void)presentLoginScreen{
+    // Customize the Log In View Controller
+    LoginViewController *logInViewController = [[LoginViewController alloc] init];
+    logInViewController.delegate = self;
+    logInViewController.facebookPermissions = @[@"friends_about_me"];
+    logInViewController.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsTwitter | PFLogInFieldsFacebook | PFLogInFieldsSignUpButton | PFLogInFieldsDismissButton;
+    
+    // Customize the Sign Up View Controller
+    SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
+    signUpViewController.delegate = self;
+    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+    logInViewController.signUpController = signUpViewController;
+    
+    // Present Log In View Controller
+    [self presentViewController:logInViewController animated:NO completion:NULL];
+}
+// instantiates the sidecontroller and main controller with the library ICSDrawerController
+-(UIViewController*)addSideViewController{
+    NSArray *colors ;
+    //    colors = @[[UIColor colorWithRed:237.0f/255.0f green:195.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:147.0f/255.0f blue:0.0f/255.0f alpha:1.0f],
+    //                        [UIColor colorWithRed:237.0f/255.0f green:9.0f/255.0f blue:0.0f/255.0f alpha:1.0f]
+    //                        ];
+    colors = @[[UIColor clearColor],
+               [UIColor clearColor],
+               [UIColor clearColor]
+               ];
+    
+    LeftSideController *colorsVC = [[LeftSideController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:colorsVC];
+    MainViewController *plainColorVC = [[MainViewController alloc] init];
+    plainColorVC.view.backgroundColor = colors[0];
+    UINavigationController *navController1 = [[UINavigationController alloc]initWithRootViewController:plainColorVC];
+    navController1.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    navController.title = @"BABYNINJA";
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:navController centerViewController:navController1];
+    return drawer;
 }
 
 
@@ -51,6 +93,7 @@
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+    
     if (username && password && username.length && password.length) {
         return YES;
     }
@@ -62,6 +105,17 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    
+    [self addSideViewController];
+}
+
+-(void)showBabyVitalsScreen{
+    CareTaker *careTaker = [[CareTaker alloc]init];
+    careTaker.careTakerName = [FBSDKProfile currentProfile].name;
+    careTaker.careTakerId = [FBSDKProfile currentProfile].userID;
+    //    careTaker.careTakerGender = [FBSDKProfile currentProfile]
+    BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:careTaker];
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -89,15 +143,18 @@
     }
     
     if (!informationComplete) {
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Missing Information thai", nil) message:NSLocalizedString(@"Make sure you fill out all of the information!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil] show];
     }
     
-    return informationComplete;
+    //return informationComplete;
+    return YES;
 }
 
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [self showBabyVitalsScreen];
+    
 }
 
 // Sent to the delegate when the sign up attempt fails.
@@ -116,6 +173,7 @@
 - (IBAction)logOutButtonTapAction:(id)sender {
     [PFUser logOut];
     [self.navigationController popViewControllerAnimated:YES];
+    [self presentLoginScreen];
 }
 
 @end

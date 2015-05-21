@@ -14,6 +14,11 @@
 #import "BabyVitalsViewController.h"
 #import "SignUpViewController.h"
 
+@interface LoginViewController(){
+    UILabel *label;
+}
+@end
+
 @implementation LoginViewController
 
 - (void)viewDidLoad
@@ -31,7 +36,11 @@
     self.loginFBButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     self.loginFBButton.delegate = self;
 //    self.loginFBButton.loginBehavior = FBSDKLoginBehaviorSystemAccount;
-    
+    label = [[UILabel alloc]init];
+    label.text = @"You can also sign up with:";
+    label.textColor = [UIColor grayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.logInView addSubview:label];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
@@ -46,13 +55,16 @@
     
     // Set frame for elements
     [self.logInView.dismissButton setFrame:CGRectMake(10.0f, 10.0f, 87.5f, 45.5f)];
-    [self.logInView.logo setFrame:CGRectMake(66.5f, 70.0f, 187.0f, 58.5f)];
-    [self.logInView.facebookButton setFrame:CGRectMake(35.0f, 287.0f, 120.0f, 40.0f)];
-    [self.logInView.twitterButton setFrame:CGRectMake(35.0f+130.0f, 287.0f, 120.0f, 40.0f)];
-    [self.logInView.signUpButton setFrame:CGRectMake(35.0f, 385.0f, 250.0f, 40.0f)];
-    [self.logInView.usernameField setFrame:CGRectMake(35.0f, 145.0f, 250.0f, 50.0f)];
-    [self.logInView.passwordField setFrame:CGRectMake(35.0f, 195.0f, 250.0f, 50.0f)];
-    [self.fieldsBackground setFrame:CGRectMake(35.0f, 145.0f, 250.0f, 100.0f)];
+    [self.logInView.logo setFrame:CGRectMake((self.view.frame.size.width -250)/2, 60, 250.0f, 80.0f)];
+    [self.logInView.usernameField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 200, 250.0f, 50.0f)];
+    [self.logInView.passwordField setFrame:CGRectMake((self.view.frame.size.width -250)/2, 260, 250.0f, 50.0f)];
+    [self.logInView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 350, 200.0f, 40.0f)];
+    label.frame = CGRectMake((self.view.frame.size.width -250)/2, 410, 250, 20);
+
+    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 440, 200.0f, 40.0f)];
+    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 490, 200.0f, 40.0f)];
+    
+
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -118,8 +130,8 @@
             {
                 
                 // intialize care Taker
-                CareTaker *careTaker = [[CareTaker alloc]init];
-                careTaker = object;
+                CareTaker *careTaker = (CareTaker *)object ;//[[CareTaker alloc]init];
+//                careTaker = object;
                 // NSLog(@"care taker name %@",careTaker.careTakerName);
                 
                 
@@ -217,35 +229,11 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     [self.logInView setBackgroundColor:[UIColor whiteColor]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo"]]];
     
-    // Set buttons appearance
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"Exit.png"] forState:UIControlStateNormal];
-//    [self.logInView.dismissButton setImage:[UIImage imageNamed:@"ExitDown.png"] forState:UIControlStateHighlighted];
     self.logInView.dismissButton.hidden = YES;
     
     self.logInView.facebookButton.enabled = YES;
-//    [self.logInView.facebookButton setImage:nil forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setImage:nil forState:UIControlStateHighlighted];
-//    [self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"FacebookDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.facebookButton setBackgroundImage:[UIImage imageNamed:@"Facebook.png"] forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.facebookButton setTitle:@"" forState:UIControlStateHighlighted];
-    
-//    [self.logInView.twitterButton setImage:nil forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setImage:nil forState:UIControlStateHighlighted];
-//    [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"Twitter.png"] forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setBackgroundImage:[UIImage imageNamed:@"TwitterDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
-//    
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-//    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+
     self.logInView.logInButton.enabled = YES;
-    // Add login field background
-//    self.fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];
-//    [self.logInView addSubview:self.fieldsBackground];
-//    [self.logInView sendSubviewToBack:self.fieldsBackground];
     
     // Remove text shadow
     CALayer *layer = self.logInView.usernameField.layer;
@@ -261,16 +249,16 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 
 #pragma mark UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    if(textField == self.usernameTextField){
-        [self.passwordTextField becomeFirstResponder];
-        
-    } else if (textField == self.passwordTextField){
-        [self signInButtonPressed:nil];
-    }
-    
-    return YES;
-}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+//    
+//    if(textField == self.usernameTextField){
+//        [self.passwordTextField becomeFirstResponder];
+//        
+//    } else if (textField == self.passwordTextField){
+//        [self signInButtonPressed:nil];
+//    }
+//    
+//    return YES;
+//}
 
 @end
