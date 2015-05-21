@@ -237,16 +237,16 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
 
 #pragma mark UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    if(textField == self.usernameTextField){
-        [self.passwordTextField becomeFirstResponder];
-        
-    } else if (textField == self.passwordTextField){
-        [self signInButtonPressed:nil];
-    }
-    
-    return YES;
-}
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+//    
+//    if(textField == self.usernameTextField){
+//        [self.passwordTextField becomeFirstResponder];
+//        
+//    } else if (textField == self.passwordTextField){
+//        [self signInButtonPressed:nil];
+//    }
+//    
+//    return YES;
+//}
 
 @end
