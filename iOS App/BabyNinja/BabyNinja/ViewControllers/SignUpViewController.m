@@ -102,23 +102,23 @@
 }
 
 #pragma mark UITextFieldDelegate
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    if(textField== self.emailTextField){
-        [self.passwordTextField becomeFirstResponder];
-        
-    }else if (textField == self.passwordTextField){
-        [self.confirmPasswordTextField becomeFirstResponder];
-        
-//    } else if (textField == self.confirmPasswordTextField){
-//        [textField resignFirstResponder];
-//        [self signUpButtonPressed:nil];
+//
+//- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+//    
+//    if(textField== self.emailTextField){
+//        [self.passwordTextField becomeFirstResponder];
 //        
-    }
-    return YES;
-    
-}
+//    }else if (textField == self.passwordTextField){
+//        [self.confirmPasswordTextField becomeFirstResponder];
+//        
+////    } else if (textField == self.confirmPasswordTextField){
+////        [textField resignFirstResponder];
+////        [self signUpButtonPressed:nil];
+////        
+//    }
+//    return YES;
+//    
+//}
 - (IBAction)genderSegmentControlChanged:(id)sender {
 }
 @end
