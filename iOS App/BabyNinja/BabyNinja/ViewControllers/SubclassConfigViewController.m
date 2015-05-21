@@ -11,6 +11,7 @@
 #import "SignUpViewController.h"
 #import "MainViewController.h"
 #import "LeftSideController.h"
+#import "BabyVitalsViewController.h"
 
 @implementation SubclassConfigViewController
 
@@ -92,6 +93,7 @@
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+    
     if (username && password && username.length && password.length) {
         return YES;
     }
@@ -103,6 +105,17 @@
 // Sent to the delegate when a PFUser is logged in.
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    
+    [self addSideViewController];
+}
+
+-(void)showBabyVitalsScreen{
+    CareTaker *careTaker = [[CareTaker alloc]init];
+    careTaker.careTakerName = [FBSDKProfile currentProfile].name;
+    careTaker.careTakerId = [FBSDKProfile currentProfile].userID;
+    //    careTaker.careTakerGender = [FBSDKProfile currentProfile]
+    BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:careTaker];
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 // Sent to the delegate when the log in attempt fails.
@@ -140,6 +153,7 @@
 // Sent to the delegate when a PFUser is signed up.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [self showBabyVitalsScreen];
     
 }
 
