@@ -125,7 +125,7 @@
     // Customize the Sign Up View Controller
     SignUpViewController *signUpViewController = [[SignUpViewController alloc] init];
     signUpViewController.delegate = self;
-    signUpViewController.fields = PFSignUpFieldsDefault | PFSignUpFieldsAdditional;
+    signUpViewController.fields = PFSignUpFieldsUsernameAndPassword | PFSignUpFieldsSignUpButton | PFSignUpFieldsDismissButton;
     logInViewController.signUpController = signUpViewController;
     
     // Present Log In View Controller

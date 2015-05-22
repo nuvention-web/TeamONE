@@ -91,7 +91,7 @@
 
 -(void)signOutPressed{
     [self showSpinnerWithMessage:@"Signing Out...."];
-    [NSTimer scheduledTimerWithTimeInterval:3.0
+    [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(stopSpinner)
                                    userInfo:nil
