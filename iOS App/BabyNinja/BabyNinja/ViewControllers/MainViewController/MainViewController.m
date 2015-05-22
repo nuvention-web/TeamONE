@@ -62,10 +62,7 @@
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
     
     //Sets the labels
-    [self setLatestLabelsByQuery:@"SLEEP"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"DIAPER"];
-
+    [self updateAllLabels];
 
     // Initialize and add the openDrawerButton
     UIImage *hamburger = [UIImage imageNamed:@"hamburger-1"];
@@ -92,6 +89,13 @@
 }
 
 
+
+
+-(void)updateAllLabels{
+    [self setLatestLabelsByQuery:@"DIAPER"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"SLEEP"];
+}
 
 
 #pragma mark - Label and Data Methods
@@ -185,7 +189,7 @@
                     diaperLabel = [diaperLabel capitalizedString];
                     
                     
-                    NSLog(@"THIS IS DIAPER, %@", object.objectId);
+                 
                     
                     self.lastDiaperTypeLabel.text = diaperLabel;
                     
@@ -268,10 +272,7 @@
             NSLog(@"NOT DONE");        }
     }];
     
-    
-    [self setLatestLabelsByQuery:@"DIAPER"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"SLEEP"];
+    [self updateAllLabels];
 }
 
 
@@ -288,10 +289,7 @@
    }];
 
     
-    [self setLatestLabelsByQuery:@"DIAPER"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"SLEEP"];
-
+    [self updateAllLabels];
 }
 
 
@@ -325,10 +323,7 @@
     
     
     
-    [self setLatestLabelsByQuery:@"DIAPER"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"SLEEP"];
-   
+     [self updateAllLabels];
     
 }
 
@@ -351,10 +346,7 @@
         }
     }];
 
-    
-    [self setLatestLabelsByQuery:@"DIAPER"];
-    [self setLatestLabelsByQuery:@"FEED"];
-    [self setLatestLabelsByQuery:@"SLEEP"];
+    [self updateAllLabels];
 }
 
 

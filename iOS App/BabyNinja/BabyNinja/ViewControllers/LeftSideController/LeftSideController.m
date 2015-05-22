@@ -51,7 +51,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     //    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         _careTaker = careTaker;
-        NSLog(@"in left side controller%@",_careTaker.careTakerName);
+//        NSLog(@"in left side controller%@",_careTaker.careTakerName);
     }
     
     return self;
