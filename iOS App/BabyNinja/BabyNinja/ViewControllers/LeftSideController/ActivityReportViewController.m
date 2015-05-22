@@ -400,7 +400,7 @@ CGFloat const kJBBaseChartViewControllerAnimationDuration = 0.25f;
                      
                      for(int i=0;i<7;i++)
                          NSLog(@"count = %@",[count objectAtIndex:i]);
-                     
+ 
                      NSMutableArray *mutableLineCharts = [NSMutableArray array];
                      for (int lineIndex=0; lineIndex<JBLineChartLineCount; lineIndex++)
                      {

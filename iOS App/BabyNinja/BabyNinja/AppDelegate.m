@@ -27,6 +27,8 @@
     [Parse setApplicationId:@"0iY4J5cRhjyh2vwkMcfLlQCTnalQ4JdNTtGyAlkg"
                   clientKey:@"Gkj3LuUho7ejgdHjls0nVEZXkeqM83aKCdAvKTmd"];
     
+
+    
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [FBSDKLoginButton class];
 //    [FBSDKLoginView class];
@@ -50,7 +52,7 @@
 -(void)initiateUserDefaultVarialbles{
     
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
-   NSLog(@"%@",[[Utility sharedUtility] userDefaultForKey:DiaperCount]) ;
+//   NSLog(@"%@",[[Utility sharedUtility] userDefaultForKey:DiaperCount]) ;
 }
 
 
