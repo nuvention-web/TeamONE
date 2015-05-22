@@ -42,7 +42,7 @@
     label.text = @"You can also sign up with:";
     label.textColor = [UIColor grayColor];
     label.textAlignment = NSTextAlignmentCenter;
-    [self.logInView addSubview:label];
+//    [self.logInView addSubview:label];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profileUpdated:) name:FBSDKProfileDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logoutButtonPressed:) name:ULogoutNotification object:nil];
     if ([FBSDKAccessToken currentAccessToken]) {
@@ -64,8 +64,8 @@
     [self.logInView.signUpButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 400, 200.0f, 40.0f)];
     label.frame = CGRectMake((self.view.frame.size.width -250)/2, 460, 250, 20);
 
-    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 490, 200.0f, 40.0f)];
-    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 540, 200.0f, 40.0f)];
+//    [self.logInView.facebookButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 490, 200.0f, 40.0f)];
+//    [self.logInView.twitterButton setFrame:CGRectMake((self.view.frame.size.width -200)/2, 540, 200.0f, 40.0f)];
     
 
 }
@@ -234,7 +234,8 @@ didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
     
     self.logInView.dismissButton.hidden = YES;
     
-    self.logInView.facebookButton.enabled = YES;
+    self.logInView.facebookButton.hidden = YES;
+    self.logInView.twitterButton.hidden = YES;
 
     self.logInView.logInButton.enabled = YES;
     

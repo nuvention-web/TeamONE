@@ -24,7 +24,7 @@
     [super viewDidLoad];
     [self hideEverything:YES];
 
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOut) name:ULogoutNotification object:nil];
 
 }
 
@@ -62,7 +62,7 @@
                     
                     
                     [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
-                    
+//                    [self.navigationController pushViewController:[self addSideViewController:careTaker] animated:YES];
              //       NSLog(@"Successfully retrieved %@",baby.babyName);
                 
             }
@@ -272,6 +272,11 @@
     NSLog(@"User dismissed the signUpViewController");
 }
 
+-(void)signOut{
+    [PFUser logOut];
+    [self.navigationController popViewControllerAnimated:YES];
+    [self presentLoginScreen];
+}
 
 
 

@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lastDiaperActivityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastDiaperTypeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastFeedTypeLabel;
+@property (nonatomic, strong) AIViewController *activityIndicator;
 
 @end
 
@@ -53,6 +54,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOutPressed) name:ULogoutNotification object:nil];
     returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
     isBreastMode = NO;
@@ -87,7 +89,14 @@
 }
 
 
-
+-(void)signOutPressed{
+    [self showSpinnerWithMessage:@"Signing Out...."];
+    [NSTimer scheduledTimerWithTimeInterval:3.0
+                                     target:self
+                                   selector:@selector(stopSpinner)
+                                   userInfo:nil
+                                    repeats:NO];
+}
 
 -(void)updateAllLabels{
     [self setLatestLabelsByQuery:@"DIAPER"];
@@ -571,6 +580,31 @@
     tickImageView.tag = 100;
     [button addSubview:tickImageView];
     
+}
+
+-(void)showSpinnerWithMessage:(NSString*)spinnerMessage
+{
+    //    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [self.view setUserInteractionEnabled:NO];
+    if (!self.activityIndicator) {
+        self.activityIndicator = [[AIViewController alloc] initToShowOnView:self.view WithSpinnerLabelText:spinnerMessage];
+        [self.activityIndicator setBackgroundOpacity:0.2f];
+    }
+    
+    [self.activityIndicator startAnimatingSpinnerWithMessage:spinnerMessage];
+    //    [self.window bringSubviewToFront:self.activityIndicator.view];
+}
+
+-(void)stopSpinner
+{
+    if (self.activityIndicator != nil) {
+        [self.activityIndicator stopAnimatingSpinner];
+    }
+    
+    self.activityIndicator = nil;
+    [self.view setUserInteractionEnabled:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 
 @end
