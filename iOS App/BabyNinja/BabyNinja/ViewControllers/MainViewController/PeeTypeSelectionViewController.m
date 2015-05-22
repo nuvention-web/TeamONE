@@ -27,9 +27,9 @@
 
 -(void)sendPeeToParse:(const NSString *)peeColor{
     
-    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
+    Activity* newActivity = [Activity returnActivityWithAttibutes:@"DIAPER" :@"SOMEID"];
     newActivity = [Diapers returnPeeDiapierObject:peeColor];
-     [self.delegate peeTypeRecorded:newActivity];
+    [self.delegate peeTypeRecorded:newActivity];
     
 //    [newActivity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 //        if (succeeded) {

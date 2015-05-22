@@ -39,7 +39,7 @@
     Diapers *newPeeObject = [[Diapers alloc] init];
     newPeeObject.color = peeColor;
     newPeeObject.poopTexture = @"";
-    newPeeObject.type = TYPE_DIAPERS_PEE;
+    newPeeObject.type = @"PEE";
     return newPeeObject;
 }
 

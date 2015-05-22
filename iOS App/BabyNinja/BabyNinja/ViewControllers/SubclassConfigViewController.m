@@ -33,7 +33,7 @@
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
         //self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
-        NSLog(@"%@",[PFUser currentUser].objectId);
+    //    NSLog(@"%@",[PFUser currentUser].objectId);
         
         PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
         [query whereKey:@"careTakerId" equalTo:[PFUser currentUser].objectId];
@@ -42,7 +42,7 @@
             
                 // The find succeeded.
                 
-                NSLog(@"the object%@",object);
+        //        NSLog(@"the object%@",object);
                 //                if(object == nil)
                 //                    [self showBabyVitalsScreen];
                 //                else
@@ -63,7 +63,7 @@
                     
                     [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
                     
-                    NSLog(@"Successfully retrieved %@",baby.babyName);
+             //       NSLog(@"Successfully retrieved %@",baby.babyName);
                 
             }
         }];

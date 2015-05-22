@@ -171,6 +171,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:className];
     [query whereKey:@"objectId" equalTo:objectIDString];
+    [query orderByDescending:@"createdAt"];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{ 
@@ -182,7 +183,9 @@
                     NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
                     diaperLabel = [diaperLabel lowercaseString];
                     diaperLabel = [diaperLabel capitalizedString];
-            
+                    
+                    
+                    NSLog(@"THIS IS DIAPER, %@", object.objectId);
                     
                     self.lastDiaperTypeLabel.text = diaperLabel;
                     
@@ -266,7 +269,9 @@
     }];
     
     
-    
+    [self setLatestLabelsByQuery:@"DIAPER"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"SLEEP"];
 }
 
 
@@ -281,6 +286,11 @@
             NSLog(@"NOT DONE");
         }
    }];
+
+    
+    [self setLatestLabelsByQuery:@"DIAPER"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"SLEEP"];
 
 }
 
@@ -313,6 +323,13 @@
         }
     }];
     
+    
+    
+    [self setLatestLabelsByQuery:@"DIAPER"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"SLEEP"];
+   
+    
 }
 
 
@@ -333,7 +350,14 @@
             NSLog(@"NOT DONE");
         }
     }];
+
+    
+    [self setLatestLabelsByQuery:@"DIAPER"];
+    [self setLatestLabelsByQuery:@"FEED"];
+    [self setLatestLabelsByQuery:@"SLEEP"];
 }
+
+
 
 
 

@@ -98,7 +98,7 @@ PeeTypeSelectionViewController *peeTypeView;
     
     NSLog(@"the parent: %@",[FBSDKProfile currentProfile].userID);
     
-    Activity* newActivity = [Activity returnActivityWithAttibutes:TYPE_DIAPERS_PEE :@"SOMEID"];
+    Activity* newActivity = [Activity returnActivityWithAttibutes:@"DIAPER" :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPeeDiapierObject:nil];
     [self.delegate diaperChangeRecorded:newActivity];
 
