@@ -43,7 +43,6 @@
     
     if(self){
         self.careTaker = careTaker;
-        
     }
     return self;
 }
@@ -53,8 +52,6 @@
 
 - (void)viewDidLoad
 {
-    
-
     [super viewDidLoad];
     returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
@@ -87,7 +84,6 @@
     self.radialFeedMenu = [[ALRadialMenu alloc] init];
     self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
-
 }
 
 
@@ -173,7 +169,6 @@
 -(void)getTypeByObjectID:(NSString*)objectIDString :(NSString*)className :(NSNumber*)sleepStartTime{
     
     __block NSString *detailActivityType = [[NSString alloc] init];
-//    NSLog(@"USING OBJECT ID %@", objectIDString);
     
     PFQuery *query = [PFQuery queryWithClassName:className];
     [query whereKey:@"objectId" equalTo:objectIDString];
@@ -189,17 +184,12 @@
                     NSString *diaperLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
                     diaperLabel = [diaperLabel lowercaseString];
                     diaperLabel = [diaperLabel capitalizedString];
-                    
-                    
-                 
-                    
                     self.lastDiaperTypeLabel.text = diaperLabel;
                     
                 }else if ([className isEqualToString:@"feed"]){
                     NSString *feedLabel = [NSString stringWithFormat:@"Type: %@", detailActivityType];
                     feedLabel = [feedLabel lowercaseString];
                     feedLabel = [feedLabel capitalizedString];
-                   
                     self.lastFeedTypeLabel.text = feedLabel;
                     
                 }else if ([className isEqualToString:@"Sleep"]){
@@ -207,15 +197,13 @@
                     // [self getLabelByTimeStamp:sleepStartTime];
                     //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
                     //                self.lastSleepActivityLabel.text = newLabel;
-                    
                 }
-                
-                
             });
             
         });
     }];
 }
+
 
 
 -(NSString*)getLabelByTimeStamp:(NSString*)activityTime{
@@ -235,18 +223,13 @@
 
 
 -(NSString*)getLabel:(Activity*)activity{
-    //    Feed *getFeedObject = activity.feedObject;
     NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activity.timeStamp];
     NSTimeInterval _interval=[myTimeStamp doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
-    
-    
     NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
     NSString *mySmallerString = [reTimeStamp substringToIndex:16];
-    //    NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
-    
 }
 
 
@@ -257,8 +240,6 @@
 
 
 -(void)diaperChangeRecorded:(Activity*)activity{
-    
-    
     NSString *myDateString =[self getLabel:activity];
     NSString *feedLabel = [NSString stringWithFormat:@"Last Change: %@, Type: %@", myDateString, activity.activityType];
     activity.babyId = getBaby.objectId;
@@ -323,10 +304,7 @@
         }
     }];
     
-    
-    
      [self updateAllLabels];
-    
 }
 
 
@@ -361,8 +339,6 @@
 
 - (IBAction)poopButtonPressed:(id)sender {
 
-    
-    
     DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
     controller2.delegate = self;
     [self.navigationController pushViewController:controller2 animated:YES];
@@ -372,11 +348,7 @@
 
 
 - (IBAction)feedButtonPressed:(id)sender {
-    //    [self changeFeedButtonStateImage];
-    //    [self.radialFeedMenu buttonsWillAnimateFromButton:sender withFrame:self.feedButton.frame inView:self.view];
-    //    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"You have been doing a good job in feeding the baby at regular intervals. Congratulations. " delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles: nil];
-    //    [alert show];
-    
+
     if(isBreastMode){
         BreastSideViewController *controller = [[BreastSideViewController alloc]init];
         controller.delegate =self;
@@ -425,14 +397,6 @@
     SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
     sleep.delegate = self;
     [self presentViewController:sleep animated:YES completion:nil];
-//    if(self.sleepOrAwakeButton.tag==0){
-//        self.sleepOrAwakeButton.tag = 1 ; //setting the mode to selected
-//        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"awake"] forState:UIControlStateNormal];
-//    } else {
-//        self.sleepOrAwakeButton.tag = 0 ; //setting the mode to unselected
-//        [self removeTheBlackOutBackground];
-//        [self.sleepOrAwakeButton setImage:[UIImage imageNamed:@"sleep"] forState:UIControlStateNormal];
-//    }
     
 }
 
