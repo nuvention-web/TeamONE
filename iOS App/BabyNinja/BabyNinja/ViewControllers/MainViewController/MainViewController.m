@@ -125,6 +125,7 @@
         if([activityType isEqualToString:@"SLEEP"]){
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
+                self.lastSleepActivityLabel.text = @"Last Sleep: -";
             }else{
                 Sleep *currentSleep = object[@"sleepObject"];
                 [self  getTypeByObjectID:currentSleep.objectId :@"Sleep" : object[@"timeStamp"]];
@@ -209,11 +210,9 @@
                     
                 }else if ([className isEqualToString:@"Sleep"]){
                       NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
-//                     [self getLabelByTimeStampByNumber:sleepStartTime];
-//                     [self getLabelByTimeStampByNumber:object[@"finishTime"]];
                       self.lastSleepActivityLabel.text = [self getFinalTimeForSleep:[self getLabelByTimeStampByNumber:sleepStartTime] : [self getLabelByTimeStampByNumber:sleepStartTime]];
-                    //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
-                    //                self.lastSleepActivityLabel.text = newLabel;
+
+
                 }
             });
             
