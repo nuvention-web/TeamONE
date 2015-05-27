@@ -53,6 +53,10 @@
 
 - (void)viewDidLoad
 {
+ 
+
+    
+    
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOutPressed) name:ULogoutNotification object:nil];
     returnString = [[NSString alloc] init];
@@ -86,6 +90,9 @@
     self.radialFeedMenu = [[ALRadialMenu alloc] init];
     self.radialFeedMenu.delegate = self;
     [self.view addSubview:self.openDrawerButton];
+    
+
+    
 }
 
 
@@ -406,8 +413,10 @@
 - (IBAction)sleepOrAwakeButtonPressed:(id)sender {
     
     SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
-    sleep.delegate = self;
-    [self presentViewController:sleep animated:YES completion:nil];
+    SleepModeViewController *newSleepScreen = [[SleepModeViewController alloc] initWithBabyName:getBaby.babyName];
+    newSleepScreen.delegate = self;
+    [self presentViewController:newSleepScreen animated:YES completion:nil];
+//    NSLog(@"this is the tester: %@",    );
     
 }
 
