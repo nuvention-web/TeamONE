@@ -142,15 +142,28 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     if(indexPath.section==0){
         if(indexPath.row==0){
             BabyProfileCell *profileCell = (BabyProfileCell *)cell;
+            PFFile *file = [(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyImageURL];
+
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                
+                [profileCell.profileImageView setImage:[UIImage imageWithData:data]];
+                
+                
+            }];
+
             profileCell.nameLabel.text = [(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyName];
             
             profileCell.ageLabel.text= [self calculateTheBabyAgeWithDOB:[(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyDOB]];
+                
+                
 
             
             
             [profileCell configureCell];
             
+           
             return profileCell;
+        
         } else {
             CareTakersListCell *profileCell = (CareTakersListCell *)cell;
             [profileCell configureCell];
