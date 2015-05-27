@@ -131,7 +131,8 @@
         
         if([activityType isEqualToString:@"FEED"]){
             if(object[@"timeStamp"] == nil){
-                newLabel = @"Last Sleep: -";
+                newLabel = @"Last Feed: -";
+                self.lastFeedTypeLabel.text = @"-";
                 self.lastFeedActivityLabel.text = newLabel;
             }else{
                 Feed *currentFeed = object[@"feedObject"];
@@ -153,8 +154,9 @@
         
         if([activityType isEqualToString:@"DIAPER"]){
             if(object[@"timeStamp"] == nil){
-                newLabel = @"Last Sleep: -";
+                newLabel = @"Last Diaper Change: -";
                 self.lastDiaperActivityLabel.text = newLabel;
+                self.lastDiaperTypeLabel.text = @"-";
                 
             }else{
                 Diapers *currentDiaper = object[@"diaperObject"];
