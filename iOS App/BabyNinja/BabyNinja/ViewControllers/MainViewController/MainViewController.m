@@ -209,7 +209,20 @@
                     self.lastFeedTypeLabel.text = feedLabel;
                     
                 }else if ([className isEqualToString:@"Sleep"]){
-                      NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
+                    NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
+                     /////////////////// TESTER FOR SPECIFIC DATES/////////////////
+                    
+
+                    NSTimeInterval _interval= [sleepStartTime doubleValue];
+                    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+                    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+                    [formatter setLocale:[NSLocale currentLocale]];
+                    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+                    NSString *dateString = [formatter stringFromDate:date];
+                    NSLog(@"FINAL TIME TESTER ** %@", dateString);
+                    
+                    /////////////////////////////////////////////////////////
+                    
                       self.lastSleepActivityLabel.text = [self getFinalTimeForSleep:[self getLabelByTimeStampByNumber:sleepStartTime] : [self getLabelByTimeStampByNumber:sleepStartTime]];
 
 
@@ -246,11 +259,15 @@
 //    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
     NSTimeInterval _interval=[activityTime doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *dateString = [formatter stringFromDate:date];
     
     
-    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
-    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
-    NSLog(@"%@", mySmallerString);
+//    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [dateString substringToIndex:16];
+  //  NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
     
@@ -262,10 +279,14 @@
     NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
     NSTimeInterval _interval=[myTimeStamp doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *dateString = [formatter stringFromDate:date];
     
     
-    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
-    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+//    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [dateString substringToIndex:16];
     //    NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
@@ -393,6 +414,7 @@
     DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
     controller2.delegate = self;
     [self.navigationController pushViewController:controller2 animated:YES];
+    [self updateAllLabels];
 }
 
 
@@ -409,6 +431,8 @@
         controller.delegate =self;
         [self.navigationController pushViewController:controller animated:YES];
     }
+    
+    [self updateAllLabels];
 }
 
 
@@ -428,6 +452,7 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
+   [self updateAllLabels];
 }
 
 -(void)changeFeedButtonStateImage{
