@@ -58,7 +58,9 @@
     // Do any additional setup after loading the view from its nib.
     
     
-    NSLog(@"START: %@",    [NSDate date] );
+    
+    //COMMNETED COULD NEED THIS FOR LATER
+    //NSLog(@"START: %@",    [NSDate date] );
     
     
 }

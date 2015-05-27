@@ -54,9 +54,6 @@
 - (void)viewDidLoad
 {
  
-
-    
-    
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOutPressed) name:ULogoutNotification object:nil];
     returnString = [[NSString alloc] init];
@@ -212,7 +209,9 @@
                     
                 }else if ([className isEqualToString:@"Sleep"]){
                       NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
-                    // [self getLabelByTimeStamp:sleepStartTime];
+//                     [self getLabelByTimeStampByNumber:sleepStartTime];
+//                     [self getLabelByTimeStampByNumber:object[@"finishTime"]];
+                      self.lastSleepActivityLabel.text = [self getFinalTimeForSleep:[self getLabelByTimeStampByNumber:sleepStartTime] : [self getLabelByTimeStampByNumber:sleepStartTime]];
                     //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
                     //                self.lastSleepActivityLabel.text = newLabel;
                 }
@@ -222,6 +221,41 @@
     }];
 }
 
+
+-(NSString*)getFinalTimeForSleep:(NSString*)startTime :(NSString*)finishTime{
+    NSString *returnLabel = [[NSString alloc] init];
+    NSString *startDate = [startTime substringToIndex:10];
+    NSString *finishDate = [finishTime substringToIndex:10];
+    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(11,5)];
+    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(11,5)];
+
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
+
+    
+    if([startDate isEqualToString:finishDate]){
+        returnLabel = [[NSString alloc] initWithFormat:@"Last Sleep: %@ from %@ to %@", startDate, startDetailTime, finishDetailTime];
+    }else{
+        returnLabel = [[NSString alloc] initWithFormat:@"Last Sleep: %@ from %@ to Next Day %@", startDate, startDetailTime, finishDetailTime];
+    }
+    return returnLabel;
+}
+
+
+-(NSString*)getLabelByTimeStampByNumber:(NSNumber*)activityTime{
+//    Feed *getFeedObject = activity.feedObject;
+//    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
+    NSTimeInterval _interval=[activityTime doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    
+    
+    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+    NSLog(@"%@", mySmallerString);
+    
+    return mySmallerString;
+    
+}
 
 
 -(NSString*)getLabelByTimeStamp:(NSString*)activityTime{
@@ -412,11 +446,11 @@
 
 - (IBAction)sleepOrAwakeButtonPressed:(id)sender {
     
-    SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
+//    SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
     SleepModeViewController *newSleepScreen = [[SleepModeViewController alloc] initWithBabyName:getBaby.babyName];
     newSleepScreen.delegate = self;
     [self presentViewController:newSleepScreen animated:YES completion:nil];
-//    NSLog(@"this is the tester: %@",    );
+
     
 }
 
