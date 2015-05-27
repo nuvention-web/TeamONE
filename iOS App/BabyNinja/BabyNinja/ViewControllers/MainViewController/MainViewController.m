@@ -396,12 +396,13 @@
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
+           [self updateAllLabels];
         } else {
             NSLog(@"NOT DONE");
         }
     }];
 
-    [self updateAllLabels];
+
 }
 
 
