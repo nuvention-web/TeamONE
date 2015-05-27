@@ -54,9 +54,6 @@
 - (void)viewDidLoad
 {
  
-
-    
-    
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOutPressed) name:ULogoutNotification object:nil];
     returnString = [[NSString alloc] init];
@@ -128,6 +125,7 @@
         if([activityType isEqualToString:@"SLEEP"]){
             if(object[@"timeStamp"] == nil){
                 newLabel = @"Last Sleep: -";
+                self.lastSleepActivityLabel.text = @"Last Sleep: -";
             }else{
                 Sleep *currentSleep = object[@"sleepObject"];
                 [self  getTypeByObjectID:currentSleep.objectId :@"Sleep" : object[@"timeStamp"]];
@@ -211,10 +209,23 @@
                     self.lastFeedTypeLabel.text = feedLabel;
                     
                 }else if ([className isEqualToString:@"Sleep"]){
-                      NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
-                    // [self getLabelByTimeStamp:sleepStartTime];
-                    //                newLabel = [NSString stringWithFormat:@"Last Sleep: %@",myDateString];
-                    //                self.lastSleepActivityLabel.text = newLabel;
+                    NSLog(@"START TIME %@ and finish %@", sleepStartTime, object[@"finishTime"]);
+                     /////////////////// TESTER FOR SPECIFIC DATES/////////////////
+                    
+
+                    NSTimeInterval _interval= [sleepStartTime doubleValue];
+                    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+                    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+                    [formatter setLocale:[NSLocale currentLocale]];
+                    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+                    NSString *dateString = [formatter stringFromDate:date];
+                    NSLog(@"FINAL TIME TESTER ** %@", dateString);
+                    
+                    /////////////////////////////////////////////////////////
+                    
+                      self.lastSleepActivityLabel.text = [self getFinalTimeForSleep:[self getLabelByTimeStampByNumber:sleepStartTime] : [self getLabelByTimeStampByNumber:sleepStartTime]];
+
+
                 }
             });
             
@@ -223,16 +234,59 @@
 }
 
 
+-(NSString*)getFinalTimeForSleep:(NSString*)startTime :(NSString*)finishTime{
+    NSString *returnLabel = [[NSString alloc] init];
+    NSString *startDate = [startTime substringToIndex:10];
+    NSString *finishDate = [finishTime substringToIndex:10];
+    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(11,5)];
+    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(11,5)];
+
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
+
+    
+    if([startDate isEqualToString:finishDate]){
+        returnLabel = [[NSString alloc] initWithFormat:@"Last Sleep: %@ from %@ to %@", startDate, startDetailTime, finishDetailTime];
+    }else{
+        returnLabel = [[NSString alloc] initWithFormat:@"Last Sleep: %@ from %@ to Next Day %@", startDate, startDetailTime, finishDetailTime];
+    }
+    return returnLabel;
+}
+
+
+-(NSString*)getLabelByTimeStampByNumber:(NSNumber*)activityTime{
+//    Feed *getFeedObject = activity.feedObject;
+//    NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
+    NSTimeInterval _interval=[activityTime doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *dateString = [formatter stringFromDate:date];
+    
+    
+//    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [dateString substringToIndex:16];
+  //  NSLog(@"%@", mySmallerString);
+    
+    return mySmallerString;
+    
+}
+
 
 -(NSString*)getLabelByTimeStamp:(NSString*)activityTime{
     //    Feed *getFeedObject = activity.feedObject;
     NSString *myTimeStamp = [NSString stringWithFormat:@"%@", activityTime];
     NSTimeInterval _interval=[myTimeStamp doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *dateString = [formatter stringFromDate:date];
     
     
-    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
-    NSString *mySmallerString = [reTimeStamp substringToIndex:16];
+//    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
+    NSString *mySmallerString = [dateString substringToIndex:16];
     //    NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
@@ -269,11 +323,12 @@
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
+           [self updateAllLabels];
         } else {
             NSLog(@"NOT DONE");        }
     }];
     
-    [self updateAllLabels];
+
 }
 
 
@@ -284,13 +339,14 @@
    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
+           [self updateAllLabels];
         } else {
             NSLog(@"NOT DONE");
         }
    }];
 
     
-    [self updateAllLabels];
+
 }
 
 
@@ -317,12 +373,13 @@
     [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
+           [self updateAllLabels];
         } else {
             NSLog(@"NOT DONE");
         }
     }];
     
-     [self updateAllLabels];
+
 }
 
 
@@ -360,6 +417,7 @@
     DiaperChangeViewController *controller2 = [[DiaperChangeViewController alloc]init];
     controller2.delegate = self;
     [self.navigationController pushViewController:controller2 animated:YES];
+    [self updateAllLabels];
 }
 
 
@@ -376,6 +434,8 @@
         controller.delegate =self;
         [self.navigationController pushViewController:controller animated:YES];
     }
+    
+    [self updateAllLabels];
 }
 
 
@@ -395,6 +455,7 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Diaper Alert!" message:@"You are left with just 8 diapers. Order more!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alert show];
     }
+   [self updateAllLabels];
 }
 
 -(void)changeFeedButtonStateImage{
@@ -412,11 +473,11 @@
 
 - (IBAction)sleepOrAwakeButtonPressed:(id)sender {
     
-    SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
+//    SleepModeViewController *sleep = [[SleepModeViewController alloc]init];
     SleepModeViewController *newSleepScreen = [[SleepModeViewController alloc] initWithBabyName:getBaby.babyName];
     newSleepScreen.delegate = self;
     [self presentViewController:newSleepScreen animated:YES completion:nil];
-//    NSLog(@"this is the tester: %@",    );
+
     
 }
 
