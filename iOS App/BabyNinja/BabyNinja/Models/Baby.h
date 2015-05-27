@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
+#import "Parse/PFFile.h"
 #import "Constants.h"
 
 @interface Baby : PFObject<PFSubclassing>
 
 @property (nonatomic, strong) NSString *babyName;
 @property (nonatomic, strong) NSString *babyId;
-@property (nonatomic, strong) NSString *babyImageURL;
+@property (nonatomic, strong) PFFile *babyImageURL;
 @property (nonatomic, strong) NSDate *babyDOB;
 @property (nonatomic, strong) NSString *babyGender;
 @property (nonatomic, strong) NSNumber *babyWeight;

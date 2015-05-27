@@ -141,6 +141,12 @@
     [makeBabyObject.caretakers addObject:self.careTaker];
     NSString *myID = [makeBabyObject objectId];
     makeBabyObject.babyId = myID;
+    //makeBabyObject.babyImageURL = self.babyImageView.image;
+    NSData *imageData = UIImageJPEGRepresentation(self.babyImageView.image, 1.0);
+    PFFile *imageFile = [PFFile fileWithName:@"img.png" data:imageData];
+    [imageFile saveInBackground];
+    
+    makeBabyObject.babyImageURL = imageFile;
     [makeBabyObject save];
     
     [self presentViewController:[self addSideViewController] animated:YES completion:nil];
