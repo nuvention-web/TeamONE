@@ -68,7 +68,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     self.tableView.dataSource = self;
     
     [self.view addSubview:self.tableView];
-    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Timeline",@"Settings", @"Logout", nil];
+    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Timeline", @"Logout", nil]; //,@"Settings"
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kICSColorsViewControllerCellReuseId];
     [self.tableView registerClass:[BabyProfileCell class] forCellReuseIdentifier:@"babyCell"];
     [self.tableView registerClass:[CareTakersListCell class] forCellReuseIdentifier:@"careTakerCell"];
@@ -229,8 +229,10 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 {
     if(indexPath.section == 1){
         if(indexPath.row==2){
-            SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
-            [self.navigationController pushViewController:settings animated:YES];
+            [[NSNotificationCenter defaultCenter] postNotificationName:ULogoutNotification object:nil];
+            [self.drawer close];
+//            SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
+//            [self.navigationController pushViewController:settings animated:YES];
         } else if(indexPath.row==0){
             ReportListViewController *reports = [[ReportListViewController alloc]initWithCareTaker:_careTaker];
             [self.navigationController pushViewController:reports animated:YES];
@@ -238,8 +240,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
             TimelineViewController *timeline = [[TimelineViewController alloc]init];
             [self presentViewController:timeline animated:YES completion:nil];
         } else if(indexPath.row ==3){
-            [[NSNotificationCenter defaultCenter] postNotificationName:ULogoutNotification object:nil];
-            [self.drawer close];
+
         }
     }
     
