@@ -107,8 +107,11 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65Y-He-Zcw">
                     <rect key="frame" x="39" y="324" width="303" height="36"/>
+                    <color key="backgroundColor" red="0.12156862745098039" green="0.43137254901960786" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <state key="normal" title="Date of Birth"/>
+                    <state key="normal" title="Date of Birth">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="babyDOBButtonPressed:" destination="-1" eventType="touchUpInside" id="Kf3-dH-Lr0"/>
                     </connections>

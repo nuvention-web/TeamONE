@@ -27,7 +27,7 @@
     [Parse setApplicationId:@"0iY4J5cRhjyh2vwkMcfLlQCTnalQ4JdNTtGyAlkg"
                   clientKey:@"Gkj3LuUho7ejgdHjls0nVEZXkeqM83aKCdAvKTmd"];
     
-
+    [Crittercism enableWithAppID:@"5546837a8172e25e67906b69"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [FBSDKLoginButton class];
