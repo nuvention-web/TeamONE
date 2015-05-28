@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/PFObject+Subclass.h>
+#import "Parse/PFFile.h"
 
 @interface CareTaker : PFObject <PFSubclassing>
 
@@ -17,7 +18,7 @@
 
 @property (nonatomic, strong) NSString *careTakerUsername;
 
-@property (nonatomic, strong) NSString *careTakerImageURL;
+@property (nonatomic, strong) PFFile *careTakerImageURL;
 
 @property (nonatomic, strong) NSDate *careTakerRelationToBaby;
 

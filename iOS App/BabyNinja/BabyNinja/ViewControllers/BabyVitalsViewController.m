@@ -14,6 +14,7 @@
 @interface BabyVitalsViewController (){
     BOOL didSetDOB;
     Baby *makeBabyObject;
+    BOOL isBabyImageEditMode;
 }
 
 @end
@@ -32,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isBabyImageEditMode = NO;
     
     NSLog(@"TESING IF MATCH ID: %@,",    self.careTaker.careTakerId);
 
@@ -52,8 +54,10 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    self.babyImageView.layer.cornerRadius = 90;
+    self.babyImageView.layer.cornerRadius = 75;
     self.babyImageView.clipsToBounds = YES;
+    self.careTakerImageView.layer.cornerRadius = 75;
+    self.careTakerImageView.clipsToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +78,13 @@
 - (IBAction)genderSegmentControlChanged:(id)sender {
 }
 
-- (IBAction)imageEditButtonPressed:(id)sender {
+- (IBAction)imageEditButtonPressed:(UIButton*)sender {
+    
+    if(sender.tag == 0)
+        isBabyImageEditMode = YES;
+    else
+        isBabyImageEditMode = NO;
+    
     UIAlertController *alertController = [UIAlertController
                                           alertControllerWithTitle:@"Edit Photo"
                                           message:@""
@@ -90,6 +100,7 @@
  
         }
     }] ;
+    
     UIAlertAction *choosePhotoAction = [UIAlertAction actionWithTitle:@"Choose Existing Photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         UIImagePickerController *imagePickController = [[UIImagePickerController alloc]init];
         imagePickController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -135,7 +146,6 @@
         makeBabyObject.babyGender = @"FEMALE";
         
     }
-    
 
     makeBabyObject.caretakers = [[NSMutableArray alloc] init];
     [makeBabyObject.caretakers addObject:self.careTaker];
@@ -145,6 +155,12 @@
     NSData *imageData = UIImageJPEGRepresentation(self.babyImageView.image, 1.0);
     PFFile *imageFile = [PFFile fileWithName:@"img.png" data:imageData];
     [imageFile saveInBackground];
+    
+    NSData *imageData1 = UIImageJPEGRepresentation(self.careTakerImageView.image, 1.0);
+    PFFile *imageFile1 = [PFFile fileWithName:@"img1.png" data:imageData1];
+    [imageFile1 saveInBackground];
+
+    self.careTaker.careTakerImageURL = imageFile1;
     
     makeBabyObject.babyImageURL = imageFile;
     [makeBabyObject save];
@@ -308,7 +324,11 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
-    self.babyImageView.image=image;
+    if(isBabyImageEditMode)
+        self.babyImageView.image=image;
+    else
+        self.careTakerImageView.image = image;
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

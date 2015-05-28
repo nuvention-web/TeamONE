@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *babyImageView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *careTakerImageView;
+
 @property (weak, nonatomic) IBOutlet UIButton *imageEditButton;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *genderSegmentControl;

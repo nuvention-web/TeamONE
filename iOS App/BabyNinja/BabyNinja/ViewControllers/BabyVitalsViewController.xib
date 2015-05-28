@@ -10,6 +10,7 @@
                 <outlet property="babyImageView" destination="oF4-mm-Pkn" id="TAo-yW-eCk"/>
                 <outlet property="babyNameTextField" destination="Xwh-c4-f9q" id="eoV-HK-VMH"/>
                 <outlet property="babyWeightTextField" destination="tZd-BF-KIS" id="izf-jS-LFR"/>
+                <outlet property="careTakerImageView" destination="70f-w8-QnA" id="Xdl-TT-a8y"/>
                 <outlet property="datePicker" destination="O2T-iR-Yv9" id="2uG-dw-zhw"/>
                 <outlet property="datePickerView" destination="1VA-tn-WYX" id="ibK-vt-PW3"/>
                 <outlet property="genderSegmentControl" destination="DOs-P4-8wJ" id="KVf-oq-xb2"/>
@@ -26,11 +27,11 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hL8-ML-liz">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
-                            <rect key="frame" x="97" y="67" width="180" height="180"/>
+                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="parent-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="70f-w8-QnA">
+                            <rect key="frame" x="15" y="90" width="150" height="150"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCr-bv-lqY">
-                            <rect key="frame" x="175" y="249" width="30" height="30"/>
+                            <rect key="frame" x="250" y="250" width="30" height="30"/>
                             <state key="normal" title="Edit">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -38,12 +39,36 @@
                                 <action selector="imageEditButtonPressed:" destination="-1" eventType="touchUpInside" id="mgp-3l-ID9"/>
                             </connections>
                         </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tY-A9-eiU">
+                            <rect key="frame" x="75" y="250" width="30" height="30"/>
+                            <state key="normal" title="Edit">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="imageEditButtonPressed:" destination="-1" eventType="touchUpInside" id="SLc-zg-bsE"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR BABY NINJA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNZ-pJ-BdP">
-                            <rect key="frame" x="48" y="38" width="285" height="27"/>
+                            <rect key="frame" x="45" y="26" width="285" height="27"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxA-L0-KPV">
+                            <rect key="frame" x="75" y="61" width="29" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Baby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrE-47-QIG">
+                            <rect key="frame" x="245" y="61" width="40" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
+                            <rect key="frame" x="198" y="90" width="150" height="150"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.354430447426069" blue="0.22012338838925782" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -60,8 +85,8 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-P4-8wJ">
                     <rect key="frame" x="39" y="288" width="303" height="29"/>
                     <segments>
-                        <segment title="Male"/>
-                        <segment title="Female"/>
+                        <segment title="Baby Boy"/>
+                        <segment title="Baby Girl"/>
                     </segments>
                     <connections>
                         <action selector="genderSegmentControlChanged:" destination="-1" eventType="valueChanged" id="Uui-l5-EHT"/>
@@ -109,7 +134,7 @@
                     <rect key="frame" x="39" y="324" width="303" height="36"/>
                     <color key="backgroundColor" red="0.12156862745098039" green="0.43137254901960786" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <state key="normal" title="Date of Birth">
+                    <state key="normal" title="Date of Birth of your Baby">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -122,5 +147,6 @@
     </objects>
     <resources>
         <image name="babyPlaceholder" width="128" height="128"/>
+        <image name="parent-placeholder" width="128" height="128"/>
     </resources>
 </document>
