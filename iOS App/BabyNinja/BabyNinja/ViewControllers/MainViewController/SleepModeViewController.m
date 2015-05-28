@@ -20,10 +20,26 @@
 
 @implementation SleepModeViewController
 
+
+-(id)initWithBabyName:(NSString*)babyname{
+    self = [super init];
+    
+    if(self){
+        self.babyName = babyname;
+    }
+    return self;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     sendActivity = [Activity returnActivityWithAttibutes:TYPE_SLEEP :@"SOME ID "];
     currentSleep = [[Sleep alloc] init];
+    
+    
+    NSString *fullLabelwithBaby = [[NSString alloc] initWithFormat:@"Baby %@ has been sleeping since", self.babyName];
+    self.sleepBabyLabel.text = fullLabelwithBaby;
 
     
     /// TO DEFINE IF SLEEP OR NAP
@@ -42,7 +58,9 @@
     // Do any additional setup after loading the view from its nib.
     
     
-    NSLog(@"START: %@",    [NSDate date] );
+    
+    //COMMNETED COULD NEED THIS FOR LATER
+    //NSLog(@"START: %@",    [NSDate date] );
     
     
 }

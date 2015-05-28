@@ -93,14 +93,16 @@ PeeTypeSelectionViewController *peeTypeView;
 
 
 - (IBAction)peeButtonPressed:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"We have just recorded your baby's PEE. Congratulations. " delegate:self cancelButtonTitle:@"Recorded" otherButtonTitles: nil];
-   [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Good Job!" message:@"We have just recorded your baby's PEE. Congratulations. " delegate:self cancelButtonTitle:@"Recorded" otherButtonTitles: nil];
+//   [alert show];
     
   //  NSLog(@"the parent: %@",[FBSDKProfile currentProfile].userID);
     
     Activity* newActivity = [Activity returnActivityWithAttibutes:@"DIAPER" :@"SOMEID"];
     newActivity.diaperObject = [Diapers returnPeeDiapierObject:nil];
     [self.delegate diaperChangeRecorded:newActivity];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 
     
 }

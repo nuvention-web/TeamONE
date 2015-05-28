@@ -20,6 +20,7 @@
 
 
 @interface MainViewController : UIViewController<ICSDrawerControllerChild, ICSDrawerControllerPresenting, ALRadialMenuDelegate>
+
 -(id)initWithCareTaker:(CareTaker*)careTaker;
 @property(nonatomic, weak) ICSDrawerController *drawer;
 @property (strong, nonatomic) ALRadialMenu *radialMenu;

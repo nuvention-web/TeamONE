@@ -33,12 +33,17 @@
     [super viewWillAppear:animated];
     if ([PFUser currentUser]) {
         //self.welcomeLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Welcome %@!", nil), [[PFUser currentUser] username]];
-    //    NSLog(@"%@",[PFUser currentUser].objectId);
+        
         
         PFQuery *query = [PFQuery queryWithClassName:@"CareTaker"];
+        
         [query whereKey:@"careTakerId" equalTo:[PFUser currentUser].objectId];
         [query includeKey:@"careTakerBabyArray"];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            
+            if (error) {
+                [self showBabyVitalsScreen];
+            }
             
                 // The find succeeded.
                 
@@ -180,7 +185,7 @@
 -(void)showBabyVitalsScreen{
     CareTaker *careTaker = [[CareTaker alloc]init];
     careTaker.careTakerName = [FBSDKProfile currentProfile].name;
-    careTaker.careTakerId = [FBSDKProfile currentProfile].userID;
+    careTaker.careTakerId = [PFUser currentUser].objectId;
     //    careTaker.careTakerGender = [FBSDKProfile currentProfile]
     BabyVitalsViewController *controller = [[BabyVitalsViewController alloc]initWithCareGiver:careTaker];
     [self presentViewController:controller animated:NO completion:nil];

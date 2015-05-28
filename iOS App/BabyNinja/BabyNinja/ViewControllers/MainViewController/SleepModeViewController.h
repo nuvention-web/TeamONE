@@ -19,5 +19,9 @@
 @property (nonatomic, assign) id <SleepActivityProtocol> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *durationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sleepBabyLabel;
+@property (weak, nonatomic) NSString *babyName;
 
+
+-(id)initWithBabyName:(NSString*)babyname;
 @end
