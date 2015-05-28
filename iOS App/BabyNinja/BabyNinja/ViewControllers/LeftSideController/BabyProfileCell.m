@@ -12,6 +12,8 @@
 
 -(void)configureCell{
     self.profileImageView.layer.cornerRadius = 40;
+    self.profileImageView.clipsToBounds = YES;
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
