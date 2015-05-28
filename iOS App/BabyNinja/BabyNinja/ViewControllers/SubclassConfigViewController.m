@@ -194,6 +194,8 @@
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
     NSLog(@"Failed to log in...");
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error!" message:@"Login Failed!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alert show];
 }
 
 // Sent to the delegate when the log in screen is dismissed.

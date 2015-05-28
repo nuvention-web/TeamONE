@@ -216,6 +216,11 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     }
     
     age =[age stringByAppendingString:@" young"];
+    
+    if(years==0 && months==0 && days==0){
+        age = @"Born Today";
+    }
+    
     return age;
 }
 
