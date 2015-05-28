@@ -33,6 +33,8 @@
 		2029C8DB1AEADD660086B506 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D71AEADD660086B506 /* JBChartView.m */; };
 		2029C8DC1AEADD660086B506 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8D91AEADD660086B506 /* JBLineChartView.m */; };
 		2029C8DF1AEADD730086B506 /* JBChartTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2029C8DE1AEADD730086B506 /* JBChartTableCell.m */; };
+		20320EE51B16D80000249E80 /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 20320EE31B16D80000249E80 /* dsym_upload.sh */; };
+		20320EE61B16D80000249E80 /* libCrittercism_v5_1_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20320EE41B16D80000249E80 /* libCrittercism_v5_1_3.a */; };
 		20354A581AAEACF400B732D0 /* SleepModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20354A561AAEACF400B732D0 /* SleepModeViewController.m */; };
 		20354A591AAEACF400B732D0 /* SleepModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20354A571AAEACF400B732D0 /* SleepModeViewController.xib */; };
 		203A499D1A809D9C00F02E56 /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A499A1A809D9C00F02E56 /* ICSDrawerController.m */; };
@@ -107,8 +109,6 @@
 		209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F41AA2D5F500463D41 /* ReportsListViewController.xib */; };
 		209753FA1AA3987600463D41 /* ReportScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209753F81AA3987600463D41 /* ReportScreenViewController.m */; };
 		209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209753F91AA3987600463D41 /* ReportScreenViewController.xib */; };
-		209F4AEE1B16C7B90059D73C /* dsym_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = 209F4AEC1B16C7B90059D73C /* dsym_upload.sh */; };
-		209F4AEF1B16C7B90059D73C /* libCrittercism_v5_1_3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 209F4AED1B16C7B90059D73C /* libCrittercism_v5_1_3.a */; };
 		20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */; };
 		20A02DCC1AAEB88B00A285C2 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */; };
 		20A29CAC1AE0B65F009936F5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A29CAB1AE0B65F009936F5 /* Constants.m */; };
@@ -235,6 +235,12 @@
 		2029C8E81AEAE2D40086B506 /* JBFontConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBFontConstants.h; sourceTree = "<group>"; };
 		2029C8E91AEAE2D40086B506 /* JBStringConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStringConstants.h; sourceTree = "<group>"; };
 		2029C8EA1AEAE2D40086B506 /* JBUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBUIConstants.h; sourceTree = "<group>"; };
+		20320EDF1B16D80000249E80 /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
+		20320EE01B16D80000249E80 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		20320EE11B16D80000249E80 /* CrittercismConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismConfig.h; sourceTree = "<group>"; };
+		20320EE21B16D80000249E80 /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
+		20320EE31B16D80000249E80 /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
+		20320EE41B16D80000249E80 /* libCrittercism_v5_1_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v5_1_3.a; sourceTree = "<group>"; };
 		20354A551AAEACF400B732D0 /* SleepModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SleepModeViewController.h; sourceTree = "<group>"; };
 		20354A561AAEACF400B732D0 /* SleepModeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SleepModeViewController.m; sourceTree = "<group>"; };
 		20354A571AAEACF400B732D0 /* SleepModeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SleepModeViewController.xib; sourceTree = "<group>"; };
@@ -355,12 +361,6 @@
 		209753F71AA3987600463D41 /* ReportScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportScreenViewController.h; sourceTree = "<group>"; };
 		209753F81AA3987600463D41 /* ReportScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportScreenViewController.m; sourceTree = "<group>"; };
 		209753F91AA3987600463D41 /* ReportScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportScreenViewController.xib; sourceTree = "<group>"; };
-		209F4AE81B16C7B90059D73C /* CRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRFilter.h; sourceTree = "<group>"; };
-		209F4AE91B16C7B90059D73C /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
-		209F4AEA1B16C7B90059D73C /* CrittercismConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismConfig.h; sourceTree = "<group>"; };
-		209F4AEB1B16C7B90059D73C /* CrittercismDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDelegate.h; sourceTree = "<group>"; };
-		209F4AEC1B16C7B90059D73C /* dsym_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dsym_upload.sh; sourceTree = "<group>"; };
-		209F4AED1B16C7B90059D73C /* libCrittercism_v5_1_3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCrittercism_v5_1_3.a; sourceTree = "<group>"; };
 		20A02DC81AAEB88B00A285C2 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		20A02DC91AAEB88B00A285C2 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 		20A02DCA1AAEB88B00A285C2 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
@@ -437,7 +437,7 @@
 				205B98351ACB34C600B5E3D5 /* CoreLocation.framework in Frameworks */,
 				205B98331ACB34BD00B5E3D5 /* CoreGraphics.framework in Frameworks */,
 				205B98311ACB34B400B5E3D5 /* CFNetwork.framework in Frameworks */,
-				209F4AEF1B16C7B90059D73C /* libCrittercism_v5_1_3.a in Frameworks */,
+				20320EE61B16D80000249E80 /* libCrittercism_v5_1_3.a in Frameworks */,
 				205B982F1ACB34AC00B5E3D5 /* AudioToolbox.framework in Frameworks */,
 				205B982D1ACB349F00B5E3D5 /* Accounts.framework in Frameworks */,
 				E3F680D71AEBF19400574631 /* FBSDKShareKit.framework in Frameworks */,
@@ -535,8 +535,8 @@
 		201024FA1A7B135F00F248F3 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				20320EDE1B16D80000249E80 /* CrittercismSDK */,
 				2029C8B21AEADC940086B506 /* JBChartView */,
-				209F4AE71B16C7B90059D73C /* CrittercismSDK */,
 				20F3BB2E1AA57DEA00C50831 /* TMCache */,
 				20B3A8791A84884300B4C8CC /* ALRadial */,
 				203A49B01A8165EE00F02E56 /* AFNetworking */,
@@ -662,6 +662,19 @@
 			);
 			name = Constants;
 			path = JBChartView/Constants;
+			sourceTree = "<group>";
+		};
+		20320EDE1B16D80000249E80 /* CrittercismSDK */ = {
+			isa = PBXGroup;
+			children = (
+				20320EDF1B16D80000249E80 /* CRFilter.h */,
+				20320EE01B16D80000249E80 /* Crittercism.h */,
+				20320EE11B16D80000249E80 /* CrittercismConfig.h */,
+				20320EE21B16D80000249E80 /* CrittercismDelegate.h */,
+				20320EE31B16D80000249E80 /* dsym_upload.sh */,
+				20320EE41B16D80000249E80 /* libCrittercism_v5_1_3.a */,
+			);
+			path = CrittercismSDK;
 			sourceTree = "<group>";
 		};
 		203A49981A809D9C00F02E56 /* ICSDrawerController */ = {
@@ -891,20 +904,6 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		209F4AE71B16C7B90059D73C /* CrittercismSDK */ = {
-			isa = PBXGroup;
-			children = (
-				209F4AE81B16C7B90059D73C /* CRFilter.h */,
-				209F4AE91B16C7B90059D73C /* Crittercism.h */,
-				209F4AEA1B16C7B90059D73C /* CrittercismConfig.h */,
-				209F4AEB1B16C7B90059D73C /* CrittercismDelegate.h */,
-				209F4AEC1B16C7B90059D73C /* dsym_upload.sh */,
-				209F4AED1B16C7B90059D73C /* libCrittercism_v5_1_3.a */,
-			);
-			name = CrittercismSDK;
-			path = TMCache/CrittercismSDK;
-			sourceTree = "<group>";
-		};
 		20B3A8791A84884300B4C8CC /* ALRadial */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,7 +1082,7 @@
 				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
-				209F4AEE1B16C7B90059D73C /* dsym_upload.sh in Resources */,
+				20320EE51B16D80000249E80 /* dsym_upload.sh in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
 				201EF87E1B0E81FC005D12BA /* UserVitalsViewController.xib in Resources */,
@@ -1377,6 +1376,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/External",
 					Libraries/TMCache/CrittercismSDK,
+					"$(PROJECT_DIR)/BabyNinja/External",
+					Libraries/CrittercismSDK,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1409,6 +1410,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BabyNinja/External",
 					Libraries/TMCache/CrittercismSDK,
+					"$(PROJECT_DIR)/BabyNinja/External",
+					Libraries/CrittercismSDK,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
