@@ -238,7 +238,7 @@
     NSString *returnLabel = [[NSString alloc] init];
     NSString *startDate = [startTime substringToIndex:10];
     NSString *finishDate = [finishTime substringToIndex:10];
-    NSString *newStartDetailTime = [startTime substringWithRange: NSMakeRange(0,5)];
+//    NSString *newStartDetailTime = [startTime substringWithRange: NSMakeRange(0,5)];
     NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(10,9)];
     NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(10,9)];
 
@@ -247,12 +247,12 @@
 //    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(11,5)];
 //    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(11,5)];
 
-    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
-    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
-    NSLog(@"TESTER FOR DETAIL START : %@ ", startDetailTime);
-    NSLog(@"TESTER FOR DETAIL START : %@ ", finishDetailTime);
-    NSLog(@"TESTER FOR DETAIL START : %@ ", newStartDetailTime);
-
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", startDetailTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", finishDetailTime);
+//    NSLog(@"TESTER FOR DETAIL START : %@ ", newStartDetailTime);
+//
 
     
     if([startDate isEqualToString:finishDate]){
