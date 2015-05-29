@@ -199,6 +199,8 @@
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithBool:NO] forKey:UDefaultLoggedIn];
     
     [self dismissViewControllerAnimated:YES completion:nil];
+
+    
 }
 
 #pragma mark FBSDKLoginButtonDelegate methods

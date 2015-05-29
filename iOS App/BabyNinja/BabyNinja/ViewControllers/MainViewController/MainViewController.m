@@ -217,7 +217,7 @@
                     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
                     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
                     [formatter setLocale:[NSLocale currentLocale]];
-                    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+                    [formatter setDateFormat:@"yyyy-MM-dd hh:mm aa"];
                     NSString *dateString = [formatter stringFromDate:date];
                     NSLog(@"FINAL TIME TESTER ** %@", dateString);
                     
@@ -238,11 +238,21 @@
     NSString *returnLabel = [[NSString alloc] init];
     NSString *startDate = [startTime substringToIndex:10];
     NSString *finishDate = [finishTime substringToIndex:10];
-    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(11,5)];
-    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(11,5)];
+    NSString *newStartDetailTime = [startTime substringWithRange: NSMakeRange(0,5)];
+    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(10,9)];
+    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(10,9)];
 
-//    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
-//    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
+//    NSString *startDate = [startTime substringToIndex:10];
+//    NSString *finishDate = [finishTime substringToIndex:10];
+//    NSString *startDetailTime = [startTime substringWithRange: NSMakeRange(11,5)];
+//    NSString *finishDetailTime = [finishTime substringWithRange: NSMakeRange(11,5)];
+
+    NSLog(@"TESTER FOR DETAIL START : %@ ", startTime);
+    NSLog(@"TESTER FOR DETAIL START : %@ ", finishTime);
+    NSLog(@"TESTER FOR DETAIL START : %@ ", startDetailTime);
+    NSLog(@"TESTER FOR DETAIL START : %@ ", finishDetailTime);
+    NSLog(@"TESTER FOR DETAIL START : %@ ", newStartDetailTime);
+
 
     
     if([startDate isEqualToString:finishDate]){
@@ -261,12 +271,12 @@
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [formatter setDateFormat:@"yyyy-MM-dd hh:mm aa"];//"MMMM dd, hh:mm aa"]; //"yyyy-MM-dd hh:mm aa"];
     NSString *dateString = [formatter stringFromDate:date];
     
     
 //    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
-    NSString *mySmallerString = [dateString substringToIndex:16];
+    NSString *mySmallerString = [dateString substringToIndex:19];
   //  NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
@@ -281,12 +291,12 @@
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
     [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [formatter setDateFormat: @"yyyy-MM-dd hh:mm aa"];//@"yyyy-MM-dd hh:mm AA"];
     NSString *dateString = [formatter stringFromDate:date];
     
     
 //    NSString *reTimeStamp = [NSString stringWithFormat:@"%@", date];
-    NSString *mySmallerString = [dateString substringToIndex:16];
+    NSString *mySmallerString = [dateString substringToIndex:19];
     //    NSLog(@"%@", mySmallerString);
     
     return mySmallerString;
