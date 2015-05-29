@@ -166,6 +166,23 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
         
         } else {
             CareTakersListCell *profileCell = (CareTakersListCell *)cell;
+            
+            //PFFile *file = [(Baby*)[self.careTaker.careTakerBabyArray objectAtIndex:0] babyImageURL];
+        
+            PFFile *file = self.careTaker.careTakerImageURL;
+            
+            [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                
+                [profileCell.careTaker1 setImage:[UIImage imageWithData:data]];
+                
+                
+            }];
+            
+            
+            
+            
+            
+           
             [profileCell configureCell];
             return profileCell;
         }
