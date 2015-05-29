@@ -66,7 +66,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="babyPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baby-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="oF4-mm-Pkn">
                             <rect key="frame" x="198" y="90" width="150" height="150"/>
                         </imageView>
                     </subviews>
@@ -146,7 +146,7 @@
         </view>
     </objects>
     <resources>
-        <image name="babyPlaceholder" width="128" height="128"/>
+        <image name="baby-placeholder" width="320" height="362"/>
         <image name="parent-placeholder" width="128" height="128"/>
     </resources>
 </document>

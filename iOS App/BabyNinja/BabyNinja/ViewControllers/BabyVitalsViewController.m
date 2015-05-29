@@ -16,6 +16,7 @@
     Baby *makeBabyObject;
     BOOL isBabyImageEditMode;
 }
+@property (nonatomic, strong) AIViewController *activityIndicator;
 
 @end
 
@@ -35,6 +36,7 @@
     [super viewDidLoad];
     isBabyImageEditMode = NO;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signoutPressed) name:ULogoutNotification object:nil];
     NSLog(@"TESING IF MATCH ID: %@,",    self.careTaker.careTakerId);
 
     
@@ -63,6 +65,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)signoutPressed{
+    [self showSpinnerWithMessage:@"Signing Out...."];
+    [NSTimer scheduledTimerWithTimeInterval:1.05
+                                     target:self
+                                   selector:@selector(stopSpinner)
+                                   userInfo:nil
+                                    repeats:NO];
 }
 
 /*
@@ -330,6 +341,31 @@
         self.careTakerImageView.image = image;
     
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)showSpinnerWithMessage:(NSString*)spinnerMessage
+{
+    //    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    [self.view setUserInteractionEnabled:NO];
+    if (!self.activityIndicator) {
+        self.activityIndicator = [[AIViewController alloc] initToShowOnView:self.view WithSpinnerLabelText:spinnerMessage];
+        [self.activityIndicator setBackgroundOpacity:0.2f];
+    }
+    
+    [self.activityIndicator startAnimatingSpinnerWithMessage:spinnerMessage];
+    //    [self.window bringSubviewToFront:self.activityIndicator.view];
+}
+
+-(void)stopSpinner
+{
+    if (self.activityIndicator != nil) {
+        [self.activityIndicator stopAnimatingSpinner];
+    }
+    
+    self.activityIndicator = nil;
+    [self.view setUserInteractionEnabled:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    //    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
 }
 
 @end
