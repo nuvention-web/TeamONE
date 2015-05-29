@@ -68,7 +68,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
     self.tableView.dataSource = self;
     
     [self.view addSubview:self.tableView];
-    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Timeline",@"Settings", @"Logout", nil];
+    self.actions = [[NSArray alloc] initWithObjects:@"Reports",@"Timeline", @"Logout", nil]; //,@"Settings"
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kICSColorsViewControllerCellReuseId];
     [self.tableView registerClass:[BabyProfileCell class] forCellReuseIdentifier:@"babyCell"];
     [self.tableView registerClass:[CareTakersListCell class] forCellReuseIdentifier:@"careTakerCell"];
@@ -228,7 +228,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 1){
-        if(indexPath.row==2){
+        if(indexPath.row==10){ /// made dummy change to remove setting from the menu
             SettingsTableViewController *settings = [[SettingsTableViewController alloc]init];
             [self.navigationController pushViewController:settings animated:YES];
         } else if(indexPath.row==0){
@@ -237,7 +237,7 @@ static NSString * const kICSColorsViewControllerCellReuseId = @"kICSColorsViewCo
         } else if(indexPath.row==1){
             TimelineViewController *timeline = [[TimelineViewController alloc]init];
             [self presentViewController:timeline animated:YES completion:nil];
-        } else if(indexPath.row ==3){
+        } else if(indexPath.row ==2){
             [[NSNotificationCenter defaultCenter] postNotificationName:ULogoutNotification object:nil];
             [self.drawer close];
         }
