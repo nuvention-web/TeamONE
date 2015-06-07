@@ -13,6 +13,7 @@
 #import "PoopTypeSelectionView.h"
 #import "FeedOuncesViewController.h"
 #import "BreastSideViewController.h"
+#import "FeedViewController.h"
 
 @interface MainViewController ()<DiaperChangeProtocol, BreastSideFeedDelegate, SleepActivityProtocol, FeedOuncesDelegate>{
     UIView *blackView;
@@ -58,7 +59,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signOutPressed) name:ULogoutNotification object:nil];
     returnString = [[NSString alloc] init];
     getBaby = self.careTaker.careTakerBabyArray[0];
-    isBreastMode = NO;
+    isBreastMode = YES;
     
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:12] forKey:DiaperCount];
     [[Utility sharedUtility] saveUserDefaultObject:[NSNumber numberWithInt:10] forKey:MinDiaperCount];
@@ -344,16 +345,31 @@
 
 -(void)breastFeedRecorded:(Activity*)activity{
     
-   [getBaby.activities addObject:activity];
+//   [getBaby.activities addObject:activity];
+//    activity.babyId = getBaby.objectId;
+//   [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (succeeded) {
+//            NSLog(@"DONE DONE");
+//           [self updateAllLabels];
+//        } else {
+//            NSLog(@"NOT DONE");
+//        }
+//   }];
+    
+    NSString *myDateString =[self getLabel:activity];
+    NSString *feedLabel = [NSString stringWithFormat:@"Last Feed: %@, Used: %@", myDateString, activity.activityType];
+    self.lastFeedActivityLabel.text = feedLabel;
     activity.babyId = getBaby.objectId;
-   [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    
+    [getBaby.activities addObject:activity];
+    [activity saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             NSLog(@"DONE DONE");
-           [self updateAllLabels];
+            [self updateAllLabels];
         } else {
             NSLog(@"NOT DONE");
         }
-   }];
+    }];
 
     
 
@@ -436,15 +452,19 @@
 
 - (IBAction)feedButtonPressed:(id)sender {
 
-    if(isBreastMode){
-        BreastSideViewController *controller = [[BreastSideViewController alloc]init];
-        controller.delegate =self;
-        [self.navigationController pushViewController:controller animated:YES];
-    }else {
-        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
-        controller.delegate =self;
-        [self.navigationController pushViewController:controller animated:YES];
-    }
+//    if(isBreastMode){
+//        BreastSideViewController *controller = [[BreastSideViewController alloc]init];
+//        controller.delegate =self;
+//        [self.navigationController pushViewController:controller animated:YES];
+//    }else {
+//        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+//        controller.delegate =self;
+//        [self.navigationController pushViewController:controller animated:YES];
+//    }
+    
+    FeedViewController *controller = [[FeedViewController alloc]init];
+   // controller.delegate = self; //Sneha should I add this?
+    [self.navigationController pushViewController:controller animated:YES];
     
     [self updateAllLabels];
 }

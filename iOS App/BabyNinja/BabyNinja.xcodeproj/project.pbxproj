@@ -129,6 +129,8 @@
 		20F3BB371AA57DEA00C50831 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB341AA57DEA00C50831 /* TMMemoryCache.m */; };
 		20F3BB3A1AA609F900C50831 /* ColorSelectionInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */; };
 		20F3BB3D1AA60B9B00C50831 /* DiaperTypeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */; };
+		99CC048A1B24302300B90ACB /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CC04881B24302300B90ACB /* FeedViewController.m */; };
+		99CC048B1B24302300B90ACB /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99CC04891B24302300B90ACB /* FeedViewController.xib */; };
 		E358A89F1AEBFB5E003680C7 /* Poop.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A89E1AEBFB5E003680C7 /* Poop.m */; };
 		E358A8A21AEC031C003680C7 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A11AEC031C003680C7 /* Activity.m */; };
 		E358A8A81AEC0833003680C7 /* Diapers.m in Sources */ = {isa = PBXBuildFile; fileRef = E358A8A71AEC0833003680C7 /* Diapers.m */; };
@@ -392,6 +394,9 @@
 		20F3BB391AA609F900C50831 /* ColorSelectionInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSelectionInterfaceController.m; sourceTree = "<group>"; };
 		20F3BB3B1AA60B9B00C50831 /* DiaperTypeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaperTypeInterfaceController.h; sourceTree = "<group>"; };
 		20F3BB3C1AA60B9B00C50831 /* DiaperTypeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaperTypeInterfaceController.m; sourceTree = "<group>"; };
+		99CC04871B24302300B90ACB /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		99CC04881B24302300B90ACB /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		99CC04891B24302300B90ACB /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		E358A89D1AEBFB5E003680C7 /* Poop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poop.h; sourceTree = "<group>"; };
 		E358A89E1AEBFB5E003680C7 /* Poop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poop.m; sourceTree = "<group>"; };
 		E358A8A01AEC031C003680C7 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
@@ -742,6 +747,9 @@
 				204471BA1AEE9F8200D35BDD /* FeedOuncesViewController.h */,
 				204471BB1AEE9F8200D35BDD /* FeedOuncesViewController.m */,
 				204471BC1AEE9F8200D35BDD /* FeedOuncesViewController.xib */,
+				99CC04871B24302300B90ACB /* FeedViewController.h */,
+				99CC04881B24302300B90ACB /* FeedViewController.m */,
+				99CC04891B24302300B90ACB /* FeedViewController.xib */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -1059,6 +1067,7 @@
 				209753FB1AA3987600463D41 /* ReportScreenViewController.xib in Resources */,
 				201332C01ADCDA010012B498 /* LoginViewController.xib in Resources */,
 				209753F61AA2D5F500463D41 /* ReportsListViewController.xib in Resources */,
+				99CC048B1B24302300B90ACB /* FeedViewController.xib in Resources */,
 				209753E71AA29F9B00463D41 /* ConfigurationTableViewCell.xib in Resources */,
 				209753EC1AA2B9BD00463D41 /* MilkSettingsViewController.xib in Resources */,
 				20BA8EE91AAF289F00290220 /* ActivityReportViewController.xib in Resources */,
@@ -1173,6 +1182,7 @@
 				209753D81AA16EAD00463D41 /* CustomTableFooter.m in Sources */,
 				2029C8D21AEADD3F0086B506 /* JBBarChartFooterView.m in Sources */,
 				20F3BB351AA57DEA00C50831 /* TMCache.m in Sources */,
+				99CC048A1B24302300B90ACB /* FeedViewController.m in Sources */,
 				2029C8C91AEADD0C0086B506 /* JBChartTooltipTipView.m in Sources */,
 				20A02DCB1AAEB88B00A285C2 /* TimelineViewController.m in Sources */,
 				2017397B1AED8E2900F44EFD /* FeedActivityViewController.m in Sources */,

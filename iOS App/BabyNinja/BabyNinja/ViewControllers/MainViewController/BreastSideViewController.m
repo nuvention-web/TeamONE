@@ -7,6 +7,8 @@
 //
 
 #import "BreastSideViewController.h"
+#import "FeedOuncesViewController.h"
+
 
 @interface BreastSideViewController (){
     Activity *currentActivity;
@@ -68,5 +70,27 @@
     
     [self.delegate breastFeedRecorded:currentActivity];
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+//- (IBAction)bottleSelected:(id)sender {
+//    
+//    NSLog(@"here");
+//    
+//        FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+//        controller.delegate =self;
+//        [self.navigationController pushViewController:controller animated:YES];
+//    
+//}
+- (IBAction)typeSegmentControlChanged:(id)sender {
+    
+    if(self.typeSegmentControl.selectedSegmentIndex == 0)
+    {
+        NSLog(@"Brest");
+    }else{
+                FeedOuncesViewController *controller = [[FeedOuncesViewController alloc]init];
+               // controller.delegate =self;
+                [self.navigationController pushViewController:controller animated:YES];
+        
+    }
+
 }
 @end

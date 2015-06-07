@@ -16,6 +16,7 @@
 @end
 
 @interface BreastSideViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UISegmentedControl *typeSegmentControl;
 
 @property(nonatomic,strong) id<BreastSideFeedDelegate>delegate;
 
