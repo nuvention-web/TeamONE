@@ -64,9 +64,11 @@
                     
                     baby = careTaker.careTakerBabyArray[0];
                     
+                    UIViewController *controller = [self addSideViewController:careTaker];
+//                    controller.modalPresentationStyle = UIModalPresentationPageSheet;
+                    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
                     
-                    
-                    [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
+                    [self presentViewController:controller animated:YES completion:nil];
 //                    [self.navigationController pushViewController:[self addSideViewController:careTaker] animated:YES];
              //       NSLog(@"Successfully retrieved %@",baby.babyName);
                 

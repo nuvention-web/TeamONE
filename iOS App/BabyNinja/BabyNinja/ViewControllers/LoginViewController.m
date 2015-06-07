@@ -144,8 +144,10 @@
                 baby = careTaker.careTakerBabyArray[0];
                 
                 
-                
-                [self presentViewController:[self addSideViewController:careTaker] animated:YES completion:nil];
+                UIViewController *controller = [self addSideViewController:careTaker];
+                controller.modalPresentationStyle = UIModalPresentationPageSheet;
+                controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+                [self presentViewController:controller animated:YES completion:nil];
                 
                 NSLog(@"Successfully retrieved %@",baby.babyName);
             }
