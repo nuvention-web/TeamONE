@@ -19,7 +19,7 @@ year is of vital importance and babyNinja is like an experienced
 parent of millions of children with you all the time to settle your
 first time anxieties.”
 
-Value proposition 
+Value Proposition 
 ----------------------------------------------
 BabyNinja is an app that was designed with parent’s needs in mind and the features are prioritized to give them answers to the essential tracking needs of a newborn and grow with him/her.
 
