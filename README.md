@@ -1,6 +1,6 @@
 # TeamONE
 
-[LOGO TO BE ADDED]
+[SIZE TO BE ADJUSTED]
 ![alt tag](https://github.com/nuvention-web/TeamONE/blob/master/Logo/Final-Logo%20copy.png)
 About BabyNinja
 ----------------------------------------------
