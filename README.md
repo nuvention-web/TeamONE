@@ -21,11 +21,9 @@ first time anxieties.”
 
 Value proposition 
 ----------------------------------------------
-BabyNinja is an app that was designed with parent’s needs in mind and the features are prioritized to give them answers to the essential tracking needs of
-a newborn and grow with him/her.
+BabyNinja is an app that was designed with parent’s needs in mind and the features are prioritized to give them answers to the essential tracking needs of a newborn and grow with him/her.
 
-We help parents to #nailParenting by enabling them to keep track of their baby’s activities in a fast and unobtrusive way so they know what’s happening with
-their newborn over time and ease the anxiousness of being new parents.
+We help parents to #nailParenting by enabling them to keep track of their baby’s activities in a fast and unobtrusive way so they know what’s happening with their newborn over time and ease the anxiousness of being new parents.
 
 
 Key Technologies
@@ -33,6 +31,8 @@ Key Technologies
 iOS
 * Apple iWatch(coded with: Objective-C)
 * Apple iPhone(coded with: Objective-C)
+* Parse 
+* Crittercism (??????????)
 
 Landing Page
 [to be filled in]
@@ -40,8 +40,8 @@ Landing Page
 Team Members
 ----------------------------------------------
 * Francisco González
-* Sneha Aggarwal
-*Makarand Karvekar
+* Sneha Aggarwal 
+* Makarand Karvekar
 * Rawan Alharbi
 * Sung Hee Kim
 * Asha Vaidyanath
