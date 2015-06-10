@@ -1,7 +1,7 @@
 # TeamONE
 
 [LOGO TO BE ADDED]
-
+![alt tag](https://github.com/nuvention-web/TeamONE/blob/master/Logo/Final-Logo%20copy.png)
 About BabyNinja
 ----------------------------------------------
 BabyNinja is an intuitive application designed especially for the Apple Watch and iPhone to keep track of your newborn's activities.
