@@ -1,6 +1,6 @@
 # TeamONE
 
-[SIZE TO BE ADJUSTED]
+
 ![alt tag](https://github.com/nuvention-web/TeamONE/blob/master/Logo/Final-Logo%20copy.png)
 About BabyNinja
 ----------------------------------------------
@@ -31,11 +31,11 @@ Key Technologies
 iOS
 * Apple iWatch(coded with: Objective-C)
 * Apple iPhone(coded with: Objective-C)
-* Parse 
-* Crittercism (??????????)
+* Parse (for login and database)
+* Crittercism (currently disabled)
 
 Landing Page
-[to be filled in]
+www.babyninja.net
 
 Team Members
 ----------------------------------------------
